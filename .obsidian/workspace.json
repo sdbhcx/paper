@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "3ea74f7f2fbce334",
+        "id": "d4cda96d7fbdf2a4",
         "type": "tabs",
         "children": [
           {
-            "id": "3e07aaa09fc07fbf",
+            "id": "19ef19b2fa3095f4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-Ai work/Aff3DFunc - Open-Vocabulary 3D Affordance Understanding.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Aff3DFunc - Open-Vocabulary 3D Affordance Understanding"
+              "title": "新标签页"
             }
           }
         ]
@@ -166,13 +162,23 @@
               "icon": "lucide-list",
               "title": "欢迎 的大纲"
             }
+          },
+          {
+            "id": "f3221a4728953d8d",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 527.0999755859375
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,42 +188,50 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:新建数据库": false
+      "bases:新建数据库": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3e07aaa09fc07fbf",
+  "active": "f3221a4728953d8d",
   "lastOpenFiles": [
-    "2-Ai work/SAGE - Point Cloud as a Foreign Language for Multi-modal Large Language Model.md",
-    "2-Ai work/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency.md",
+    "outputs/debug.log",
     "2-Ai work/Aff3DFunc - Open-Vocabulary 3D Affordance Understanding.md",
-    "1-inbox/2026-7-13DAffordSplat.pdf",
-    "tmp/DeepPaperNote_runs/aff3d_lint_note.json",
+    "tmp/DPN_iaao/iaao_lint_grounding.json",
+    "新建文本文档.txt",
+    "tmp/DPN_iaao/iaao_note_plan.json",
+    "2-Ai work/Comparison_2D-to-3D_Semantic_Transfer_Unlocking_GEAL_PointGS.md",
+    "tmp/DPN_iaao/iaao_note_draft.md",
+    "tmp/DPN_iaao/iaao_bundle.json",
+    "tmp/DPN_iaao/iaao_figure_table_decisions.json",
+    "tmp/DPN_iaao/iaao_figures.json",
+    "tmp/DPN_iaao/iaao_assets.json",
+    "tmp/DPN_iaao/iaao_evidence.json",
+    "tmp/DPN_iaao/iaao_source_manifest.json",
+    "tmp/DPN_iaao/iaao_full_text.md",
+    "tmp/DPN_iaao/iaao_raw_sections.jsonl",
+    "2-Ai work/3DAffordSplat - Efficient Affordance Reasoning with 3D Gaussians.md",
+    "2-Ai work/Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge/Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge.md",
+    "2-Ai work/PointGS - Semantic-Consistent Unsupervised 3D Point Cloud Segmentation with 3D Gaussian.md",
+    "2-Ai work/SAGE - Point Cloud as a Foreign Language for Multi-modal Large Language Model.md",
+    "Research/Papers/机器学习/Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge/Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge.md",
+    "Research/Papers/机器学习/Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge/images/page_008_fig_table_4_review.png",
+    "Research/Papers/机器学习/Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge/images/page_008_fig_table_3_review.png",
+    "Research/Papers/机器学习/Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge/images/page_007_fig_table_2_review.png",
+    "Research/Papers/机器学习/Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge/images/page_006_fig_figure_4_review.png",
+    "Research/Papers/机器学习/Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge/images/page_005_fig_figure_3_review.png",
+    "Research/Papers/机器学习/Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge/images/page_004_fig_figure_2_review.png",
+    "Research/Papers/机器学习/Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge/images/page_001_fig_figure_1_review.png",
+    "2-Ai work/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency.md",
     "tmp/DeepPaperNote_runs/aff3d_note_draft.md",
-    "tmp/DeepPaperNote_runs/aff3d_lint_grounding.json",
-    "tmp/DeepPaperNote_runs/aff3d_note_plan.json",
-    "tmp/DeepPaperNote_runs/freeze_decisions.py",
-    "tmp/DeepPaperNote_runs/aff3d_bundle.json",
-    "tmp/DeepPaperNote_runs/aff3d_figure_table_decisions.json",
-    "tmp/DeepPaperNote_runs/aff3d_figures.json",
-    "tmp/DeepPaperNote_runs/aff3d_assets.json",
-    "tmp/DeepPaperNote_runs/aff3d_evidence.json",
     "tmp/DeepPaperNote_runs/aff3d_full_text.md",
     "2-Ai work/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/GEAL 改进方案.md",
-    "2-Ai work/PointGS - Semantic-Consistent Unsupervised 3D Point Cloud Segmentation with 3D Gaussian.md",
     "tmp/2412.09511/2412.09511_full_text.md",
     "2-Ai work/Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement/Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.md",
     "2-Ai work/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/基于SAGE的改进.md",
     "2-Ai work/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/images/page_017_fig_figure_7_review.png",
     "2-Ai work/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/images/page_004_fig_figure_2_review.png",
     "2-Ai work/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/images/page_004_fig_figure_2_review.png",
-    "2-Ai work/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/images/page_017_fig_figure_7_review.png",
-    "2-Ai work/机器学习/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/images/page_004_fig_figure_2_review.png",
-    "2-Ai work/机器学习/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/images/page_017_fig_figure_7_review.png",
-    "Research/Papers/2-Ai work/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/images/page_004_fig_figure_2_review.png",
-    "Research/Papers/2-Ai work/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/images/page_017_fig_figure_7_review.png",
     "tmp/2412.09511/GEAL_draft.md",
-    "2-Ai work/Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement/images/page_007_fig_figure_5_review.png",
-    "2-Ai work/Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement/images/page_006_fig_table_4_review.png",
     "Research/Papers/2-Ai work/Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement/Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.md",
     "创建链接.md",
     "未命名.canvas",
