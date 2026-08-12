@@ -1,0 +1,1058 @@
+# Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement
+
+## sec:preamble preamble
+_Pages 1-1_
+
+Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric
+Refinement
+Lian He1,2, Meng Liu2,3*, Qilang Ye5,2, Yu Zhou5,2, Xiang Deng4, Gangyi Ding1*
+1 School of Computer Science & Technology, Beijing Institute of Technology
+2 Zhongguancun Academy 3 Shandong Jianzhu University 4 Harbin Institute of Technology, Shenzhen
+5 VCIP & TMCC & DISSec, College of Computer Science & College of Cryptology and Cyber Science, Nankai University
+
+## sec:abstract Abstract
+_Pages 1-1_
+
+Understanding 3D scene-level affordances from natural lan-
+guage instructions is essential for enabling embodied agents
+to interact meaningfully in complex environments. However,
+this task remains challenging due to the need for semantic
+reasoning and spatial grounding. Existing methods mainly
+focus on object-level affordances or merely lift 2D predic-
+tions to 3D, neglecting rich geometric structure information
+in point clouds and incurring high computational costs. To ad-
+dress these limitations, we introduce Task-Aware 3D Scene-
+level Affordance segmentation (TASA), a novel geometry-
+optimized framework that jointly leverages 2D semantic cues
+and 3D geometric reasoning in a coarse-to-fine manner. To
+improve the affordance detection efficiency, TASA features a
+task-aware 2D affordance detection module to identify ma-
+nipulable points from language and visual inputs, guiding the
+selection of task-relevant views. To fully exploit 3D geomet-
+ric information, a 3D affordance refinement module is pro-
+posed to integrate 2D semantic priors with local 3D geom-
+etry, resulting in accurate and spatially coherent 3D affor-
+dance masks. Experiments on SceneFun3D demonstrate that
+TASA significantly outperforms the baselines in both accu-
+racy and efficiency in scene-level affordance segmentation.
+Projrct: https://hl1208649851.github.io/TASA/
+
+## sec:introduction Introduction
+_Pages 1-2_
+
+Affordances describe the latent functional properties of ob-
+jects, such as handles, knobs, and switches, which allow spe-
+cific actions (Gibson 2014). Understanding affordances in
+3D environments is essential for enabling embodied agents
+to interact effectively with the physical world (Radford et al.
+2021). To perform goal-directed behaviors, agents must not
+only perceive these functional components but also ground
+them with high-level instructions, often expressed through
+natural language. This grounding is especially challenging
+in cluttered environments, where language instructions im-
+plicitly reference specific, functionally relevant object parts.
+For example, executing the command “open the bottom
+drawer” requires identifying and localizing the correct han-
+dle among many visually similar alternatives. Solving this
+task demands: 1) commonsense reasoning to infer implied
+functional targets from language, and 2) fine-grained spatial
+*Corresponding Authors
+Copyright © 2026, Association for the Advancement of Artificial
+Intelligence (www.aaai.org). All rights reserved.
+Please locate the areas on this mug
+that are ideal for grasping it.
+Language
+Encoder
+Point Encoder
+Projector
+Decoder
+Input Point Cloud
+Predicted Mask
+(a) Object affordance understanding paradigm
+Input Point Cloud
+The coffee table is between a chair
+and a long white table.
+Sparse 3D U-Net
+Language
+Encoder
+Point Feature
+Matching
+Predicted Mask
+(b) Referring segmentation paradigm
+Flush the toilet.
+VLM
+Predicted Mask
+(c) Scene affordance segmentation paradigm
+Input Video
+Frames
+Object
+sam
+Affordance
+sam
+2D Lift
+Input Point Cloud
+Figure 1: Comparison among (a) object affordance under-
+standing, (b) referring segmentation, and (c) scene affor-
+dance segmentation paradigms.
+perception to detect small and context-sensitive elements.
+Effectively bridging natural language and 3D perception un-
+der such conditions is a critical step toward building intelli-
+gent agents capable of operating autonomously in real-world
+environments.
+Despite recent progress, existing approaches to 3D affor-
+dance understanding remain limited in several critical as-
+pects. First, most methods adopt a narrow focus by tar-
+geting single-object affordance detection in isolation (Chu
+et al. 2025; Yang et al. 2023; Nguyen et al. 2023; Van Vo
+et al. 2024). For example, they identify grasp points on
+a mug (Figure1(a)) without considering the broader scene
+context. These object-centric paradigms, which treat indi-
+vidual objects as standalone inputs, fail to scale to complex,
+scene-level reasoning where affordances often depend on
+inter-object relationships and spatial arrangements. Second,
+many approaches rely heavily on 2D image-based informa-
+tion, typically projecting 2D segmentation masks into 3D via
+camera poses. This lifting process often overlooks essential
+arXiv:2511.11702v1 [cs.CV] 12 Nov 2025
+geometric cues. As shown in Figure 1(c), when handling the
+“flush the toilet” task, it incorrectly segments point clouds
+with similar textures near the flush button into the affordance
+region, resulting in blurred segmentation outcomes that fail
+to differentiate between affordance-critical regions and sur-
+rounding areas with similar textures. The absence of true
+3D spatial constraints hampers the accurate localization
+of functional parts. Third, current frameworks are ineffi-
+cient in handling multi-view data. Typical methods for 3D
+affordance segmentation (Corsetti et al. 2025) require pro-
+cessing hundreds of RGB frames, yet treat all views equally,
+resulting in substantial redundancy and computational
+overhead without exploiting view-specific utility.
+To address the aforementioned challenges, we propose a
+Task-Aware 3D Sece-level Affordance segmentation frame-
+work (TASA), a novel geometry-optimized framework that
+jointly leverages 2D semantic cues and 3D geometric rea-
+soning in a coarse-to-fine manner. To our knowledge, this is
+the first geometry-optimized framework explicitly designed
+for affordance understanding in 3D scenes.
+First, to move beyond the single-object paradigm, our
+method operates directly on full-scene 3D environments. It
+leverages vision-language models (VLMs) to parse task in-
+structions and extract scene-level semantic cues from both
+3D point clouds and multi-view RGB images. This enables
+context-aware affordance reasoning across objects, account-
+ing for inter-object relationships and spatial configurations.
+Second, to reduce the inefficiency of uniform multi-view
+processing, we introduce a CLIP-based affordance-weighted
+frame selector. Guided by VLM-extracted task elements, it
+prioritizes views that are semantically aligned with the ac-
+tion, e.g., focusing on cabinet handles instead of irrelevant
+views like a “TV”, for the instruction “open the drawer of the
+cabinet with the TV on top”. This selective strategy signif-
+icantly reduces redundancy while preserving task-relevant
+information.
+Third, to mitigate over-reliance on 2D projections, we re-
+fine 2D segmentation masks by fusing them with 3D geo-
+metric features. Given the complexity of directly interpret-
+ing high-resolution 3D point clouds, we use 2D masks as a
+guidance to partition the 3D point cloud, enabling the model
+to focus on critical regions and achieve precise localization
+of functional components in texture-similar areas. In addi-
+tion, we design a multi-objective loss function tailored for
+high-fidelity point clouds, where traditional methods often
+fail. This loss encourages fine-grained and spatially consis-
+tent segmentation across densely sampled scenes.
+We evaluate our method on SceneFun3D, the only ex-
+isting dataset with 3D affordance segmentation annotations
+in real-world indoor scenes. The dataset presents multiple
+challenges: 1) objects with similar visual appearances (e.g.,
+dresser handles), 2) ambiguous and spatially complex task
+descriptions (e.g., “open the second drawer”), and 3) dense,
+high-resolution point clouds that demand precise spatial rea-
+soning. Our method demonstrates robust performance across
+all these scenarios.
+Our contributions are summarized as follows:
+• We propose a Task-Aware 3D Scene-level Affordance
+segmentation framework that jointly leverages 2D se-
+mantic cues and 3D geometric reasoning in a coarse-to-
+fine manner.
+• We design a CLIP-based frame selection strategy guided
+by VLM-extracted task elements, and a 3D affordance
+refinement module to produce more precise and spatially
+consistent affordance masks.
+• We achieve state-of-the-art results in 3D scene-level af-
+fordance segmentation with high-fidelity point clouds,
+significantly improving mAP from 7.6 to 23.2 and mIoU
+from 15.2 to 19.7.
+
+## sec:related-work Related Work
+_Pages 2-3_
+
+Affordance Understanding.
+Affordance research spans
+both 2D and 3D domains. In 2D, recent efforts explore
+off-the-shelf segmentation models and weakly supervised
+learning (Xu et al. 2024; Li et al. 2024; Xu and Mu 2025;
+Qian et al. 2024) for efficient RGB-based affordance pars-
+ing. However, these approaches lack 3D grounding, limiting
+their applicability to real-world embodied interaction.
+In the 3D domain, most existing methods focus on
+object-centric affordance prediction (Qian et al. 2024; Chu
+et al. 2025; Yang et al. 2023; Lu et al. 2025; Shao et al.
+2025; Yang et al. 2024). While some recent work attempts
+open-vocabulary affordance reasoning (Nguyen et al. 2023;
+Van Vo et al. 2024), these methods rely on isolated-object
+datasets and struggle to scale to complex scenes with clut-
+ter and occlusion. Their limited spatial context restricts fine-
+grained localization of functional parts in realistic settings.
+To our knowledge, Fun3DU (Corsetti et al. 2025) is the only
+method targeting scene-level 3D affordance segmentation.
+However, it suffers from severe computational inefficiency
+and merely lifts 2D segmentations into 3D. This leads to
+cascading errors when initial 2D predictions are inaccurate.
+In contrast, our method introduces a task-aware frame se-
+lection module that leverages CLIP embeddings guided by
+VLM-derived affordance cues. This drastically improves ef-
+ficiency, reducing computation time by orders of magnitude
+compared to Fun3DU. Crucially, we further enhance seg-
+mentation robustness by integrating 3D geometric features
+into the refinement process, enabling reliable affordance lo-
+calization in cluttered, high-fidelity environments.
+3D Referring Segmentation.
+Among 3D scene under-
+standing tasks, 3D referring segmentation is partially related
+to our problem setting. Given a natural language expression,
+these methods aim to segment the corresponding object in
+a 3D scene. Existing approaches fall into two main cate-
+gories: referring expression-based methods (Chen, Chang,
+and Niessner 2020; Achlioptas et al. 2020; Luo et al. 2022),
+and superpoint-based segmentation (Wu et al. 2024; Sun
+et al. 2023; Engelmann et al. 2020). While effective for
+whole-object localization, these methods lack the granular-
+ity needed for actionable manipulation. For example, the in-
+struction “close the bedroom door” requires localizing the
+doorknob, not the entire door. Furthermore, most models
+are trained on coarse, low-resolution point clouds, limiting
+their generalization to high-fidelity 3D data common in real-
+world robotics applications.
+-nearest geometry feature
+Open the bottom closet
+drawer between the
+door and the cabinet.
+task
+point
+clouds
+video
+frames
+Task-aware 2D Affordance Detection
+Affordance-Weighted
+Task Frame Selection
+vision encoder
+text encoder
+Double
+Check
+Mechanism
+Affordance Concept Extraction
+Affordance-Weighted
+Task Frame Selection
+Initialization with Geometric Constraints
+3D Affordance Refinement
+Output
+𝐾[𝑅|𝑡]
+feature
+Point Trans.
+Encoder
+Point Trans.
+Decoder
+Input data
+ℳ#$
+ℳ%$
+ℳ%$
+ℳ!"
+Figure 2: Overview of our Task-Aware 3D Scene-level Affordance segmentation framework (TASA).
+Vision-Language Models.
+VLMs enable cross-modal
+reasoning through joint encoding of visual and textual in-
+puts, and can be broadly categorized into 2D and 3D vari-
+ants. 2D VLMs (Chen et al. 2024; Radford et al. 2021; Li
+et al. 2022; Alayrac et al. 2022; Liu et al. 2018a,b; Ye and
+Yu 2024; Ye et al. 2024, 2025), have seen rapid progress,
+driven by large-scale image-text pretraining. These models
+typically combine a vision encoder with a language model
+via various fusion architectures. For example, LLaVA (Liu
+et al. 2023) fuses CLIP (Radford et al. 2021) features into
+a Vicuna-based language model using a lightweight MLP
+adapter. In contrast, 3D VLMs are still in their early stages,
+mainly focusing on grounding generic objects in 3D scenes.
+Due to the lack of large-scale 3D vision-language datasets
+and the absence of strong 3D foundation models, current
+3D VLMs exhibit limited generalization, particularly in fine-
+grained affordance reasoning within complex environments.
+
+## sec:method Method
+_Pages 3-5_
+
+Overview of the Framework
+Figure 2 illustrates our proposed framework for Task-Aware
+3D Scene-level Affordance Segmentation, which adopts a
+coarse-to-fine pipeline to progressively improve segmenta-
+tion accuracy. The objective is to localize actionable regions
+in a 3D point cloud based on natural language instructions.
+Given a task description T , a high-precision point cloud
+PC = {pi ∈R3 | i = 1, ..., M}, and set of multi-view
+RGB images V = {v1, v2, ..., vN} ∈RN×H×W ×3, where
+pi is individual 3D points, M denotes the total number of
+points in the point cloud, vi refers to every RGB image, N
+is the number of views, H and W are the image height and
+width, the framework outputs a 3D affordance mask indi-
+cating task-relevant regions suitable for downstream robotic
+manipulation.
+Our method comprises two main stages: 1) Task-aware af-
+fordance detection, which employs vision-language reason-
+ing to guide informative frame selection, and 2) 3D affor-
+dance mask refinement, which incorporates geometric fea-
+tures to ensure precise and spatially grounded segmentation.
+Task-Aware 2D Affordance Detection
+This module extracts reliable 2D manipulable points from
+natural language instructions and image frames to provide
+task-aligned guidance for downstream 3D segmentation. It
+consists of three components: 1) Affordance Concept Ex-
+traction using a VLM to identify task-relevant interactive
+components from text, 2) Affordance-Weighted Frame Se-
+lection via a CLIP-based similarity metric modulated by ex-
+tracted concepts to prioritize informative views, and 3) Ma-
+nipulable Point Validation through a double-check mecha-
+nism that enhances robustness via reverse checks and fall-
+back queries.
+Affordance Concept Extraction.
+Given a natural lan-
+guage task T, we extract a set of interactive concepts es-
+sential for completing the instruction. These typically cor-
+respond to manipulable object parts (e.g., “handle” in “open
+the bottom closet drawer between the door and the cabinet”).
+Formally, let A = {a1, a2, ..., ak} denote the set of extracted
+affordance concepts. These are obtained via the VLM:
+A = VLMaffordance(T; θVLM),
+(1)
+where θVLM represents the parameters of the VLM. The out-
+put A encodes functional cues semantically grounded in the
+instruction.
+Affordance-Weighted Frame Selection.
+Multi-view im-
+age streams often contain frames irrelevant to the task (e.g.,
+occluded views, distant background clutter), which can de-
+grade downstream performance and increase computational
+overhead. To address this, we propose a semantic frame
+selection strategy that emphasizes frames aligned with ex-
+tracted affordance concepts.
+Standard CLIP-based similarity (Radford et al. 2021)
+tends to bias toward dominant nouns (e.g., “cabinet”), ne-
+glecting functional components like “handle”. To mitigate
+this, we introduce an affordance-weighted similarity metric.
+Let CLIPimg : RH×W ×3 →Rd and CLIPtxt : L →Rd be
+the CLIP encoders for images and text, respectively, with
+embedding dimension d = 512. For each image frame
+vi ∈V and task T, we compute eimg
+= CLIPimg(vi), serv-
+ing as the reference embedding eref of frame vi,
+etxt
+CLIPtxt(T), and the baseline CLIP similarity:
+SimCLIP(vi, T) =
+eimg
+· etxt
+∥eimg
+∥2 · ∥etxt
+T ∥2
+∈[−1, 1],
+(2)
+serving as a baseline metric quantifying the overall semantic
+alignment between frame vi and task T , capturing contex-
+tual information such as dominant entities (e.g., “cabinet”)
+that provide scene-level relevance. To emphasize actionable
+components, we compute CLIP embeddings for each affor-
+dance concept ai ∈A:
+etxt
+ai = CLIPtxt(ai) ∈Rd.
+(3)
+which are directly utilized in the affordance-weighted cal-
+culation. The affordance-weighted similarity score S, com-
+puted for each frame vi:
+S = 1
+ai∈A exp(etxt
+ai · eref),
+Z = P
+ai∈A exp(etxt
+ai · eref),
+(4)
+SimCLIP(vi, T) and S are complementary and jointly con-
+tribute to frame selection. While S prioritizes functional af-
+fordance concepts (e.g., handle) critical for task execution.
+SimCLIP(vi, T) ensures alignment with the broader task
+context (e.g., ‘cabinet”), preventing selection of irrelevant
+frames containing isolated affordance components.
+For final frame selection, we caculate FinalScore(vi) as:
+FinalScore(vi) = αa · SimCLIP(vi, T) + (1 −αa) · S (5)
+where α ∈[0, 1] balances contextual and affordance priori-
+ties. We rank frames by FinalScore(vi) and select the top-K
+frames as V∗, prioritizing semantically aligned, interactive
+elements over visually dominant. This method reduces the
+number of frames processed by focusing on the most rele-
+vant ones, enhancing both efficiency and accuracy.
+Manipulable Point Validation.
+For each select frame v ∈
+V∗, we extract 2D manipulable points using a VLM, en-
+hanced by a double-check mechanism to improve both ro-
+bustness and accuracy.
+We first issue a task-specific prompt to the VLM, asking it
+to identify spatial locations within the image that are critical
+for completing the given instruction T. This yields a set of
+candidate points: P = {(x1, y1), ..., (xm, ym)}, which rep-
+resent likely affordance regions (e.g., handles or switches)
+in the task-relevant frames.
+However, direct one-shot VLM extraction often suffers
+from missed detections or false positives due to semantic
+ambiguity (e.g., the term “handle” may refer to visually di-
+verse components). To address this, we introduce a double-
+check mechanism composed of two sequential steps: reverse
+validation and fallback querying, as illustrated in Figure 3.
+• Reverse Validation: For each candidate point p2D
+(xi, yi) ∈P, we verify whether interacting with this
+point is sufficient to complete task T. We define a verifi-
+cation function: V LMverify(vi, p2D
+, T), which checks
+You're an AI generating JSON for robots to interact with
+the physical world via natural language, specifically
+pinpointing object parts they need to engage with for tasks.
+task
+affordance
+candidate frames
+Input
+Open the bottom closet drawer
+between the door and the cabinet.
+handle
+How can I open the bottom closet drawer between the door and the cabinet?
+Respond directly with only the json with the following format.
+{"image_name": the image with the coordinate point.,coordinates": the location of the image
+where the affordance locates,"object_found": whether the coordinate has been found.}
+{"image_name":"80969.879.jpg",
+"coordinates": {"x": 0, "y": 128},
+"object_found": yes.}
+{"image_name":"81003.782.jpg",
+"coordinates": null,
+"object_found": false.}
+Did you see handle? Please tell me its coordinates.Respond directly with the JSON in the
+format provided just now.
+{"image_name":"80970.479.jpg", "coordinates": {"x": 100, "y": 825},"object_found": yes.}
+Is the candidate point with "coordinates“ on image "image_name" the one that can
+complete task open the bottom closet drawer between the door and the cabinet, and
+does it correspond to affordance handle?
+{yes,yes.}
+image name
+coordinates
+object_found
+Output
+Double Check Mechanism
+Figure 3: Illustration of the Double-Check Mechanism.
+whether point pi corresponds to a functionally correct
+component (e.g., ensuring the point lies on a drawer han-
+dle rather than on the drawer surface). Points that fail val-
+idation are discarded, resulting a validation set of points,
+denoted as Pvalid
+• Fallback Query: If no candidate point is extracted
+∅), we trigger a fallback mechanism. For
+each affordance concept ai
+A identified earlier,
+we query the VLM to estimate relevant 2D locations:
+V LMpoint(vi, ai; θV LM). This yields a supplementary
+set of points, denoted as P∗.
+The final set of verified manipulable points is the union of
+the reverse and fallback results (i.e., Pvalid ∪P∗), ensuring
+both precision and recall in affordance localization. These
+points serve as coarse spatial cues for subsequent 2D mask
+generation, forming the initial step in our coarse-to-fine af-
+fordance segmentation pipeline.
+3D Affordance Refinement
+This module fuses 2D semantic guidance with 3D geomet-
+ric features to generate accurate and spatially consistent 3D
+affordance masks. It consists of two key components: 1) Ge-
+ometric Initialization, which projects 2D masks into 3D to
+produce coarse 3D mask candidates; and 2) a 3D Affordance
+Refinement module, which leverages local geometric con-
+text and self-attention to refine the masks.
+Geometric Initialization.
+Given selected task-relevant
+frames V∗and validated manipulable points Pvalid ∪P∗,
+we first generate 2D binary masks for each frame vi ∈V∗,
+denote as {M2D
+v } where M2D
+⊆{0, 1}H×W using a pre-
+trained segmentation model. These masks are then projected
+into the 3D point cloud PC = {pi ∈R3}M
+i=1 using known
+camera intrinsics K ∈R3×3 and extrinsics [R | t] ∈R3×4,
+resulting in an initial 3D mask Minit ∈RM×1. This provides
+a coarse binary indicator for each 3D point’s relevance.
+To tackle the challenges of processing high-fidelity scene
+point clouds due to their scale and precision, we focus on
+points within N-neighbors of those points masked by Minit
+to obtain
+M3D. This design aligns with our coarse-to-fine
+
+## sec:framework framework.
+_Pages 5-5_
+
+3D Affordance Refinement.
+To capture local geometric
+dependencies in 3D space, we adopt the Point Transformer
+Layer inspired by (Zhao et al. 2021). This layer performs
+self-attention among neighboring points, enhanced by rela-
+tive positional encoding. Given input point coordinates p ∈
+RN×3 and features x ∈RN×C, the process is as follows:
+First, the input features are projected into query, key, and
+value spaces via linear layers:
+qi = Wqxi, kj = Wkxj, vj = Wvxj.
+(6)
+For each point pi, we identify its k nearest neighbors
+{pj}k
+j=1 and compute the relative positions δi,j = pj −
+pi. These offsets are encoded by a multi-layer perceptron
+(MLP) to yield position embeddings:
+γi,j = MLPpos(pj −pi).
+(7)
+Then, we compute attention weights using a combination
+of feature difference and position encoding. Specifically, for
+each point pair (i, j), the unnormalized attention weight is
+computed as:
+wi,j = MLPw (kj −qi + γi,j) ,
+(8)
+where MLPw is a shared-weight network applied across lo-
+cal neighbors. These weights are normalized via a softmax
+function:
+αi,j =
+exp(wi,j)
+l=1 exp(wi,l)
+(9)
+The output feature at each point is computed by aggre-
+gating the value features from its neighbors, weighted by
+attention and enriched with positional encoding:
+i =
+j=1
+αi,j · (vj + γi,j).
+(10)
+Leveraging the Point Transformer Layer, we employ an
+encoder-decoder architecture for refining 3D affordance
+masks, as showed in Figure 2. The encoder aggregates lo-
+cal geometric features and downsamples the point cloud to
+capture global contextual information. The decoder upsam-
+ples features via feature propagation layers with distance-
+weighted interpolation, while integrating skip connections
+to fuse encoder-derived features and retain fine-grained de-
+tails, thereby ensuring precise segmentation boundaries.
+Training Objective.
+To handle the challenges of mask
+prediction in high-resolution point clouds, we adopt a multi-
+objective loss function to supervise the training of the point
+transformer-based 3D refinement module. The total loss is
+defined as:
+Ltotal = α1LBCE + α2LDice + α3LFocal + α4LIoU,
+(11)
+where αi ≥0 and P4
+i=1 αi = 1. Each loss term ad-
+dresses a distinct aspect of the 3D segmentation quality:
+1) LBCE supervises per-point classification by minimiz-
+ing pointwise prediction error. 2) LDice encourages over-
+lap between predicted and ground-truth regions, promoting
+
+## sec:method-2 Method
+_Pages 5-5_
+
+mAP
+AP50
+AP25
+mIoU
+OpenMask3D
+0.2
+0.2
+0.4
+0.2
+LERF
+0.0
+0.0
+0.0
+0.0
+OpenIns3D
+0.0
+0.0
+0.0
+0.1
+Fun3DU
+7.6
+16.9
+33.3
+15.2
+Ours
+23.2
+26.9
+28.6
+19.7
+Table 1: Comparison of our method and baselines on the
+SceneFun3D dataset. All metrics are positively correlated
+with performance (higher is better).
+Backbone
+
+## sec:model Model
+_Pages 5-5_
+
+FLOPS
+Inference
+Time (s/sample)↓
+Speed Up↑
+Fun3DU
+48.05G
+130.26
+1.00×
+Ours
+29.50G
+37.61
+3.37×
+Table 2: Efficiency comparison between our method and
+Fun3DU on the SceneFun3D dataset. Inference time per task
+is reported using an NVIDIA A800 GPU.
+region-level consistency. 3) LFocal emphasizes hard exam-
+ples, mitigating class imbalance by down-weighting easy
+negatives. 4) LIoU directly optimizes the intersection-over-
+union between predicted and ground-truth masks, enhancing
+spatial alignment. This composite loss balances point-level
+precision and global spatial coherence, enabling the model
+to produce accurate and robust affordance masks in dense
+3D scenes by jointly leveraging 2D semantic priors and 3D
+geometric context.
+
+## sec:experiment Experiment
+_Pages 5-5_
+
+Experimental Settings
+
+## sec:dataset Dataset.
+_Pages 5-7_
+
+Evaluation conducted on SceneFun3D (Delitzas
+et al. 2024), the only existing dataset that provides anno-
+tations for 3D functional affordance segmentation in in-
+door environments. The dataset includes high-resolution 3D
+scans of real-world indoor scenes and is divided into two
+subsets: Split0, containing 30 scenes, and Split1, comprising
+200 scenes. Each scene is accompanied by approximately
+100 high-resolution RGB-D images, along with their corre-
+sponding intrinsic and extrinsic camera parameters. In addi-
+tion, each scene is annotated with about 15 natural language
+task descriptions and their corresponding ground-truth 3D
+affordance masks. We report results on both splits to evalu-
+ate performance on small- and large-scale settings.
+Evaluation Metrics.
+We evaluated our model using the
+standard metrics provided by SceneFun3D (Delitzas et al.
+2024), which measure precision in 3D affordance segmenta-
+tion. Specifically, we reported: 1) Average Precision (AP) at
+IoU thresholds of 0.25 and 0.5. 2) Mean Average Precision
+(mAP), computed by averaging AP across IoU thresholds
+from 0.5 to 0.95 in 0.05 increments; 3) Mean Intersection
+over Union (mIoU), which measures per-point segmentation
+quality across the entire point cloud.
+Affordance
+Weight
+Double
+Check
+mAP
+AP50
+AP25
+mIoU
+3.9
+6.00
+14.9
+4.4
+9.3
+14.2
+23.3
+11.3
+13.1
+18.1
+27.9
+8.5
+23.2
+26.9
+28.6
+19.7
+Table 3: Ablation of the Task-Aware 2D Affordance Detec-
+tion module on SceneFun3D Split0.
+geometry
+color
+text
+mAP
+AP50
+AP25
+mIoU
+7.4
+18.7
+29.9
+16.7
+19.3
+19.3
+24.3
+15.2
+9.2
+10.0
+10.1
+4.8
+5.0
+5.8
+6.1
+2.8
+23.2
+26.9
+28.6
+19.7
+Table 4: Ablation of the 3D Affordance Refinement Module
+with different input modalities: geometry, color, and text.
+Baselines.
+We compared our approach against recent
+open-vocabulary 3D segmentation methods used in the
+SceneFun3D benchmark. Specifically, we included Open-
+Mask3D (Takmaz et al. 2023), LERF (Kerr et al. 2023),
+OpenIns3D (Huang et al. 2024), as well as the more re-
+cent Fun3DU (Corsetti et al. 2025), which directly targets
+3D scene affordance segmentation.
+Implementation Details.
+We used Qwen (Bai et al. 2023)
+for both affordance concept extraction and the double-
+check mechanism. For coarse 2D mask generation, we com-
+bined MolMo (Deitke et al. 2025) with the Segment Any-
+thing Model (SAM) (Kirillov et al. 2023), leveraging their
+complementary strengths in vision-language alignment and
+generic segmentation. The 3D affordance refinement mod-
+ule is implemented using a Point Transformer (Zhao et al.
+2021), trained with the multi-objective loss described in
+Eqn. (11). We set the loss weights to: α1 = 0.3, α2 = 0.3,
+α3 = 0.2, and α4 = 0.2. For geometric feature extraction,
+the number of N-nearest neighbors is set to 8,192.
+Quantitative Results
+Table 1 presents a comparison of our method with baselines
+on the SceneFun3D dataset. The results reveal that LERF
+and OpenIns3D achieve (AP25) scores close to zero, while
+OpenMask3D attains a modest (AP25) of 0.4. These limi-
+tations primarily arise from undersegmentation issues, such
+as misclassifying entire cabinets as handles, due to insuffi-
+cient fine-grained semantic reasoning. These methods strug-
+gle with high-resolution point clouds, containing up to 13
+million points against only a few hundred annotated ground-
+truth affordance masks, severely limiting their learning and
+resulting in low AP scores. Fun3DU achieves a notable AP25
+score of 33.3, likely due to its ability to generate masks that
+satisfy the lenient mIoU threshold despite their imprecision.
+However, its performance is limited by directly translating
+Figure 4: Effect of the number of selected images K on seg-
+mentation performance, evaluated using mIoU. Each exper-
+iment is conducted with a different Affordance Weight αa.
+2D results into 3D without leveraging geometric structures,
+leading to a lower AP50 of 16.9 and an mIoU of 15.2.
+In contrast, our method demonstrates a significant ad-
+vancement in precision, achieving the AP50 of 26.9 and
+mIoU of 19.7, surpassing all baselines. This improvement
+is driven by our synergistic pipeline: 1) CLIP-driven, task-
+aware frame selection effectively filters irrelevant frames,
+thereby reducing noise and mitigating undersegmentation is-
+sues observed in LERF and OpenMask3D, leading to en-
+hanced (AP) scores. 2) A coarse-to-fine integration of 2D
+semantic guidance with 3D geometric reasoning provides
+richer contextual understanding, resulting in superior (AP)
+and (mIoU) scores compared to Fun3DU.
+Moreover, Table 2 quantifies the efficiency of our method
+compared to Fun3DU, achieving a 3.37× speedup with 40%
+fewer FLOPs. This efficiency stems from CLIP-driven task-
+aware frame selection, which eliminates irrelevant frames
+and redundant computations, enhancing inference through-
+put while maintaining performance. This efficient approach
+is more suitable for embodied downstream applications.
+Ablation Study
+On Task-Aware 2D Affordance Detection.
+We evalu-
+ated the Affordance-Weighted Frame Selection and Double-
+Check Point Validation components through ablation experi-
+ments as shown in Table 3. The model performs poorly with-
+out either component, while enabling each module individ-
+ually yields moderate improvements. Specifically, the frame
+selection module raises mIoU to 11.3, while the Double-
+Check mechanism increases mAP to 13.1. Notably, activat-
+ing both modules simultaneously yields the most significant
+gains across all metrics. These results underscore the com-
+plementary roles of the two components: the frame selection
+module enhances spatial priors by focusing on task-relevant
+views, while the Double-Check mechanism improves point-
+level accuracy through geometric validation. Together, they
+improve segmentation precision and robustness.
+Figure 4 illustrates the impact of the number of selected
+K-frames on mIoU. When only one highest-confidence
+frame is selected, performance is limited due to insufficient
+multi-view context. Although K=20 has the highest mIoU,
+K=10 achieves comparable performance while effectively
+capturing critical visual cues. Therefore, we select K=10 as
+it offers a favorable trade-off between accuracy and compu-
+OpenMaske3D
+LERF
+Fun3DU
+Ours
+Ground Truth
+Open the bottom
+drawer of the
+nightstand with the
+red table lamp on top
+Open the second
+drawer of the cabinet
+with the TV on top
+Adjust the room's
+temperature using the
+radiator dial
+Flush the toilet
+Close the bedroom
+door
+Open the second
+drawer of the wooden
+cabinet in the corner
+Figure 5: Qualitative comparison on SceneFun3D Split0. Point clouds are cropped around functional objects for improved
+visibility.
+tational efficiency.
+On 3D Affordance Refinement.
+We conducted ablation
+experiments reported in Table 4. The results confirm that in-
+corporating geometric structure is critical, yielding the high-
+est scores in mAP, AP50, and competitive performance in
+AP25. We further explore the effect of adding color and
+text features to the 3D module. Surprisingly, performance
+degrades across all metrics when these modalities are in-
+cluded. We hypothesize that this decline results from over-
+fitting or confusion introduced by low-quality or sparse se-
+mantic signals, especially under the limited data regime of
+SceneFun3D. These additional modalities may act as noise,
+hindering convergence and diluting the contribution of reli-
+able geometric cues. This finding highlights the importance
+of modality alignment: adding more input channels does not
+guarantee better performance, especially when data is lim-
+ited. Instead, carefully balancing semantic and geometric in-
+formation is essential for effective affordance segmentation.
+Qualitative Results
+As shown in Figure 5, OpenMask3D often fails to interpret
+large-scale point clouds and struggles with basic scene un-
+derstanding. For example, in the sixth column, it misclassi-
+fies upright wall features as part of a cabinet. In many cases,
+it is unable to localize the target object at all, likely due to its
+limited semantic grounding and computational inefficiency
+on dense inputs. LERF focuses on high-level object cate-
+gories but lacks the ability to isolate task-relevant functional
+components. In the first and second columns, where the task
+involves “opening a cabinet drawer”, LERF highlights the
+cabinet itself while overlooking the drawer handle, illustrat-
+ing its tendency to prioritize object names over actionable
+parts. Fun3DU performs better in identifying functional re-
+gions but suffers from spurious mask generation. In the first
+and second columns, it produces large, imprecise masks due
+to over-reliance on noisy 2D point predictions from VLMs.
+Additionally, when nearby textures are visually similar to
+the affordance region, as in the third and fourth columns,
+Fun3DU frequently oversegments irrelevant areas. It also
+struggles with tasks involving multiple disconnected com-
+ponents (e.g., dual handles), as seen in the sixth column.
+In contrast, our method produces significantly more ac-
+curate and robust affordance segmentation results compared
+to existing baselines, particularly in complex and cluttered
+scenes. These improvements stem from the combination of
+2D-guided localization and 3D geometry-aware refinement.
+
+## sec:conclusion Conclusion
+_Pages 7-8_
+
+We present a Task-Aware 3D Scene-level Affordance seg-
+mentation framework (TASA), that jointly leverages 2D se-
+mantic cues and 3D geometric reasoning in a coarse-to-
+fine manner, marking the first geometry-optimized method
+for holistic affordance understanding in complex 3D scenes.
+The framework demonstrates strong performance to high-
+fidelity point clouds and consistently outperforms baselines
+in cluttered, real-world environments.
+
+## sec:acknowledgments Acknowledgments
+_Pages 8-8_
+
+This research was funded by the Zhongguancun Academy
+(Grant No. 20240306), the National Natural Science Foun-
+dation of China (Grant No. 62376140, No. U23A20315 and
+No. 62376266), the Special Fund for Taishan Scholar Project
+of Shandong Province.
+
+## sec:references References
+_Pages 8-9_
+
+Achlioptas, P.; Abdelreheem, A.; Xia, F.; Elhoseiny, M.; and
+Guibas, L. 2020. Referit3d: Neural listeners for fine-grained
+3d object identification in real-world scenes. In European
+conference on computer vision, 422–440. Springer.
+Alayrac, J.-B.; Donahue, J.; Luc, P.; Miech, A.; Barr, I.; Has-
+son, Y.; Lenc, K.; Mensch, A.; Millican, K.; Reynolds, M.;
+et al. 2022. Flamingo: a visual language model for few-shot
+learning. Advances in neural information processing sys-
+tems, 35: 23716–23736.
+Bai, J.; Bai, S.; Chu, Y.; Cui, Z.; Dang, K.; Deng, X.; Fan,
+Y.; Ge, W.; Han, Y.; Huang, F.; et al. 2023. Qwen technical
+report. arXiv preprint arXiv:2309.16609.
+Chen, B.; Xu, Z.; Kirmani, S.; Ichter, B.; Sadigh, D.; Guibas,
+L.; and Xia, F. 2024. Spatialvlm: Endowing vision-language
+models with spatial reasoning capabilities. In Proceedings of
+the IEEE/CVF Conference on Computer Vision and Pattern
+Recognition, 14455–14465.
+Chen, D. Z.; Chang, A. X.; and Niessner, M. 2020. Scanre-
+fer: 3d object localization in rgb-d scans using natural lan-
+guage. In European conference on computer vision, 202–
+221. Springer.
+Chu, H.; Deng, X.; Lv, Q.; Chen, X.; Li, Y.; Hao, J.; and Nie,
+L. 2025. 3d-affordancellm: Harnessing large language mod-
+els for open-vocabulary affordance detection in 3d worlds.
+arXiv preprint arXiv:2502.20041.
+Corsetti, J.; Giuliari, F.; Fasoli, A.; Boscaini, D.; and Poiesi,
+F. 2025. Functionality understanding and segmentation in
+3D scenes. In Proceedings of the Computer Vision and Pat-
+tern Recognition Conference, 24550–24559.
+Deitke, M.; Clark, C.; Lee, S.; Tripathi, R.; Yang, Y.; Park,
+J. S.; Salehi, M.; Muennighoff, N.; Lo, K.; Soldaini, L.; et al.
+2025. Molmo and pixmo: Open weights and open data for
+state-of-the-art vision-language models. In Proceedings of
+the Computer Vision and Pattern Recognition Conference,
+91–104.
+Delitzas, A.; Takmaz, A.; Tombari, F.; Sumner, R.; Polle-
+feys, M.; and Engelmann, F. 2024.
+Scenefun3d: Fine-
+grained functionality and affordance understanding in 3d
+scenes.
+In Proceedings of the IEEE/CVF Conference on
+Computer Vision and Pattern Recognition, 14531–14542.
+Engelmann, F.; Bokeloh, M.; Fathi, A.; Leibe, B.; and
+Niessner, M. 2020.
+3d-mpa: Multi-proposal aggregation
+for 3d semantic instance segmentation. In Proceedings of
+the IEEE/CVF conference on computer vision and pattern
+recognition, 9031–9040.
+Gibson, J. J. 2014. The ecological approach to visual per-
+ception: classic edition. Psychology press.
+Huang, Z.; Wu, X.; Chen, X.; Zhao, H.; Zhu, L.; and
+Lasenby, J. 2024. Openins3d: Snap and lookup for 3d open-
+vocabulary instance segmentation. In European Conference
+on Computer Vision, 169–185. Springer.
+Kerr, J.; Kim, C. M.; Goldberg, K.; Kanazawa, A.; and Tan-
+cik, M. 2023. Lerf: Language embedded radiance fields. In
+Proceedings of the IEEE/CVF international conference on
+computer vision, 19729–19739.
+Kirillov, A.; Mintun, E.; Ravi, N.; Mao, H.; Rolland, C.;
+Gustafson, L.; Xiao, T.; Whitehead, S.; Berg, A. C.; Lo,
+W.-Y.; et al. 2023. Segment anything. In Proceedings of
+the IEEE/CVF international conference on computer vision,
+4015–4026.
+Li, G.; Sun, D.; Sevilla-Lara, L.; and Jampani, V. 2024. One-
+shot open affordance learning with foundation models. In
+Proceedings of the IEEE/CVF Conference on Computer Vi-
+sion and Pattern Recognition, 3086–3096.
+Li, J.; Li, D.; Xiong, C.; and Hoi, S. 2022.
+Blip: Boot-
+strapping language-image pre-training for unified vision-
+language understanding and generation.
+In International
+conference on machine learning, 12888–12900. PMLR.
+Liu, H.; Li, C.; Wu, Q.; and Lee, Y. J. 2023.
+Visual in-
+struction tuning. Advances in neural information processing
+systems, 36: 34892–34916.
+Liu, M.; Wang, X.; Nie, L.; He, X.; Chen, B.; and Chua, T.-
+S. 2018a. Attentive moment retrieval in videos. In The 41st
+international ACM SIGIR conference on research & devel-
+opment in information retrieval, 15–24.
+Liu, M.; Wang, X.; Nie, L.; Tian, Q.; Chen, B.; and Chua,
+T.-S. 2018b. Cross-modal moment localization in videos. In
+Proceedings of the 26th ACM international conference on
+Multimedia, 843–851.
+Lu, D.; Kong, L.; Huang, T.; and Lee, G. H. 2025. Geal:
+Generalizable 3d affordance learning with cross-modal con-
+sistency. In Proceedings of the Computer Vision and Pattern
+Recognition Conference, 1680–1690.
+Luo, J.; Fu, J.; Kong, X.; Gao, C.; Ren, H.; Shen, H.; Xia, H.;
+and Liu, S. 2022. 3d-sps: Single-stage 3d visual grounding
+via referred point progressive selection. In Proceedings of
+the IEEE/CVF Conference on Computer Vision and Pattern
+Recognition, 16454–16463.
+Nguyen, T.; Vu, M. N.; Vuong, A.; Nguyen, D.; Vo, T.;
+Le, N.; and Nguyen, A. 2023. Open-vocabulary affordance
+detection in 3d point clouds. In 2023 IEEE/RSJ Interna-
+tional Conference on Intelligent Robots and Systems (IROS),
+5692–5698. IEEE.
+Qian, S.; Chen, W.; Bai, M.; Zhou, X.; Tu, Z.; and Li, L. E.
+2024.
+Affordancellm: Grounding affordance from vision
+language models. In Proceedings of the IEEE/CVF Con-
+ference on Computer Vision and Pattern Recognition, 7587–
+7597.
+Radford, A.; Kim, J. W.; Hallacy, C.; Ramesh, A.; Goh, G.;
+Agarwal, S.; Sastry, G.; Askell, A.; Mishkin, P.; Clark, J.;
+et al. 2021. Learning transferable visual models from nat-
+ural language supervision. In International conference on
+machine learning, 8748–8763. PmLR.
+Shao, Y.; Zhai, W.; Yang, Y.; Luo, H.; Cao, Y.; and Zha, Z.-J.
+2025. Great: Geometry-intention collaborative inference for
+open-vocabulary 3d object affordance grounding. In Pro-
+ceedings of the Computer Vision and Pattern Recognition
+Conference, 17326–17336.
+Sun, J.; Qing, C.; Tan, J.; and Xu, X. 2023.
+Superpoint
+transformer for 3d scene instance segmentation. In Proceed-
+ings of the AAAI Conference on Artificial Intelligence, vol-
+ume 37, 2393–2401.
+Takmaz, A.; Fedele, E.; Sumner, R. W.; Pollefeys, M.;
+Tombari, F.; and Engelmann, F. 2023.
+Openmask3d:
+Open-vocabulary 3d instance segmentation. arXiv preprint
+arXiv:2306.13631.
+Van Vo, T.; Vu, M. N.; Huang, B.; Nguyen, T.; Le, N.; Vo,
+T.; and Nguyen, A. 2024. Open-vocabulary affordance de-
+tection using knowledge distillation and text-point correla-
+tion. In 2024 IEEE International Conference on Robotics
+and Automation (ICRA), 13968–13975. IEEE.
+Wu, C.; Ma, Y.; Chen, Q.; Wang, H.; Luo, G.; Ji, J.; and
+Sun, X. 2024. 3d-stmn: Dependency-driven superpoint-text
+matching network for end-to-end 3d referring expression
+segmentation. In Proceedings of the AAAI Conference on
+Artificial Intelligence, volume 38, 5940–5948.
+Xu, L.; Gao, Y.; Song, W.; and Hao, A. 2024. Weakly super-
+vised multimodal affordance grounding for egocentric im-
+ages. In Proceedings of the AAAI Conference on Artificial
+Intelligence, volume 38, 6324–6332.
+Xu, P.; and Mu, Y. 2025.
+Weakly-supervised affordance
+grounding guided by part-level semantic priors.
+arXiv
+preprint arXiv:2505.24103.
+Yang, Y.; Zhai, W.; Luo, H.; Cao, Y.; Luo, J.; and Zha, Z.-J.
+2023. Grounding 3d object affordance from 2d interactions
+in images. In Proceedings of the IEEE/CVF International
+Conference on Computer Vision, 10905–10915.
+Yang, Y.; Zhai, W.; Wang, C.; Yu, C.; Cao, Y.; and Zha, Z.-
+J. 2024. Egochoir: Capturing 3d human-object interaction
+regions from egocentric views. Advances in Neural Infor-
+mation Processing Systems, 37: 54529–54557.
+Ye, Q.; and Yu, Z. 2024. Pose-Promote: Progressive Visual
+Perception for Activities of Daily Living. IEEE Signal Pro-
+cessing Letters.
+Ye, Q.; Yu, Z.; Shao, R.; Cui, Y.; Kang, X.; Liu, X.; Torr,
+P.; and Cao, X. 2025. Cat+: Investigating and enhancing
+audio-visual understanding in large language models. IEEE
+Transactions on Pattern Analysis and Machine Intelligence.
+Ye, Q.; Yu, Z.; Shao, R.; Xie, X.; Torr, P.; and Cao, X. 2024.
+Cat: Enhancing multimodal large language model to answer
+questions in dynamic audio-visual scenarios. In European
+Conference on Computer Vision, 146–164. Springer.
+Zhao, H.; Jiang, L.; Jia, J.; Torr, P. H.; and Koltun, V. 2021.
+Point transformer. In Proceedings of the IEEE/CVF interna-
+tional conference on computer vision, 16259–16268.

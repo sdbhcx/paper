@@ -1,0 +1,888 @@
+{
+  "status": "ok",
+  "script": "plan_figure_table_decisions.py",
+  "paper_id": "arxiv:2412.09511",
+  "decisions": [
+    {
+      "item_id": "figure:Figure 1",
+      "source_id": "Figure 1",
+      "kind": "figure",
+      "label": "Figure 1",
+      "caption": "3D affordance prediction under varied data noises.",
+      "pages": [
+        1
+      ],
+      "section_id": "sec:preamble",
+      "decision": "low_priority",
+      "reason": "caption_detected_but_not_selected_by_figure_plan",
+      "skip_reason": "",
+      "visual_quality_status": "",
+      "priority": 99,
+      "target_section": ""
+    },
+    {
+      "item_id": "figure:Figure 2",
+      "source_id": "Figure 2",
+      "kind": "figure",
+      "label": "Figure 2",
+      "caption": "(Left): Framework Overview. The proposed GEAL consists of two branches: 3D and 2D. The 2D branch is established through",
+      "pages": [
+        4
+      ],
+      "section_id": "sec:methodology",
+      "decision": "insert",
+      "reason": "裁剪覆盖完整双分支总览与右侧一致性对齐模块，分辨率 2096×724，可作为方法机制总图。",
+      "skip_reason": "",
+      "visual_quality_status": "usable_reviewed",
+      "priority": 1,
+      "target_section": "机制流程",
+      "plan_kind": "method_overview",
+      "source_image_filename": "page_004_fig_figure_2_review.png",
+      "relative_markdown_embed": "![Figure 2](images/page_004_fig_figure_2_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_004_fig_figure_2_review.png",
+      "materialization_status": "materialized",
+      "source_image_sha256": "b76afb271be6f843b5c4e4913b3bab0e4f6a6a5583074c913090969e8d5ad852",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_004_fig_figure_2_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\page_previews\\page_004.png",
+        "source_pdf_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\pdfs\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency.pdf",
+        "source_page": 4,
+        "caption": "(Left): Framework Overview. The proposed GEAL consists of two branches: 3D and 2D. The 2D branch is established through",
+        "bbox_pt": [
+          54.5,
+          68.00010681152344,
+          557.4904174804688,
+          241.6341094970703
+        ],
+        "normalized_bbox": [
+          0.089052,
+          0.085859,
+          0.910932,
+          0.305094
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewed_asset_sha256": "b76afb271be6f843b5c4e4913b3bab0e4f6a6a5583074c913090969e8d5ad852",
+        "preserved_scientific_elements": [
+          "完整框架模块",
+          "2D/3D 分支",
+          "GAFM",
+          "Consistency Alignment"
+        ],
+        "omitted_scientific_elements": [],
+        "notes": "裁剪覆盖完整双分支总览与右侧一致性对齐模块，分辨率 2096×724，可作为方法机制总图。",
+        "failure_reason": "",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      },
+      "materialized_image_path": "D:\\study\\deep-learning\\paper\\2-Ai work\\GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency\\images\\page_004_fig_figure_2_review.png"
+    },
+    {
+      "item_id": "figure:Figure 3",
+      "source_id": "Figure 3",
+      "kind": "figure",
+      "label": "Figure 3",
+      "caption": "Illustration of the Granularity-Adaptive Fusion Mod-",
+      "pages": [
+        5
+      ],
+      "section_id": "sec:methodology",
+      "decision": "low_priority",
+      "reason": "caption_detected_but_not_selected_by_figure_plan",
+      "skip_reason": "",
+      "visual_quality_status": "",
+      "priority": 99,
+      "target_section": ""
+    },
+    {
+      "item_id": "figure:Figure 4",
+      "source_id": "Figure 4",
+      "kind": "figure",
+      "label": "Figure 4",
+      "caption": "Qualitative comparisons between GEAL and LASO [32]",
+      "pages": [
+        8
+      ],
+      "section_id": "sec:datasets",
+      "decision": "visual_defect",
+      "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+      "skip_reason": "visual_quality_gate_rejected_candidate",
+      "visual_quality_status": "reject_visual_quality",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result",
+      "source_image_filename": "page_008_fig_figure_4.png",
+      "relative_markdown_embed": "![Figure 4](images/page_008_fig_figure_4.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_fig_figure_4.png"
+    },
+    {
+      "item_id": "figure:Figure 5",
+      "source_id": "Figure 5",
+      "kind": "figure",
+      "label": "Figure 5",
+      "caption": "Visualization examples of the PIAD-C dataset. We show 7 corruption types across 5 severity levels.",
+      "pages": [
+        12
+      ],
+      "section_id": "sec:method-4",
+      "decision": "low_priority",
+      "reason": "caption_detected_but_not_selected_by_figure_plan",
+      "skip_reason": "",
+      "visual_quality_status": "",
+      "priority": 99,
+      "target_section": ""
+    },
+    {
+      "item_id": "figure:Figure 6",
+      "source_id": "Figure 6",
+      "kind": "figure",
+      "label": "Figure 6",
+      "caption": "Visualization examples of the LASO-C dataset. We show 7 corruption types across 5 severity levels.",
+      "pages": [
+        13
+      ],
+      "section_id": "sec:method-4",
+      "decision": "low_priority",
+      "reason": "caption_detected_but_not_selected_by_figure_plan",
+      "skip_reason": "",
+      "visual_quality_status": "",
+      "priority": 99,
+      "target_section": ""
+    },
+    {
+      "item_id": "figure:Figure 7",
+      "source_id": "Figure 7",
+      "kind": "figure",
+      "label": "Figure 7",
+      "caption": "Qualitative comparisons between GEAL and LASO [32] on the PIAD-C dataset, highlighting the superior robustness of our",
+      "pages": [
+        17
+      ],
+      "section_id": "sec:method-4",
+      "decision": "insert",
+      "reason": "裁剪覆盖 PIAD-C 的 Clean 与七类腐化定性对比，包含 GT、GEAL、LASO，适合呈现鲁棒性。",
+      "skip_reason": "",
+      "visual_quality_status": "usable_reviewed",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result",
+      "source_image_filename": "page_017_fig_figure_7_review.png",
+      "relative_markdown_embed": "![Figure 7](images/page_017_fig_figure_7_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_017_fig_figure_7_review.png",
+      "materialization_status": "materialized",
+      "source_image_sha256": "61936faf7910cc3932f16e5a02935f033aa954c75d2ce220753a0bd55b3ca384",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_017_fig_figure_7_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\page_previews\\page_017.png",
+        "source_pdf_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\pdfs\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency.pdf",
+        "source_page": 17,
+        "caption": "Qualitative comparisons between GEAL and LASO [32] on the PIAD-C dataset, highlighting the superior robustness of our",
+        "bbox_pt": [
+          41.370792388916016,
+          84.25701904296875,
+          575.4413452148438,
+          666.9016723632812
+        ],
+        "normalized_bbox": [
+          0.067599,
+          0.106385,
+          0.940264,
+          0.842048
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewed_asset_sha256": "61936faf7910cc3932f16e5a02935f033aa954c75d2ce220753a0bd55b3ca384",
+        "preserved_scientific_elements": [
+          "GT/GEAL/LASO",
+          "Clean 与七类 corruption"
+        ],
+        "omitted_scientific_elements": [],
+        "notes": "裁剪覆盖 PIAD-C 的 Clean 与七类腐化定性对比，包含 GT、GEAL、LASO，适合呈现鲁棒性。",
+        "failure_reason": "",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      },
+      "materialized_image_path": "D:\\study\\deep-learning\\paper\\2-Ai work\\GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency\\images\\page_017_fig_figure_7_review.png"
+    },
+    {
+      "item_id": "figure:Figure 8",
+      "source_id": "Figure 8",
+      "kind": "figure",
+      "label": "Figure 8",
+      "caption": "Qualitative comparisons between GEAL and LASO [32] on the PIAD dataset.",
+      "pages": [
+        18
+      ],
+      "section_id": "sec:method-4",
+      "decision": "skip",
+      "reason": "数值表将在正文中重写为可检索 Markdown，或与已选图内容重复。",
+      "skip_reason": "reproduced_as_markdown_or_redundant",
+      "visual_quality_status": "usable_but_not_inserted",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result",
+      "source_image_filename": "page_018_fig_figure_8_review.png",
+      "relative_markdown_embed": "![Figure 8](images/page_018_fig_figure_8_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_018_fig_figure_8_review.png",
+      "materialization_status": "pending",
+      "source_image_sha256": "ed412e06985090470fb03c4b15ca8033ce5bf2bd480a885ec0e1a48e1783d356",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_018_fig_figure_8_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\page_previews\\page_018.png",
+        "source_pdf_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\pdfs\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency.pdf",
+        "source_page": 18,
+        "caption": "Qualitative comparisons between GEAL and LASO [32] on the PIAD dataset.",
+        "bbox_pt": [
+          54.5,
+          135.38250732421875,
+          557.49658203125,
+          632.4551391601562
+        ],
+        "normalized_bbox": [
+          0.089052,
+          0.170938,
+          0.910942,
+          0.798554
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewed_asset_sha256": "ed412e06985090470fb03c4b15ca8033ce5bf2bd480a885ec0e1a48e1783d356",
+        "preserved_scientific_elements": [
+          "表头",
+          "方法行",
+          "指标数值"
+        ],
+        "omitted_scientific_elements": [],
+        "notes": "图表主体尺寸与 PDF 区域匹配；为减少冗余不插图，关键数值转写为 Markdown。",
+        "failure_reason": "",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      }
+    },
+    {
+      "item_id": "table:Table 1",
+      "source_id": "Table 1",
+      "kind": "table",
+      "label": "Table 1",
+      "caption": "The overall results of all comparative methods on PIAD",
+      "pages": [
+        6
+      ],
+      "section_id": "sec:methodology",
+      "decision": "skip",
+      "reason": "数值表将在正文中重写为可检索 Markdown，或与已选图内容重复。",
+      "skip_reason": "reproduced_as_markdown_or_redundant",
+      "visual_quality_status": "usable_but_not_inserted",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result",
+      "source_image_filename": "page_006_fig_table_1_review.png",
+      "relative_markdown_embed": "![Table 1](images/page_006_fig_table_1_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_1_review.png",
+      "materialization_status": "pending",
+      "source_image_sha256": "fa7f4b7e487a8166583d7cf2a78287c5b312b708d8a9fbf7ee48348d7b7b07c2",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_1_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\page_previews\\page_006.png",
+        "source_pdf_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\pdfs\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency.pdf",
+        "source_page": 6,
+        "caption": "The overall results of all comparative methods on PIAD",
+        "bbox_pt": [
+          318.3565673828125,
+          117.5188217163086,
+          557.41357421875,
+          319.0368347167969
+        ],
+        "normalized_bbox": [
+          0.52019,
+          0.148382,
+          0.910806,
+          0.402824
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewed_asset_sha256": "fa7f4b7e487a8166583d7cf2a78287c5b312b708d8a9fbf7ee48348d7b7b07c2",
+        "preserved_scientific_elements": [
+          "表头",
+          "方法行",
+          "指标数值"
+        ],
+        "omitted_scientific_elements": [],
+        "notes": "图表主体尺寸与 PDF 区域匹配；为减少冗余不插图，关键数值转写为 Markdown。",
+        "failure_reason": "",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      }
+    },
+    {
+      "item_id": "table:Table 2",
+      "source_id": "Table 2",
+      "kind": "table",
+      "label": "Table 2",
+      "caption": "The overall results of all comparative methods on the",
+      "pages": [
+        6
+      ],
+      "section_id": "sec:methodology",
+      "decision": "skip",
+      "reason": "数值表将在正文中重写为可检索 Markdown，或与已选图内容重复。",
+      "skip_reason": "reproduced_as_markdown_or_redundant",
+      "visual_quality_status": "usable_but_not_inserted",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result",
+      "source_image_filename": "page_006_fig_table_2_review.png",
+      "relative_markdown_embed": "![Table 2](images/page_006_fig_table_2_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_2_review.png",
+      "materialization_status": "pending",
+      "source_image_sha256": "bb4d548d1b2bcd1818f103bc27accd7005fd69f8aeb01fe5d206d635cfd9b78e",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_2_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\page_previews\\page_006.png",
+        "source_pdf_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\pdfs\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency.pdf",
+        "source_page": 6,
+        "caption": "The overall results of all comparative methods on the",
+        "bbox_pt": [
+          318.3044738769531,
+          435.7625427246094,
+          554.5200805664062,
+          606.1068115234375
+        ],
+        "normalized_bbox": [
+          0.520105,
+          0.550205,
+          0.906079,
+          0.765286
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewed_asset_sha256": "bb4d548d1b2bcd1818f103bc27accd7005fd69f8aeb01fe5d206d635cfd9b78e",
+        "preserved_scientific_elements": [
+          "表头",
+          "方法行",
+          "指标数值"
+        ],
+        "omitted_scientific_elements": [],
+        "notes": "图表主体尺寸与 PDF 区域匹配；为减少冗余不插图，关键数值转写为 Markdown。",
+        "failure_reason": "",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      }
+    },
+    {
+      "item_id": "table:Table 3",
+      "source_id": "Table 3",
+      "kind": "table",
+      "label": "Table 3",
+      "caption": "Comparison of different methods under various corrup-",
+      "pages": [
+        7
+      ],
+      "section_id": "sec:method-2",
+      "decision": "skip",
+      "reason": "数值表将在正文中重写为可检索 Markdown，或与已选图内容重复。",
+      "skip_reason": "reproduced_as_markdown_or_redundant",
+      "visual_quality_status": "usable_but_not_inserted",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result",
+      "source_image_filename": "page_007_fig_table_3_review.png",
+      "relative_markdown_embed": "![Table 3](images/page_007_fig_table_3_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_3_review.png",
+      "materialization_status": "pending",
+      "source_image_sha256": "baa90200774e5e382b6b0b0bdc6168614b2ef8680ea1d02d2f0098f09afc21d5",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_3_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\page_previews\\page_007.png",
+        "source_pdf_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\pdfs\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency.pdf",
+        "source_page": 7,
+        "caption": "Comparison of different methods under various corrup-",
+        "bbox_pt": [
+          316.7432861328125,
+          138.66677856445312,
+          554.0059204101562,
+          224.2079620361328
+        ],
+        "normalized_bbox": [
+          0.517554,
+          0.175084,
+          0.905238,
+          0.283091
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewed_asset_sha256": "baa90200774e5e382b6b0b0bdc6168614b2ef8680ea1d02d2f0098f09afc21d5",
+        "preserved_scientific_elements": [
+          "表头",
+          "方法行",
+          "指标数值"
+        ],
+        "omitted_scientific_elements": [],
+        "notes": "图表主体尺寸与 PDF 区域匹配；为减少冗余不插图，关键数值转写为 Markdown。",
+        "failure_reason": "",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      }
+    },
+    {
+      "item_id": "table:Table 4",
+      "source_id": "Table 4",
+      "kind": "table",
+      "label": "Table 4",
+      "caption": "Comparison of different methods under various corrup-",
+      "pages": [
+        7
+      ],
+      "section_id": "sec:method-2",
+      "decision": "skip",
+      "reason": "数值表将在正文中重写为可检索 Markdown，或与已选图内容重复。",
+      "skip_reason": "reproduced_as_markdown_or_redundant",
+      "visual_quality_status": "usable_but_not_inserted",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result",
+      "source_image_filename": "page_007_fig_table_4_review.png",
+      "relative_markdown_embed": "![Table 4](images/page_007_fig_table_4_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_4_review.png",
+      "materialization_status": "pending",
+      "source_image_sha256": "366fb75e7d396d923b2db5f1fde2d2ec04a00b8e9daa4d2119bceb5b58542246",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_4_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\page_previews\\page_007.png",
+        "source_pdf_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\pdfs\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency.pdf",
+        "source_page": 7,
+        "caption": "Comparison of different methods under various corrup-",
+        "bbox_pt": [
+          316.7432861328125,
+          301.08282470703125,
+          554.0059204101562,
+          386.6239929199219
+        ],
+        "normalized_bbox": [
+          0.517554,
+          0.380155,
+          0.905238,
+          0.488162
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewed_asset_sha256": "366fb75e7d396d923b2db5f1fde2d2ec04a00b8e9daa4d2119bceb5b58542246",
+        "preserved_scientific_elements": [
+          "表头",
+          "方法行",
+          "指标数值"
+        ],
+        "omitted_scientific_elements": [],
+        "notes": "图表主体尺寸与 PDF 区域匹配；为减少冗余不插图，关键数值转写为 Markdown。",
+        "failure_reason": "",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      }
+    },
+    {
+      "item_id": "table:Table 5",
+      "source_id": "Table 5",
+      "kind": "table",
+      "label": "Table 5",
+      "caption": "Ablation study on the impact of different components",
+      "pages": [
+        7
+      ],
+      "section_id": "sec:method-2",
+      "decision": "skip",
+      "reason": "数值表将在正文中重写为可检索 Markdown，或与已选图内容重复。",
+      "skip_reason": "reproduced_as_markdown_or_redundant",
+      "visual_quality_status": "usable_but_not_inserted",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result",
+      "source_image_filename": "page_007_fig_table_5_review.png",
+      "relative_markdown_embed": "![Table 5](images/page_007_fig_table_5_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_5_review.png",
+      "materialization_status": "pending",
+      "source_image_sha256": "e3d24b933bf8f3998df88bea41a8ab207b39770ba9ce46f5250041e0b2bc3c82",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_5_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\page_previews\\page_007.png",
+        "source_pdf_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\pdfs\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency.pdf",
+        "source_page": 7,
+        "caption": "Ablation study on the impact of different components",
+        "bbox_pt": [
+          311.25,
+          485.638916015625,
+          559.5029907226562,
+          617.6950073242188
+        ],
+        "normalized_bbox": [
+          0.508578,
+          0.61318,
+          0.914221,
+          0.779918
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewed_asset_sha256": "e3d24b933bf8f3998df88bea41a8ab207b39770ba9ce46f5250041e0b2bc3c82",
+        "preserved_scientific_elements": [
+          "表头",
+          "方法行",
+          "指标数值"
+        ],
+        "omitted_scientific_elements": [],
+        "notes": "图表主体尺寸与 PDF 区域匹配；为减少冗余不插图，关键数值转写为 Markdown。",
+        "failure_reason": "",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      }
+    },
+    {
+      "item_id": "table:Table 6",
+      "source_id": "Table 6",
+      "kind": "table",
+      "label": "Table 6",
+      "caption": "Ablation study on the configuration of Gaussian Splatting",
+      "pages": [
+        8
+      ],
+      "section_id": "sec:datasets",
+      "decision": "skip",
+      "reason": "数值表将在正文中重写为可检索 Markdown，或与已选图内容重复。",
+      "skip_reason": "reproduced_as_markdown_or_redundant",
+      "visual_quality_status": "usable_but_not_inserted",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result",
+      "source_image_filename": "page_008_fig_table_6_review.png",
+      "relative_markdown_embed": "![Table 6](images/page_008_fig_table_6_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_fig_table_6_review.png",
+      "materialization_status": "pending",
+      "source_image_sha256": "ecc0a653b053f4f570dc0bc74cda1c7e23667d42690a9edee2c4ccb9269f6a2a",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_fig_table_6_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\page_previews\\page_008.png",
+        "source_pdf_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\pdfs\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency.pdf",
+        "source_page": 8,
+        "caption": "Ablation study on the configuration of Gaussian Splatting",
+        "bbox_pt": [
+          59.13307189941406,
+          150.1690216064453,
+          296.0701904296875,
+          273.5077209472656
+        ],
+        "normalized_bbox": [
+          0.096623,
+          0.189607,
+          0.483775,
+          0.345338
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewed_asset_sha256": "ecc0a653b053f4f570dc0bc74cda1c7e23667d42690a9edee2c4ccb9269f6a2a",
+        "preserved_scientific_elements": [
+          "表头",
+          "方法行",
+          "指标数值"
+        ],
+        "omitted_scientific_elements": [],
+        "notes": "图表主体尺寸与 PDF 区域匹配；为减少冗余不插图，关键数值转写为 Markdown。",
+        "failure_reason": "",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      }
+    },
+    {
+      "item_id": "table:Table 7",
+      "source_id": "Table 7",
+      "kind": "table",
+      "label": "Table 7",
+      "caption": "Detailed statistics of the proposed PIAD-C dataset, show-",
+      "pages": [
+        10
+      ],
+      "section_id": "sec:appendix",
+      "decision": "low_priority",
+      "reason": "caption_detected_but_not_selected_by_figure_plan",
+      "skip_reason": "",
+      "visual_quality_status": "",
+      "priority": 99,
+      "target_section": ""
+    },
+    {
+      "item_id": "table:Table 8",
+      "source_id": "Table 8",
+      "kind": "table",
+      "label": "Table 8",
+      "caption": "Detailed statistics of the proposed LASO-C dataset,",
+      "pages": [
+        10
+      ],
+      "section_id": "sec:appendix",
+      "decision": "low_priority",
+      "reason": "caption_detected_but_not_selected_by_figure_plan",
+      "skip_reason": "",
+      "visual_quality_status": "",
+      "priority": 99,
+      "target_section": ""
+    },
+    {
+      "item_id": "table:Table 9",
+      "source_id": "Table 9",
+      "kind": "table",
+      "label": "Table 9",
+      "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the PIAD dataset [70]. AUC and aIOU scores",
+      "pages": [
+        15
+      ],
+      "section_id": "sec:method-4",
+      "decision": "visual_defect",
+      "reason": "数值表将在正文中重写为可检索 Markdown，或与已选图内容重复。",
+      "skip_reason": "identity_ambiguous_shared_crop",
+      "visual_quality_status": "reject_visual_quality",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result",
+      "source_image_filename": "page_015_fig_table_9_review.png",
+      "relative_markdown_embed": "![Table 9](images/page_015_fig_table_9_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_015_fig_table_9_review.png",
+      "materialization_status": "pending",
+      "source_image_sha256": "078556dcb116b8cd58b3cb32b01629a592cb5eac4aeb9bb46cdb2439b97dc979",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_015_fig_table_9_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\page_previews\\page_015.png",
+        "source_pdf_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\pdfs\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency.pdf",
+        "source_page": 15,
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the PIAD dataset [70]. AUC and aIOU scores",
+        "bbox_pt": [
+          102.92129516601562,
+          146.790283203125,
+          506.5867004394531,
+          424.4701843261719
+        ],
+        "normalized_bbox": [
+          0.168172,
+          0.185341,
+          0.827756,
+          0.535947
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "fail",
+        "reviewed_asset_sha256": "078556dcb116b8cd58b3cb32b01629a592cb5eac4aeb9bb46cdb2439b97dc979",
+        "preserved_scientific_elements": [
+          "表头",
+          "方法行",
+          "指标数值"
+        ],
+        "omitted_scientific_elements": [
+          "候选裁剪同时包含 Table 9 与 Table 10，无法单表绑定"
+        ],
+        "notes": "图表主体尺寸与 PDF 区域匹配；为减少冗余不插图，关键数值转写为 Markdown。",
+        "failure_reason": "ambiguous_visual_body",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      }
+    },
+    {
+      "item_id": "table:Table 10",
+      "source_id": "Table 10",
+      "kind": "table",
+      "label": "Table 10",
+      "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the PIAD dataset [70]. AUC and aIOU",
+      "pages": [
+        15
+      ],
+      "section_id": "sec:method-4",
+      "decision": "visual_defect",
+      "reason": "数值表将在正文中重写为可检索 Markdown，或与已选图内容重复。",
+      "skip_reason": "identity_ambiguous_shared_crop",
+      "visual_quality_status": "reject_visual_quality",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result",
+      "source_image_filename": "page_015_fig_table_10_review.png",
+      "relative_markdown_embed": "![Table 10](images/page_015_fig_table_10_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_015_fig_table_10_review.png",
+      "materialization_status": "pending",
+      "source_image_sha256": "078556dcb116b8cd58b3cb32b01629a592cb5eac4aeb9bb46cdb2439b97dc979",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_015_fig_table_10_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\page_previews\\page_015.png",
+        "source_pdf_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\pdfs\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency.pdf",
+        "source_page": 15,
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the PIAD dataset [70]. AUC and aIOU",
+        "bbox_pt": [
+          102.92129516601562,
+          146.790283203125,
+          506.5867004394531,
+          424.4701843261719
+        ],
+        "normalized_bbox": [
+          0.168172,
+          0.185341,
+          0.827756,
+          0.535947
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "fail",
+        "reviewed_asset_sha256": "078556dcb116b8cd58b3cb32b01629a592cb5eac4aeb9bb46cdb2439b97dc979",
+        "preserved_scientific_elements": [
+          "表头",
+          "方法行",
+          "指标数值"
+        ],
+        "omitted_scientific_elements": [
+          "候选裁剪同时包含 Table 9 与 Table 10，无法单表绑定"
+        ],
+        "notes": "图表主体尺寸与 PDF 区域匹配；为减少冗余不插图，关键数值转写为 Markdown。",
+        "failure_reason": "ambiguous_visual_body",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      }
+    },
+    {
+      "item_id": "table:Table 11",
+      "source_id": "Table 11",
+      "kind": "table",
+      "label": "Table 11",
+      "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the LASO dataset [32]. AUC and aIOU",
+      "pages": [
+        16
+      ],
+      "section_id": "sec:method-4",
+      "decision": "skip",
+      "reason": "数值表将在正文中重写为可检索 Markdown，或与已选图内容重复。",
+      "skip_reason": "reproduced_as_markdown_or_redundant",
+      "visual_quality_status": "usable_but_not_inserted",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result",
+      "source_image_filename": "page_016_fig_table_11_review.png",
+      "relative_markdown_embed": "![Table 11](images/page_016_fig_table_11_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_016_fig_table_11_review.png",
+      "materialization_status": "pending",
+      "source_image_sha256": "40fa4d66a212e6a47bf9610ef39d6a56278623c61c24ff45c0d20697d4c19a4c",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_016_fig_table_11_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\page_previews\\page_016.png",
+        "source_pdf_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\pdfs\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency.pdf",
+        "source_page": 16,
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the LASO dataset [32]. AUC and aIOU",
+        "bbox_pt": [
+          102.92129516601562,
+          103.8751220703125,
+          506.5867004394531,
+          381.5550537109375
+        ],
+        "normalized_bbox": [
+          0.168172,
+          0.131155,
+          0.827756,
+          0.481761
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewed_asset_sha256": "40fa4d66a212e6a47bf9610ef39d6a56278623c61c24ff45c0d20697d4c19a4c",
+        "preserved_scientific_elements": [
+          "表头",
+          "方法行",
+          "指标数值"
+        ],
+        "omitted_scientific_elements": [],
+        "notes": "图表主体尺寸与 PDF 区域匹配；为减少冗余不插图，关键数值转写为 Markdown。",
+        "failure_reason": "",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      }
+    },
+    {
+      "item_id": "table:Table 12",
+      "source_id": "Table 12",
+      "kind": "table",
+      "label": "Table 12",
+      "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the LASO dataset [32]. AUC and aIOU",
+      "pages": [
+        16
+      ],
+      "section_id": "sec:method-4",
+      "decision": "skip",
+      "reason": "数值表将在正文中重写为可检索 Markdown，或与已选图内容重复。",
+      "skip_reason": "reproduced_as_markdown_or_redundant",
+      "visual_quality_status": "usable_but_not_inserted",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result",
+      "source_image_filename": "page_016_fig_table_12_review.png",
+      "relative_markdown_embed": "![Table 12](images/page_016_fig_table_12_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_016_fig_table_12_review.png",
+      "materialization_status": "pending",
+      "source_image_sha256": "fd993cf3418f3d343ccf9f8e6e9a126450b57152d15141744ab53c9eaa40797d",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_016_fig_table_12_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\page_previews\\page_016.png",
+        "source_pdf_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\pdfs\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency.pdf",
+        "source_page": 16,
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the LASO dataset [32]. AUC and aIOU",
+        "bbox_pt": [
+          102.93231964111328,
+          426.6263122558594,
+          506.57952880859375,
+          705.7763671875
+        ],
+        "normalized_bbox": [
+          0.16819,
+          0.53867,
+          0.827744,
+          0.891132
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewed_asset_sha256": "fd993cf3418f3d343ccf9f8e6e9a126450b57152d15141744ab53c9eaa40797d",
+        "preserved_scientific_elements": [
+          "表头",
+          "方法行",
+          "指标数值"
+        ],
+        "omitted_scientific_elements": [],
+        "notes": "图表主体尺寸与 PDF 区域匹配；为减少冗余不插图，关键数值转写为 Markdown。",
+        "failure_reason": "",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      }
+    }
+  ],
+  "summary": {
+    "total_items": 20,
+    "by_decision": {
+      "insert": 2,
+      "low_priority": 6,
+      "placeholder": 0,
+      "review_pending": 0,
+      "skip": 9,
+      "visual_defect": 3
+    }
+  }
+}

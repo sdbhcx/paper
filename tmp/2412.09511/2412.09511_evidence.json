@@ -1,0 +1,1246 @@
+{
+  "status": "ok",
+  "script": "extract_evidence.py",
+  "paper_id": "arxiv:2412.09511",
+  "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+  "evidence_pack": {
+    "paper_id": "arxiv:2412.09511",
+    "problem_evidence": [
+      {
+        "claim": "arXiv:2412.09511v1 [cs.CV] 12 Dec 2024 Despite its potential, 3D affordance learning still faces significant challenges.",
+        "evidence": "arXiv:2412.09511v1 [cs.CV] 12 Dec 2024 Despite its potential, 3D affordance learning still faces significant challenges.",
+        "source_section": "introduction",
+        "page_hint": ""
+      },
+      {
+        "claim": "By contributing these benchmark datasets, we aim to fill a critical gap in the affordance learn- ing community by providing a standard for evaluating the robustness of point cloud-based 3D affordance methods.",
+        "evidence": "By contributing these benchmark datasets, we aim to fill a critical gap in the affordance learn- ing community by providing a standard for evaluating the robustness of point cloud-based 3D affordance methods.",
+        "source_section": "introduction",
+        "page_hint": ""
+      },
+      {
+        "claim": "Extending affordance detection to 3D space presents challenges due to the need for accu- rate spatial and depth information.",
+        "evidence": "Extending affordance detection to 3D space presents challenges due to the need for accu- rate spatial and depth information.",
+        "source_section": "introduction",
+        "page_hint": ""
+      },
+      {
+        "claim": "The avail- ability of large-scale 3D object datasets [11, 34, 46] has driven efforts to map affordances directly onto 3D structures [8, 32, 47, 67, 70], aiming to capture complex spatial rela- tionships.",
+        "evidence": "The avail- ability of large-scale 3D object datasets [11, 34, 46] has driven efforts to map affordances directly onto 3D structures [8, 32, 47, 67, 70], aiming to capture complex spatial rela- tionships.",
+        "source_section": "introduction",
+        "page_hint": ""
+      }
+    ],
+    "task_evidence": [
+      {
+        "claim": "Identifying affordance regions on 3D objects from seman- tic cues is essential for robotics and human-machine inter- action.",
+        "evidence": "Identifying affordance regions on 3D objects from seman- tic cues is essential for robotics and human-machine inter- action.",
+        "source_section": "task",
+        "page_hint": ""
+      },
+      {
+        "claim": "Extensive experiments on public datasets and our benchmarks show that GEAL consistently outperforms existing methods across seen and novel object categories, as well as corrupted data, demon- strating robust and adaptable affordance prediction under diverse conditions.",
+        "evidence": "Extensive experiments on public datasets and our benchmarks show that GEAL consistently outperforms existing methods across seen and novel object categories, as well as corrupted data, demon- strating robust and adaptable affordance prediction under diverse conditions.",
+        "source_section": "task",
+        "page_hint": ""
+      },
+      {
+        "claim": "3D affordance learning involves identifying interactive re- gions on objects given semantic cues such as image or tex- tual instruction [7, 10], which is a fundamental competency for intelligent systems [6, 18] to infer how an object can 1GitHub: https://github.com/DylanOrange/geal Clean Add Local If you want to lift the [bag], at which point is your finger most likely to carry the [bag]?",
+        "evidence": "3D affordance learning involves identifying interactive re- gions on objects given semantic cues such as image or tex- tual instruction [7, 10], which is a fundamental competency for intelligent systems [6, 18] to infer how an object can 1GitHub: https://github.com/DylanOrange/geal Clean Add Local If you want to lift the [bag], at which point is your finger most likely to carry the [bag]?",
+        "source_section": "task",
+        "page_hint": ""
+      },
+      {
+        "claim": "3D affordance prediction under varied data noises.",
+        "evidence": "3D affordance prediction under varied data noises.",
+        "source_section": "task",
+        "page_hint": ""
+      },
+      {
+        "claim": "This understanding is vital for applications in robotics and human-machine inter- action such as action prediction, object manipulation, and autonomous decision-making [5, 12, 13, 16].",
+        "evidence": "This understanding is vital for applications in robotics and human-machine inter- action such as action prediction, object manipulation, and autonomous decision-making [5, 12, 13, 16].",
+        "source_section": "task",
+        "page_hint": ""
+      }
+    ],
+    "data_evidence": [
+      {
+        "claim": "Extensive experiments on public datasets and our benchmarks show that GEAL consistently outperforms existing methods across seen and novel object categories, as well as corrupted data, demon- strating robust and adaptable affordance prediction under diverse conditions.",
+        "evidence": "Extensive experiments on public datasets and our benchmarks show that GEAL consistently outperforms existing methods across seen and novel object categories, as well as corrupted data, demon- strating robust and adaptable affordance prediction under diverse conditions.",
+        "source_section": "data",
+        "page_hint": ""
+      },
+      {
+        "claim": "Code and corruption datasets have been made publicly available1.",
+        "evidence": "Code and corruption datasets have been made publicly available1.",
+        "source_section": "data",
+        "page_hint": ""
+      },
+      {
+        "claim": "In view of the limitation of data scarcity to benchmark the robustness of 3D affordance models, we create two datasets: PIAD-Corrupt and LASO-Corrupt from existing commonly used affordance datasets [32, 70].",
+        "evidence": "In view of the limitation of data scarcity to benchmark the robustness of 3D affordance models, we create two datasets: PIAD-Corrupt and LASO-Corrupt from existing commonly used affordance datasets [32, 70].",
+        "source_section": "data",
+        "page_hint": ""
+      },
+      {
+        "claim": "We design these benchmark datasets by incorporating various types of real-world corruptions such as scaling, cropping, etc., to ensure their suitability in evaluating the robustness of 3D affordance models.",
+        "evidence": "We design these benchmark datasets by incorporating various types of real-world corruptions such as scaling, cropping, etc., to ensure their suitability in evaluating the robustness of 3D affordance models.",
+        "source_section": "data",
+        "page_hint": ""
+      },
+      {
+        "claim": "By contributing these benchmark datasets, we aim to fill a critical gap in the affordance learn- ing community by providing a standard for evaluating the robustness of point cloud-based 3D affordance methods.",
+        "evidence": "By contributing these benchmark datasets, we aim to fill a critical gap in the affordance learn- ing community by providing a standard for evaluating the robustness of point cloud-based 3D affordance methods.",
+        "source_section": "data",
+        "page_hint": ""
+      }
+    ],
+    "method_evidence": [
+      {
+        "claim": "In this section, we describe the technical components of our proposed GEAL framework.",
+        "evidence": "In this section, we describe the technical components of our proposed GEAL framework.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "An overview of the full framework is shown in Fig.",
+        "evidence": "An overview of the full framework is shown in Fig.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "3.3, we outline the decod- ing process that derives robust and generalizable affordance predictions from the aligned feature space.",
+        "evidence": "3.3, we outline the decod- ing process that derives robust and generalizable affordance predictions from the aligned feature space.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "Current 3D affordance learning methods suffer from poor generalization due to limited annotated data and exhibit relatively weak robustness owing to limited global semantic capture.",
+        "evidence": "Current 3D affordance learning methods suffer from poor generalization due to limited annotated data and exhibit relatively weak robustness owing to limited global semantic capture.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "In contrast, 2D affordance learning meth- ods [27, 28] leverage 2D foundation models [51, 54] pre- trained on large amounts of data, offering superior gen- eralization and robustness.",
+        "evidence": "In contrast, 2D affordance learning meth- ods [27, 28] leverage 2D foundation models [51, 54] pre- trained on large amounts of data, offering superior gen- eralization and robustness.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "A 3D-2D mapping to lever- age the strengths of 2D foundation models is thus promis- ing.",
+        "evidence": "A 3D-2D mapping to lever- age the strengths of 2D foundation models is thus promis- ing.",
+        "source_section": "method",
+        "page_hint": ""
+      }
+    ],
+    "mechanism_evidence": [
+      {
+        "claim": "3.3, we outline the decod- ing process that derives robust and generalizable affordance predictions from the aligned feature space.",
+        "evidence": "3.3, we outline the decod- ing process that derives robust and generalizable affordance predictions from the aligned feature space.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "However, a direct projection of 3D point clouds onto 2D planes yields sparse 2D points without semantic and depth information that are not useful for feature extrac- tion with 2D foundation models.",
+        "evidence": "However, a direct projection of 3D point clouds onto 2D planes yields sparse 2D points without semantic and depth information that are not useful for feature extrac- tion with 2D foundation models.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "Moreover, 3D Gaussian Splatting offers smoother transitions between points, preserves occlusions and depth cues for a coherent and accurate scene representation.",
+        "evidence": "Moreover, 3D Gaussian Splatting offers smoother transitions between points, preserves occlusions and depth cues for a coherent and accurate scene representation.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "This process establishes a coherent mapping from 3D point clouds and affordance scores to their 2D counterparts, using Gaussian splatting to generate realistic, informative 2D representations that enhance affordance learning.",
+        "evidence": "This process establishes a coherent mapping from 3D point clouds and affordance scores to their 2D counterparts, using Gaussian splatting to generate realistic, informative 2D representations that enhance affordance learning.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "The 3D branch uses PointNet++ [53] for point cloud feature extraction, while the 2D branch em- Ideal sit spot on chair?",
+        "evidence": "The 3D branch uses PointNet++ [53] for point cloud feature extraction, while the 2D branch em- Ideal sit spot on chair?",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "We then perform cross-modality alignment, including Granularity-Adaptive Visual-Textual Fusion and 2D-3D Consistency Alignment, to unify features from different modalities into a shared embedding space (cf.",
+        "evidence": "We then perform cross-modality alignment, including Granularity-Adaptive Visual-Textual Fusion and 2D-3D Consistency Alignment, to unify features from different modalities into a shared embedding space (cf.",
+        "source_section": "method",
+        "page_hint": ""
+      }
+    ],
+    "results_evidence": [
+      {
+        "claim": "Additionally, the 2D backbone DINOV2 [51] remains frozen during training, while the language model RoBERTa [36] has been fine-tuned.",
+        "evidence": "Additionally, the 2D backbone DINOV2 [51] remains frozen during training, while the language model RoBERTa [36] has been fine-tuned.",
+        "source_section": "experiment",
+        "page_hint": ""
+      }
+    ],
+    "ablation_evidence": [],
+    "limitations_evidence": [
+      {
+        "claim": "In conclusion, we present GEAL, a framework that im- proves the generalization and robustness of 3D affordance learning by leveraging large-scale pre-trained 2D mod- els.",
+        "evidence": "In conclusion, we present GEAL, a framework that im- proves the generalization and robustness of 3D affordance learning by leveraging large-scale pre-trained 2D mod- els.",
+        "source_section": "conclusion",
+        "page_hint": ""
+      }
+    ],
+    "equation_candidates": [
+      {
+        "equation": "O(3)",
+        "source_section": "method",
+        "kind_hint": "complexity"
+      }
+    ],
+    "reference_candidates": [],
+    "figure_captions": [
+      {
+        "id": "Figure 1",
+        "caption": "3D affordance prediction under varied data noises.",
+        "page_hint": "p.1",
+        "section_id": "sec:preamble"
+      },
+      {
+        "id": "Fig 1",
+        "caption": "shows an example of the text description and the",
+        "page_hint": "p.2",
+        "section_id": "sec:introduction"
+      },
+      {
+        "id": "Figure 2",
+        "caption": "(Left): Framework Overview. The proposed GEAL consists of two branches: 3D and 2D. The 2D branch is established through",
+        "page_hint": "p.4",
+        "section_id": "sec:methodology"
+      },
+      {
+        "id": "Figure 3",
+        "caption": "Illustration of the Granularity-Adaptive Fusion Mod-",
+        "page_hint": "p.5",
+        "section_id": "sec:methodology"
+      },
+      {
+        "id": "Figure 4",
+        "caption": "Qualitative comparisons between GEAL and LASO [32]",
+        "page_hint": "p.8",
+        "section_id": "sec:datasets"
+      },
+      {
+        "id": "Figure 5",
+        "caption": "Visualization examples of the PIAD-C dataset. We show 7 corruption types across 5 severity levels.",
+        "page_hint": "p.12",
+        "section_id": "sec:method-4"
+      },
+      {
+        "id": "Figure 6",
+        "caption": "Visualization examples of the LASO-C dataset. We show 7 corruption types across 5 severity levels.",
+        "page_hint": "p.13",
+        "section_id": "sec:method-4"
+      },
+      {
+        "id": "Figure 7",
+        "caption": "Qualitative comparisons between GEAL and LASO [32] on the PIAD-C dataset, highlighting the superior robustness of our",
+        "page_hint": "p.17",
+        "section_id": "sec:method-4"
+      },
+      {
+        "id": "Figure 8",
+        "caption": "Qualitative comparisons between GEAL and LASO [32] on the PIAD dataset.",
+        "page_hint": "p.18",
+        "section_id": "sec:method-4"
+      }
+    ],
+    "table_captions": [
+      {
+        "id": "Table 1",
+        "caption": "The overall results of all comparative methods on PIAD",
+        "page_hint": "p.6",
+        "section_id": "sec:methodology"
+      },
+      {
+        "id": "Table 2",
+        "caption": "The overall results of all comparative methods on the",
+        "page_hint": "p.6",
+        "section_id": "sec:methodology"
+      },
+      {
+        "id": "Table 3",
+        "caption": "Comparison of different methods under various corrup-",
+        "page_hint": "p.7",
+        "section_id": "sec:method-2"
+      },
+      {
+        "id": "Table 4",
+        "caption": "Comparison of different methods under various corrup-",
+        "page_hint": "p.7",
+        "section_id": "sec:method-2"
+      },
+      {
+        "id": "Table 5",
+        "caption": "Ablation study on the impact of different components",
+        "page_hint": "p.7",
+        "section_id": "sec:method-2"
+      },
+      {
+        "id": "Table 6",
+        "caption": "Ablation study on the configuration of Gaussian Splatting",
+        "page_hint": "p.8",
+        "section_id": "sec:datasets"
+      },
+      {
+        "id": "Table 7",
+        "caption": "Detailed statistics of the proposed PIAD-C dataset, show-",
+        "page_hint": "p.10",
+        "section_id": "sec:appendix"
+      },
+      {
+        "id": "Table 8",
+        "caption": "Detailed statistics of the proposed LASO-C dataset,",
+        "page_hint": "p.10",
+        "section_id": "sec:appendix"
+      },
+      {
+        "id": "Table 9",
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the PIAD dataset [70]. AUC and aIOU scores",
+        "page_hint": "p.15",
+        "section_id": "sec:method-4"
+      },
+      {
+        "id": "Table 10",
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the PIAD dataset [70]. AUC and aIOU",
+        "page_hint": "p.15",
+        "section_id": "sec:method-4"
+      },
+      {
+        "id": "Table 11",
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the LASO dataset [32]. AUC and aIOU",
+        "page_hint": "p.16",
+        "section_id": "sec:method-4"
+      },
+      {
+        "id": "Table 12",
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the LASO dataset [32]. AUC and aIOU",
+        "page_hint": "p.16",
+        "section_id": "sec:method-4"
+      }
+    ],
+    "sections": [
+      {
+        "name": "preamble",
+        "length": 349,
+        "preview": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency Dongyue Lu Lingdong Kong Tianxin Huang Gim Hee Lee National University of Singapore dongyue.lu@u.nus.edu lingdong@comp.nus.edu.sg {huangtx, gimhee.lee}@nus.edu.sg  Cod"
+      },
+      {
+        "name": "abstract",
+        "length": 1435,
+        "preview": "Identifying affordance regions on 3D objects from seman- tic cues is essential for robotics and human-machine inter- action. However, existing 3D affordance learning methods struggle with generalization and robustness due to limited annotat"
+      },
+      {
+        "name": "introduction",
+        "length": 8270,
+        "preview": "3D affordance learning involves identifying interactive re- gions on objects given semantic cues such as image or tex- tual instruction [7, 10], which is a fundamental competency for intelligent systems [6, 18] to infer how an object can 1G"
+      },
+      {
+        "name": "method",
+        "length": 42252,
+        "preview": "In this section, we describe the technical components of our proposed GEAL framework. An overview of the full framework is shown in Fig. 2. Given an instruction Q and an object point cloud P ∈RN×3 with N points, GEAL pre- dicts an affordanc"
+      },
+      {
+        "name": "experiment",
+        "length": 453,
+        "preview": "4.1. Experimental Settings Implementation Details. Our model is implemented us- ing PyTorch [52] and is trained using the Adam optimizer [22] with an initial learning rate of 1 × 10−4 for 50 epochs on a single NVIDIA A5000 GPU (with 24 GB m"
+      },
+      {
+        "name": "data",
+        "length": 12275,
+        "preview": "We conduct experiments on LASO [32] and PIAD [70], both providing paired affordance and point cloud data. LASO contains 19, 751 point cloud-question pairs over 8, 434 objects (23 classes, 17 affordance cate- gories) with Seen and Unseen spl"
+      },
+      {
+        "name": "conclusion",
+        "length": 747,
+        "preview": "In conclusion, we present GEAL, a framework that im- proves the generalization and robustness of 3D affordance learning by leveraging large-scale pre-trained 2D mod- els. Through a dual-branch architecture with Gaussian splatting, GEAL maps"
+      },
+      {
+        "name": "appendix",
+        "length": 2916,
+        "preview": "A. Corrupt Data Benchmark A.1. Corruption & Severity Level Settings . . . . A.2. The PIAD-C Dataset . . . . . . . . . . . . . A.3. The LASO-C Dataset . . . . . . . . . . . . . B. Benchmark Configuration B.1. Datasets . . . . . . . . . . . ."
+      },
+      {
+        "name": "references",
+        "length": 16196,
+        "preview": "[1] Emanuele Aiello, Diego Valsesia, and Enrico Magli. Cross- modal learning for image-guided point cloud shape comple- tion. In Advances in Neural Information Processing Systems, pages 37349–37362, 2022. 6, 14 [2] Mathilde Caron, Hugo Touv"
+      }
+    ],
+    "section_texts": {
+      "preamble": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency Dongyue Lu Lingdong Kong Tianxin Huang Gim Hee Lee National University of Singapore dongyue.lu@u.nus.edu lingdong@comp.nus.edu.sg {huangtx, gimhee.lee}@nus.edu.sg  Code & Demo: dylanorange.github.io/projects/geal I Dataset & Benchmark: huggingface.co/datasets/dylanorange/geal",
+      "abstract": "Identifying affordance regions on 3D objects from seman- tic cues is essential for robotics and human-machine inter- action. However, existing 3D affordance learning methods struggle with generalization and robustness due to limited annotated data and a reliance on 3D backbones focused on geometric encoding, which often lack resilience to real- world noise and data corruption. We propose GEAL, a novel framework designed to enhance the generalization and robustness of 3D affordance learning by leveraging large-scale pre-trained 2D models. We employ a dual- branch architecture with Gaussian splatting to establish consistent mappings between 3D point clouds and 2D rep- resentations, enabling realistic 2D renderings from sparse point clouds. A granularity-adaptive fusion module and a 2D-3D consistency alignment module further strengthen cross-modal alignment and knowledge transfer, allowing the 3D branch to benefit from the rich semantics and gen- eralization capacity of 2D models. To holistically assess the robustness, we introduce two new corruption-based benchmarks: PIAD-C and LASO-C. Extensive experiments on public datasets and our benchmarks show that GEAL consistently outperforms existing methods across seen and novel object categories, as well as corrupted data, demon- strating robust and adaptable affordance prediction under diverse conditions. Code and corruption datasets have been made publicly available1.",
+      "introduction": "3D affordance learning involves identifying interactive re- gions on objects given semantic cues such as image or tex- tual instruction [7, 10], which is a fundamental competency for intelligent systems [6, 18] to infer how an object can 1GitHub: https://github.com/DylanOrange/geal Clean Add Local If you want to lift the [bag], at which point is your finger most likely to carry the [bag]? Add Global Drop Local Drop Global Rotate Jitter Scale Ours LASO LASO Ours Ours LASO LASO Ours Ours LASO LASO Ours Ours LASO LASO Ours Figure 1. 3D affordance prediction under varied data noises. Given a textual prompt, previous methods like LASO [32] (right side of each example) exhibit reduced robustness across different corruption types. In contrast, our proposed method, GEAL (left side of each example), maintains high accuracy and generaliza- tion across these challenging scenarios by effectively transferring knowledge from a large-scale pre-trained 2D foundation model, enhancing robustness and adaptability under diverse conditions. be used or manipulated [27, 42, 70]. This understanding is vital for applications in robotics and human-machine inter- action such as action prediction, object manipulation, and autonomous decision-making [5, 12, 13, 16]. For exam- ple, a robot equipped with affordance knowledge can intel- ligently interact with objects in its environment by deter- mining where to grasp a handle or press a button. arXiv:2412.09511v1 [cs.CV] 12 Dec 2024 Despite its potential, 3D affordance learning still faces significant challenges. Due to limited annotated data, 3D affordance models generally show poorer generalization than their 2D counterparts which benefit from abundant la- beled data and large-scale pretraining [28]. Additionally, 3D models often rely on backbones that focus on posi- tional and geometric encoding, limiting their capacity to capture global semantic content and making them vulner- able to noisy or corrupted data from sensor inaccuracies, scene complexity, or processing artifacts in real-world set- tings [23, 37, 56, 57, 66]. These issues further hinder the robustness and adaptability of current 3D affordance learn- ing methods. In this paper, we introduce a novel framework GEAL, which is designed to enhance the generalization and robust- ness of 3D affordance learning through a dual-branch archi- tecture that leverages the correspondence between 2D and 3D data. GEAL generates realistic 2D renderings directly from sparse 3D data by employing 3D Gaussian splatting (3DGS) [20] to build consistent mappings between 3D point clouds and 2D representations. This approach effectively creates a 2D branch from purely 3D data, which allows us to utilize the generalization capabilities and rich semantic knowledge of large-scale pre-trained 2D foundation mod- els [51, 54] to enhance 3D affordance predictions. We further introduce a granularity-adaptive fusion mod- ule, and a 2D-3D consistency alignment module to ensure robust multi-modal alignment. The granularity-adaptive fu- sion module dynamically integrates multi-level visual and textual features to address affordance queries at various scales and granularities. The 2D-3D consistency align- ment module concurrently establishes reliable cross-modal correspondence with feature embeddings augmented to the Gaussian primitives of 3DGS, fostering effective knowl- edge transfer across branches, and enhancing the general- ization and robustness of the 3D branch by enforcing con- sistent alignment between 2D and 3D modalities. In view of the limitation of data scarcity to benchmark the robustness of 3D affordance models, we create two datasets: PIAD-Corrupt and LASO-Corrupt from existing commonly used affordance datasets [32, 70]. We design these benchmark datasets by incorporating various types of real-world corruptions such as scaling, cropping, etc., to ensure their suitability in evaluating the robustness of 3D affordance models. By contributing these benchmark datasets, we aim to fill a critical gap in the affordance learn- ing community by providing a standard for evaluating the robustness of point cloud-based 3D affordance methods. Fig. 1 shows an example of the text description and the corresponding 3D affordance on 3D point clouds that are corrupted under various noise types. We validate the generalization and robustness of our GEAL on both standard and corruption-based benchmarks, demonstrating that our approach consistently outperforms recent methods in all scenarios. Our experiments confirm that our GEAL effectively transfers knowledge from seen to unseen data and maintains high performance even under corruption, underscoring the adaptability of our framework across challenging scenarios. In summary, the main contributions of this work can be summarized as follows: • We propose GEAL, a novel approach for generalizable 3D affordance learning. By employing 3DGS, we de- velop a 2D affordance prediction branch for 3D point clouds, harnessing the robust generalization and seman- tic understanding of pre-trained 2D foundation models. • We propose granularity-adaptive fusion and 2D-3D con- sistency alignment to integrate and propagate knowledge across the dual-branch architecture, and enhance the gen- eralizability of the 3D branch using 2D knowledge. • We establish two corruption-based benchmarks: PIAD-C and LASO-C, to holistically evaluate the robustness of 3D affordance learning under real-world scenarios, contribut- ing a standard to the community for robustness analysis. • Extensive experiments validate the strong performance of our approach on both mainstream and corruption 3D af- fordance learning benchmarks, proving its generalization ability and robustness across diverse conditions. 2D Affordance Learning. Affordances refer to potential actions that objects or environments enable for an observer, based on their properties[5, 9, 25, 48]. Early methods for affordance detection mainly try to identify interaction re- gions in images and videos [29, 40, 58, 61, 71], though these often lacked precise localization of affordance-relevant ob- ject parts. To address this, later research improved affor- dance localization [4, 10, 27, 35, 39, 41, 42, 49, 70] given demonstration 2D data. Recently, large-scale pre-trained models [2, 54] have aligned visual features with affordance- related textual descriptions, reducing dependence on man- ual labels and enhancing affordance prediction in new contexts [39, 44, 45, 50]. Building on this, some stud- ies [14, 27, 28] turn to leverage foundation models to gen- eralize affordance detection to novel objects and views. 3D Affordance Learning. Extending affordance detection to 3D space presents challenges due to the need for accu- rate spatial and depth information. While some studies use 2D data to detect 3D affordance regions [5, 9, 29], they of- ten struggle with precise 3D interaction sites. The avail- ability of large-scale 3D object datasets [11, 34, 46] has driven efforts to map affordances directly onto 3D structures [8, 32, 47, 67, 70], aiming to capture complex spatial rela- tionships. Recent methods [19, 32, 50] leverage 2D visual and language models for open-vocabulary affordance detec- tion, enhancing generalization without fixed label sets. De- spite these advancements, achieving robust generalization in 3D remains challenging, as 3D backbones still lack the generalization capabilities of 2D foundation models, thus, our method leverages large-scale 2D foundation models to improve 3D affordance generalization. Robustness for 3D Affordance Learning. Real-world 3D affordance learning faces inevitable challenges from point cloud corruptions caused by scene complexity, sensor inac- curacies, and processing errors [17, 31, 57, 66]. Existing studies aim to improve and benchmark robustness against noise and corruption in 3D perception across real-world scenarios [15, 21, 23, 24, 26, 63, 64]. However, affordance learning uniquely requires precise identification of interac- tive regions under variable and degraded data conditions. To our knowledge, this work is the first to specifically ad- dress robustness in 3D affordance learning, providing a tar- geted approach to enhance reliability across diverse envi- ronments.",
+      "method": "In this section, we describe the technical components of our proposed GEAL framework. An overview of the full framework is shown in Fig. 2. Given an instruction Q and an object point cloud P ∈RN×3 with N points, GEAL pre- dicts an affordance score y ∈RN, where each value in y indicates the likelihood that a corresponding point supports the specified functionality. In Sec. 3.1, we employ Gaus- sian splatting as a cross-modal mapping to bridge the 2D and 3D modalities, establishing a 2D branch to leverage the generalization and robustness of large pre-trained 2D mod- els. Sec. 3.2 details our cross-modal alignment strategy, in- corporating both granularity-adaptive visual-text fusion and 2D-3D consistency alignment to unify these modalities in the embedding space. In Sec. 3.3, we outline the decod- ing process that derives robust and generalizable affordance predictions from the aligned feature space. 3.1. 3D-2D Mapping with Gaussian Splatting Motivation. Current 3D affordance learning methods suffer from poor generalization due to limited annotated data and exhibit relatively weak robustness owing to limited global semantic capture. In contrast, 2D affordance learning meth- ods [27, 28] leverage 2D foundation models [51, 54] pre- trained on large amounts of data, offering superior gen- eralization and robustness. A 3D-2D mapping to lever- age the strengths of 2D foundation models is thus promis- ing. However, a direct projection of 3D point clouds onto 2D planes yields sparse 2D points without semantic and depth information that are not useful for feature extrac- tion with 2D foundation models. To overcome this issue, we adopt 3D Gaussian Splatting [20] which represents 3D scenes as learnable Gaussian primitives for realistic, dif- ferentiable and high-speed rendering from arbitrary view- points. This approach allows us to synthesize realistic 2D images from sparse point clouds, preserving crucial seman- tic and depth information for downstream affordance learn- ing tasks. Moreover, 3D Gaussian Splatting offers smoother transitions between points, preserves occlusions and depth cues for a coherent and accurate scene representation. Gaussian Initialization. In 3D Gaussian Splatting, each Gaussian primitive is characterized by its 3D position µ rep- resented by a 3D coordinate, a covariance matrix Σ which defines its shape and spread, spherical harmonic parameters c representing its color, and an opacity value α that indicates its transparency. To render 3D Gaussian primitives into 2D image planes, we apply point-based α-blending using a tile- based rasterizer for efficient rendering. The rendered color at each pixel v is calculated as follows: C(v) = i∈N ciαi Yi−1 j=1(1 −αj), (1) where ci is the color of the i-th Gaussian, N represents the Gaussians within the tile, and αi = oiG2D (v). oi is opacity of the i-th Gaussian and G2D (·) represents the function of the i-th Gaussian projected onto 2D. Similarly, a depth map can be rendered as: D(v) = i∈N diαi Yi−1 j=1(1 −αj), (2) where di denotes the depth of the i-th Gaussian primitive under the provided camera pose. To ensure that the rendered images accurately reflect the geometry of the input point cloud P, we set the Gaussian mean positions to match the point coordinates, i.e. µ = P. The covariance Σ and opacity α are manually adjusted and then kept fixed during training to preserve the original ge- ometry. Using the depth map from Eq. (2) with V camera poses and a predefined color map, we obtain realistic im- ages I ∈RV ×3×H×W that preserve both semantics and spatial information of the original point cloud, effectively bridging the 3D-2D gap. Treating the affordance score y ∈[0, 1] as grayscale color, we assign the color of each Gaussian to match its affordance score, i.e. c = y. We gen- erate 2D affordance masks y2D ∈RV ×H×W , where each pixel represents the affordance score of the associated 3D point. This process establishes a coherent mapping from 3D point clouds and affordance scores to their 2D counterparts, using Gaussian splatting to generate realistic, informative 2D representations that enhance affordance learning. Encoding. Our GEAL framework as shown in Fig. 2 com- prises a 2D and a 3D branch with backbones ϕ2D(·) and ϕ3D(·), respectively. The 3D branch uses PointNet++ [53] for point cloud feature extraction, while the 2D branch em- Ideal sit spot on chair? Given depth map of a chair of [front] view, ideal sit spot on chair? 𝐐2D Gaussian Initialization GAFM GAFM Consistency Alignment 𝜔3D 𝜔2D 𝜙3D 𝜙2D 𝐟3D 𝐟2D 𝐡3D 𝐡2D 𝐟enh 𝐟enh 𝐡3D 𝐡2D 𝐡enh 𝐡enh 𝐟enh 𝐟enh ො𝐲3D ො𝐲2D Consistency Alignment 𝐟enh Downsampler Upsampler 𝐟enh 𝐟cam 𝐟cam 𝐟cam 3D−2D ℒconsis Figure 2. (Left): Framework Overview. The proposed GEAL consists of two branches: 3D and 2D. The 2D branch is established through 3D Gaussian Splatting to leverage the generalization capabilities of large pre-trained 2D models (cf. 3.1). We then perform cross-modality alignment, including Granularity-Adaptive Visual-Textual Fusion and 2D-3D Consistency Alignment, to unify features from different modalities into a shared embedding space (cf. 3.2). Finally, we decode generalizable affordance from this embedding space (cf. 3.3). (Right): Architecture of the 2D-3D Consistency Alignment Module. This module maps features from 2D and 3D modalities into a shared embedding space and enforces consistency alignment to enable effective knowledge transfer across branches. ploys DINOV2 [51] for image features. Both networks pro- duce multi-scale features at various granularities. At each scale i, we extract features: f 3D = ϕ3D i (P), f 2D = ϕ2D i (I), (3) where f 3D ∈RB×C3D i ×NP i and f 2D ∈RB×V ×C2D×NI. B is the batch size, V is the number of views, and C3D and C2D are feature dimensions. N P i is the number of point in scale i, and N I is image patch length. Note that the 3D spatial resolution N P i and C3D differ between different scales due to the usage of PointNet++ [53]. We process the input prompt Q using lightweight lan- guage models ω3D(·) and ω2D(·) that share the same archi- tecture. For the 2D input, we modify the prompt to Q2D by adding: “Given a depth map of a [object] in [view]”, constructing view-dependent prompt to enhance context understanding. The text embeddings are: h3D = ω3D(Q), h2D = ω2D(Q2D), (4) where h3D ∈RB×Ctxt×L and h2D ∈RB×V ×Ctxt×L, with L as the sequence length. 3.2. Cross-Modal Consistency Alignment Since point cloud, image, and text features are embedded in distinct spaces, we design alignment modules to map these multi-modal features into a shared embedding space. First, we fuse visual features at varying granularities with tex- tual features through Granularity-Adaptive Visual-Textual Fusion, supporting affordance learning conditioned on in- structions across different scales. Subsequently, we prop- agate knowledge from the 2D to 3D branch via a 2D-3D Consistency Alignment by enforcing consistency between 2D and 3D features. Granularity-Adaptive Visual-Textual Fusion. Both 2D and 3D backbones capture different levels of granularity, with lower layers focusing on fine details and higher lay- ers providing broader context. Since affordances can span multiple object parts, leveraging features at various gran- ularities is advantageous. To achieve this, we introduce Granularity-Adaptive Fusion Module (GAFM), which in- tegrates multi-granularity visual features with textual cues via Flexible Granularity Feature Aggregation and Text- Conditioned Visual Alignment. These mechanisms allow the model to adaptively fuse features across different gran- ularities, enhancing affordance prediction in response to specific instructions. An illustration of the Granularity- Adaptive Fusion Module is provided in Fig. 3. Flexible Granularity Feature Aggregation. This mecha- nism aims to fuse visual features from different granulari- ties. Taking the 2D branch as an example, we concatenate feature maps from the last m levels, forming an input ten- sor f 2D con ∈RB×V ×(m×C2D)×N I. Inspired by previous works [28, 72], we then compute adaptive soft weights to regulate the contribution of each feature level, enabling the model to adapt to varying levels of detail. These weights are com- puted via a gating function with learned noise, introducing perturbations that enhance adaptability: W = Softmax \u0000f 2D con · Wg + σ · ϵ (5) where Wg ∈R(m×C2D)×m is a trainable weight matrix, W ∈RB×m represents the concatenation of weights wi for each feature level, σ is a learned standard deviation con- . . . Gate Noise 𝐟\"# 𝐟$%& Cross-Attention MLP MLP Softmax Cross-Attention 𝐟'(% 𝐟\"# 𝐡\"# (a) (b) Figure 3. Illustration of the Granularity-Adaptive Fusion Mod- ule, it consists of a Flexible Granularity Feature Aggregation mechanism (a) and a Text-Conditioned Visual Alignment mech- anism (b), we take the 2D branch as an example. trolling the noise scale, and ϵ ∼N(0, 1) is Gaussian noise. These weights balance the influence of each feature level, enabling affordance reasoning across different granularities. The fused feature map is then obtained by applying the adaptive weights to features from each level: f 2D = i=1 wi ⊙f 2D i , (6) where ⊙denotes element-wise multiplication and wi ∈W. This adaptive aggregation yields a robust feature representa- tion across varying conditions to enhance the generalization ability of the model. Text-Conditioned Visual Alignment. This module is pro- posed to integrate visual features with the textual instruc- tion. we follow [32, 62] to feed f 2D and h2D into a trans- former block. We first enhance the textual features h2D with visual features f 2D through cross-attention, followed by re- finement with two multilayer perceptrons (MLPs). We then acquire the visual features f 2D enh ∈RB×Ctxt×N I by querying the refined textual features with cross-attention. We thus en- sure that the 2D visual features maintain their spatial struc- ture while embedding the question-relevant information. In the 3D branch, we align textual features with multi- granularity visual features in a similar manner. How- ever, due to varying spatial resolutions and feature dimen- sions across scales in PointNet++ [53], directly concatenat- ing all scales’ features and computing soft weights as in Eq. (5) is not feasible. To address this, we first apply Text- Conditioned Visual Alignment to the 3D visual features at each scale, then upsample them to a uniform resolution. Fi- nally, we perform Flexible Granularity Feature Aggregation on these upsampled features to produce the aggregated vi- sual representation. 2D-3D Consistency Alignment. 2D features retain rich se- mantic context and strong generalization via the pre-trained backbone [51], while 3D features preserve geometric and spatial details, compensating for the loss of 2D informa- tion caused by self-occlusions. To propagate the knowledge inherently, we introduce Consistency Alignment Module (CAM) to ensure mutual alignment and knowledge trans- fer from 2D to 3D spaces. Specifically, as shown in right part of Fig. 2, we map f 3D enh and f 2D enh into a shared embedding space. Given the 2D-3D correspondence, regions in 2D and 3D representations that map to the same spatial areas should exhibit similar feature representations. By enforcing this consistency, we facilitate 2D-3D knowledge propagation to enhance the understand- ing of affordances across both modalities of the model. To align 3D and 2D features in the same embed- ding space, we employ a down-sampler consisting of two Conv1D layers that reduces the feature dimension of f 3D enh to f 3D cam ∈RB×Ccam×N. This processed feature acts as the rep- resentation for each point. We then leverage the established 2D-3D mapping using Gaussian splatting to project these point features into 2D. For each Gaussian, we treat its point feature vector as an inherent attribute. The 2D feature at pixel v is then rendered as: F(v) = i∈N fiαi i−1 j=1 (1 −αj), (7) where fi is the feature of the i-th Gaussian, αi is its opacity, and F(v) is the resulting semantic feature at pixel v. Similarly, we map the 2D features into the same em- bedding space using an up-sampler consisting of three Conv2D layers, which upsamples the spatial resolution of f 2D enh while also reducing its feature dimension to f 2D cam ∈ RB×V ×Ccam×H×W . V is the number of views and H and W is the spatial dimensions. Given the pixel positions from all V number of H∗M feature maps as M, we can define the 3D-2D projected feature as f 3D−2D cam = {F(v)|v ∈M}. We then enforce a consistency constraint by minimizing the dif- ference between the aligned 3D-2D features using L2 loss: Lconsis = MSE(f 3D−2D cam , f 2D cam). (8) This consistency loss Lconsis encourages the model to main- tain similar representations in both 2D and 3D spaces, effec- tively aligning affordance knowledge across domains. This alignment supports 2D-3D knowledge propagation, ensur- ing that the information learned in the 2D domain benefits the 3D features. 3.3. Decoding Generalizable Affordance The affordance scores is decoded under the condition of affordance instructions. Through transformer decoder, the textual features attend to enhanced visual features, focusing the model on specific object parts for accurate predictions. Our decoder architecture is shared across both 2D and 3D branches. In the 2D branch, textual features h2D and en- hanced visual features f 2D enh are processed through a 3-layer transformer decoder. Here, h2D serves as the query, and f 2D enh acts as key and value, yielding updated textual features h2D enh. Each layer comprises self-attention to refine textual relationships and cross-attention to guide focus toward rel- evant visual regions. After the transformer decoder, these enhanced textual features serve as dynamic kernels to predict affordance scores from visual features. The final affordance prediction ˆy2D is obtained by multiplying h2D enh with f 2D enh, followed by a sigmoid activation: ˆy2D = sigmoid \u0000h2D enh · f 2D enh (9) where ˆy2D ∈RN denotes affordance scores. Training. We employ a combination of Binary Cross- Entropy (BCE) and Dice loss to guide the affordance score prediction in each branch, addressing both class imbalance and segmentation accuracy. For the 2D branch, the loss function is: L2D = L2D BCE + L2D Dice, (10) where L2D BCE minimizes discrepancies between predicted and true affordance scores, and L2D Dice improves the overlap between predicted and ground truth regions by maximizing intersection over union. We adopt a two-stage training approach. We train the 2D branch in the first stage, optimizing it for robust fea- ture extraction and affordance decoding. Except for the CAM (Conisistency Alignment Module), all layers in the 2D branch are frozen in the second stage training. This approach allows the 3D branch to leverage fixed 2D fea- tures while adapting to 3D-specific characteristics. Conse- quently, the loss function for the 3D branch becomes: L3D = L3D BCE + L3D Dice + Lconsis. (11) During inference, only the 3D branch is used, ensuring efficient and lightweight affordance prediction. 3.4. Corrupt Data Benchmark To facilitate robust 3D affordance learning across diverse real-world scenarios, we establish two 3D affordance ro- bustness benchmarks: PIAD-C and LASO-C based on the test sets of the commonly used datasets PIAD and LASO following [56]. We apply seven types of corruptions – 1Add Global, 2Add Local, 3Drop Global, 4Drop Local, 5Rotate, Table 1. The overall results of all comparative methods on PIAD [70]. Seen and Unseen are two partitions of the dataset. AUC and aIOU are shown in percentage. The best and 2nd best scores from each metric are highlighted in bold and underlined, respectively. Type aIoU ↑ AUC ↑ SIM ↑ MAE ↓ Seen MBDF [60] 9.3 74.9 0.415 0.143 PMF [73] 10.1 75.1 0.425 0.141 FRCNN [69] 12.0 76.1 0.429 0.136 ILN [3] 11.5 75.8 0.427 0.137 PFusion [68] 12.3 77.5 0.432 0.135 XMF [1] 12.9 78.2 0.441 0.127 IAGNet [70] 20.5 84.9 0.545 0.098 LASO [32] 19.7 84.2 0.590 0.096 GEAL (Ours) 22.5 85.0 0.600 0.092 Unseen MBDF [60] 4.2 58.2 0.325 0.213 PMF [73] 4.7 60.3 0.330 0.211 FRCNN [69] 5.1 61.9 0.332 0.195 ILN [3] 4.7 59.7 0.325 0.207 PFusion [68] 5.3 61.9 0.330 0.193 XMF [1] 5.7 62.6 0.342 0.188 IAGNet [70] 8.0 71.8 0.352 0.127 LASO [32] 8.0 69.2 0.386 0.118 GEAL (Ours) 8.7 72.5 0.390 0.102 Table 2. The overall results of all comparative methods on the LASO dataset [32]. Seen and Unseen are two partitions of the dataset. Results marked with * denote our reproduced results, fol- lowing the data split reported in LASO [32]. AUC and aIOU are shown in percentage. The best and 2nd best scores from each met- ric are highlighted in bold and underlined, respectively. Type aIoU ↑ AUC ↑ SIM ↑ MAE ↓ Seen ReferTrans [30] 13.7 79.8 0.497 0.124 ReLA [33] 15.2 78.9 0.532 0.118 3D-SPS [43] 11.4 76.2 0.433 0.138 IAGNet [70] 17.8 82.3 0.561 0.109 LASO [32] 20.8 87.3 0.629 0.093 LASO* [32] 19.7 85.2 0.600 0.097 GEAL (Ours) 22.0 86.7 0.634 0.092 Unseen ReferTrans [30] 10.2 69.1 0.432 0.145 ReLA [33] 10.7 69.7 0.429 0.144 3D-SPS [43] 7.9 68.8 0.402 0.158 IAGNet [70] 12.9 77.8 0.443 0.129 LASO [32] 14.6 80.2 0.507 0.119 LASO* [32] 15.6 79.9 0.549 0.108 GEAL (Ours) 16.7 80.9 0.567 0.106 6Scale, and 7Jitter – each with five severity levels. This re- sults in a total of 4, 890 object-affordance pairings, compris- ing 17 affordance categories and 23 object categories with 2, 047 distinct object shapes. More details are provided in the supplementary material. 1. Randomly choose the number of local regions C ∼ U{1, 8}. 2. For each region i: * Randomly select a local center. * Assign a cluster size Ni. * Drop the Ni-nearest neighbor points to the center. 3. Repeat for C regions. – Severity Levels: The total number of points to drop K is: K ∈{100, 200, 300, 400, 500}. • Add Global – Description: Uniformly samples additional points in- side a unit sphere and appends them to the point cloud. The added points are treated as noise and assigned a label of 0. – Method: Sample K random points within a unit sphere. – Severity Levels: The total number of added points K is: K ∈{10, 20, 30, 40, 50}. • Add Local – Description: Adds clusters of points around randomly selected local regions. The added points are treated as noise and assigned a label of 0. 1. Shuffle points and select C ∼U{1, 8} as the num- ber of local centers. 2. For each center i: * Define a cluster size Ni. * Generate neighboring points’ coordinates from: N(µi, σ2 i I), where µi is the i-th local center, and σi U(0.075, 0.125). 3. Append generated points to the cloud one cluster at a time. – Severity Levels: The total number of added points K is: K ∈{100, 200, 300, 400, 500}. A.2. The PIAD-C Dataset Our proposed PIAD-C dataset is constructed from the test set of the Seen partition in PIAD [70], specifically designed to evaluate the robustness of affordance detection models under various corruption scenarios. This dataset includes a total of 2, 474 object-affordance pairings, representing 17 affordance categories and 23 object categories, and with 1, 012 distinct clean object shapes. Comprehensive statis- tics, detailing object categories, their corresponding affor- dance categories, and the number of object-affordance pair- ings, are presented in Tab. 7. We include additional visual- ization examples for the PIAD-C dataset in Fig. 5. A.3. The LASO-C Dataset Our proposed LASO-C dataset is derived from the test set of the Seen partition in LASO [32], focusing on evaluat- ing model robustness against point cloud corruptions. This dataset comprises 2, 416 object-affordance pairings, cover- ing 17 affordance categories and 23 object categories, with a total of 1, 035 distinct clean object shapes. The comprehensive statistics, detailing object categories, their corresponding affordance categories, and the number of object-affordance pairings, are presented in Tab. 8. We include additional visualization examples for the LASO-C dataset in Fig. 6. B. Benchmark Configuration In this section, we elaborate in more detail on the configura- tions and evaluations of the proposed robust 3D affordance learning benchmark. B.1. Datasets We conduct experiments primarily on the LASO[32] and PIAD[70] datasets, both of which provide paired affordance and point cloud data for evaluating 3D affordance learning. LASO. This dataset is a pioneering benchmark designed to enable language-guided affordance segmentation of 3D objects. It includes 19, 751 point cloud-question pairs across 8, 434 unique object shapes, spanning 23 object categories and 17 affordance types. Derived from 3D- AffordanceNet [8], the dataset pairs 3D object point clouds with questions that were carefully crafted by human ex- perts and augmented using GPT-4. This process incorpo- rates principles of contextual enrichment, concise phrasing, and structural diversity, enhancing the linguistic variety and complexity of the dataset. The LASO dataset introduces two distinct evaluation set- tings: • Seen Setting: Models are trained and tested on overlap- ping object-affordance combinations, ensuring that both the object classes and affordance types in the training set are also present in the test set. • Unseen Setting: This setting is designed to evaluate gen- eralization capabilities. Certain object-affordance com- binations (e.g., “grasp-mug”) are excluded during train- ing but appear in testing. This setting challenges models to transfer affordance knowledge learned from seen com- binations (e.g., “grasp-bag”) to novel combinations, pro- moting robust generalization. These settings promote a comprehensive evaluation of models’ abilities to generalize affordance knowledge to un- seen object-affordance pairings, a critical aspect for real- world deployment. The dataset also emphasizes diverse affordance scales and shapes, presenting significant chal- lenges for perception models. By addressing the se- mantic limitations of traditional visual-only 3D affordance datasets, LASO bridges the gap between 3D perception and natural language understanding, encouraging cross-modal learning. This integration fosters advancements in embod- ied AI, enabling tasks that require nuanced reasoning and action in real-world environments. PIAD. The Point-Image Affordance Dataset (PIAD) [70] is specifically curated to advance the task of grounding 3D object affordances using 2D interactions. PIAD consists of 7, 012 point clouds and 5, 162 images, spanning 23 ob- ject classes and 17 affordance categories. Unlike other datasets, PIAD pairs point clouds with images that demon- strate corresponding affordances. For example, a point cloud of a “Chair” affords “Sit,” and its paired image de- picts a person sitting on a chair. These cross-modal pairings ensure consistency in affordance relationships while lever- aging distinct modalities. PIAD introduces two distinct evaluation settings: • Seen Setting: In this setting, both objects and affordances in the training and testing sets are consistent. Point clouds and images of the same object categories and affordance types are included during training, allowing models to learn affordance relationships in a supervised manner. This standard evaluation setting enables benchmarking on familiar object-affordance combinations. • Unseen Setting: The Unseen partition presents a more challenging evaluation by excluding certain object cate- gories from the training set entirely. For instance, some object categories are entirely unseen during training. This partition tests the ability of methods to transfer affordance knowledge across completely novel object instances and contexts, simulating real-world scenarios where interac- tion data is sparse or varied. Annotations in PIAD include detailed affordance labels Clean Rotation Jitter Scale Drop Local Drop Global Add Local Add Global Level 0 Level 1 Level 2 Level 3 Level 4 Ideal sit spot on chair? Figure 5. Visualization examples of the PIAD-C dataset. We show 7 corruption types across 5 severity levels. for point clouds, represented as heatmaps indicating the likelihood of affordance at each point. Paired images are annotated with bounding boxes for interactive subjects and objects, along with affordance category labels. This com- prehensive annotation schema supports diverse affordance- learning paradigms and provides a robust benchmark for evaluating models in both Seen and Unseen scenarios. Note that PIAD does not include language annotations. Since PIAD and LASO share the same object classes, affor- dance categories, and the same 58 affordance-object pair- ings, we reuse LASO’s language annotations for PIAD. For each object and affordance category label in PIAD, we ran- domly select a question from LASO’s question dataset cor- responding to that affordance-object pairing. B.2. Evaluation Metrics To comprehensively evaluate the performance of our method, we employ four widely used metrics: AUC, aIoU, SIM, and MAE. Each metric is designed to assess differ- ent aspects of affordance prediction, providing a robust and multi-faceted evaluation framework. Below, we detail the formulation and significance of each metric: • Area Under the ROC Curve (AUC) [38]: AUC mea- sures the model’s ability to distinguish between regions of high and low affordance saliency on the point cloud. Specifically, the saliency map is treated as a binary clas- sifier at various threshold levels, and a Receiver Operat- ing Characteristic (ROC) curve is generated by plotting the true positive rate (TPR) against the false positive rate (FPR) at each threshold. AUC provides a single scalar value summarizing the overall performance, where higher values indicate better discrimination ability. It is particu- larly useful for comparing models’ effectiveness in high- lighting affordance-relevant regions. • Average Intersection over Union (aIoU) [55]: IoU is a standard metric for comparing the similarity between two arbitrary regions—in this case, the predicted affordance region and the ground truth. It is defined as the size of the intersection between the two regions divided by the size of their union: IoU = TP + FP + FN , (12) where TP, FP, and FN denote true positives, false posi- Clean Rotation Jitter Scale Drop Local Drop Global Add Local Add Global Level 0 Level 1 Level 2 Level 3 Level 4 Which part of the earphone allows for the most efficient grasping method? Figure 6. Visualization examples of the LASO-C dataset. We show 7 corruption types across 5 severity levels. tives, and false negatives, respectively. The aIoU extends this metric to compute the average IoU across all cate- gories and test samples, providing a quantitative measure of the overlap between predicted and labeled affordance regions. Higher values indicate better alignment between the prediction and the ground truth. • Similarity (SIM) [59]: The SIM metric evaluates how closely the predicted affordance map matches the ground truth by summing the minimum values at each point. For normalized prediction and ground truth maps P and Q, the similarity is calculated as: SIM(P, Q) = min(Pi, Qi), (13) where the inputs are normalized such that P i Pi i Qi = 1. SIM provides a measure of how well the model captures the relative affordance distribution across the point cloud. A higher similarity score reflects greater consistency between the predicted and true maps, mak- ing it a valuable metric for evaluating spatial prediction fidelity. • Mean Absolute Error (MAE) [65]: MAE quantifies the average absolute difference between the predicted affor- dance values and the ground truth, offering a direct mea- sure of prediction accuracy. For n points in a point cloud, it is calculated as: MAE = 1 i=1 |ei| , (14) where ei is the point-wise error. MAE is particularly use- ful for evaluating overall prediction quality by penalizing larger deviations. Lower MAE values indicate better per- formance, as they reflect a smaller error margin between the predicted and ground truth affordance scores. Together, these metrics provide a comprehensive frame- work to benchmark the performance of affordance predic- tion models. AUC evaluates ranking capability, aIoU mea- sures spatial overlap, SIM assesses prediction similarity, and MAE quantifies overall prediction accuracy. By com- bining these complementary metrics, we ensure a holistic evaluation of model performance under diverse scenarios. B.3. Baselines We evaluate our method against state-of-the-art approaches on both the PIAD and LASO datasets. Among these, LASO [32] is the closest to our method, as it also gen- erates affordance scores based on textual cues. Addition- ally, we include 3D cross-modal baselines such as 3D- SPS [43], and image segmentation methods like Refer- Trans [30] and RelA [33], which leverage vision-language models for cross-modal alignment. Results for these meth- ods are referenced directly from the LASO paper. On the PIAD dataset, we compare against IAGNet [70], a method that grounds 3D affordances by transferring knowledge from demonstration images into point clouds. Furthermore, this benchmark includes advanced image- point cloud cross-modal methods, including MBDF [60], PMF [73], FRCNN [69], ILN [3], PFusion [68], and XMF [1]. These baselines align image and point cloud features in various ways. Results for these baselines are taken from the IAGNet paper, except for LASO, which is retrained in the PIAD setting. Below is a brief introduction to the baselines: • LASO [32]: Generates affordance segmentation masks using textual-conditioned affordance queries, focusing on cross-modal alignment between text and 3D objects. • IAGNet [70]: Grounds 3D affordances by transfer- ring knowledge from 2D demonstration images to point clouds, leveraging cross-modal affordance reasoning. • 3D-SPS [43]: A 3D visual grounding method that selects linguistic keypoints for affordance segmentation, adapted by removing its bounding box prediction module. • ReLA [33]: Originally designed for image-based refer- ring expression segmentation, it segments point clouds based on language expressions by adapting image region features to grouped point features. • ReferTrans [30]: A transformer-based architecture for image-based expression segmentation, modified for point clouds by replacing the image backbone with a 3D back- bone and focusing solely on mask prediction. • MBDF-Net (MBDF) [60]: Employs an Adaptive Atten- tion Fusion (AAF) module for cross-modal feature fusion, with modifications to exclude camera intrinsic parame- ters. • PMF [73]: Uses a residual-based fusion model to com- bine image and point cloud features, incorporating con- volution and attention, while omitting perspective projec- tion. • FusionRCNN (FRCNN) [69]: Fuses proposals extracted from images and point clouds through iterative self- attention and cross-attention mechanisms. • ImloveNet (ILN) [3]: Projects image features into 3D space using a learnable mapping, and fuses these with point cloud features using an attention mechanism. • PointFusion (PFusion) [68]: Performs dense fusion by combining global and point-wise features extracted sepa- rately from point clouds and images. • XMFnet (XMF) [1]: Fuses localized features from point clouds and images using a combination of cross-attention and self-attention, originally designed for cross-modal point cloud completion. C. Additional Quantitative Results In this section, we provide additional quantitative results, i.e., the class-wise and corruption-wise evaluation metrics, to demonstrate the effectiveness of our method. C.1. Complete Results on PIAD The complete results of the comparative methods for all ob- ject categories in the Seen and Unseen partitions of the PIAD dataset [70] are provided in Tab. 9 and Tab. 10, re- spectively. C.2. Complete Results on LASO The complete results of the comparative methods for all object categories in the Seen and Unseen partitions of the LASO dataset [32] are provided in Tab. 11 and Tab. 12, re- spectively. D. Additional Qualitative Results In this section, we provide more qualitative results (visual examples) to demonstrate the effectiveness of our method. D.1. Additional Qualitative Results on PIAD-C We include additional qualitative results of GEAL and LASO [32] on the PIAD-C dataset in Fig. 7. D.2. Additional Qualitative Results on PIAD We include additional qualitative results of GEAL and LASO [32] on the PIAD dataset in Fig. 8. Table 9. The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the PIAD dataset [70]. AUC and aIOU scores are reported in percentages (%). LASO [32] GEAL (Ours) Category aIOU ↑ AUC ↑ SIM ↑ MAE ↓ aIOU ↑ AUC ↑ SIM ↑ MAE ↓ Bag • 23.4 83.3 0.567 0.090 24.0 85.1 0.588 0.088 Bed • 21.1 87.3 0.587 0.097 22.7 88.1 0.595 0.091 Bowl • 7.4 76.2 0.736 0.114 9.8 84.1 0.761 0.105 Clock • 7.5 91.5 0.473 0.077 11.1 92.5 0.596 0.051 Dishwash • 24.7 91.9 0.464 0.069 26.2 92.9 0.496 0.058 Display • 32.5 91.5 0.719 0.083 37.7 91.3 0.726 0.104 Door • 10.1 81.2 0.437 0.064 11.0 83.8 0.395 0.054 Earphone • 18.8 85.9 0.615 0.094 21.6 87.6 0.654 0.086 Faucet • 19.9 79.9 0.517 0.099 19.1 83.6 0.602 0.078 Hat • 4.7 65.9 0.604 0.148 7.8 74.2 0.620 0.133 StorageFurniture • 17.3 87.2 0.419 0.077 20.8 87.5 0.430 0.065 Keyboard • 14.8 81.2 0.249 0.059 15.2 84.6 0.257 0.048 Knife • 15.5 89.8 0.671 0.060 23.5 94.1 0.717 0.046 Laptop • 29.2 94.1 0.566 0.072 31.2 94.2 0.575 0.069 Microwave • 30.1 96.8 0.524 0.037 35.5 96.9 0.545 0.037 Mug • 10.7 76.5 0.578 0.107 17.5 77.2 0.607 0.091 Refrigerator • 23.2 87.1 0.473 0.070 24.7 89.6 0.460 0.070 Chair • 27.5 88.1 0.649 0.094 28.5 89.0 0.652 0.066 Scissors • 24.1 91.2 0.631 0.055 31.9 95.8 0.698 0.040 Table • 10.1 78.2 0.627 0.129 11.4 79.1 0.639 0.135 TrashCan • 11.9 67.4 0.323 0.143 16.2 68.8 0.385 0.146 Vase • 10.3 72.0 0.608 0.120 12.5 72.4 0.612 0.116 Bottle • 23.5 77.3 0.552 0.110 27.8 79.8 0.536 0.107 Table 10. The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the PIAD dataset [70]. AUC and aIOU scores are reported in percentages (%). LASO [32] GEAL (Ours) Category aIOU ↑ AUC ↑ SIM ↑ MAE ↓ aIOU ↑ AUC ↑ SIM ↑ MAE ↓ Bed • 12.0 78.0 0.469 0.126 12.8 78.4 0.473 0.120 Dishwasher • 17.3 84.9 0.338 0.079 18.3 89.8 0.440 0.060 Laptop • 4.5 65.4 0.192 0.122 6.3 74.5 0.201 0.100 Microwave • 14.4 83.4 0.365 0.066 15.8 89.6 0.402 0.049 Scissors • 3.2 66.5 0.310 0.107 3.7 69.8 0.333 0.123 Vase • 5.2 58.1 0.455 0.140 6.4 54.9 0.466 0.127 Table 11. The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the LASO dataset [32]. AUC and aIOU scores are reported in percentages (%). LASO [32] GEAL (Ours) Category aIOU ↑ AUC ↑ SIM ↑ MAE ↓ aIOU ↑ AUC ↑ SIM ↑ MAE ↓ Bag • 19.8 85.4 0.535 0.085 20.6 86.7 0.572 0.084 Bed • 13.6 77.4 0.515 0.111 16.0 79.9 0.527 0.110 Bowl • 8.6 81.3 0.777 0.102 12.2 87.4 0.807 0.102 Clock • 6.2 84.2 0.461 0.064 9.8 84.8 0.485 0.062 Dishwash • 29.6 94.1 0.472 0.070 28.5 89.9 0.505 0.068 Display • 31.0 92.2 0.700 0.086 41.1 92.6 0.718 0.088 Door • 12.3 82.3 0.311 0.060 15.7 83.8 0.368 0.058 Earphone • 26.5 93.0 0.639 0.099 27.5 94.0 0.662 0.094 Faucet • 14.2 78.9 0.498 0.089 18.3 84.3 0.589 0.087 Hat • 3.6 67.0 0.538 0.152 9.3 72.7 0.560 0.148 StorageFurniture • 19.2 88.6 0.437 0.067 24.7 89.3 0.481 0.066 Keyboard • 12.0 89.0 0.227 0.055 12.9 87.9 0.232 0.039 Knife • 14.8 91.3 0.642 0.064 22.9 93.2 0.657 0.063 Laptop • 28.5 95.1 0.583 0.078 29.8 95.1 0.586 0.070 Microwave • 27.2 96.1 0.440 0.042 31.8 92.8 0.464 0.038 Mug • 13.3 78.1 0.547 0.098 21.7 87.6 0.635 0.076 Refrigerator • 25.6 92.8 0.433 0.063 24.8 93.7 0.484 0.069 Chair • 28.9 89.9 0.650 0.093 28.7 89.9 0.678 0.091 Scissors • 17.5 95.4 0.661 0.053 24.9 95.9 0.684 0.045 Table • 10.1 81.7 0.662 0.119 10.8 81.6 0.690 0.115 TrashCan • 10.9 72.1 0.323 0.137 27.8 90.4 0.499 0.100 Vase • 7.9 71.1 0.630 0.125 13.5 79.5 0.650 0.116 Bottle • 20.4 81.2 0.553 0.114 28.7 81.9 0.570 0.116 Table 12. The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the LASO dataset [32]. AUC and aIOU scores are reported in percentages (%). LASO [32] GEAL (Ours) Category aIOU ↑ AUC ↑ SIM ↑ MAE ↓ aIOU ↑ AUC ↑ SIM ↑ MAE ↓ Bag • 20.7 89.1 0.513 0.089 22.1 91.0 0.522 0.086 Bed • 12.2 80.6 0.553 0.115 13.6 81.4 0.563 0.113 Bowl • 7.5 81.3 0.744 0.125 9.1 82.5 0.749 0.119 Clock • 5.3 85.2 0.419 0.094 6.4 85.0 0.433 0.079 Dishwash • 20.7 92.4 0.443 0.069 26.0 92.4 0.470 0.065 Display • 23.4 86.6 0.512 0.112 25.0 87.6 0.526 0.112 Door • 3.4 81.3 0.324 0.095 11.7 81.4 0.355 0.066 Earphone • 9.5 76.8 0.454 0.130 20.8 93.5 0.639 0.091 Faucet • 13.8 74.1 0.442 0.098 15.1 76.8 0.470 0.095 Hat • 4.5 61.2 0.586 0.158 4.1 66.5 0.582 0.149 StorageFurniture • 17.9 88.1 0.422 0.069 18.3 88.3 0.423 0.067 Keyboard • 3.1 74.6 0.138 0.082 3.3 79.4 0.137 0.078 Knife • 15.3 91.7 0.643 0.053 15.4 91.2 0.675 0.059 Laptop • 8.7 79.7 0.334 0.096 29.3 95.6 0.610 0.064 Microwave • 11.9 90.9 0.317 0.063 14.2 91.5 0.318 0.064 Mug • 1.7 64.5 0.381 0.174 2.5 66.6 0.511 0.157 Refrigerator • 20.1 87.2 0.378 0.066 21.0 89.4 0.390 0.065 Chair • 25.2 87.4 0.642 0.098 26.0 89.4 0.624 0.094 Scissors • 1.6 25.3 0.094 0.105 2.1 27.6 0.105 0.097 Table • 7.5 70.4 0.604 0.135 7.8 72.1 0.620 0.129 TrashCan • 2.6 63.1 0.191 0.124 7.4 71.0 0.293 0.125 Vase • 6.4 56.4 0.466 0.148 7.6 67.0 0.614 0.140 Bottle • 16.2 78.5 0.455 0.134 21.2 78.2 0.519 0.119 Point out the areas on the display ideal for displaying. Where would you grasp the mug, and what makes you choose that part? If you pour water into the bottle, which points will the water first touch when it falls into the bottle? Ours LASO Ours LASO Ours LASO Clean Rotation Jitter Scale Drop Local Drop Global Add Local Add Global Figure 7. Qualitative comparisons between GEAL and LASO [32] on the PIAD-C dataset, highlighting the superior robustness of our method on corrupted data. Ours LASO Describe your grasp method on the knife Could grasping the mug be done differently? If you want to ensure the trashcan doesn’t get damaged, what part would you open? Identify the key points on the bottle that ensure a successful opening experience. How would you approach sitting the chair to maintain its condition? Best microwave open method? Any tips on grasping the mug efficiently? Your preferred open point on dishwasher? Ours LASO Figure 8. Qualitative comparisons between GEAL and LASO [32] on the PIAD dataset. E. Broader Impact & Limitations In this section, we discuss the societal impact, broader im- pact, and potential limitations of this work. E.1. Societal Impact The proposed framework for 3D affordance learning has significant societal implications, enabling embodied intelli- gence for effective robot and AI interaction with surround- ings. This advancement can enhance automated systems’ efficiency and safety in fields like healthcare, elderly care, and disaster response, where understanding object affor- dances is critical. This technology also has the potential to empower individuals with disabilities by enabling assistive robots to perform tasks such as fetching, opening, or manip- ulating objects. Applications in education and augmented or virtual reality could transform learning and entertainment by offering immersive and interactive experiences. E.2. Broader Impact Affordance learning can redefine robotics automation by improving autonomy and adaptability in industries. manufacturing, it allows robots to handle diverse objects with minimal reprogramming, optimizing workflows and reducing human workload. In agriculture and environmen- tal monitoring, affordance-aware systems can adapt to dy- namic environments for precise operations. Integrating af- fordance grounding with augmented and virtual reality en- ables new possibilities in training, simulation, and inter- active applications. This could drive innovations in medi- cal training, such as AR-guided surgeries, and in gaming, offering intuitive and immersive user experiences through affordance-based interactions. E.3. Potential Limitations Despite its advantages, the proposed framework may en- counter certain limitations: • Limited Generalization for Internal Affordances: The framework struggles to accurately perceive and general- ize affordances associated with the internal properties of objects, such as the ”contain” affordance of a bottle. This limitation arises because point cloud processing primar- ily focuses on an object’s external surface, often neglect- ing internal structures. Furthermore, the scarcity of high- quality data representing internal affordances, hampers the system’s ability to generalize on such affordances. • Ethical Concerns: In applications such as surveillance or autonomous decision-making, the deployment of the framework introduces potential ethical concerns. Misuse of the technology could infringe on privacy or lead to a lack of accountability in critical decision-making sce- narios, highlighting the importance of establishing robust ethical guidelines for its use. • Resource Intensity: Training and deploying such so- phisticated models demand significant computational re- sources, which can pose a challenge for smaller organiza- tions or regions with limited access to advanced technol- ogy infrastructure. This barrier may restrict the broader adoption of the framework in resource-constrained envi- ronments. F. Public Resource Used In this section, we acknowledge the use of the following public resources, during the course of this work: • LASO2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .Unknown • IAGNet3 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Unknown • PointCloud-C4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Unknown • OOAL5. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .MIT License • DreamGaussian6 . . . . . . . . . . . . . . . . . . . . . . . . MIT License • LangSplat7 . . . . . . . . . . . . . . . . Gaussian-Splatting License 2https://github.com/yl3800/LASO 3https://github.com/yyvhang/IAGNet 4https://github.com/ldkong1205/PointCloud-C 5https://github.com/Reagan1311/OOAL 6https://github.com/dreamgaussian/dreamgaussian 7https://github.com/minghanqin/LangSplat",
+      "experiment": "4.1. Experimental Settings Implementation Details. Our model is implemented us- ing PyTorch [52] and is trained using the Adam optimizer [22] with an initial learning rate of 1 × 10−4 for 50 epochs on a single NVIDIA A5000 GPU (with 24 GB memory) with a batch size of 12. A step learning rate scheduler aids convergence. Additionally, the 2D backbone DINOV2 [51] remains frozen during training, while the language model RoBERTa [36] has been fine-tuned.",
+      "data": "We conduct experiments on LASO [32] and PIAD [70], both providing paired affordance and point cloud data. LASO contains 19, 751 point cloud-question pairs over 8, 434 objects (23 classes, 17 affordance cate- gories) with Seen and Unseen splits to test generalization to novel affordance-object pairs. PIAD comprises 7, 012 point clouds of the same categories, but some objects are entirely unseen during training, challenging the model’s generaliza- tion to novel objects. Since PIAD lacks language annota- tions, we reuse LASO by randomly assigning questions to each affordance-object pair. Metrics. We use four metrics to assess performance: AUC [38] measures the ability to rank points correctly; aIoU [55] quantifies the overlap between predictions and ground truth; SIM [59] assesses the similarity by summing minimum val- ues at each point; and MAE [65] calculates the average ab- solute difference between predictions and ground truth. Baselines. We primarily compare our method with state-of- the-art approaches LASO [32] and IAGNet [70]. On PIAD, we evaluate against IAGNet and several image-point cloud cross-modal baselines, retraining LASO for comparison. On LASO, we compare with the original LASO method and other methods utilizing vision-language models for cross- modal alignment. To adapt IAGNet to LASO, its image backbone is replaced with a language model [32], keeping the rest of the architecture intact. Since the Unseen data split of LASO is not publicly available, we reproduce it based on the descriptions in their paper and report our re- sults accordingly. Further experimental details are provided in the supplementary material. 4.2. Comparisons to State-of-the-Art Methods Seen Categories: In Tab. 1 and Tab. 2, we present the per- formance of our GEAL compared to state-of-the-art ap- proaches on the PIAD and LASO datasets under the Seen category setting. On the PIAD dataset, GEAL achieves the highest scores across all evaluation metrics, surpassing the previous best method, IAGNet [70]. Similarly, on the LASO dataset, GEAL outperforms LASO [32] on the ma- jority of metrics. These results highlight the effectiveness of GEAL in leveraging the rich semantic understanding from Table 3. Comparison of different methods under various corrup- tion settings on the proposed PIAD-C benchmark, evaluated on the Seen partition. Drop-L denotes local drop, and Drop-G de- notes global drop; similarly, Add-L and Add-G refer to local and global addition, respectively. AUC and aIOU are reported as per- centages. For each metric, the best scores are highlighted in bold. Type aIOU ↑ AUC ↑ SIM ↑ MAE ↓ LASO GEAL LASO GEAL LASO GEAL LASO GEAL Scale 17.6 19.7 82.1 82.5 0.554 0.562 0.100 0.097 Jitter 14.7 17.0 80.3 80.6 0.501 0.505 0.103 0.099 Rotate 16.7 19.0 82.2 82.4 0.542 0.550 0.101 0.097 Drop-L 10.6 12.4 77.0 77.2 0.470 0.474 0.112 0.111 Drop-G 18.7 21.1 83.1 83.7 0.545 0.559 0.097 0.094 Add-L 15.7 18.5 81.0 81.1 0.525 0.536 0.100 0.095 Add-G 13.4 16.1 76.9 77.4 0.506 0.513 0.101 0.098 Table 4. Comparison of different methods under various corrup- tion settings on the proposed LASO-C benchmark, evaluated on the Seen partition. Drop-L denotes local drop, and Drop-G de- notes global drop; similarly, Add-L and Add-G refer to local and global addition, respectively. AUC and aIOU are reported as per- centages. For each metric, the best scores are highlighted in bold. Type aIOU ↑ AUC ↑ SIM ↑ MAE ↓ LASO GEAL LASO GEAL LASO GEAL LASO GEAL Scale 18.7 21.0 84.6 85.3 0.590 0.600 0.103 0.100 Jitter 15.4 17.8 81.3 81.9 0.516 0.517 0.107 0.106 Rotate 17.8 19.8 83.6 84.3 0.572 0.573 0.101 0.100 Drop-L 12.6 13.3 79.3 80.0 0.466 0.484 0.122 0.110 Drop-G 18.4 20.9 83.5 85.2 0.565 0.567 0.099 0.095 Add-L 17.6 20.2 82.7 84.4 0.566 0.572 0.103 0.100 Add-G 16.7 19.0 81.1 83.4 0.549 0.575 0.108 0.097 Table 5. Ablation study on the impact of different components in GEAL on the PIAD dataset [70]. Seen and Unseen are two partitions of the dataset. 2D denotes the use of the 2D baseline with a weighted sum mapping back to 3D. 3D represents the 3D baseline. CAM is the consistency alignment module. GAFM is the granularity-adaptive fusion module. AUC and aIoU are shown in percentage. The best and second best scores from each metric are highlighted in bold and underlined, respectively. Type CAM GAFM aIoU ↑ AUC ↑ SIM ↑ MAE ↓ Seen 19.2 80.5 0.567 0.101 19.5 83.5 0.585 0.097 22.0 84.4 0.592 0.094 22.5 85.0 0.600 0.092 Unseen 8.5 70.8 0.357 0.112 8.0 69.2 0.386 0.118 8.6 71.2 0.371 0.105 8.7 72.5 0.390 0.102 pre-trained 2D models through Gaussian splatting. The granularity-adaptive fusion and 2D-3D consistency align- ment modules enable multi-granularity feature fusion and efficient knowledge transfer between the 2D and 3D modal- ities, enhancing the ability of the model to accurately pre- dict affordance regions on the seen categories. Unseen Categories: The Unseen category setting evaluates the generalization ability of the model to novel objects not encountered during training. On both the PIAD (Tab. 1) and Table 6. Ablation study on the configuration of Gaussian Splatting parameters in GEAL on the PIAD dataset [70]. r denotes the res- olution, V is the number of views, and prompt indicates whether a view-dependent prompt is used. Seen and Unseen are two parti- tions of the dataset. AUC and aIoU are shown in percentage. The best and 2nd best scores from each metric are highlighted in bold and underlined, respectively. Type prompt aIoU ↑ AUC ↑ SIM ↑ MAE ↓ Seen 20.2 83.5 0.566 0.112 21.4 83.8 0.578 0.105 22.5 85.0 0.600 0.092 22.5 85.2 0.599 0.092 22.9 86.1 0.603 0.089 Unseen 7.0 70.7 0.355 0.108 7.5 71.9 0.390 0.106 8.7 72.5 0.390 0.102 8.9 72.8 0.391 0.098 9.2 73.0 0.394 0.095 LASO (Tab. 2) datasets, GEAL consistently outperforms all baselines across metrics. Although the absolute perfor- mance values are lower due to the increased difficulty of un- seen categories, GEAL maintains a performance edge over the baselines. This demonstrates that GEAL effectively generalizes to unseen categories, a result attributed to the integration of the 2D branch with a pretrained foundation model backbone and the cross-modal consistency alignment between the 2D and 3D branches. Qualitative comparisons with LASO on PIAD are shown in Fig. 4. Robustness on Corrupt Data: To assess robustness under real-world conditions, we compare GEAL with LASO on the proposed PIAD-C and LASO-C benchmarks after train- ing on clean data. As shown in Tab. 3 and Tab. 4, GEAL consistently outperforms LASO across all corruption types and evaluation metrics. GEAL demonstrates superior re- silience under various corruptions, achieving higher AUC and SIM scores while maintaining lower MAE values. This consistent outperformance indicates that the architecture of GEAL effectively mitigates the impact of data degrada- tion. The robustness improvements are attributed to our dual-branch architecture and the 2D-3D consistency align- ment module. By leveraging the robustness of pre-trained 2D models and enforcing cross-modal consistency, GEAL maintains high performance even when faced with cor- rupted or noisy 3D data. 4.3. Ablation Study Component Analysis. As shown in Table 5, we conduct an ablation study on the PIAD dataset [70] to evaluate the effectiveness of each component in our proposed GEAL framework. We examine the impact of using only the 2D baseline with a weighted sum mapping back to 3D using the inverse process of Eq. (1) (i.e., 2D), only the 3D baseline Ours LASO Identify the key points on the bottle that ensure a successful opening experience. Which part of the door allows for the most efficient opening method? If you look on the computer screen, which points on the screen will you look at? Considering the structure of the bed, what area would be most stable for laying? Figure 4. Qualitative comparisons between GEAL and LASO [32] on the PIAD [70] dataset. Top two rows display results on seen partition, while bottom two rows show results on unseen partition. Our method demonstrates strong generalization on both seen and unseen partitions. cf. supplementary material for more examples. (i.e., 3D), the consistency alignment module (CAM), and the granularity-adaptive fusion module (GAFM). Both the 2D and 3D baselines use only the last-layer features from their respective visual backbones to fuse with textual fea- tures without considering granularity. The results show that using only the 2D branch or only the 3D branch yields sim- ilar baseline performance. Integrating both branches with the consistency alignment module (CAM) leads to a no- ticeable improvement. Finally, our full model incorporat- ing all components, including the granularity-adaptive fu- sion module (GAFM), achieves the best performance on both the Seen and Unseen sets. This demonstrates the effec- tiveness of our dual-branch architecture and underscores the importance of granularity-adaptive fusion and cross-modal consistency in enhancing the generalization capability of the model. Gaussian Splatting Configuration Tuning. As shown in Table 6, we further investigate the impact of different Gaussian splatting configurations on the performance of our model. Specifically, we vary the rendering resolution (r), the number of views (V ), and the inclusion of view- dependent prompts. The results indicate that increasing the number of views from 6 to 12 slightly improves perfor- mance, suggesting that additional viewpoints provide richer information for affordance learning. Incorporating view- dependent prompts significantly boosts performance, par- ticularly on the Seen set, highlighting the importance of semantic guidance in our framework. Increasing the res- olution from 112 to 224 yields only marginal gains, indi- cating that our model is robust to resolution changes and that higher resolutions offer diminishing returns. Balancing effectiveness and efficiency, we opt for a configuration of r = 112, V = 12, and the use of view-dependent prompts. Earphone • listen, grasp Bag • contain, open, grasp, lift Chair • move, support, sit Refrigerator • contain, open Knife • stab, cut, grasp Dishwasher • contain, open Keyboard • press Scissors • stab, cut, grasp Table • move, support StorageFurniture • contain, open Bottle • contain, wrap grasp, open, grasp, pour Bowl • contain, wrap-grasp, pour Microwave • contain, open Display • display TrashCan • contain, open, pour Hat • wear, grasp Clock • display Door • open, push Mug • contain, wrap grasp, grasp, pour Faucet • open, grasp Vase • contain, wrap-grasp, pour Laptop • press, display Bed • lay, support, sit Total 23 Categories 17 Affordance Types Table 8. Detailed statistics of the proposed LASO-C dataset, showing the object categories, their corresponding affordance types, and the number of distinct objects for each category. Object Category Affordance Door • open, push, pull Clock • display Dishwasher • open, contain Earphone • listen, grasp Vase • contain, pour, wrap-grasp Knife • stab, grasp, cut Bowl • contain, pour, wrap grasp Bag • open, contain, lift, grasp Faucet • open, grasp Scissors • stab, grasp, cut Display • display Chair • sit, support, move Bottle • grasp, wrap grasp, open, contain, pour Microwave • open, contain StorageFurniture • open, contain Refrigerator • open, contain Mug • contain, grasp, pour, wrap-grasp Keyboard • press Table • support, move Bed • sit, support, lay Hat • wear, grasp Laptop • display, press TrashCan • open, contain, pour Total 23 Categories 17 Affordance Types – Description: Introduces random rotation to the point cloud. – Mathematical Formulation: The rotation is specified by Euler angles (α, β, γ), where: α, β, γ ∼U(−θ, θ). – Severity Levels: The angle range θ is: θ ∈{π/30, π/15, π/10, π/7.5, π/6}. This approach does not guarantee uniform sampling in SO(3), but provides sufficient variation to simulate di- verse rotations. • Drop Global – Description: Randomly removes a percentage of points from the point cloud. – Method: Shuffle all points and drop the last N·ρ points, where N = 2048 is the total number of points. – Severity Levels: The proportion ρ is: ρ ∈{0.25, 0.375, 0.5, 0.675, 0.75}. • Drop Local – Description: Removes points in clusters around ran- domly selected local regions.",
+      "conclusion": "In conclusion, we present GEAL, a framework that im- proves the generalization and robustness of 3D affordance learning by leveraging large-scale pre-trained 2D mod- els. Through a dual-branch architecture with Gaussian splatting, GEAL maps 3D point clouds to 2D representa- tions, enabling realistic renderings from sparse data. The granularity-adaptive fusion and 2D-3D consistency align- ment modules support cross-modal alignment and knowl- edge transfer, allowing the 3D branch to leverage rich se- mantic information from pre-trained 2D models. Experi- ments on public datasets and our corruption-based bench- marks show that GEAL consistently outperforms existing methods, demonstrating robust affordance prediction under varied conditions.",
+      "appendix": "A. Corrupt Data Benchmark A.1. Corruption & Severity Level Settings . . . . A.2. The PIAD-C Dataset . . . . . . . . . . . . . A.3. The LASO-C Dataset . . . . . . . . . . . . . B. Benchmark Configuration B.1. Datasets . . . . . . . . . . . . . . . . . . . . B.2. Evaluation Metrics . . . . . . . . . . . . . . B.3. Baselines . . . . . . . . . . . . . . . . . . . C. Additional Quantitative Results C.1. Complete Results on PIAD . . . . . . . . . . C.2. Complete Results on LASO . . . . . . . . . D. Additional Qualitative Results D.1. Additional Qualitative Results on PIAD-C D.2. Additional Qualitative Results on PIAD . . . E. Broader Impact & Limitations E.1. Societal Impact . . . . . . . . . . . . . . . . E.2. Broader Impact . . . . . . . . . . . . . . . . E.3. Potential Limitations . . . . . . . . . . . . . F. Public Resource Used A. Corrupt Data Benchmark The robustness of models under real-world corruptions is a critical challenge in 3D point cloud analysis and 3D affor- dance learning [17, 21, 57, 63]. Unlike other 3D representa- tions, point clouds often face various distortions caused by sensor inaccuracies, environmental complexities, and post- processing artifacts, which significantly impact downstream tasks [23, 26, 64]. For 3D affordance learning, ensuring ro- bustness is paramount, as affordances are highly sensitive to object geometry and spatial details. A.1. Corruption & Severity Level Settings To standardize evaluation, we introduce a taxonomy of seven atomic corruption types – Scale, Jitter, Rotate, Drop Global, Drop Local, Add Global, Add Local – each simulating distinct real-world perturbations. These atomic corruptions simplify complex scenarios into controllable factors, enabling systematic analysis across five levels of severity. By providing a unified framework for benchmark- ing, we facilitate consistent and comprehensive assessment of model robustness, setting the stage for more resilient 3D affordance learning methods. Below, we detail the construction methodology for each corruption type: • Jitter – Description: Adds Gaussian noise to perturb each point’s X, Y, and Z coordinates. – Mathematical Formulation: For each point, a noise ϵ ∼ N(0, σ2) is added independently to X, Y, and Z. – Severity Levels: The standard deviation σ varies as: σ ∈{0.01, 0.02, 0.03, 0.04, 0.05}. • Scale – Description: Applies random scaling independently to the X, Y, and Z axes. – Mathematical Formulation: Each axis is scaled by a factor s ∼U \u0000 1 S , S , where S determines the range of scaling. – Severity Levels: The range of S is: S ∈{1.6, 1.7, 1.8, 1.9, 2.0}. After scaling, the point cloud is re-normalized to fit within a unit sphere. • Rotate Table 7. Detailed statistics of the proposed PIAD-C dataset, show- ing the object categories, their corresponding affordance types, and the number of object-affordance pairings for each category. Object Category Affordance Type",
+      "references": "[1] Emanuele Aiello, Diego Valsesia, and Enrico Magli. Cross- modal learning for image-guided point cloud shape comple- tion. In Advances in Neural Information Processing Systems, pages 37349–37362, 2022. 6, 14 [2] Mathilde Caron, Hugo Touvron, Ishan Misra, Herv´e J´egou, Julien Mairal, Piotr Bojanowski, and Armand Joulin. Emerg- ing properties in self-supervised vision transformers. IEEE/CVF International Conference on Computer Vision, pages 9650–9660, 2021. 2 [3] Honghua Chen, Zeyong Wei, Yabin Xu, Mingqiang Wei, and Jun Wang. Imlovenet: Misaligned image-supported regis- tration network for low-overlap point cloud pairs. In ACM SIGGRAPH Conference Proceedings, pages 1–9, 2022. 6, [4] Joya Chen, Difei Gao, Kevin Qinghong Lin, and Mike Zheng Shou. Affordance grounding from demonstration video to target image. In IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 6799–6808, 2023. 2 [5] Ching-Yao Chuang, Jiaman Li, Antonio Torralba, and Sanja Fidler. Learning to act properly: Predicting and explaining affordances from images. In IEEE/CVF Conference on Com- puter Vision and Pattern Recognition, pages 975–983, 2018. 1, 2 [6] Francisco Cruz, Sven Magg, Cornelius Weber, and Stefan Wermter. Training agents with interactive reinforcement learning and contextual affordances. IEEE Transactions on Cognitive and Developmental Systems, 8(4):271–284, 2016. [7] Leiyao Cui, Xiaoxue Chen, Hao Zhao, Guyue Zhou, and Yixin Zhu. Strap: Structured object affordance segmentation with point supervision. arXiv preprint arXiv:2304.08492, 2023. 1 [8] Shengheng Deng, Xun Xu, Chaozheng Wu, Ke Chen, and Kui Jia. 3d affordancenet: A benchmark for visual ob- ject affordance understanding. In IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 1778– 1787, 2021. 2, 11 [9] Thanh-Toan Do, Anh Nguyen, and Ian Reid. Affordancenet: An end-to-end deep learning approach for object affordance detection. In IEEE International Conference on Robotics and Automation, pages 5882–5889, 2018. 2 [10] Kuan Fang, Te-Lin Wu, Daniel Yang, Silvio Savarese, and Joseph J Lim. Demo2vec: Reasoning object affordances from online videos. In IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 2139–2147, 2018. 1, [11] Haoran Geng, Helin Xu, Chengyang Zhao, Chao Xu, Li Yi, Siyuan Huang, and He Wang. Gapartnet: Cross-category domain-generalizable object perception and manipulation via generalizable and actionable parts. In IEEE/CVF Con- ference on Computer Vision and Pattern Recognition, pages 7081–7091, 2023. 2 [12] Yiran Geng, Boshi An, Haoran Geng, Yuanpei Chen, Yaodong Yang, and Hao Dong. Rlafford: End-to-end affor- dance learning for robotic manipulation. In IEEE Interna- tional Conference on Robotics and Automation, pages 5880– 5886, 2023. 1 [13] James J Gibson. The ecological approach to visual percep- tion: classic edition. Psychology press, 2014. 1 [14] Denis Hadjivelichkov, Sicelukwanda Zwane, Lourdes Agapito, Marc Peter Deisenroth, and Dimitrios Kanoulas. One-shot transfer of affordance regions? affcorrs! In Con- ference on Robot Learning, pages 550–560. PMLR, 2023. [15] Xiaoshuai Hao, Mengchuan Wei, Yifan Yang, Haimei Zhao, Hui Zhang, Yi Zhou, Qiang Wang, Weiming Li, Lingdong Kong, and Jing Zhang. Is your hd map constructor reliable under sensor corruptions? In Advances in Neural Informa- tion Processing Systems, 2024. 3 [16] Mohammed Hassanin, Salman Khan, and Murat Tahtali. Vi- sual affordance and function understanding: A survey. ACM Computing Surveys, 54(3):1–35, 2021. 1 [17] Dan Hendrycks and Thomas Dietterich. Benchmarking neu- ral network robustness to common corruptions and perturba- tions. arXiv preprint arXiv:1903.12261, 2019. 3, 9 [18] Zhi Hou, Baosheng Yu, Yu Qiao, Xiaojiang Peng, and Dacheng Tao. Affordance transfer learning for human-object interaction detection. In IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 495–504, 2021. 1 [19] Wenlong Huang, Chen Wang, Ruohan Zhang, Yunzhu Li, Jiajun Wu, and Li Fei-Fei. Voxposer: Composable 3d value maps for robotic manipulation with language models. In Conference on Robot Learning, pages 540–562. PMLR, 2023. 2 [20] Bernhard Kerbl, Georgios Kopanas, Thomas Leimk¨uhler, and George Drettakis. 3d gaussian splatting for real-time radiance field rendering. ACM Transactions on Graphics, 42 (4):139–1, 2023. 2, 3 [21] Sihyeon Kim, Sanghyeok Lee, Dasol Hwang, Jaewon Lee, Seong Jae Hwang, and Hyunwoo J Kim. Point cloud augmentation with weighted local transformations. IEEE/CVF International Conference on Computer Vision, pages 548–557, 2021. 3, 9 [22] Diederik P. Kingma and Jimmy Ba. Adam: A method for stochastic optimization. In International Conference for Learning Representations, 2015. 7 [23] Lingdong Kong, Youquan Liu, Xin Li, Runnan Chen, Wen- wei Zhang, Jiawei Ren, Liang Pan, Kai Chen, and Ziwei Liu. Robo3d: Towards robust and reliable 3d perception against corruptions. In IEEE/CVF International Conference on Computer Vision, pages 19994–20006, 2023. 2, 3, 9 [24] Lingdong Kong, Shaoyuan Xie, Hanjiang Hu, Lai Xing Ng, Benoit R. Cottereau, and Wei Tsang Ooi. Robodepth: Robust out-of-distribution depth estimation under corruptions. Advances in Neural Information Processing Systems, pages 21298–21342, 2023. 3 [25] Hema Swetha Koppula, Rudhir Gupta, and Ashutosh Sax- ena. Learning human activities and object affordances from rgb-d videos. International Journal of Robotics Research, 32 (8):951–970, 2013. 2 [26] Dogyoon Lee, Jaeha Lee, Junhyeop Lee, Hyeongmin Lee, Minhyeok Lee, Sungmin Woo, and Sangyoun Lee. Regu- larization strategy for point cloud via rigidly mixed sample. In IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 15900–15909, 2021. 3, 9 [27] Gen Li, Varun Jampani, Deqing Sun, and Laura Sevilla-Lara. Locate: Localize and transfer object parts for weakly su- pervised affordance grounding. In IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 10922– 10931, 2023. 1, 2, 3 [28] Gen Li, Deqing Sun, Laura Sevilla-Lara, and Varun Jampani. One-shot open affordance learning with foundation models. In IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 3086–3096, 2024. 2, 3, 4 [29] Hongxiang Li, Meng Cao, Xuxin Cheng, Yaowei Li, Zhi- hong Zhu, and Yuexian Zou. G2l: Semantically aligned and uniform video grounding via geodesic and game theory. In IEEE/CVF International Conference on Computer Vision, pages 12032–12042, 2023. 2 [30] Muchen Li and Leonid Sigal. Referring transformer: A one- step approach to multi-task visual grounding. In Advances in Neural Information Processing Systems, pages 19652– 19664, 2021. 6, 14 [31] Ye Li, Lingdong Kong, Hanjiang Hu, Xiaohao Xu, and Xi- aonan Huang. Is your lidar placement optimized for 3d scene understanding? In Advances in Neural Information Process- ing Systems, 2024. 3 [32] Yicong Li, Na Zhao, Junbin Xiao, Chun Feng, Xiang Wang, and Tat-Seng Chua. Laso: Language-guided affordance seg- mentation on 3d object. In IEEE/CVF Conference on Com- puter Vision and Pattern Recognition, pages 14251–14260, 2024. 1, 2, 5, 6, 7, 8, 11, 14, 15, 16, 17, 18 [33] Chang Liu, Henghui Ding, and Xudong Jiang. Gres: Gener- alized referring expression segmentation. In IEEE/CVF Con- ference on Computer Vision and Pattern Recognition, pages 23592–23601, 2023. 6, 14 [34] Liu Liu, Wenqiang Xu, Haoyuan Fu, Sucheng Qian, Qiao- jun Yu, Yang Han, and Cewu Lu. Akb-48: A real-world ar- ticulated object knowledge base. In IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 14809– 14818, 2022. 2 [35] Shaowei Liu, Subarna Tripathi, Somdeb Majumdar, and Xi- aolong Wang. Joint hand motion and interaction hotspots prediction from egocentric videos. In IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 3282– 3292, 2022. 2 [36] Yinhan Liu. Roberta: A robustly optimized bert pretraining approach. arXiv preprint arXiv:1907.11692, 364, 2019. 7 [37] Youquan Liu, Lingdong Kong, Jun Cen, Runnan Chen, Wen- wei Zhang, Liang Pan, Kai Chen, and Ziwei Liu. Segment any point cloud sequences by distilling vision foundation models. In Advances in Neural Information Processing Sys- tems, pages 37193–37229, 2023. 2 [38] Jorge M Lobo, Alberto Jim´enez-Valverde, and Raimundo Real. Auc: a misleading measure of the performance of pre- dictive distribution models. Global Ecology and Biogeogra- phy, 17(2):145–151, 2008. 7, 12 [39] Liangsheng Lu, Wei Zhai, Hongchen Luo, Yu Kang, and Yang Cao. Phrase-based affordance detection via cyclic bi- lateral interaction. IEEE Transactions on Artificial Intelli- gence, 4(5):1186–1198, 2023. 2 [40] Hongchen Luo, Wei Zhai, Jing Zhang, Yang Cao, and Dacheng Tao. One-shot affordance detection. arXiv preprint arXiv:2106.14747, 2021. 2 [41] Hongchen Luo, Wei Zhai, Jing Zhang, Yang Cao, and Dacheng Tao. Grounded affordance from exocentric view. arXiv preprint arXiv:2208.13196, 2022. 2 [42] Hongchen Luo, Wei Zhai, Jing Zhang, Yang Cao, and Dacheng Tao. Learning affordance grounding from exocen- tric images. In IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 2252–2261, 2022. 1, 2 [43] Junyu Luo, Jiahui Fu, Xianghao Kong, Chen Gao, Haibing Ren, Hao Shen, Huaxia Xia, and Si Liu. 3d-sps: Single-stage 3d visual grounding via referred point progressive selection. In IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 16454–16463, 2022. 6, 14 [44] Jinpeng Mi, Song Tang, Zhen Deng, Michael Goerner, and Jianwei Zhang. Object affordance based multimodal fusion for natural human-robot interaction. Cognitive Systems Re- search, 54:128–137, 2019. 2 [45] Jinpeng Mi, Hongzhuo Liang, Nikolaos Katsakis, Song Tang, Qingdu Li, Changshui Zhang, and Jianwei Zhang. Intention-related natural language grounding via object af- fordance detection and intention semantic extraction. Fron- tiers in Neurorobotics, 14:26, 2020. 2 [46] Kaichun Mo, Shilin Zhu, Angel X. Chang, Li Yi, Subarna Tripathi, Leonidas J. Guibas, and Hao Su. Partnet: A large- scale benchmark for fine-grained and hierarchical part-level 3d object understanding. In IEEE/CVF Conference on Com- puter Vision and Pattern Recognition, pages 909–918, 2019. [47] Kaichun Mo, Yuzhe Qin, Fanbo Xiang, Hao Su, and Leonidas Guibas. O2o-afford: Annotation-free large-scale object-object affordance learning. In Conference on Robot Learning, pages 1666–1677. PMLR, 2022. 2 [48] Austin Myers, Ching L Teo, Cornelia Ferm¨uller, and Yiannis Aloimonos. Affordance detection of tool parts from geomet- ric features. In IEEE International Conference on Robotics and Automation, pages 1374–1381, 2015. 2 [49] Tushar Nagarajan, Christoph Feichtenhofer, and Kristen Grauman. Grounded human-object interaction hotspots from video. In IEEE/CVF International Conference on Computer Vision, pages 8688–8697, 2019. 2 [50] Toan Nguyen, Minh Nhat Vu, An Vuong, Dzung Nguyen, Thieu Vo, Ngan Le, and Anh Nguyen. Open-vocabulary af- fordance detection in 3d point clouds. In IEEE/RSJ Interna- tional Conference on Intelligent Robots and Systems, pages 5692–5698, 2023. 2 [51] Maxime Oquab, Timoth´ee Darcet, Th´eo Moutakanni, Huy Vo, Marc Szafraniec, Vasil Khalidov, Pierre Fernandez, Daniel Haziza, Francisco Massa, Alaaeldin El-Nouby, et al. Dinov2: Learning robust visual features without supervision. arXiv preprint arXiv:2304.07193, 2023. 2, 3, 4, 5, 7 [52] Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, et al. Pytorch: An imperative style, high-performance deep learning library. In Advances in Neural Information Processing Systems, pages 8026–8037, 2019. 7 [53] Charles Ruizhongtai Qi, Li Yi, Hao Su, and Leonidas J Guibas. Pointnet++: Deep hierarchical feature learning on point sets in a metric space. Advances in Neural Information Processing Systems, 30, 2017. 3, 4, 5 [54] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, et al. Learning transferable visual models from natural language supervi- sion. In International conference on machine learning, pages 8748–8763. PMLR, 2021. 2, 3 [55] Md Atiqur Rahman and Yang Wang. Optimizing intersection-over-union in deep neural networks for image segmentation. In International Symposium on Visual Com- puting, pages 234–244, 2016. 7, 12 [56] Jiawei Ren, Lingdong Kong, Liang Pan, and Ziwei Liu. Benchmarking and analyzing point cloud robustness under corruptions. Preprint, 2022. 2, 6 [57] Jiawei Ren, Liang Pan, and Ziwei Liu. Benchmarking and analyzing point cloud classification under corruptions. In In- ternational Conference on Machine Learning, pages 18559– 18575. PMLR, 2022. 2, 3, 9 [58] Anirban Roy and Sinisa Todorovic. A multi-scale cnn for affordance segmentation in rgb images. In European con- ference on computer vision, pages 186–201. Springer, 2016. [59] Michael J Swain and Dana H Ballard. Color indexing. Inter- national Journal of Computer Vision, 7(1):11–32, 1991. 7, [60] Xun Tan, Xingyu Chen, Guowei Zhang, Jishiyu Ding, and Xuguang Lan. Mbdf-net: Multi-branch deep fusion network for 3d object detection. In International Workshop on Mul- timedia Computing for Urban Data, pages 9–17, 2021. 6, [61] Spyridon Thermos, Petros Daras, and Gerasimos Potami- anos. A deep learning approach to object affordance segmen- tation. In ICASSP 2020-2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pages 2358–2362. IEEE, 2020. 2 [62] Ilya O Tolstikhin, Neil Houlsby, Alexander Kolesnikov, Lu- cas Beyer, Xiaohua Zhai, Thomas Unterthiner, Jessica Yung, Andreas Steiner, Daniel Keysers, Jakob Uszkoreit, et al. Mlp-mixer: An all-mlp architecture for vision. Advances in Neural Information Processing Systems, 34:24261–24272, 2021. 5 [63] Jie Wang, Lihe Ding, Tingfa Xu, Shaocong Dong, Xinli Xu, Long Bai, and Jianan Li. Sample-adaptive augmentation for point cloud recognition against real-world corruptions. In IEEE/CVF International Conference on Computer Vision, pages 14330–14339, 2023. 3, 9 [64] Jie Wang, Tingfa Xu, Lihe Ding, and Jianan Li. Target- guided adversarial point cloud transformer towards recog- nition against real-world corruptions. arXiv preprint arXiv:2411.00462, 2024. 3, 9 [65] Cort J Willmott and Kenji Matsuura. Advantages of the mean absolute error (mae) over the root mean square error (rmse) in assessing average model performance. Climate Research, 30(1):79–82, 2005. 7, 13 [66] Shaoyuan Xie, Lingdong Kong, Wenwei Zhang, Jiawei Ren, Liang Pan, Kai Chen, and Ziwei Liu. Benchmarking and im- proving bird’s eye view perception robustness in autonomous driving. arXiv preprint arXiv:2405.17426, 2024. 2, 3 [67] Chao Xu, Yixin Chen, He Wang, Song-Chun Zhu, Yixin Zhu, and Siyuan Huang. Partafford: Part-level affordance discovery from 3d objects. arXiv preprint arXiv:2202.13519, 2022. 2 [68] Danfei Xu, Dragomir Anguelov, and Ashesh Jain. Pointfu- sion: Deep sensor fusion for 3d bounding box estimation. In IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 244–253, 2018. 6, 14 [69] Xinli Xu, Shaocong Dong, Lihe Ding, Jie Wang, Tingfa Xu, and Jianan Li. Fusionrcnn: Lidar-camera fusion for two- stage 3d object detection. Remote Sensing, 15(7):1839, 2023. 6, 14 [70] Yuhang Yang, Wei Zhai, Hongchen Luo, Yang Cao, Jiebo Luo, and Zheng-Jun Zha. Grounding 3d object affordance from 2d interactions in images. In IEEE/CVF International Conference on Computer Vision, pages 10905–10915, 2023. 1, 2, 6, 7, 8, 11, 14, 15 [71] Xue Zhao, Yang Cao, and Yu Kang. Object affordance de- tection with relationship-aware network. Neural Computing and Applications, 32(18):14321–14333, 2020. 2 [72] Zihan Zhong, Zhiqiang Tang, Tong He, Haoyang Fang, and Chun Yuan. Convolution meets lora: Parameter effi- cient finetuning for segment anything model. arXiv preprint arXiv:2401.17868, 2024. 4 [73] Zhuangwei Zhuang, Rong Li, Kui Jia, Qicheng Wang, Yuan- qing Li, and Mingkui Tan. Perception-aware multi-sensor fusion for 3d lidar semantic segmentation. In IEEE/CVF In- ternational Conference on Computer Vision, pages 16280– 16290, 2021. 6, 14"
+    },
+    "candidate_chunks": {
+      "abstract": [
+        {
+          "text": "Identifying affordance regions on 3D objects from seman- tic cues is essential for robotics and human-machine inter- action. However, existing 3D affordance learning methods struggle with generalization and robustness due to limited annotated data and a reliance on 3D backbones focused on geometric encoding, which often lack resilience to real- world noise and data corruption.",
+          "source_section": "abstract",
+          "page_hint": "",
+          "kind_hint": "abstract",
+          "actual_source_section": "abstract"
+        },
+        {
+          "text": "We propose GEAL, a novel framework designed to enhance the generalization and robustness of 3D affordance learning by leveraging large-scale pre-trained 2D models. We employ a dual- branch architecture with Gaussian splatting to establish consistent mappings between 3D point clouds and 2D rep- resentations, enabling realistic 2D renderings from sparse point clouds.",
+          "source_section": "abstract",
+          "page_hint": "",
+          "kind_hint": "abstract",
+          "actual_source_section": "abstract"
+        },
+        {
+          "text": "A granularity-adaptive fusion module and a 2D-3D consistency alignment module further strengthen cross-modal alignment and knowledge transfer, allowing the 3D branch to benefit from the rich semantics and gen- eralization capacity of 2D models. To holistically assess the robustness, we introduce two new corruption-based benchmarks: PIAD-C and LASO-C.",
+          "source_section": "abstract",
+          "page_hint": "",
+          "kind_hint": "abstract",
+          "actual_source_section": "abstract"
+        },
+        {
+          "text": "Extensive experiments on public datasets and our benchmarks show that GEAL consistently outperforms existing methods across seen and novel object categories, as well as corrupted data, demon- strating robust and adaptable affordance prediction under diverse conditions. Code and corruption datasets have been made publicly available1.",
+          "source_section": "abstract",
+          "page_hint": "",
+          "kind_hint": "abstract",
+          "actual_source_section": "abstract"
+        }
+      ],
+      "introduction": [
+        {
+          "text": "3D affordance learning involves identifying interactive re- gions on objects given semantic cues such as image or tex- tual instruction [7, 10], which is a fundamental competency for intelligent systems [6, 18] to infer how an object can 1GitHub: https://github.com/DylanOrange/geal Clean Add Local If you want to lift the [bag], at which point is your finger most likely to carry the [bag]? Add Global Drop Local Drop Global Rotate Jitter Scale Ours LASO LASO Ours Ours LASO LASO Ours Ours LASO LASO Ours Ours LASO L...",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "3D affordance prediction under varied data noises. Given a textual prompt, previous methods like LASO [32] (right side of each example) exhibit reduced robustness across different corruption types.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "In contrast, our proposed method, GEAL (left side of each example), maintains high accuracy and generaliza- tion across these challenging scenarios by effectively transferring knowledge from a large-scale pre-trained 2D foundation model, enhancing robustness and adaptability under diverse conditions. be used or manipulated [27, 42, 70].",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "This understanding is vital for applications in robotics and human-machine inter- action such as action prediction, object manipulation, and autonomous decision-making [5, 12, 13, 16]. For exam- ple, a robot equipped with affordance knowledge can intel- ligently interact with objects in its environment by deter- mining where to grasp a handle or press a button.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "arXiv:2412.09511v1 [cs.CV] 12 Dec 2024 Despite its potential, 3D affordance learning still faces significant challenges. Due to limited annotated data, 3D affordance models generally show poorer generalization than their 2D counterparts which benefit from abundant la- beled data and large-scale pretraining [28].",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "Additionally, 3D models often rely on backbones that focus on posi- tional and geometric encoding, limiting their capacity to capture global semantic content and making them vulner- able to noisy or corrupted data from sensor inaccuracies, scene complexity, or processing artifacts in real-world set- tings [23, 37, 56, 57, 66]. These issues further hinder the robustness and adaptability of current 3D affordance learn- ing methods.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "In this paper, we introduce a novel framework GEAL, which is designed to enhance the generalization and robust- ness of 3D affordance learning through a dual-branch archi- tecture that leverages the correspondence between 2D and 3D data. GEAL generates realistic 2D renderings directly from sparse 3D data by employing 3D Gaussian splatting (3DGS) [20] to build consistent mappings between 3D point clouds and 2D representations.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "This approach effectively creates a 2D branch from purely 3D data, which allows us to utilize the generalization capabilities and rich semantic knowledge of large-scale pre-trained 2D foundation mod- els [51, 54] to enhance 3D affordance predictions. We further introduce a granularity-adaptive fusion mod- ule, and a 2D-3D consistency alignment module to ensure robust multi-modal alignment.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "The granularity-adaptive fu- sion module dynamically integrates multi-level visual and textual features to address affordance queries at various scales and granularities. The 2D-3D consistency align- ment module concurrently establishes reliable cross-modal correspondence with feature embeddings augmented to the Gaussian primitives of 3DGS, fostering effective knowl- edge transfer across branches, and enhancing the general- ization and robustness of the 3D branch by enforcing con- sistent alignment between 2D an...",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "In view of the limitation of data scarcity to benchmark the robustness of 3D affordance models, we create two datasets: PIAD-Corrupt and LASO-Corrupt from existing commonly used affordance datasets [32, 70]. We design these benchmark datasets by incorporating various types of real-world corruptions such as scaling, cropping, etc., to ensure their suitability in evaluating the robustness of 3D affordance models.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "By contributing these benchmark datasets, we aim to fill a critical gap in the affordance learn- ing community by providing a standard for evaluating the robustness of point cloud-based 3D affordance methods. Fig.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "1 shows an example of the text description and the corresponding 3D affordance on 3D point clouds that are corrupted under various noise types. We validate the generalization and robustness of our GEAL on both standard and corruption-based benchmarks, demonstrating that our approach consistently outperforms recent methods in all scenarios.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        }
+      ],
+      "method": [
+        {
+          "text": "In this section, we describe the technical components of our proposed GEAL framework. An overview of the full framework is shown in Fig.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "2. Given an instruction Q and an object point cloud P ∈RN×3 with N points, GEAL pre- dicts an affordance score y ∈RN, where each value in y indicates the likelihood that a corresponding point supports the specified functionality.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "In Sec. 3.1, we employ Gaus- sian splatting as a cross-modal mapping to bridge the 2D and 3D modalities, establishing a 2D branch to leverage the generalization and robustness of large pre-trained 2D mod- els.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "Sec. 3.2 details our cross-modal alignment strategy, in- corporating both granularity-adaptive visual-text fusion and 2D-3D consistency alignment to unify these modalities in the embedding space.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "In Sec. 3.3, we outline the decod- ing process that derives robust and generalizable affordance predictions from the aligned feature space.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "3.1. 3D-2D Mapping with Gaussian Splatting Motivation.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "Current 3D affordance learning methods suffer from poor generalization due to limited annotated data and exhibit relatively weak robustness owing to limited global semantic capture. In contrast, 2D affordance learning meth- ods [27, 28] leverage 2D foundation models [51, 54] pre- trained on large amounts of data, offering superior gen- eralization and robustness.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "A 3D-2D mapping to lever- age the strengths of 2D foundation models is thus promis- ing. However, a direct projection of 3D point clouds onto 2D planes yields sparse 2D points without semantic and depth information that are not useful for feature extrac- tion with 2D foundation models.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "To overcome this issue, we adopt 3D Gaussian Splatting [20] which represents 3D scenes as learnable Gaussian primitives for realistic, dif- ferentiable and high-speed rendering from arbitrary view- points. This approach allows us to synthesize realistic 2D images from sparse point clouds, preserving crucial seman- tic and depth information for downstream affordance learn- ing tasks.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "Moreover, 3D Gaussian Splatting offers smoother transitions between points, preserves occlusions and depth cues for a coherent and accurate scene representation. Gaussian Initialization.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "In 3D Gaussian Splatting, each Gaussian primitive is characterized by its 3D position µ rep- resented by a 3D coordinate, a covariance matrix Σ which defines its shape and spread, spherical harmonic parameters c representing its color, and an opacity value α that indicates its transparency. To render 3D Gaussian primitives into 2D image planes, we apply point-based α-blending using a tile- based rasterizer for efficient rendering.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "The rendered color at each pixel v is calculated as follows: C(v) = i∈N ciαi Yi−1 j=1(1 −αj), (1) where ci is the color of the i-th Gaussian, N represents the Gaussians within the tile, and αi = oiG2D (v). oi is opacity of the i-th Gaussian and G2D (·) represents the function of the i-th Gaussian projected onto 2D.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        }
+      ],
+      "experiment": [
+        {
+          "text": "4.1. Experimental Settings Implementation Details.",
+          "source_section": "experiment",
+          "page_hint": "",
+          "kind_hint": "results",
+          "actual_source_section": "experiment"
+        },
+        {
+          "text": "Our model is implemented us- ing PyTorch [52] and is trained using the Adam optimizer [22] with an initial learning rate of 1 × 10−4 for 50 epochs on a single NVIDIA A5000 GPU (with 24 GB memory) with a batch size of 12. A step learning rate scheduler aids convergence.",
+          "source_section": "experiment",
+          "page_hint": "",
+          "kind_hint": "results",
+          "actual_source_section": "experiment"
+        },
+        {
+          "text": "Additionally, the 2D backbone DINOV2 [51] remains frozen during training, while the language model RoBERTa [36] has been fine-tuned.",
+          "source_section": "experiment",
+          "page_hint": "",
+          "kind_hint": "results",
+          "actual_source_section": "experiment"
+        }
+      ],
+      "conclusion": [
+        {
+          "text": "In conclusion, we present GEAL, a framework that im- proves the generalization and robustness of 3D affordance learning by leveraging large-scale pre-trained 2D mod- els. Through a dual-branch architecture with Gaussian splatting, GEAL maps 3D point clouds to 2D representa- tions, enabling realistic renderings from sparse data.",
+          "source_section": "conclusion",
+          "page_hint": "",
+          "kind_hint": "limitations",
+          "actual_source_section": "conclusion"
+        },
+        {
+          "text": "The granularity-adaptive fusion and 2D-3D consistency align- ment modules support cross-modal alignment and knowl- edge transfer, allowing the 3D branch to leverage rich se- mantic information from pre-trained 2D models. Experi- ments on public datasets and our corruption-based bench- marks show that GEAL consistently outperforms existing methods, demonstrating robust affordance prediction under varied conditions.",
+          "source_section": "conclusion",
+          "page_hint": "",
+          "kind_hint": "limitations",
+          "actual_source_section": "conclusion"
+        }
+      ],
+      "data": [
+        {
+          "text": "Identifying affordance regions on 3D objects from seman- tic cues is essential for robotics and human-machine inter- action. However, existing 3D affordance learning methods struggle with generalization and robustness due to limited annotated data and a reliance on 3D backbones focused on geometric encoding, which often lack resilience to real- world noise and data corruption.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "We propose GEAL, a novel framework designed to enhance the generalization and robustness of 3D affordance learning by leveraging large-scale pre-trained 2D models. We employ a dual- branch architecture with Gaussian splatting to establish consistent mappings between 3D point clouds and 2D rep- resentations, enabling realistic 2D renderings from sparse point clouds.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "A granularity-adaptive fusion module and a 2D-3D consistency alignment module further strengthen cross-modal alignment and knowledge transfer, allowing the 3D branch to benefit from the rich semantics and gen- eralization capacity of 2D models. To holistically assess the robustness, we introduce two new corruption-based benchmarks: PIAD-C and LASO-C.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "Extensive experiments on public datasets and our benchmarks show that GEAL consistently outperforms existing methods across seen and novel object categories, as well as corrupted data, demon- strating robust and adaptable affordance prediction under diverse conditions. Code and corruption datasets have been made publicly available1.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "3D affordance learning involves identifying interactive re- gions on objects given semantic cues such as image or tex- tual instruction [7, 10], which is a fundamental competency for intelligent systems [6, 18] to infer how an object can 1GitHub: https://github.com/DylanOrange/geal Clean Add Local If you want to lift the [bag], at which point is your finger most likely to carry the [bag]? Add Global Drop Local Drop Global Rotate Jitter Scale Ours LASO LASO Ours Ours LASO LASO Ours Ours LASO LASO Ours Ours LASO L...",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "3D affordance prediction under varied data noises. Given a textual prompt, previous methods like LASO [32] (right side of each example) exhibit reduced robustness across different corruption types.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "In contrast, our proposed method, GEAL (left side of each example), maintains high accuracy and generaliza- tion across these challenging scenarios by effectively transferring knowledge from a large-scale pre-trained 2D foundation model, enhancing robustness and adaptability under diverse conditions. be used or manipulated [27, 42, 70].",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "This understanding is vital for applications in robotics and human-machine inter- action such as action prediction, object manipulation, and autonomous decision-making [5, 12, 13, 16]. For exam- ple, a robot equipped with affordance knowledge can intel- ligently interact with objects in its environment by deter- mining where to grasp a handle or press a button.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "arXiv:2412.09511v1 [cs.CV] 12 Dec 2024 Despite its potential, 3D affordance learning still faces significant challenges. Due to limited annotated data, 3D affordance models generally show poorer generalization than their 2D counterparts which benefit from abundant la- beled data and large-scale pretraining [28].",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "Additionally, 3D models often rely on backbones that focus on posi- tional and geometric encoding, limiting their capacity to capture global semantic content and making them vulner- able to noisy or corrupted data from sensor inaccuracies, scene complexity, or processing artifacts in real-world set- tings [23, 37, 56, 57, 66]. These issues further hinder the robustness and adaptability of current 3D affordance learn- ing methods.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "In this paper, we introduce a novel framework GEAL, which is designed to enhance the generalization and robust- ness of 3D affordance learning through a dual-branch archi- tecture that leverages the correspondence between 2D and 3D data. GEAL generates realistic 2D renderings directly from sparse 3D data by employing 3D Gaussian splatting (3DGS) [20] to build consistent mappings between 3D point clouds and 2D representations.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "This approach effectively creates a 2D branch from purely 3D data, which allows us to utilize the generalization capabilities and rich semantic knowledge of large-scale pre-trained 2D foundation mod- els [51, 54] to enhance 3D affordance predictions. We further introduce a granularity-adaptive fusion mod- ule, and a 2D-3D consistency alignment module to ensure robust multi-modal alignment.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        }
+      ],
+      "general": [
+        {
+          "text": "Identifying affordance regions on 3D objects from seman- tic cues is essential for robotics and human-machine inter- action. However, existing 3D affordance learning methods struggle with generalization and robustness due to limited annotated data and a reliance on 3D backbones focused on geometric encoding, which often lack resilience to real- world noise and data corruption.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "We propose GEAL, a novel framework designed to enhance the generalization and robustness of 3D affordance learning by leveraging large-scale pre-trained 2D models. We employ a dual- branch architecture with Gaussian splatting to establish consistent mappings between 3D point clouds and 2D rep- resentations, enabling realistic 2D renderings from sparse point clouds.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "A granularity-adaptive fusion module and a 2D-3D consistency alignment module further strengthen cross-modal alignment and knowledge transfer, allowing the 3D branch to benefit from the rich semantics and gen- eralization capacity of 2D models. To holistically assess the robustness, we introduce two new corruption-based benchmarks: PIAD-C and LASO-C.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "Extensive experiments on public datasets and our benchmarks show that GEAL consistently outperforms existing methods across seen and novel object categories, as well as corrupted data, demon- strating robust and adaptable affordance prediction under diverse conditions. Code and corruption datasets have been made publicly available1.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "3D affordance learning involves identifying interactive re- gions on objects given semantic cues such as image or tex- tual instruction [7, 10], which is a fundamental competency for intelligent systems [6, 18] to infer how an object can 1GitHub: https://github.com/DylanOrange/geal Clean Add Local If you want to lift the [bag], at which point is your finger most likely to carry the [bag]? Add Global Drop Local Drop Global Rotate Jitter Scale Ours LASO LASO Ours Ours LASO LASO Ours Ours LASO LASO Ours Ours LASO L...",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "3D affordance prediction under varied data noises. Given a textual prompt, previous methods like LASO [32] (right side of each example) exhibit reduced robustness across different corruption types.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "In contrast, our proposed method, GEAL (left side of each example), maintains high accuracy and generaliza- tion across these challenging scenarios by effectively transferring knowledge from a large-scale pre-trained 2D foundation model, enhancing robustness and adaptability under diverse conditions. be used or manipulated [27, 42, 70].",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "This understanding is vital for applications in robotics and human-machine inter- action such as action prediction, object manipulation, and autonomous decision-making [5, 12, 13, 16]. For exam- ple, a robot equipped with affordance knowledge can intel- ligently interact with objects in its environment by deter- mining where to grasp a handle or press a button.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "arXiv:2412.09511v1 [cs.CV] 12 Dec 2024 Despite its potential, 3D affordance learning still faces significant challenges. Due to limited annotated data, 3D affordance models generally show poorer generalization than their 2D counterparts which benefit from abundant la- beled data and large-scale pretraining [28].",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "Additionally, 3D models often rely on backbones that focus on posi- tional and geometric encoding, limiting their capacity to capture global semantic content and making them vulner- able to noisy or corrupted data from sensor inaccuracies, scene complexity, or processing artifacts in real-world set- tings [23, 37, 56, 57, 66]. These issues further hinder the robustness and adaptability of current 3D affordance learn- ing methods.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "In this paper, we introduce a novel framework GEAL, which is designed to enhance the generalization and robust- ness of 3D affordance learning through a dual-branch archi- tecture that leverages the correspondence between 2D and 3D data. GEAL generates realistic 2D renderings directly from sparse 3D data by employing 3D Gaussian splatting (3DGS) [20] to build consistent mappings between 3D point clouds and 2D representations.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "This approach effectively creates a 2D branch from purely 3D data, which allows us to utilize the generalization capabilities and rich semantic knowledge of large-scale pre-trained 2D foundation mod- els [51, 54] to enhance 3D affordance predictions. We further introduce a granularity-adaptive fusion mod- ule, and a 2D-3D consistency alignment module to ensure robust multi-modal alignment.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        }
+      ]
+    },
+    "language_hint": "en",
+    "section_sources": {
+      "abstract": "abstract",
+      "introduction": "introduction",
+      "method": "method",
+      "experiment": "experiment",
+      "conclusion": "conclusion",
+      "data": "data"
+    },
+    "section_extraction_coverage": {
+      "coverage_status": "good",
+      "recognized_sections": [
+        "preamble",
+        "abstract",
+        "introduction",
+        "method",
+        "experiment",
+        "data",
+        "conclusion",
+        "appendix",
+        "references"
+      ],
+      "core_sections_found": [
+        "introduction",
+        "method",
+        "experiment"
+      ],
+      "missing_core_sections": [],
+      "section_text_chars": {
+        "preamble": 349,
+        "abstract": 1435,
+        "introduction": 8270,
+        "method": 42252,
+        "experiment": 453,
+        "data": 12275,
+        "conclusion": 747,
+        "appendix": 2916,
+        "references": 16196
+      },
+      "fallback_sections": []
+    },
+    "pdf_coverage": {
+      "total_pages": 22,
+      "text_max_pages": null,
+      "text_pages_extracted": 22,
+      "text_pages_scanned": 22,
+      "text_truncated": false,
+      "truncated_due_to_page_limit": false,
+      "appendix_detected": true,
+      "appendix_start_page": 9,
+      "references_start_page": 20,
+      "section_stop_reason": "",
+      "section_stop_page": null
+    },
+    "appendix_index": {
+      "appendix_detected": true,
+      "start_page": 9,
+      "sections": [
+        {
+          "title": "r = 112, V = 12, and the use of view-dependent prompts.",
+          "page": 9
+        },
+        {
+          "title": "A. Corrupt Data Benchmark",
+          "page": 9
+        },
+        {
+          "title": "B. Benchmark Configuration",
+          "page": 9
+        },
+        {
+          "title": "C. Additional Quantitative Results",
+          "page": 9
+        },
+        {
+          "title": "D. Additional Qualitative Results",
+          "page": 9
+        },
+        {
+          "title": "E. Broader Impact & Limitations",
+          "page": 9
+        },
+        {
+          "title": "F. Public Resource Used",
+          "page": 9
+        },
+        {
+          "title": "S , S",
+          "page": 9
+        },
+        {
+          "title": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page": 9
+        },
+        {
+          "title": "K ∈{100, 200, 300, 400, 500}.",
+          "page": 10
+        },
+        {
+          "title": "K ∈{10, 20, 30, 40, 50}.",
+          "page": 10
+        },
+        {
+          "title": "i I),",
+          "page": 10
+        },
+        {
+          "title": "a time.",
+          "page": 11
+        },
+        {
+          "title": "a total of 1, 035 distinct clean object shapes.",
+          "page": 11
+        },
+        {
+          "title": "i Qi = 1. SIM provides a measure of how well the",
+          "page": 13
+        },
+        {
+          "title": "a method that grounds 3D affordances by transferring",
+          "page": 14
+        },
+        {
+          "title": "a lack of accountability in critical decision-making sce-",
+          "page": 19
+        }
+      ],
+      "figure_captions": [
+        {
+          "id": "Figure 5",
+          "caption": "Visualization examples of the PIAD-C dataset. We show 7 corruption types across 5 severity levels.",
+          "page_hint": "p.12"
+        },
+        {
+          "id": "Figure 6",
+          "caption": "Visualization examples of the LASO-C dataset. We show 7 corruption types across 5 severity levels.",
+          "page_hint": "p.13"
+        },
+        {
+          "id": "Figure 7",
+          "caption": "Qualitative comparisons between GEAL and LASO [32] on the PIAD-C dataset, highlighting the superior robustness of our",
+          "page_hint": "p.17"
+        },
+        {
+          "id": "Figure 8",
+          "caption": "Qualitative comparisons between GEAL and LASO [32] on the PIAD dataset.",
+          "page_hint": "p.18"
+        }
+      ],
+      "table_captions": [
+        {
+          "id": "Table 7",
+          "caption": "Detailed statistics of the proposed PIAD-C dataset, show-",
+          "page_hint": "p.10"
+        },
+        {
+          "id": "Table 8",
+          "caption": "Detailed statistics of the proposed LASO-C dataset,",
+          "page_hint": "p.10"
+        },
+        {
+          "id": "Table 9",
+          "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the PIAD dataset [70]. AUC and aIOU scores",
+          "page_hint": "p.15"
+        },
+        {
+          "id": "Table 10",
+          "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the PIAD dataset [70]. AUC and aIOU",
+          "page_hint": "p.15"
+        },
+        {
+          "id": "Table 11",
+          "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the LASO dataset [32]. AUC and aIOU",
+          "page_hint": "p.16"
+        },
+        {
+          "id": "Table 12",
+          "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the LASO dataset [32]. AUC and aIOU",
+          "page_hint": "p.16"
+        }
+      ]
+    },
+    "appendix_evidence": {
+      "ablation": [
+        {
+          "evidence": "• Drop Global – Description: Randomly removes a percentage of points from the point cloud.",
+          "source_section": "i I),",
+          "page_hint": "p.10",
+          "kind_hint": "ablation"
+        },
+        {
+          "evidence": "• Drop Local – Description: Removes points in clusters around ran- domly selected local regions.",
+          "source_section": "i I),",
+          "page_hint": "p.10",
+          "kind_hint": "ablation"
+        }
+      ],
+      "implementation_details": [
+        {
+          "evidence": "r denotes the res- olution, V is the number of views, and prompt indicates whether a view-dependent prompt is used.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "implementation_details"
+        },
+        {
+          "evidence": "Type prompt aIoU ↑ AUC ↑ SIM ↑ MAE ↓ Seen 20.2 83.5 0.566 0.112 21.4 83.8 0.578 0.105 22.5 85.0 0.600 0.092 22.5 85.2 0.599 0.092 22.9 86.1 0.603 0.089 Unseen 7.0 70.7 0.355 0.108 7.5 71.9 0.390 0.106 8.7 72.5 0.390 0.102 8.9 72.8 0.391 0.098 9.2 73.0 0.394 0.095 LASO (Tab.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "implementation_details"
+        },
+        {
+          "evidence": "Specifically, we vary the rendering resolution (r), the number of views (V ), and the inclusion of view- dependent prompts.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "implementation_details"
+        },
+        {
+          "evidence": "Incorporating view- dependent prompts significantly boosts performance, par- ticularly on the Seen set, highlighting the importance of semantic guidance in our framework.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "implementation_details"
+        },
+        {
+          "evidence": "Balancing effectiveness and efficiency, we opt for a configuration of r = 112, V = 12, and the use of view-dependent prompts.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "implementation_details"
+        }
+      ],
+      "dataset_details": [
+        {
+          "evidence": "LASO contains 19, 751 point cloud-question pairs over 8, 434 objects (23 classes, 17 affordance cate- gories) with Seen and Unseen splits to test generalization to novel affordance-object pairs.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "dataset_details"
+        },
+        {
+          "evidence": "Since the Unseen data split of LASO is not publicly available, we reproduce it based on the descriptions in their paper and report our re- sults accordingly.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "dataset_details"
+        },
+        {
+          "evidence": "2, we present the per- formance of our GEAL compared to state-of-the-art ap- proaches on the PIAD and LASO datasets under the Seen category setting.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "dataset_details"
+        },
+        {
+          "evidence": "Ablation study on the impact of different components in GEAL on the PIAD dataset [70].",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "dataset_details"
+        },
+        {
+          "evidence": "Seen and Unseen are two partitions of the dataset.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "dataset_details"
+        },
+        {
+          "evidence": "Ablation study on the configuration of Gaussian Splatting parameters in GEAL on the PIAD dataset [70].",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "dataset_details"
+        },
+        {
+          "evidence": "Seen and Unseen are two parti- tions of the dataset.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "dataset_details"
+        },
+        {
+          "evidence": "As shown in Table 5, we conduct an ablation study on the PIAD dataset [70] to evaluate the effectiveness of each component in our proposed GEAL framework.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "dataset_details"
+        }
+      ],
+      "extra_results": [
+        {
+          "evidence": "We use four metrics to assess performance: AUC [38] measures the ability to rank points correctly; aIoU [55] quantifies the overlap between predictions and ground truth; SIM [59] assesses the similarity by summing minimum val- ues at each point; and MAE [65] calculates the average ab- solute difference between predictions and ground truth.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "extra_results"
+        },
+        {
+          "evidence": "On the PIAD dataset, GEAL achieves the highest scores across all evaluation metrics, surpassing the previous best method, IAGNet [70].",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "extra_results"
+        },
+        {
+          "evidence": "Similarly, on the LASO dataset, GEAL outperforms LASO [32] on the ma- jority of metrics.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "extra_results"
+        },
+        {
+          "evidence": "These results highlight the effectiveness of GEAL in leveraging the rich semantic understanding from Table 3.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "extra_results"
+        },
+        {
+          "evidence": "Type aIOU ↑ AUC ↑ SIM ↑ MAE ↓ LASO GEAL LASO GEAL LASO GEAL LASO GEAL Scale 17.6 19.7 82.1 82.5 0.554 0.562 0.100 0.097 Jitter 14.7 17.0 80.3 80.6 0.501 0.505 0.103 0.099 Rotate 16.7 19.0 82.2 82.4 0.542 0.550 0.101 0.097 Drop-L 10.6 12.4 77.0 77.2 0.470 0.474 0.112 0.111 Drop-G 18.7 21.1 83.1 83.7 0.545 0.559 0.097 0.094 Add-L 15.7 18.5 81.0 81.1 0.525 0.536 0.100 0.095 Add-G 13.4 16.1 76.9 77.4 0.506 0.513 0.101 0.098 Table 4.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "extra_results"
+        },
+        {
+          "evidence": "Type aIOU ↑ AUC ↑ SIM ↑ MAE ↓ LASO GEAL LASO GEAL LASO GEAL LASO GEAL Scale 18.7 21.0 84.6 85.3 0.590 0.600 0.103 0.100 Jitter 15.4 17.8 81.3 81.9 0.516 0.517 0.107 0.106 Rotate 17.8 19.8 83.6 84.3 0.572 0.573 0.101 0.100 Drop-L 12.6 13.3 79.3 80.0 0.466 0.484 0.122 0.110 Drop-G 18.4 20.9 83.5 85.2 0.565 0.567 0.099 0.095 Add-L 17.6 20.2 82.7 84.4 0.566 0.572 0.103 0.100 Add-G 16.7 19.0 81.1 83.4 0.549 0.575 0.108 0.097 Table 5.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "extra_results"
+        },
+        {
+          "evidence": "Type CAM GAFM aIoU ↑ AUC ↑ SIM ↑ MAE ↓ Seen 19.2 80.5 0.567 0.101 19.5 83.5 0.585 0.097 22.0 84.4 0.592 0.094 22.5 85.0 0.600 0.092 Unseen 8.5 70.8 0.357 0.112 8.0 69.2 0.386 0.118 8.6 71.2 0.371 0.105 8.7 72.5 0.390 0.102 pre-trained 2D models through Gaussian splatting.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "extra_results"
+        },
+        {
+          "evidence": "The best and 2nd best scores from each metric are highlighted in bold and underlined, respectively.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "extra_results"
+        }
+      ],
+      "qualitative_examples": [
+        {
+          "evidence": "Qualitative comparisons with LASO on PIAD are shown in Fig.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "qualitative_examples"
+        },
+        {
+          "evidence": "supplementary material for more examples.",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "qualitative_examples"
+        },
+        {
+          "evidence": "Additional Qualitative Results on PIAD .",
+          "source_section": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+          "page_hint": "p.9",
+          "kind_hint": "qualitative_examples"
+        },
+        {
+          "evidence": "For example, a point cloud of a “Chair” affords “Sit,” and its paired image de- picts a person sitting on a chair.",
+          "source_section": "i I),",
+          "page_hint": "p.10",
+          "kind_hint": "qualitative_examples"
+        },
+        {
+          "evidence": "Additional Qualitative Results In this section, we provide more qualitative results (visual examples) to demonstrate the effectiveness of our method.",
+          "source_section": "i I),",
+          "page_hint": "p.10",
+          "kind_hint": "qualitative_examples"
+        }
+      ]
+    },
+    "quotes": [],
+    "extraction_failures": [],
+    "evidence_quality": "high"
+  },
+  "summary": {
+    "paper_type": "AI_method",
+    "paper_type_rationale": "The paper is best treated as a method-focused technical paper.",
+    "datasets": [
+      "PIAD-C",
+      "LASO-C",
+      "Extensive",
+      "GEAL",
+      "Code",
+      "PIAD-Corrupt",
+      "LASO-Corrupt",
+      "The"
+    ],
+    "metrics": [
+      "Additionally, the 2D backbone DINOV2 [51] remains frozen during training, while the language model RoBERTa [36] has been fine-tuned."
+    ],
+    "mechanism_signals": [
+      "3.3, we outline the decod- ing process that derives robust and generalizable affordance predictions from the aligned feature space.",
+      "However, a direct projection of 3D point clouds onto 2D planes yields sparse 2D points without semantic and depth information that are not useful for feature extrac- tion with 2D foundation models.",
+      "Moreover, 3D Gaussian Splatting offers smoother transitions between points, preserves occlusions and depth cues for a coherent and accurate scene representation.",
+      "This process establishes a coherent mapping from 3D point clouds and affordance scores to their 2D counterparts, using Gaussian splatting to generate realistic, informative 2D representations that enhance affordance learning.",
+      "The 3D branch uses PointNet++ [53] for point cloud feature extraction, while the 2D branch em- Ideal sit spot on chair?",
+      "We then perform cross-modality alignment, including Granularity-Adaptive Visual-Textual Fusion and 2D-3D Consistency Alignment, to unify features from different modalities into a shared embedding space (cf."
+    ],
+    "ablation_signals": [],
+    "equation_candidates": [
+      {
+        "equation": "O(3)",
+        "source_section": "method",
+        "kind_hint": "complexity"
+      }
+    ],
+    "section_keys": [
+      "preamble",
+      "abstract",
+      "introduction",
+      "method",
+      "experiment",
+      "data",
+      "conclusion",
+      "appendix",
+      "references"
+    ],
+    "language_hint": "en",
+    "section_coverage_status": "good",
+    "fallback_sections": [],
+    "pdf_coverage": {
+      "total_pages": 22,
+      "text_max_pages": null,
+      "text_pages_extracted": 22,
+      "text_pages_scanned": 22,
+      "text_truncated": false,
+      "truncated_due_to_page_limit": false,
+      "appendix_detected": true,
+      "appendix_start_page": 9,
+      "references_start_page": 20,
+      "section_stop_reason": "",
+      "section_stop_page": null
+    },
+    "appendix_evidence_counts": {
+      "ablation": 2,
+      "implementation_details": 5,
+      "dataset_details": 8,
+      "extra_results": 8,
+      "qualitative_examples": 5
+    },
+    "pdf_used": false,
+    "source_corpus_used": true,
+    "candidate_chunk_sections": [
+      "abstract",
+      "conclusion",
+      "data",
+      "experiment",
+      "general",
+      "introduction",
+      "method"
+    ]
+  }
+}

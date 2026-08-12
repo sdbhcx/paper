@@ -1,0 +1,76 @@
+import json
+from pathlib import Path
+
+base = Path(r"D:\study\deep-learning\paper\.workbuddy\deeppapernote\task-aware-3d")
+decisions_path = base / "task_aware_3d_figure_table_decisions.json"
+data = json.loads(decisions_path.read_text(encoding="utf-8"))
+review = {
+    "figure:Figure 1": ("low_priority", "任务范式对比图信息有用，但并非理解 TASA 方法和实验的核心，笔记用文字定义任务即可。"),
+    "figure:Figure 2": ("insert", "已核对候选裁图与第 3 页整页预览：完整保留两阶段框架、模块名称、数据流箭头和输入输出，不含外部题注。"),
+    "figure:Figure 3": ("insert", "已核对候选裁图与第 4 页整页预览：完整保留候选点、反向验证和回退查询流程，不含周围正文。"),
+    "figure:Figure 5": ("insert", "已核对候选裁图与第 7 页整页预览：完整保留各方法、任务列和 Ground Truth 对比，内部文字可辨认，不含外部题注。"),
+    "table:Table 1": ("insert", "已核对候选裁图与第 5 页整页预览：表头、全部方法行与四项指标完整，未混入题注和正文。"),
+    "table:Table 3": ("insert", "已核对候选裁图与第 6 页整页预览：两项 2D 模块组合及四项指标完整，未混入题注和正文。"),
+    "table:Table 4": ("insert", "已核对候选裁图与第 6 页整页预览：输入模态组合及四项指标完整，未混入题注和正文。"),
+}
+for item in data["decisions"]:
+    if item["item_id"] not in review:
+        continue
+    decision, notes = review[item["item_id"]]
+    item["decision"] = decision
+    if decision == "insert":
+        item["visual_review"] = {
+            "status": "pass",
+            "reviewed_asset_sha256": item["source_image_sha256"],
+            "preserved_scientific_elements": ["完整科学图表主体", "内部标签与图例", "比较行列或流程箭头"],
+            "omitted_scientific_elements": [],
+            "notes": notes,
+            "failure_reason": "",
+            "repair_attempts": 0,
+            "revised_bbox": []
+        }
+    else:
+        item["skip_reason"] = "low_priority_for_final_note"
+        item["reason"] = notes
+        item.pop("visual_review", None)
+        item.pop("source_image_path", None)
+        item.pop("source_image_sha256", None)
+        item.pop("source_image_filename", None)
+        item.pop("relative_markdown_embed", None)
+        item.pop("materialization_status", None)
+        item.pop("review_evidence", None)
+counts = {k: 0 for k in ["insert", "low_priority", "placeholder", "review_pending", "skip", "visual_defect"]}
+for item in data["decisions"]:
+    counts[item["decision"]] = counts.get(item["decision"], 0) + 1
+data["summary"]["by_decision"] = counts
+decisions_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+
+plan = {
+  "paper_type": "AI_method",
+  "paper_type_rationale": "论文提出由任务感知 2D 引导与 Point Transformer 几何细化组成的两阶段方法，并在 SceneFun3D 上与基线和模块消融进行评估。",
+  "dominant_domain": "3D vision and embodied AI",
+  "must_cover": ["任务与数据定义", "任务感知 2D 检测", "3D 几何初始化与细化", "主结果与效率", "2D/3D 模块消融", "局限与复现风险"],
+  "key_numbers": ["TASA: mAP 23.2, AP50 26.9, AP25 28.6, mIoU 19.7", "Fun3DU: mAP 7.6, AP50 16.9, AP25 33.3, mIoU 15.2", "37.61 秒/样本、29.50G FLOPs、相对 Fun3DU 3.37 倍加速", "SceneFun3D Split0/1 含 30/200 个场景", "每场景约 100 张 RGB-D 图和约 15 条任务描述", "损失权重 0.3/0.3/0.2/0.2，选帧 K=10"],
+  "real_comparisons": ["TASA 与 Fun3DU 的严格定位精度、宽松 AP25 和效率对比", "帧选择与双重检查的单独/联合消融", "仅几何与加入颜色、文本的模态消融"],
+  "central_claims": [
+    {"claim": "任务感知选帧与双重检查显著改善 2D 空间先验。", "supporting_evidence": [{"section_id": "sec:method"}, {"section_id": "sec:dataset"}, {"pages": [4, 6]}], "what_it_actually_proves": "在 SceneFun3D Split0 的所报消融中，两者联合使 mAP/mIoU 从 3.9/4.4 提升到 23.2/19.7。", "what_it_does_not_prove": "未隔离不同 VLM、提示词和错误类型下的鲁棒性，也未证明该验证机制可迁移到任意具身任务。"},
+    {"claim": "2D 语义粗定位加 3D 局部几何细化提高严格分割精度。", "supporting_evidence": [{"section_id": "sec:method"}, {"section_id": "sec:framework"}, {"section_id": "sec:dataset"}, {"pages": [3, 4, 5, 6]}], "what_it_actually_proves": "TASA 在统一基准上取得最高 mAP、AP50 和 mIoU，并且只用几何特征的细化设置优于加入稀疏颜色/文本的变体。", "what_it_does_not_prove": "不能仅凭整体比较把全部收益归因于几何模块；训练数据、2D 前端和基线实现差异仍可能贡献结果。"},
+    {"claim": "过滤无关视角可降低计算量并提升推理速度。", "supporting_evidence": [{"section_id": "sec:model"}, {"section_id": "sec:dataset"}, {"pages": [5, 6]}], "what_it_actually_proves": "在 NVIDIA A800 的论文设置下，TASA 从 Fun3DU 的 130.26 秒降至 37.61 秒，并把 FLOPs 从 48.05G 降到 29.50G。", "what_it_does_not_prove": "端到端时延是否包含所有 VLM/API 调用、在不同硬件与在线机器人系统中的延迟和能耗尚未报告。"}
+  ],
+  "claim_boundaries": ["所有定量结论限定于 SceneFun3D 两个划分和论文采用的模型组合。", "论文输出 3D 功能区域掩码，不等于完成抓取、接触规划或闭环操作。", "论文没有跨数据集、真实机器人执行或开放环境泛化实验。"],
+  "negative_or_limiting_results": ["TASA 的 AP25=28.6 低于 Fun3DU 的 33.3，说明宽松阈值下并非所有指标占优。", "在 3D 模块加入颜色或文本均导致明显退化，且部分设置 mIoU 低至 2.8。", "K=20 的 mIoU 略高于 K=10，作者选择 K=10 是精度与计算的折中而非最优精度。", "论文没有给出置信区间、多次运行方差或统计显著性。"],
+  "mechanism_result_map": ["按 affordance 概念而非主物体名排序视角，针对 LERF/OpenMask3D 容易关注整个柜体而非把手的问题。", "反向验证过滤功能错误点，回退查询补漏；二者对应精度与召回的互补。", "投影后的粗掩码限定局部 3D 邻域，再由相对位置编码的点自注意力修边界，解释 AP50/mIoU 的提升。", "只处理 top-K 视角和粗掩码邻域，解释 FLOPs 与时延下降。"],
+  "comparative_positioning": ["相较开放词汇 3D 分割，TASA 将对象级语义转为可操作部件级语义。", "相较 Fun3DU 的 2D 到 3D 提升，TASA 增加显式局部几何学习，换得更高严格精度但 AP25 略低。"],
+  "reuse_takeaways": ["把语言任务拆成 affordance 部件词，再做视角选择，是比整句相似度更适合细粒度 grounding 的前端。", "让 2D 模型只提供高召回粗先验、让 3D 网络负责空间一致性，是可复用的 coarse-to-fine 分工。", "增加模态不必然增益；在小数据下应先验证模态质量和对齐，再做融合。"],
+  "followup_questions": ["控制相同 2D 前端后，几何细化单独贡献多少？", "更换 Qwen/MolMo 或提示词后双重检查的精度、调用成本和稳定性如何？", "能否在跨场景、跨数据集和真实机器人闭环操作中保持优势？", "将 8192 点固定邻域替换为自适应多尺度邻域会怎样？"],
+  "section_plan": [
+    {"section": "研究问题", "weight": "medium", "focus": "解释对象级语义分割为何无法精确定位把手、旋钮等功能部件，以及论文如何把问题重构为语言条件下的场景级三维功能区域分割。", "subsections": ["为什么对象级语义不够", "论文的任务重构"], "evidence_sources": [{"section_id": "sec:introduction"}, {"pages": [1, 2]}]},
+    {"section": "数据与任务定义", "weight": "medium", "focus": "明确自然语言、点云、多视角图像及相机参数的输入，三维功能区域掩码的输出，并说明 SceneFun3D 两个划分和四项指标。", "subsections": ["输入输出", "SceneFun3D 与指标"], "evidence_sources": [{"section_id": "sec:method"}, {"section_id": "sec:dataset"}, {"pages": [3, 5, 6]}]},
+    {"section": "方法主线", "weight": "high", "focus": "按输入、操作和输出重构从任务概念抽取、加权选帧、双重检查、二维掩码投影到 Point Transformer 几何细化的完整链路。", "subsections": ["机制流程", "任务感知 2D 检测", "双重检查", "几何初始化与 Point Transformer 细化", "训练目标", "关键实现细节"], "evidence_sources": [{"section_id": "sec:method"}, {"section_id": "sec:framework"}, {"pages": [3, 4, 5]}]},
+    {"section": "关键结果", "weight": "high", "focus": "用紧凑表格呈现主结果、推理效率和两组消融，并解释严格精度提升、AP25 退让以及增加颜色和文本后退化的含义。", "subsections": ["主结果", "效率", "消融", "定性结果"], "evidence_sources": [{"section_id": "sec:model"}, {"section_id": "sec:dataset"}, {"pages": [5, 6, 7]}]},
+    {"section": "深度分析", "weight": "high", "focus": "把视角选择、点验证和局部几何细化与结果模式逐一对应，区分论文证明的基准内优势与尚未验证的跨数据集和机器人闭环能力。", "subsections": ["真正贡献", "为什么结果成立", "证据边界", "与相关路线的位置关系"], "evidence_sources": [{"section_id": "sec:dataset"}, {"section_id": "sec:conclusion"}, {"pages": [6, 7, 8]}]},
+    {"section": "局限", "weight": "high", "focus": "审查单一数据集、小样本模态融合、VLM 与提示词依赖、时延核算边界、缺少统计方差及真实机器人闭环评估等限制。", "subsections": ["数据与外部有效性", "模块归因与复现", "部署与闭环操作缺口"], "evidence_sources": [{"section_id": "sec:dataset"}, {"section_id": "sec:conclusion"}, {"pages": [5, 6, 7, 8]}]}
+  ],
+  "formulas_to_include": ["任务/affordance 加权选帧得分", "局部点注意力更新", "BCE+Dice+Focal+IoU 复合损失"]
+}
+(base / "task_aware_3d_note_plan.json").write_text(json.dumps(plan, ensure_ascii=False, indent=2), encoding="utf-8")

@@ -1,0 +1,1737 @@
+{
+  "status": "ok",
+  "script": "plan_figures.py",
+  "paper_id": "doi:10.1609/aaai.v40i6.42466",
+  "figure_plan": {
+    "paper_id": "doi:10.1609/aaai.v40i6.42466",
+    "figures": [
+      {
+        "id": "Figure 2",
+        "caption": "Overview of our Task-Aware 3D Scene-level Affordance segmentation framework (TASA).",
+        "kind": "method_overview",
+        "section": "机制流程",
+        "reason": "这张图概括了整体方法或系统流程；如果匹配置信度足够高，最适合放在 `### 机制流程` 帮助快速建立执行链理解。",
+        "priority": 1,
+        "anchor_text": "机制流程",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_003_fig_figure_2.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_003_fig_figure_2.png",
+          "width": 682,
+          "height": 249,
+          "size_bytes": 125970,
+          "label": "Figure 2",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.197461,
+            "visual_rect_count": 62,
+            "visual_body_ratio": 1.0,
+            "paragraph_text_chars": 0,
+            "table_body_rows": 0,
+            "caption_text_chars": 93,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 3,
+            "score": 8,
+            "matched_terms": [
+              "figure 2",
+              "task-aware",
+              "scene-level",
+              "affordance",
+              "segmentation",
+              "framework"
+            ],
+            "snippet": "∗ 𝒫∗ … feature … Point Trans. Encoder Point Trans. Decoder Input data ℳ#$ ℳ%$ + ℳ%$ & ℳ!\" Figure 2: Overview of our Task-Aware 3D Scene-level Affordance segmentation framework (TASA). Visi",
+            "images": [
+              {
+                "filename": "page_003_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_003_img_01.png",
+                "width": 512,
+                "height": 512,
+                "size_bytes": 863
+              },
+              {
+                "filename": "page_003_img_02.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_003_img_02.png",
+                "width": 119,
+                "height": 122,
+                "size_bytes": 15750
+              },
+              {
+                "filename": "page_003_img_03.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_003_img_03.png",
+                "width": 512,
+                "height": 512,
+                "size_bytes": 26118
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_003_fig_figure_2.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_003_fig_figure_2.png",
+                "width": 682,
+                "height": 249,
+                "size_bytes": 125970,
+                "label": "Figure 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.197461,
+                  "visual_rect_count": 62,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 93,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 5,
+            "score": 8,
+            "matched_terms": [
+              "figure 2",
+              "affordance",
+              "segmentation",
+              "framework"
+            ],
+            "snippet": "we employ an encoder-decoder architecture for refining 3D affordance masks, as showed in Figure 2. The encoder aggregates lo- cal geometric features and downsamples the point cloud to cap",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_005_fig_table_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_005_fig_table_1.png",
+                "width": 277,
+                "height": 115,
+                "size_bytes": 9204,
+                "label": "Table 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.037331,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 99,
+                  "table_body_rows": 6,
+                  "caption_text_chars": 149,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "task-aware",
+              "scene-level",
+              "affordance",
+              "segmentation",
+              "framework"
+            ],
+            "snippet": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement Lian He1,2, Meng Liu2",
+            "images": [
+              {
+                "filename": "page_001_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_01.png",
+                "width": 389,
+                "height": 384,
+                "size_bytes": 87344
+              },
+              {
+                "filename": "page_001_img_02.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_02.png",
+                "width": 160,
+                "height": 163,
+                "size_bytes": 23746
+              },
+              {
+                "filename": "page_001_img_03.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_03.png",
+                "width": 160,
+                "height": 163,
+                "size_bytes": 26497
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_fig_figure_1.png",
+                "width": 391,
+                "height": 291,
+                "size_bytes": 54223,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.132552,
+                  "visual_rect_count": 40,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 144,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Figure 1",
+        "caption": "Comparison among (a) object affordance under-",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_001_fig_figure_1.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_fig_figure_1.png",
+          "width": 391,
+          "height": 291,
+          "size_bytes": 54223,
+          "label": "Figure 1",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.132552,
+            "visual_rect_count": 40,
+            "visual_body_ratio": 1.0,
+            "paragraph_text_chars": 0,
+            "table_body_rows": 0,
+            "caption_text_chars": 144,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 1,
+            "score": 8,
+            "matched_terms": [
+              "figure 1",
+              "comparison",
+              "among",
+              "object",
+              "affordance",
+              "under-"
+            ],
+            "snippet": "tation paradigm Input Video Frames Object sam Affordance sam 2D Lift 3D Input Point Cloud Figure 1: Comparison among (a) object affordance under- standing, (b) referring segmentation, and",
+            "images": [
+              {
+                "filename": "page_001_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_01.png",
+                "width": 389,
+                "height": 384,
+                "size_bytes": 87344
+              },
+              {
+                "filename": "page_001_img_02.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_02.png",
+                "width": 160,
+                "height": 163,
+                "size_bytes": 23746
+              },
+              {
+                "filename": "page_001_img_03.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_03.png",
+                "width": 160,
+                "height": 163,
+                "size_bytes": 26497
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_fig_figure_1.png",
+                "width": 391,
+                "height": 291,
+                "size_bytes": 54223,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.132552,
+                  "visual_rect_count": 40,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 144,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 5,
+            "score": 3,
+            "matched_terms": [
+              "comparison",
+              "among",
+              "object",
+              "affordance"
+            ],
+            "snippet": "0.0 OpenIns3D 0.0 0.0 0.0 0.1 Fun3DU 7.6 16.9 33.3 15.2 Ours 23.2 26.9 28.6 19.7 Table 1: Comparison of our method and baselines on the SceneFun3D dataset. All metrics are positively correla",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_005_fig_table_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_005_fig_table_1.png",
+                "width": 277,
+                "height": 115,
+                "size_bytes": 9204,
+                "label": "Table 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.037331,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 99,
+                  "table_body_rows": 6,
+                  "caption_text_chars": 149,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 6,
+            "score": 3,
+            "matched_terms": [
+              "comparison",
+              "object",
+              "affordance"
+            ],
+            "snippet": "he number of N-nearest neighbors is set to 8,192. Quantitative Results Table 1 presents a comparison of our method with baselines on the SceneFun3D dataset. The results reveal that LERF and",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_table_3.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_3.png",
+                "width": 309,
+                "height": 108,
+                "size_bytes": 8573,
+                "label": "Table 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.039139,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 83,
+                  "table_body_rows": 5,
+                  "caption_text_chars": 90,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_006_fig_table_4.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_4.png",
+                "width": 300,
+                "height": 87,
+                "size_bytes": 6056,
+                "label": "Table 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.030604,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 108,
+                  "table_body_rows": 6,
+                  "caption_text_chars": 116,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Figure 5",
+        "caption": "Qualitative comparison on SceneFun3D Split0. Point clouds are cropped around functional objects for improved",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_007_fig_figure_5.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_007_fig_figure_5.png",
+          "width": 682,
+          "height": 369,
+          "size_bytes": 495173,
+          "label": "Figure 5",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.292537,
+            "visual_rect_count": 126,
+            "visual_body_ratio": 1.0,
+            "paragraph_text_chars": 0,
+            "table_body_rows": 0,
+            "caption_text_chars": 130,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 7,
+            "score": 8,
+            "matched_terms": [
+              "figure 5",
+              "qualitative",
+              "comparison",
+              "scenefun",
+              "split",
+              "point"
+            ],
+            "snippet": "toilet Close the bedroom door Open the second drawer of the wooden cabinet in the corner Figure 5: Qualitative comparison on SceneFun3D Split0. Point clouds are cropped around functional",
+            "images": [
+              {
+                "filename": "page_007_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_007_img_01.png",
+                "width": 19,
+                "height": 21,
+                "size_bytes": 987
+              },
+              {
+                "filename": "page_007_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_007_img_02.jpeg",
+                "width": 393,
+                "height": 221,
+                "size_bytes": 13357
+              },
+              {
+                "filename": "page_007_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_007_img_03.jpeg",
+                "width": 393,
+                "height": 221,
+                "size_bytes": 14198
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_007_fig_figure_5.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_007_fig_figure_5.png",
+                "width": 682,
+                "height": 369,
+                "size_bytes": 495173,
+                "label": "Figure 5",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.292537,
+                  "visual_rect_count": 126,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 130,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "comparison",
+              "scenefun",
+              "point"
+            ],
+            "snippet": "adigm Input Video Frames Object sam Affordance sam 2D Lift 3D Input Point Cloud Figure 1: Comparison among (a) object affordance under- standing, (b) referring segmentation, and (c) scene af",
+            "images": [
+              {
+                "filename": "page_001_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_01.png",
+                "width": 389,
+                "height": 384,
+                "size_bytes": 87344
+              },
+              {
+                "filename": "page_001_img_02.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_02.png",
+                "width": 160,
+                "height": 163,
+                "size_bytes": 23746
+              },
+              {
+                "filename": "page_001_img_03.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_03.png",
+                "width": 160,
+                "height": 163,
+                "size_bytes": 26497
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_fig_figure_1.png",
+                "width": 391,
+                "height": 291,
+                "size_bytes": 54223,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.132552,
+                  "visual_rect_count": 40,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 144,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 5,
+            "score": 3,
+            "matched_terms": [
+              "comparison",
+              "scenefun",
+              "split",
+              "point"
+            ],
+            "snippet": "0.0 OpenIns3D 0.0 0.0 0.0 0.1 Fun3DU 7.6 16.9 33.3 15.2 Ours 23.2 26.9 28.6 19.7 Table 1: Comparison of our method and baselines on the SceneFun3D dataset. All metrics are positively correla",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_005_fig_table_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_005_fig_table_1.png",
+                "width": 277,
+                "height": 115,
+                "size_bytes": 9204,
+                "label": "Table 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.037331,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 99,
+                  "table_body_rows": 6,
+                  "caption_text_chars": 149,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Table 1",
+        "caption": "Comparison of our method and baselines on the",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_005_fig_table_1.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_005_fig_table_1.png",
+          "width": 277,
+          "height": 115,
+          "size_bytes": 9204,
+          "label": "Table 1",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.037331,
+            "visual_rect_count": 0,
+            "visual_body_ratio": 0.0,
+            "paragraph_text_chars": 99,
+            "table_body_rows": 6,
+            "caption_text_chars": 149,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 5,
+            "score": 8,
+            "matched_terms": [
+              "table 1",
+              "comparison",
+              "method",
+              "baselines"
+            ],
+            "snippet": "0.0 0.0 0.0 OpenIns3D 0.0 0.0 0.0 0.1 Fun3DU 7.6 16.9 33.3 15.2 Ours 23.2 26.9 28.6 19.7 Table 1: Comparison of our method and baselines on the SceneFun3D dataset. All metrics are positi",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_005_fig_table_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_005_fig_table_1.png",
+                "width": 277,
+                "height": 115,
+                "size_bytes": 9204,
+                "label": "Table 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.037331,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 99,
+                  "table_body_rows": 6,
+                  "caption_text_chars": 149,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 6,
+            "score": 8,
+            "matched_terms": [
+              "table 1",
+              "comparison",
+              "method",
+              "baselines"
+            ],
+            "snippet": "ature extraction, the number of N-nearest neighbors is set to 8,192. Quantitative Results Table 1 presents a comparison of our method with baselines on the SceneFun3D dataset. The results",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_table_3.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_3.png",
+                "width": 309,
+                "height": 108,
+                "size_bytes": 8573,
+                "label": "Table 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.039139,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 83,
+                  "table_body_rows": 5,
+                  "caption_text_chars": 90,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_006_fig_table_4.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_4.png",
+                "width": 300,
+                "height": 87,
+                "size_bytes": 6056,
+                "label": "Table 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.030604,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 108,
+                  "table_body_rows": 6,
+                  "caption_text_chars": 116,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "comparison",
+              "method",
+              "baselines"
+            ],
+            "snippet": "adigm Input Video Frames Object sam Affordance sam 2D Lift 3D Input Point Cloud Figure 1: Comparison among (a) object affordance under- standing, (b) referring segmentation, and (c) scene af",
+            "images": [
+              {
+                "filename": "page_001_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_01.png",
+                "width": 389,
+                "height": 384,
+                "size_bytes": 87344
+              },
+              {
+                "filename": "page_001_img_02.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_02.png",
+                "width": 160,
+                "height": 163,
+                "size_bytes": 23746
+              },
+              {
+                "filename": "page_001_img_03.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_03.png",
+                "width": 160,
+                "height": 163,
+                "size_bytes": 26497
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_fig_figure_1.png",
+                "width": 391,
+                "height": 291,
+                "size_bytes": 54223,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.132552,
+                  "visual_rect_count": 40,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 144,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Table 2",
+        "caption": "Efficiency comparison between our method and",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "candidate_pages": [
+          {
+            "page_number": 5,
+            "score": 8,
+            "matched_terms": [
+              "table 2",
+              "efficiency",
+              "comparison",
+              "between",
+              "method"
+            ],
+            "snippet": "S Inference Time (s/sample)↓ Speed Up↑ Fun3DU 48.05G 130.26 1.00× Ours 29.50G 37.61 3.37× Table 2: Efficiency comparison between our method and Fun3DU on the SceneFun3D dataset. Inference",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_005_fig_table_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_005_fig_table_1.png",
+                "width": 277,
+                "height": 115,
+                "size_bytes": 9204,
+                "label": "Table 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.037331,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 99,
+                  "table_body_rows": 6,
+                  "caption_text_chars": 149,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 6,
+            "score": 8,
+            "matched_terms": [
+              "table 2",
+              "efficiency",
+              "comparison",
+              "between",
+              "method"
+            ],
+            "snippet": "understanding, resulting in superior (AP) and (mIoU) scores compared to Fun3DU. Moreover, Table 2 quantifies the efficiency of our method compared to Fun3DU, achieving a 3.37× speedup wit",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_table_3.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_3.png",
+                "width": 309,
+                "height": 108,
+                "size_bytes": 8573,
+                "label": "Table 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.039139,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 83,
+                  "table_body_rows": 5,
+                  "caption_text_chars": 90,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_006_fig_table_4.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_4.png",
+                "width": 300,
+                "height": 87,
+                "size_bytes": 6056,
+                "label": "Table 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.030604,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 108,
+                  "table_body_rows": 6,
+                  "caption_text_chars": 116,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "efficiency",
+              "comparison",
+              "between",
+              "method"
+            ],
+            "snippet": "nd 3D geometric reasoning in a coarse-to-fine manner. To improve the affordance detection efficiency, TASA features a task-aware 2D affordance detection module to identify ma- nipulable poin",
+            "images": [
+              {
+                "filename": "page_001_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_01.png",
+                "width": 389,
+                "height": 384,
+                "size_bytes": 87344
+              },
+              {
+                "filename": "page_001_img_02.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_02.png",
+                "width": 160,
+                "height": 163,
+                "size_bytes": 23746
+              },
+              {
+                "filename": "page_001_img_03.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_03.png",
+                "width": 160,
+                "height": 163,
+                "size_bytes": 26497
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_fig_figure_1.png",
+                "width": 391,
+                "height": 291,
+                "size_bytes": 54223,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.132552,
+                  "visual_rect_count": 40,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 144,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "page-proximity-and-caption-cues"
+      },
+      {
+        "id": "Table 3",
+        "caption": "Ablation of the Task-Aware 2D Affordance Detec-",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_006_fig_table_3.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_3.png",
+          "width": 309,
+          "height": 108,
+          "size_bytes": 8573,
+          "label": "Table 3",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.039139,
+            "visual_rect_count": 0,
+            "visual_body_ratio": 0.0,
+            "paragraph_text_chars": 83,
+            "table_body_rows": 5,
+            "caption_text_chars": 90,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 6,
+            "score": 8,
+            "matched_terms": [
+              "table 3",
+              "ablation",
+              "task-aware",
+              "affordance",
+              "detec-"
+            ],
+            "snippet": "mIoU 3.9 6.00 14.9 4.4 ✓ 9.3 14.2 23.3 11.3 ✓ 13.1 18.1 27.9 8.5 ✓ ✓ 23.2 26.9 28.6 19.7 Table 3: Ablation of the Task-Aware 2D Affordance Detec- tion module on SceneFun3D Split0. geomet",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_table_3.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_3.png",
+                "width": 309,
+                "height": 108,
+                "size_bytes": 8573,
+                "label": "Table 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.039139,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 83,
+                  "table_body_rows": 5,
+                  "caption_text_chars": 90,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_006_fig_table_4.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_4.png",
+                "width": 300,
+                "height": 87,
+                "size_bytes": 6056,
+                "label": "Table 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.030604,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 108,
+                  "table_body_rows": 6,
+                  "caption_text_chars": 116,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 7,
+            "score": 3,
+            "matched_terms": [
+              "ablation",
+              "task-aware",
+              "affordance"
+            ],
+            "snippet": "s for improved visibility. tational efficiency. On 3D Affordance Refinement. We conducted ablation experiments reported in Table 4. The results confirm that in- corporating geometric struc",
+            "images": [
+              {
+                "filename": "page_007_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_007_img_01.png",
+                "width": 19,
+                "height": 21,
+                "size_bytes": 987
+              },
+              {
+                "filename": "page_007_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_007_img_02.jpeg",
+                "width": 393,
+                "height": 221,
+                "size_bytes": 13357
+              },
+              {
+                "filename": "page_007_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_007_img_03.jpeg",
+                "width": 393,
+                "height": 221,
+                "size_bytes": 14198
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_007_fig_figure_5.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_007_fig_figure_5.png",
+                "width": 682,
+                "height": 369,
+                "size_bytes": 495173,
+                "label": "Figure 5",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.292537,
+                  "visual_rect_count": 126,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 130,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 2,
+            "matched_terms": [
+              "task-aware",
+              "affordance"
+            ],
+            "snippet": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement Lian He1,2, Meng Liu2",
+            "images": [
+              {
+                "filename": "page_001_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_01.png",
+                "width": 389,
+                "height": 384,
+                "size_bytes": 87344
+              },
+              {
+                "filename": "page_001_img_02.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_02.png",
+                "width": 160,
+                "height": 163,
+                "size_bytes": 23746
+              },
+              {
+                "filename": "page_001_img_03.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_03.png",
+                "width": 160,
+                "height": 163,
+                "size_bytes": 26497
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_fig_figure_1.png",
+                "width": 391,
+                "height": 291,
+                "size_bytes": 54223,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.132552,
+                  "visual_rect_count": 40,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 144,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Table 4",
+        "caption": "Ablation of the 3D Affordance Refinement Module",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_006_fig_table_4.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_4.png",
+          "width": 300,
+          "height": 87,
+          "size_bytes": 6056,
+          "label": "Table 4",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.030604,
+            "visual_rect_count": 0,
+            "visual_body_ratio": 0.0,
+            "paragraph_text_chars": 108,
+            "table_body_rows": 6,
+            "caption_text_chars": 116,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 6,
+            "score": 8,
+            "matched_terms": [
+              "table 4",
+              "ablation",
+              "affordance",
+              "refinement",
+              "module"
+            ],
+            "snippet": "✓ ✓ 19.3 19.3 24.3 15.2 ✓ ✓ 9.2 10.0 10.1 4.8 ✓ ✓ ✓ 5.0 5.8 6.1 2.8 ✓ 23.2 26.9 28.6 19.7 Table 4: Ablation of the 3D Affordance Refinement Module with different input modalities: geometr",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_table_3.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_3.png",
+                "width": 309,
+                "height": 108,
+                "size_bytes": 8573,
+                "label": "Table 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.039139,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 83,
+                  "table_body_rows": 5,
+                  "caption_text_chars": 90,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_006_fig_table_4.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_4.png",
+                "width": 300,
+                "height": 87,
+                "size_bytes": 6056,
+                "label": "Table 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.030604,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 108,
+                  "table_body_rows": 6,
+                  "caption_text_chars": 116,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 7,
+            "score": 8,
+            "matched_terms": [
+              "table 4",
+              "ablation",
+              "affordance",
+              "refinement",
+              "module"
+            ],
+            "snippet": "al efficiency. On 3D Affordance Refinement. We conducted ablation experiments reported in Table 4. The results confirm that in- corporating geometric structure is critical, yielding the h",
+            "images": [
+              {
+                "filename": "page_007_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_007_img_01.png",
+                "width": 19,
+                "height": 21,
+                "size_bytes": 987
+              },
+              {
+                "filename": "page_007_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_007_img_02.jpeg",
+                "width": 393,
+                "height": 221,
+                "size_bytes": 13357
+              },
+              {
+                "filename": "page_007_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_007_img_03.jpeg",
+                "width": 393,
+                "height": 221,
+                "size_bytes": 14198
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_007_fig_figure_5.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_007_fig_figure_5.png",
+                "width": 682,
+                "height": 369,
+                "size_bytes": 495173,
+                "label": "Figure 5",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.292537,
+                  "visual_rect_count": 126,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 130,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "affordance",
+              "refinement",
+              "module"
+            ],
+            "snippet": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement Lian He1,2, Meng Liu2,3*, Qilang Ye",
+            "images": [
+              {
+                "filename": "page_001_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_01.png",
+                "width": 389,
+                "height": 384,
+                "size_bytes": 87344
+              },
+              {
+                "filename": "page_001_img_02.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_02.png",
+                "width": 160,
+                "height": 163,
+                "size_bytes": 23746
+              },
+              {
+                "filename": "page_001_img_03.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_img_03.png",
+                "width": 160,
+                "height": 163,
+                "size_bytes": 26497
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_001_fig_figure_1.png",
+                "width": 391,
+                "height": 291,
+                "size_bytes": 54223,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.132552,
+                  "visual_rect_count": 40,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 144,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Figure 3",
+        "caption": "Illustration of the Double-Check Mechanism.",
+        "kind": "supporting_figure",
+        "section": "深度分析",
+        "reason": "这张图更适合作为补充图，放在深度分析部分帮助解释作者论点。",
+        "priority": 3,
+        "anchor_text": "深度分析",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_004_fig_figure_3.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_004_fig_figure_3.png",
+          "width": 682,
+          "height": 252,
+          "size_bytes": 74695,
+          "label": "Figure 3",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.200003,
+            "visual_rect_count": 37,
+            "visual_body_ratio": 1.0,
+            "paragraph_text_chars": 969,
+            "table_body_rows": 0,
+            "caption_text_chars": 53,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 4,
+            "score": 8,
+            "matched_terms": [
+              "figure 3",
+              "illustration",
+              "double-check",
+              "mechanism"
+            ],
+            "snippet": "osed of two sequential steps: reverse validation and fallback querying, as illustrated in Figure 3. • Reverse Validation: For each candidate point p2D i = (xi, yi) ∈P, we verify whether in",
+            "images": [
+              {
+                "filename": "page_004_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_004_img_01.jpeg",
+                "width": 46,
+                "height": 44,
+                "size_bytes": 1448
+              },
+              {
+                "filename": "page_004_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_004_img_02.jpeg",
+                "width": 46,
+                "height": 44,
+                "size_bytes": 1393
+              },
+              {
+                "filename": "page_004_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_004_img_03.jpeg",
+                "width": 46,
+                "height": 44,
+                "size_bytes": 1380
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_004_fig_figure_3.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_004_fig_figure_3.png",
+                "width": 682,
+                "height": 252,
+                "size_bytes": 74695,
+                "label": "Figure 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.200003,
+                  "visual_rect_count": 37,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 969,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 53,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 3,
+            "score": 2,
+            "matched_terms": [
+              "double-check",
+              "mechanism"
+            ],
+            "snippet": "concepts to prioritize informative views, and 3) Ma- nipulable Point Validation through a double-check mecha- nism that enhances robustness via reverse checks and fall- back queries. Affordanc",
+            "images": [
+              {
+                "filename": "page_003_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_003_img_01.png",
+                "width": 512,
+                "height": 512,
+                "size_bytes": 863
+              },
+              {
+                "filename": "page_003_img_02.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_003_img_02.png",
+                "width": 119,
+                "height": 122,
+                "size_bytes": 15750
+              },
+              {
+                "filename": "page_003_img_03.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_003_img_03.png",
+                "width": 512,
+                "height": 512,
+                "size_bytes": 26118
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_003_fig_figure_2.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_003_fig_figure_2.png",
+                "width": 682,
+                "height": 249,
+                "size_bytes": 125970,
+                "label": "Figure 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.197461,
+                  "visual_rect_count": 62,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 93,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 6,
+            "score": 2,
+            "matched_terms": [
+              "double-check",
+              "mechanism"
+            ],
+            "snippet": "me selection module enhances spatial priors by focusing on task-relevant views, while the Double-Check mechanism improves point- level accuracy through geometric validation. Together, they imp",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_table_3.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_3.png",
+                "width": 309,
+                "height": 108,
+                "size_bytes": 8573,
+                "label": "Table 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.039139,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 83,
+                  "table_body_rows": 5,
+                  "caption_text_chars": 90,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_006_fig_table_4.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_4.png",
+                "width": 300,
+                "height": 87,
+                "size_bytes": 6056,
+                "label": "Table 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.030604,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 108,
+                  "table_body_rows": 6,
+                  "caption_text_chars": 116,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Figure 4",
+        "caption": "Effect of the number of selected images K on seg-",
+        "kind": "supporting_figure",
+        "section": "深度分析",
+        "reason": "这张图更适合作为补充图，放在深度分析部分帮助解释作者论点。",
+        "priority": 3,
+        "anchor_text": "深度分析",
+        "insert_mode": "placeholder",
+        "candidate_pages": [
+          {
+            "page_number": 6,
+            "score": 8,
+            "matched_terms": [
+              "figure 4",
+              "effect",
+              "number",
+              "selected",
+              "images",
+              "seg-"
+            ],
+            "snippet": "ld despite their imprecision. However, its performance is limited by directly translating Figure 4: Effect of the number of selected images K on seg- mentation performance, evaluated using",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_table_3.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_3.png",
+                "width": 309,
+                "height": 108,
+                "size_bytes": 8573,
+                "label": "Table 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.039139,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 83,
+                  "table_body_rows": 5,
+                  "caption_text_chars": 90,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_006_fig_table_4.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_4.png",
+                "width": 300,
+                "height": 87,
+                "size_bytes": 6056,
+                "label": "Table 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.030604,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 108,
+                  "table_body_rows": 6,
+                  "caption_text_chars": 116,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 4,
+            "score": 3,
+            "matched_terms": [
+              "number",
+              "selected",
+              "images"
+            ],
+            "snippet": "emantically aligned, interactive elements over visually dominant. This method reduces the number of frames processed by focusing on the most rele- vant ones, enhancing both efficiency an",
+            "images": [
+              {
+                "filename": "page_004_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_004_img_01.jpeg",
+                "width": 46,
+                "height": 44,
+                "size_bytes": 1448
+              },
+              {
+                "filename": "page_004_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_004_img_02.jpeg",
+                "width": 46,
+                "height": 44,
+                "size_bytes": 1393
+              },
+              {
+                "filename": "page_004_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_004_img_03.jpeg",
+                "width": 46,
+                "height": 44,
+                "size_bytes": 1380
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_004_fig_figure_3.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_004_fig_figure_3.png",
+                "width": 682,
+                "height": 252,
+                "size_bytes": 74695,
+                "label": "Figure 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.200003,
+                  "visual_rect_count": 37,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 969,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 53,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 3,
+            "score": 2,
+            "matched_terms": [
+              "number",
+              "images"
+            ],
+            "snippet": "s V = {v1, v2, ..., vN} ∈RN×H×W ×3, where pi is individual 3D points, M denotes the total number of points in the point cloud, vi refers to every RGB image, N is the number of views, H a",
+            "images": [
+              {
+                "filename": "page_003_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_003_img_01.png",
+                "width": 512,
+                "height": 512,
+                "size_bytes": 863
+              },
+              {
+                "filename": "page_003_img_02.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_003_img_02.png",
+                "width": 119,
+                "height": 122,
+                "size_bytes": 15750
+              },
+              {
+                "filename": "page_003_img_03.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_003_img_03.png",
+                "width": 512,
+                "height": 512,
+                "size_bytes": 26118
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_003_fig_figure_2.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_003_fig_figure_2.png",
+                "width": 682,
+                "height": 249,
+                "size_bytes": 125970,
+                "label": "Figure 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.197461,
+                  "visual_rect_count": 62,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 93,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "page-proximity-and-caption-cues"
+      }
+    ]
+  }
+}

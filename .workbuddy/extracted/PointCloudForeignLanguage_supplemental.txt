@@ -1,0 +1,586 @@
+Appendix                                                       Prompt 1:
+                                                              You are a helpful AI assistant.
+   In this section, we present more details on the imple-     Now, I will give you a question, its type, an
+mentation and discuss additional experimental results.        answer from the model, and an answer from the
+The following is an overview of the organization of the       label.
+appendix.                                                     Your task is to focus only on these two answers
+                                                              and determine whether they convey the same
+A1 Implementation Details                                     information for the given type of question.
+A2 Discussion                                                 Your response should be a single confidence score
+                                                              ranging from 0 to 100.
+      A2.1 Non-comparable existing literature                 This score evaluates how closely the two answers
+A3 Additional Results                                         describe the same thing.
+                                                              Follow the scoring standard demonstrated below.
+      A3.1 Comparison to Existing Methods                     Here are several example question-answer pairs
+      A3.2 Training Time Analysis                             with their confidence scores:
+      A3.3 Zero-shot Classification
+      A3.4 Performance Across Multiple Runs                   Question 1: How many oranges will there be if
+A4 Ablation and Sensitivity Studies                           1/3 of them are removed?
+      A4.1 Sensitivity Study                                  Question type: Knowledge
+      A4.2 Ablation Study                                     Answer from model: There will be 6 left.
+      A4.3 Generalization Across LLM Backbones                Answer from label: As there are 9 oranges in
+A5 More Qualitative Results                                   total, there will be 6 oranges left if 1/3 of
+                                                              them are removed.
+A1. Implementation Details                                    Confidence score: 100
+
+   We discussed most of the training and implementation       Question 2: What is this object?
+details in the main paper. In this section, we summarize all  Question type: General Visual Recognition
+hyperparameters in Table A1. Some parameters are shared       Answer from model: This is a bathtub.
+across all training stages, while others are stage-specific.  Answer from label: This is a dirty bathtub.
+The values of these hyperparameters are chosen based on a     Confidence score: 80
+rigorous sensitivity analysis, while some are derived from
+well-established literature.                                  Question 3: What is this object?
+                                                              Question type: General Visual Recognition
+   Next, we present the prompt used for GPT-4 evaluation      Answer from model: This is a bottle of water.
+in Prompt 1. This prompt is similar to what existing meth-    Answer from label: This is a bottle of oil.
+ods have used for this evaluation.                            Confidence score: 50
+
+         Table A1. List of model-specific hyperparameters.    Question 4: What is the boy holding in his right
+                                                              hand?
+Stage  Hyperparam.                         Value              Question type: Spatial Recognition
+                                                              Answer from model: He is holding a white cup in
+1                                           0.25              his right hand.
+2                                           0.50              Answer from label: He is holding a sword in his
+3      Codebook size                       8192               right hand.
+       Warm-up ratio                        0.03              Confidence score: 0
+       Weight decay                         0.05
+       Number of sampled points, Ns         512               Next, you will be given:
+       Number of neighbours, Kg              81               Question: {},
+       Epoch                                                  Question type: {},
+       Lr. rate                               3               Answer from model: {},
+       Batch size                        4  104               Answer from label: {}.
+       Epoch                                                  Output only the confidence score as a number,
+       batch size                           128               without any words.
+       Lr. rate                               3
+                                             32
+       Epoch                             2  105
+       batch size
+       Lr. rate                             0.95
+       number of generated responses, m       1
+                                              8
+
+                                         1  106
+                                              8
+Table A2. Performance comparison with existing methods. We adopt the following table from [17] and follow the notations and cat-
+egorization defined by them. Here, "Specialist Model" refers to models specifically designed for individual tasks such as 3D question
+answering, 3D dense captioning, or referring segmentation. "Finetuned 3D MLLMs" denotes models that are jointly trained and sub-
+sequently fine-tuned on each dataset before evaluation. "3D MLLMs" represents models trained on multiple tasks without task-specific
+fine-tuning. "PC" stands for point cloud, and "I" denotes multi-view images. Note that the results of LEO [28] on ScanQA are shown in
+gray and excluded from direct comparison, as the model uses a different setting that accesses ground-truth objects related to the questions.
+All models use the 7B parameter configuration.
+
+Method                                  ScanQA (val)                               Scan2Cap (val)
+                      Modality B-4 M R                                           B-4 M R
+ScanQA [1]
+3D-VLP [33]           Specialist Models
+3D-VisTA [81]
+Scan2Cap [11]         PC                                         10.1 13.1 33.3  -         -  -
+MORE [32]
+SpaCap3D [63]         PC                                         11.2 13.5 34.5  32.3 24.8 51.5
+D3Net [7]
+UniT3D [12]           PC                                         10.4 13.9 45.7  34.1 26.8 55.0
+3DJCG [4]
+Vote2Cap-DETR [8]     PC                                         -  -    -       23.3 22.0 44.8
+
+3D-LLM [25]           PC                                         -  -    -       22.9 21.7 44.4
+Scene-LLM [21]
+LL3DA [23]            PC                                         -  -    -       25.3 22.3 45.4
+
+LEO [28]              PC                                         -  -    -       30.3 24.4 51.7
+Scene-LLM [21]
+Chat-Scene [27]       PC                                         -  -    -       27.2 21.9 46.0
+Grounded 3D-LLM [10]
+3D-LLaVA [78]         PC                                         -  -    -       31.0 24.2 50.8
+SAGE-7B
+                      PC                                         -  -    -       34.5 26.2 54.4
+
+                      Finetuned 3D MLLMs
+
+                      PC+I                                       12.0 14.5 35.7  -         -  -
+                      PC+I                                       12.0 16.8 40.0
+                       PC                                        13.5 15.9 37.3  -         -  -
+
+                                                                                 36.8 26.0 55.1
+
+                            3D MLLMs
+
+                      PC+I                                       13.2 20.0 49.2  38.2 27.9 58.1
+                      PC+I
+                      PC+I                                       11.7 15.8 35.9  -         -  -
+                       PC
+                       PC                                        14.3 18.0 41.6  36.4 28.0 58.1
+                       PC
+                                                                 13.4 -  -       35.5 -       -
+
+                                                                 17.1 18.4 43.1  36.9 27.1 57.7
+
+                                                                 17.5 19.6 44.5  37.8 28.1 58.6
+
+A2. Discussion                                                                   Table A3. Total training time.
+
+A2.1. Non-comparable Existing Method                                             Model        Training time (h)
+                                                                                                      26.1
+   While we discuss many existing methods in the related                         PointLLM             18.0
+work, we do not directly compare our approach with all of                        SAGE                 27.4
+them in the main results. This is because some of the exist-
+ing methods differ substantially in terms of both their learn-                   SAGE
+ing strategies and the types of data they use. For instance,
+some methods are first trained on dense prediction tasks            utilizing well-established training pipelines [30, 52]. In the
+[17] using segmentation data. Another major source of dis-          main table of the paper, we only compare against methods
+parity lies in the training data. While our method, and a few       that follow similar datasets and training protocols [68] as
+others [68] adhere strictly to single training dataset [16],        ours. Nonetheless, we provide additional results and fur-
+some approaches [48] combine multiple datasets from dif-            ther discussion on these disparities in the appendix.
+ferent sources [6, 14, 16, 20, 60, 65] to increase data volume,
+and others propose data generation pipelines to dynami-             A3. Additional Results
+cally curate additional samples [34]. Additionally, prior
+works [22, 40, 47, 69, 70, 73, 75, 77, 80] in this literature          In this section, we present additional experimental re-
+focused on 3D encoders with any multimodal capabilities             sults for our proposed model. We first compare SAGE's
+                                                                    performance with a broader set of state-of-the-art methods
+                                                                    on 3D captioning and 3D VQA tasks across two datasets.
+                                                                    We then report multi-run results on the Objaverse 3D cap-
+Figure A1. Fig. (Left) Impact of the number of LLM trainable layers during the stage 1 training. Fig. (Middle) Impact of the number of
+LLM trainable layers during stage 1 training. Fig(Right) Impact of group normalization coefficient on performance of SAGE-7B.
+
+tioning task to demonstrate the stability of both the model     Table A4. Performance comparison on Zero-shot 3D classifica-
+and the training pipeline. Finally, we include a training-time  tion on ModelNet40 [65] and ScanObjectNN [60]. Here, Ensem-
+analysis comparing SAGE with existing approaches in the         bled [40] reprsents pretraining with four datasets, ShapeNet [6],
+literature.                                                     ABO [14] and 3D-FUTURE [20]. : Uni3D employs a
+
+A3.1. Comparison to Existing Methods                            larger EVA-CLIP-E [52] teacher, while other methods employ
+
+   In Table A2, we compare SAGE with additional existing        OpenCLIP-bigG [30].
+SOTA methods on 3D VQA and captioning tasks using the
+ScanQA [1] and Scan2Cap [11] datasets, respectively. On         Ours uses the Objaverse dataset paired with Cap3D generated captions.
+both 3D VQA and captioning tasks, SAGE outperforms the
+existing SOTA methods on most metrics. While no existing        Method           ModelNet40            ScanObjectNN
+method dominantly performs best across all metrics, SAGE
+surpasses all existing methods in 4 out of 6 metrics across                      Top1 Top3 Top5 Top1 Top3 Top5
+the 2 datasets, despite using less data for training and being
+computationally more efficient than existing methods.                         2D Inference without 3D Training
+
+A3.2. Training Time Analysis                                    PointCLIP [73] 19.3 28.6 34.8 10.5 20.8 30.6
+                                                                PointCLIPv2 [80] 63.6 77.9 85.0 42.2 63.3 74.5
+   In this section, we compare the total training time of
+our proposed method with PointLLM, which uses the same                           Trained on ShapeNet
+amount of training data and a similar training setup (Table
+A3). Here, the total training time refers to the end-to-end     RECON [47]       61.2 73.9 78.1 42.3 62.5 75.6
+duration of the entire training pipeline. Due to its efficient  CLIP2Point [29]  49.5 71.3 81.2 25.5 44.6 59.4
+model design, SAGE requires considerably less training          ULIP [69]        60.4 79.0 84.4 51.5 71.1 80.2
+time (18 hours compared to 26.1 hours for PointLLM). The        OpenShape [40]   70.3 86.9 91.3 47.2 72.4 84.7
+preference optimization step introduces additional training     TAMM [75]        73.1 88.5 91.9 54.8 74.5 83.3
+time; however, the complete three-stage training of our         MixCon3D [22]    72.6 87.1 91.3 52.6 69.9 78.7
+method still takes only slightly longer than the two-stage
+training pipeline of PointLLM.                                                   Trained on Ensembled
+
+A3.3. Zero-shot Classification                                  ULIP-2 [70]      75.1 88.1 93.2 51.6 72.5 82.3
+
+   In Table A4, we compare the zero-shot classification per-    OpenShape [40] 84.4 96.5 98.0 52.2 79.7 88.7
+formance of SAGE with existing SOTA methods on the
+ModelNet40 dataset. Here, SAGE shows improved or com-           MixCon3D [22] 86.8 96.9 98.3 58.6 80.3 89.2
+parable performance with existing SOTA methods.                 Uni3D-B [77]
+                                                                                 86.3 96.5 97.9 63.8 82.7 90.2
+A3.4. Performance Across Multiple Runs
+                                                                Uni3D-L [77]     86.3 96.8 98.3 58.2 81.8 89.4
+   To assess the stability of our method, we report the mean
+and standard deviation of SAGE and SAGE (7B parame-             RECON++-B [48] 86.5 94.7 95.8 63.6 84.2 90.6
+ters) across three independent runs in Table A5. Both vari-
+ants demonstrate consistent performance with low variance       SAGE-7B          88.9 94.7 98.3 65.8 80.2 90.6
+across all metrics.
+                                                                A4. Ablation and Sensitivity Studies
+
+                                                                   In this section, we perform an in-depth sensitivity anal-
+                                                                ysis of various model-specific hyperparameters. We also
+                                                                conduct a detailed ablation study on the key components of
+                                                                our proposed model. All experiments are carried out us-
+                                                                ing the 7B-parameter setting on the 3D captioning task with
+                                                                the Objaverse dataset, and we report the S-BERT alignment
+                                                                score.
+
+                                                                A4.1. Sensitivity Study
+
+                                                                   Trainable layers. Our model, SAGE, utilizes LLaMA
+                                                                as the pretrained LLM backbone, which consists of 32 lay-
+                                                                ers. In our proposed training pipeline, during the 3D tok-
+                                                                enizer warm-up stage (stage 1), we train the first 4 layers
+                                                                of the LLM backbone. Since our proposed method doesn't
+Table A5. Performance comparison across three runs on (SAGE) and (SAGE) on 7B parameters. Here, the Objaverse dataset is used for
+3D object captioning and recognition tasks, and the MM-Vet dataset is used for 3D VQA.
+
+Model                                                   Captioning                               Cls.             VQA
+                                                                                                GPT-4             GPT-4
+SAGE-7B  GPT-4  Sentence-BERT                SimCSE BLEU-1                ROUGE-L   METEOR      55.71             46.38
+SD       49.05        49.23                                                  10.25     14.35
+SAGE-7B   0.09         0.04                  48.56              7.41          0.02      0.02     0.03              0.04
+SD       50.98        50.11                                                  12.66     16.95    57.11             49.53
+          0.08         0.03                  0.05               0.04          0.04      0.03     0.03              0.05
+
+                                             49.70              9.50
+
+                                             0.04               0.05
+
+         Table A6. Sensitivity study on different model-specific parameters on ModelNet40.
+
+         (a) Codebook size.                  (b) Number of point tokens.            (c) Types of pooling layers.
+
+         Size   S-BERT                       Size               S-BERT              Size        S-BERT 
+
+         4096      48.88                     128                   48.98            Max pool       50.11
+         8192      50.11                     512                   50.11            Avg. pool      49.89
+         16384     49.76                     1024                  50.09            Attn. pool     48.03
+
+                                        What is this?                                                        What animal is this?
+
+This is a 3D model of a commercial airplane depicted                      This is a 3D model of an elephant, with gray color
+in a cartoon style. It is white, likely representing a                    skin. It has two big fan-like ears, one trunk, one pair of
+clean, newly-painted aircraft. The model features                         large, elevated tusks and a tail.
+typical elements of an airplane including wings, tail,
+and a cockpit, but with exaggerated proportions                                             How many legs does this animal
+commonly seen in cartoons. This type of model can be                                                         have?
+used in animation, video games, or any graphical
+representations requiring a playful and less realistic                       The elephant has four legs - two at the front
+style.                                                                       and two at the back of the body.
+
+                   How many wings does it have?                                                 What does this animal eat?
+
+2 wings - a left wing and a right wing that                               Elephants are herbivores that eat a variety of
+extend from either side of the fuselage.                                  plant materials, including grasses, leaves,
+                                                                          twigs, roots, and tree bark.
+
+                          Figure A2. Dialogues between PointLLM and a human user.
+
+Table A7. Impact of discrete vs. continuous point embeddings.             Table A8. Impact of different LLM backbones.
+
+Embedding type               S-BERT                                          LLM       Model    S-BERT 
+                                                                          LLaMA-3.1  PointLLM      51.23
+Continuous (w/o codebook) 47.67                                                                    55.89
+                                                                           Qwen-2.5    SAGE        52.35
+Discrete (with codebook)     50.11                                                   PointLLM      56.91
+
+utilize any pretrained 3D encoder, here the LLM solely ex-                             SAGE
+tracts rich features from the point tokens along with the text
+tokens. In this experiment, we evaluate several configura-          LLM to partially tuning 4, 8, or 16 layers, as well as full
+tions of the LLM backbone, ranging from fully freezing the          fine-tuning of all 32 layers. From Figure A1(left), we ob-
+                   Table A9. Qualitative results on the Objaverse dataset.
+
+Samples 1, 2
+
+Uid                059a7936ed89419ba9eae3153753ae86                   82413f74efb84bc3b872a7a8f26cca81
+Prompt
+Human              Caption this 3D model in detail.                   Caption this 3D model in detail.
+InstructBLIP [15]  A blue cartoon                                     A white fish with orange/red spots
+                   There is a cute blue and white pony in a still,    There is a fish hanging on a string in front of
+LLaVA [39]         looking cheerful and cheerful. It's standing       a black background. The fish is swimming in
+                   next to a larger blue-colored object, potentially  the middle of the image and is a little bit up
+3D-LLM [25]        a barrier or structure, which provides the back-   from the bottom of the screen. The fish has a
+PointLLM [68]      drop for this scene. The overall image is de-      red spots on the left and right sides, and is po-
+                   signed to create a fun, whimsical setting for the  sitioned slightly towards the top of the screen.
+SAGE               pony.
+                   The image features a 3D model of a cute, color-    The image features a 3D model of a fish floating
+                   ful cartoon unicorn with a blue and white body     in a dark, empty space. The fish is positioned
+                   and a hint of pink. The unicorn has a magical      towards the left side of the image and appears
+                   aura and is set against a black background. Its    to be swimming upwards. The fish is large
+                   long, flowing mane and tail add to its whimsi-     and occupies a significant portion of the image,
+                   cal charm. The unicorn appears to be in mo-        giving the impression of a life-like, computer-
+                   tion, possibly flying or prancing, as it captures  generated representation. The dark background
+                   the viewer's imagination.                          and lack of other objects in the scene emphasize
+                                                                      the fish's presence and create a sense of depth
+                   A 3D model of a purple and pink pony with          and dimension.
+                   long hair, standing on its hind legs.              A small fish with a long tail is visible in the im-
+                                                                      age. It has no distinguishing features or mark-
+                   A 3D model of a vibrant blue cartoon pony,         ings, and its color appears to be brown.
+                   characterized by its large white eyes, two         The 3D model is of a long fish, illustrating a
+                   wings, and a distinctive horn. The creature's      striking color combination of red, yellow, and
+                   overall design exudes a playful and friendly       grey. It's characterized by a slender tail. The
+                   aura, making it appropriate for children's ani-    yellow color is mostly seen on the body of the
+                   mations or toy production. The noticeably large    fish, fading into a subtler, grayish hue towards
+                   white eyes and the unique wing and horn fea-       the fins and tail. The model depicts a typical
+                   tures endow the pony with an element of fan-       long fish species, often found in the ocean, and
+                   tasy, while its blue body color gives it an over-  can be used in a variety of digital applications,
+                   all appealing look.                                like animation, games, or virtual reality.
+                   The 3D model is a depiction of a light blue
+                   pony, characterized by its vibrant color,          The 3D model represents a fish with a
+                   large white eyes, and a notably long tail. It      streamlined body with a vibrant mix of color
+                   also has two vibrantly colored wings and a         of yellow, red and silver. It has a long dor-
+                   horn, which makes it look like a cartoon           sal fin, two pectoral fins, a long anal fin, and
+                   avatar.                                            large, captivating eyes.
+
+serve that the model's performance improves as 4 layers are   loss,  is a crucial hyperparameter that controls the con-
+trained compared to fully frozen LLM. Beyond this point,      tribution of the codebook loss and the quantization loss.
+increasing the number of trainable layers leads to a perfor-  Another important hyperparameter is , which balances the
+mance drop, due to overfitting, given the relatively small    two components of the total training objective: the next-
+size of the training dataset.                                 token prediction loss and the vector quantization loss. We
+                                                              investigate the impact of these two coefficients on SAGE's
+   Model hyperparameters. In the vector quantization
+performance through a sensitivity study. As shown in Fig-        between continuous geometric features and discrete lan-
+ure A1 (middle), SAGE-7B achieves the highest perfor-            guage tokens by using a learnable codebook that maps
+mance gain with a quantization coefficient of 0.5 and a reg-     continuous embeddings into a finite vocabulary of 3D to-
+ularization coefficient of 0.25. Moreover, we observe that       kens, effectively extending the LLM tokenizer to the 3D
+the performance is not highly sensitive to the choice of these   domain. To further validate its importance, we conduct
+hyperparameters.                                                 an ablation study by comparing performance with and
+                                                                 without the codebook in the 3D tokenizer. In Table A7,
+   Similarly, we examine the effect of the coefficient           we can observe that with the codebook--using discrete
+in the reward combination during the policy optimization         embeddings--SAGE achieves a 50.11 score. Removing the
+stage (stage 3). As shown in Figure A1 (right), the perfor-      codebook and keeping the embeddings continuous leads to
+mance of SAGE-7B improves as  increases, reaching its            a performance drop of 2.44. This confirms the necessity
+highest point at  = 0.95, which indicates that performance       of vector quantization for enabling the LLM to effectively
+benefits from a lower weight on the length reward. How-          learn from multimodal signals.
+ever, performance drops when this reward is completely re-
+moved ( = 1.0), highlighting the importance of using both        A4.3. Generalization Across LLM Backbones
+rewards.
+                                                                    Finally, we investigate the generalization of SAGE to
+   Codebook size. During vector quantization, the size of        newer LLM backbones, namely LLaMA-3.1-8B and Qwen-
+the learnable codebook defines the number of unique to-          2.5-7B. We also reproduce the results of PointLLM using
+kens allocated to the point cloud representations. Table         these backbones. As shown in Table A8, SAGE demon-
+A6a presents a sensitivity study on the codebook size used       strates strong performance on both newer LLMs without
+in the model. We vary the codebook size across three set-        any additional parameter tuning, and it consistently outper-
+tings: 4096, 8192, and 16384. We observe that increasing         forms PointLLM.
+the codebook size from 4096 to 8192 improves the score
+by 1.23. However, further increasing it to 16384 leads to        A5. More Qualitative Results
+a performance drop, indicating that around 8k+ tokens can
+sufficiently represent the point cloud features when treating       We present more qualitative results on Objaverse
+it as a foreign language to LLM.                                 datasets in Table A9. We further show interactive dialogues
+                                                                 between a user and SAGE-7B in Figure A2, highlighting
+   Number of point tokens. The number of point tokens            the model's strong understanding of point-cloud geometry,
+defines the number of discrete geometric units the model         appearance, and functional attributes. The examples fur-
+uses to represent a 3D input, directly controlling the level     ther demonstrate SAGE's ability to respond to user instruc-
+of detail and the computational cost in an MLLM. Table           tions with appropriate reasoning while avoiding biased or
+A6b presents a sensitivity study on the number of point to-      ill-informed outputs.
+kens used in the model. We vary this number across three
+settings: 128, 512, and 1024. Increasing the number of
+point tokens from 128 to 512 improves the score from 48.98
+to 50.11. However, further increments do not lead to an
+improvement, even though they increase the computation.
+This suggests that 512-point tokens strike the optimal bal-
+ance, maximizing the model's alignment capability. There-
+fore, we stick to 512 tokens for our final model.
+
+   Types of pooling functions. In table A6c, we investigate
+different pooling strategies for aggregating token represen-
+tations in the proposed model. We evaluate three variants:
+max pooling, average pooling, and attention-based pooling.
+Here, using the max pooling gives the highest performance
+of 50.11, while average and attention pooling yield 49.89
+and 49.03, respectively. These results indicate that max
+pooling is the most effective aggregation mechanism, due
+to its ability to preserve salient feature signals critical for
+cross-modal alignment.
+
+A4.2. Ablation Study
+
+   Comparison of discrete vs. continuous embeddings.
+As discussed earlier, vector quantization bridges the gap
+References                                                         [14] Jasmine Collins, Shubham Goel, Kenan Deng, Achlesh-
+                                                                         war Luthra, Leon Xu, Erhan Gundogdu, Xi Zhang, Tomas
+ [1] Daichi Azuma, Taiki Miyanishi, Shuhei Kurita, and Motoaki           F Yago Vicente, Thomas Dideriksen, Himanshu Arora, et al.
+      Kawanabe. Scanqa: 3d question answering for spatial scene          Abo: Dataset and benchmarks for real-world 3d object un-
+      understanding. In proceedings of the IEEE/CVF conference           derstanding. In Proceedings of the IEEE/CVF conference
+      on computer vision and pattern recognition, pages 19129≠           on computer vision and pattern recognition, pages 21126≠
+      19139, 2022. 2, 3                                                  21136, 2022. 2, 3
+
+ [2] Jian Bai et al. Qwen: A family of large language models.      [15] Wenliang Dai, Junnan Li, Dongxu Li, Anthony Tiong, Junqi
+      arXiv preprint arXiv:2309.16609, 2023. 1                           Zhao, Weisheng Wang, Boyang Li, Pascale N Fung, and
+                                                                         Steven Hoi. Instructblip: Towards general-purpose vision-
+ [3] Rohan Bavishi, Erich Elsen, Curtis Hawthorne, Maxwell               language models with instruction tuning. Advances in neural
+      Nye, Augustus Odena, Arushi Somani, and Sagnak Tasirlar.           information processing systems, 36:49250≠49267, 2023. 7,
+      Introducing our multimodal models, 2023. URL https://www.          8, 5
+      adept. ai/blog/fuyu-8b, 2, 2023. 3
+                                                                   [16] Matt Deitke, Dustin Schwenk, Jordi Salvador, Luca Weihs,
+ [4] Daigang Cai, Lichen Zhao, Jing Zhang, Lu Sheng, and Dong            Oscar Michel, Eli VanderBilt, Ludwig Schmidt, Kiana
+      Xu. 3djcg: A unified framework for joint dense captioning          Ehsani, Aniruddha Kembhavi, and Ali Farhadi. Objaverse:
+      and visual grounding on 3d point clouds. In Proceedings of         A universe of annotated 3d objects. In Proceedings of
+      the IEEE/CVF conference on computer vision and pattern             the IEEE/CVF conference on computer vision and pattern
+      recognition, pages 16464≠16473, 2022. 2                            recognition, pages 13142≠13153, 2023. 6, 2
+
+ [5] Tianyu Cai et al. Phi-3: Democratizing language model         [17] Jiajun Deng, Tianyu He, Li Jiang, Tianyu Wang, Feras Day-
+      alignment. arXiv preprint arXiv:2404.12345, 2024. 1                oub, and Ian Reid. 3d-llava: Towards generalist 3d lmms
+                                                                         with omni superpoint transformer. In Proceedings of the
+ [6] Angel X Chang, Thomas Funkhouser, Leonidas Guibas,                  Computer Vision and Pattern Recognition Conference, pages
+      Pat Hanrahan, Qixing Huang, Zimo Li, Silvio Savarese,              3772≠3782, 2025. 3, 2
+      Manolis Savva, Shuran Song, Hao Su, et al. Shapenet:
+      An information-rich 3d model repository. arXiv preprint      [18] Haiwen Diao, Yufeng Cui, Xiaotong Li, Yueze Wang,
+      arXiv:1512.03012, 2015. 2, 3                                       Huchuan Lu, and Xinlong Wang. Unveiling encoder-free
+                                                                         vision-language models. Advances in Neural Information
+ [7] Dave Zhenyu Chen, Qirui Wu, Matthias Nieﬂner, and An-               Processing Systems, 37:52545≠52567, 2024. 3
+      gel X Chang. D3net: A speaker-listener architecture for
+      semi-supervised dense captioning and visual grounding in     [19] Haiwen Diao, Xiaotong Li, Yufeng Cui, Yueze Wang, Haoge
+      rgb-d scans. 2021. 2                                               Deng, Ting Pan, Wenxuan Wang, Huchuan Lu, and Xinlong
+                                                                         Wang. Evev2: Improved baselines for encoder-free vision-
+ [8] Sijin Chen, Hongyuan Zhu, Xin Chen, Yinjie Lei, Gang                language models. arXiv preprint arXiv:2502.06788, 2025.
+      Yu, and Tao Chen. End-to-end 3d dense captioning with              3
+      vote2cap-detr. In Proceedings of the IEEE/CVF conference
+      on computer vision and pattern recognition, pages 11124≠     [20] Huan Fu, Rongfei Jia, Lin Gao, Mingming Gong, Binqiang
+      11133, 2023. 2                                                     Zhao, Steve Maybank, and Dacheng Tao. 3d-future: 3d fur-
+                                                                         niture shape with texture. International Journal of Computer
+ [9] Yangyi Chen, Xingyao Wang, Hao Peng, and Heng Ji. Solo:             Vision, 129(12):3313≠3337, 2021. 2, 3
+      A single transformer for scalable vision-language modeling.
+      Transactions on Machine Learning Research, 2024. 3           [21] Rao Fu, Jingyu Liu, Xilun Chen, Yixin Nie, and Wen-
+                                                                         han Xiong. Scene-llm: Extending language model for
+[10] Yilun Chen, Shuai Yang, Haifeng Huang, Tai Wang, Run-               3d visual understanding and reasoning. arXiv preprint
+      sen Xu, Ruiyuan Lyu, Dahua Lin, and Jiangmiao Pang.                arXiv:2403.11401, 2024. 2
+      Grounded 3d-llm with referent tokens. arXiv preprint
+      arXiv:2405.10370, 2024. 2                                    [22] Yipeng Gao, Zeyu Wang, Wei-Shi Zheng, Cihang Xie, and
+                                                                         Yuyin Zhou. Sculpting holistic 3d representation in con-
+[11] Zhenyu Chen, Ali Gholami, Matthias Nieﬂner, and Angel X             trastive language-image-3d pre-training. In Proceedings of
+      Chang. Scan2cap: Context-aware dense captioning in rgb-            the IEEE/CVF Conference on Computer Vision and Pattern
+      d scans. In Proceedings of the IEEE/CVF conference on              Recognition, pages 22998≠23008, 2024. 2, 3
+      computer vision and pattern recognition, pages 3193≠3203,
+      2021. 2, 3                                                   [23] Yijie Guo et al. Ll3d: Large language models meet 3d. arXiv
+                                                                         preprint arXiv:2312.04837, 2023. 2
+[12] Zhenyu Chen, Ronghang Hu, Xinlei Chen, Matthias
+      Nieﬂner, and Angel X Chang. Unit3d: A unified transformer    [24] Ziyu Guo, Renrui Zhang, Xiangyang Zhu, Yiwen Tang, Xi-
+      for 3d dense captioning and visual grounding. In Proceed-          anzheng Ma, Jiaming Han, Kexin Chen, Peng Gao, Xi-
+      ings of the IEEE/CVF international conference on computer          anzhi Li, Hongsheng Li, et al. Point-bind & point-llm:
+      vision, pages 18109≠18119, 2023. 2                                 Aligning point cloud with multi-modality for 3d understand-
+                                                                         ing, generation, and instruction following. arXiv preprint
+[13] Wei-Lin Chiang, Zhuohan Li, Ziqing Lin, Ying Sheng,                 arXiv:2309.00615, 2023. 2, 3
+      Zhanghao Wu, Hao Zhang, Lianmin Zheng, Siyuan Zhuang,
+      Yonghao Zhuang, Joseph E Gonzalez, et al. Vicuna: An         [25] Yining Hong, Haoyu Zhen, Peihao Chen, Shuhong Zheng,
+      open-source chatbot impressing gpt-4 with 90%* chatgpt             Yilun Du, Zhenfang Chen, and Chuang Gan. 3d-llm: In-
+      quality. See https://vicuna. lmsys. org (accessed 14 April         jecting the 3d world into large language models. Advances
+      2023), 2(3):6, 2023. 5
+      in Neural Information Processing Systems, 36:20482≠20494,    [39] Haotian Liu, Chunyuan Li, Qingyang Wu, and Yong Jae Lee.
+      2023. 8, 2, 5                                                      Visual instruction tuning. Advances in neural information
+                                                                         processing systems, 36:34892≠34916, 2023. 7, 8, 5
+[26] Wenbo Hu, Yining Hong, Yanjun Wang, Leison Gao, Zibu
+      Wei, Xingcheng Yao, Nanyun Peng, Yonatan Bitton, Idan        [40] Minghua Liu, Ruoxi Shi, Kaiming Kuang, Yinhao Zhu, Xu-
+      Szpektor, and Kai-Wei Chang. 3dllm-mem: Long-term                  anlin Li, Shizhong Han, Hong Cai, Fatih Porikli, and Hao
+      spatial-temporal memory for embodied 3d large language             Su. Openshape: Scaling up 3d shape representation towards
+      model. arXiv preprint arXiv:2505.22657, 2025. 3                    open-world understanding. Advances in neural information
+                                                                         processing systems, 36:44860≠44879, 2023. 2, 3
+[27] Haifeng Huang, Yilun Chen, Zehan Wang, Rongjie Huang,
+      Runsen Xu, Tai Wang, Luping Liu, Xize Cheng, Yang Zhao,      [41] Tiange Luo, Chris Rockwell, Honglak Lee, and Justin
+      Jiangmiao Pang, et al. Chat-scene: Bridging 3d scene and           Johnson. Scalable 3d captioning with pretrained mod-
+      large language models with object identifiers. Advances            els. Advances in Neural Information Processing Systems,
+      in Neural Information Processing Systems, 37:113991≠               36:75307≠75337, 2023. 6
+      114017, 2024. 2
+                                                                   [42] Chenyang Ma, Kai Lu, Ta-Ying Cheng, Niki Trigoni, and
+[28] Jiangyong Huang, Silong Yong, Xiaojian Ma, Xiongkun                 Andrew Markham. Spatialpin: Enhancing spatial reason-
+      Linghu, Puhao Li, Yan Wang, Qing Li, Song-Chun Zhu,                ing capabilities of vision-language models through prompt-
+      Baoxiong Jia, and Siyuan Huang. An embodied generalist             ing and interacting 3d priors. Advances in neural information
+      agent in 3d world. arXiv preprint arXiv:2311.12871, 2023.          processing systems, 37:68803≠68832, 2024. 3
+      2
+                                                                   [43] Yunze Man, Liang-Yan Gui, and Yu-Xiong Wang. Situa-
+[29] Tianyu Huang, Bowen Dong, Yunhan Yang, Xiaoshui                     tional awareness matters in 3d vision language reasoning. In
+      Huang, Rynson WH Lau, Wanli Ouyang, and Wangmeng                   Proceedings of the IEEE/CVF Conference on Computer Vi-
+      Zuo. Clip2point: Transfer clip to point cloud classifi-            sion and Pattern Recognition, pages 13678≠13688, 2024. 3
+      cation with image-depth pre-training. In Proceedings of
+      the IEEE/CVF international conference on computer vision,    [44] Youquan Pang et al. Masked autoencoders for point cloud
+      pages 22157≠22167, 2023. 3                                         self-supervised learning. ECCV, 2022. 1
+
+[30] Gabriel Ilharco, Mitchell Wortsman, Ross Wightman, Cade       [45] Yatian Pang, Eng Hock Francis Tay, Li Yuan, and Zhenghua
+      Gordon, Nicholas Carlini, Rohan Taori, Achal Dave,                 Chen. Masked autoencoders for 3d point cloud self-
+      Vaishaal Shankar, Hongseok Namkoong, John Miller, et al.           supervised learning. World Scientific Annual Review of Arti-
+      Openclip, july 2021. URL https://doi. org/10.5281/zenodo,          ficial Intelligence, 1:2440001, 2023. 3
+      5143773(2):29, 2021. 2, 3
+                                                                   [46] Hengshuang Qi et al. Contrastive 3d learning with multi-
+[31] Albert Q. Jiang et al. Mistral 7b. arXiv preprint                   level alignment. NeurIPS, 2023. 1
+      arXiv:2310.06825, 2023. 1
+                                                                   [47] Zekun Qi, Runpei Dong, Guofan Fan, Zheng Ge, Xiangyu
+[32] Yang Jiao, Shaoxiang Chen, Zequn Jie, Jingjing Chen, Lin            Zhang, Kaisheng Ma, and Li Yi. Contrast with reconstruct:
+      Ma, and Yu-Gang Jiang. More: Multi-order relation mining           Contrastive 3d representation learning guided by generative
+      for dense captioning in 3d scenes. In European Conference          pretraining. In International Conference on Machine Learn-
+      on Computer Vision, pages 528≠545. Springer, 2022. 2               ing, pages 28223≠28243. PMLR, 2023. 2, 3
+
+[33] Zhao Jin, Munawar Hayat, Yuwei Yang, Yulan Guo, and Yin-      [48] Zekun Qi, Runpei Dong, Shaochen Zhang, Haoran Geng,
+      jie Lei. Context-aware alignment and mutual masking for 3d-        Chunrui Han, Zheng Ge, Li Yi, and Kaisheng Ma. Shapellm:
+      language pre-training. In Proceedings of the IEEE/CVF Con-         Universal 3d object understanding for embodied interaction.
+      ference on Computer Vision and Pattern Recognition, pages          In European Conference on Computer Vision, pages 214≠
+      10984≠10994, 2023. 2                                               238. Springer, 2024. 2, 4, 6, 7, 3
+
+[34] Weitai Kang, Haifeng Huang, Yuzhang Shang, Mubarak            [49] Zhangyang Qi, Zhixiong Zhang, Ye Fang, Jiaqi Wang,
+      Shah, and Yan Yan. Robin3d: Improving 3d large language            and Hengshuang Zhao. Gpt4scene: Understand 3d scenes
+      model via robust instruction tuning. pages 3905≠3915, 2025.        from videos with vision-language models. arXiv preprint
+      3, 2                                                               arXiv:2501.01428, 2025. 3
+
+[35] Bo Li, Peiyuan Zhang, Jingkang Yang, Yuanhan Zhang,           [50] John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Rad-
+      Fanyi Pu, and Ziwei Liu. Otterhd: A high-resolution multi-         ford, and Oleg Klimov. Proximal policy optimization algo-
+      modality model. arXiv preprint arXiv:2311.04219, 2023. 3           rithms. arXiv preprint arXiv:1707.06347, 2017. 5
+
+[36] Rong Li, Shijie Li, Lingdong Kong, Xulei Yang, and Jun-       [51] Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao
+      wei Liang. Seeground: See and ground for zero-shot open-           Song, Xiao Bi, Haowei Zhang, Mingchuan Zhang, YK Li,
+      vocabulary 3d visual grounding. In Proceedings of the              Yang Wu, et al. Deepseekmath: Pushing the limits of math-
+      Computer Vision and Pattern Recognition Conference, pages          ematical reasoning in open language models. arXiv preprint
+      3707≠3717, 2025. 3                                                 arXiv:2402.03300, 2024. 5
+
+[37] Xiang Li et al. Gpt-4v(ision): Multimodal reasoning across    [52] Quan Sun, Yuxin Fang, Ledell Wu, Xinlong Wang, and Yue
+      text and images. arXiv preprint arXiv:2402.00123, 2024. 1          Cao. Eva-clip: Improved training techniques for clip at scale.
+                                                                         arXiv preprint arXiv:2303.15389, 2023. 2, 3
+[38] Haotian Liu et al. Llava-next: Stronger vision-language un-
+      derstanding with large multimodal models. arXiv preprint     [53] Yiwen Tang, Zoey Guo, Zhuhao Wang, Ray Zhang, Qizhi
+      arXiv:2401.03124, 2024. 1                                          Chen, Junli Liu, Delin Qu, Zhigang Wang, Dong Wang, Xue-
+                                                                         long Li, et al. Exploring the potential of encoder-free archi-
+      tectures in 3d lmms. arXiv preprint arXiv:2502.09620, 2025.   [68] Tianyu Xu et al. Pointllm: Empowering large language mod-
+      3                                                                   els to understand point clouds. CVPR, 2025. 1, 3, 4, 5, 6, 7,
+[54] Yuan Tang, Xu Han, Xianzhi Li, Qiao Yu, Yixue Hao, Long              8, 2
+      Hu, and Min Chen. Minigpt-3d: Efficiently aligning 3d point
+      clouds with large language models using 2d priors. In Pro-    [69] Le Xue, Mingfei Gao, Chen Xing, Roberto Mart¥in-Mart¥in,
+      ceedings of the 32nd ACM International Conference on Mul-           Jiajun Wu, Caiming Xiong, Ran Xu, Juan Carlos Niebles,
+      timedia, pages 6617≠6626, 2024. 3                                   and Silvio Savarese. Ulip: Learning a unified representation
+[55] Yuan Tang, Xu Han, Xianzhi Li, Qiao Yu, Jinfeng Xu, Yixue            of language, images, and point clouds for 3d understanding.
+      Hao, Long Hu, and Min Chen. More text, less point: To-              In Proceedings of the IEEE/CVF conference on computer vi-
+      wards 3d data-efficient point-language understanding. In            sion and pattern recognition, pages 1179≠1189, 2023. 2, 3
+      Proceedings of the AAAI Conference on Artificial Intelli-
+      gence, volume 39, pages 7284≠7292, 2025. 3                    [70] Le Xue, Ning Yu, Shu Zhang, Artemis Panagopoulou, Jun-
+[56] Zhiqi Tang et al. Geometryclip: Bridging 3d geometry and             nan Li, Roberto Mart¥in-Mart¥in, Jiajun Wu, Caiming Xiong,
+      language through multimodal pretraining. arXiv preprint             Ran Xu, Juan Carlos Niebles, et al. Ulip-2: Towards scalable
+      arXiv:2402.06712, 2024. 1                                           multimodal pre-training for 3d understanding. In Proceed-
+[57] Chameleon Team. Chameleon: Mixed-modal early-fusion                  ings of the IEEE/CVF Conference on Computer Vision and
+      foundation models. arXiv preprint arXiv:2405.09818, 2024.           Pattern Recognition, pages 27091≠27101, 2024. 2, 3
+      3
+[58] Anh Thai, Songyou Peng, Kyle Genova, Leonidas Guibas,          [71] Hanxun Yu, Wentong Li, Song Wang, Junbo Chen, and
+      and Thomas Funkhouser. Splattalk: 3d vqa with gaussian              Jianke Zhu. Inst3d-lmm: Instance-aware 3d scene under-
+      splatting. arXiv preprint arXiv:2503.06271, 2025. 3                 standing with multi-modal instruction tuning. In Proceed-
+[59] Hugo Touvron et al. Llama: Open and efficient foundation             ings of the Computer Vision and Pattern Recognition Con-
+      language models. arXiv preprint arXiv:2302.13971, 2023.             ference, pages 14147≠14157, 2025. 3
+      1, 5
+[60] Mikaela Angelina Uy, Quang-Hieu Pham, Binh-Son Hua,            [72] Xumin Yu et al. Point-bert: Pre-training 3d point cloud trans-
+      Thanh Nguyen, and Sai-Kit Yeung. Revisiting point cloud             formers with masked point modeling. CVPR, 2022. 1, 3
+      classification: A new benchmark dataset and classification
+      model on real-world data. In Proceedings of the IEEE/CVF      [73] Renrui Zhang, Ziyu Guo, Wei Zhang, Kunchang Li, Xu-
+      international conference on computer vision, pages 1588≠            peng Miao, Bin Cui, Yu Qiao, Peng Gao, and Hongsheng Li.
+      1597, 2019. 2, 3                                                    Pointclip: Point cloud understanding by clip. In Proceedings
+[61] Aaron van den Oord, Oriol Vinyals, and Koray                         of the IEEE/CVF conference on computer vision and pattern
+      Kavukcuoglu. Neural discrete representation learning.               recognition, pages 8552≠8562, 2022. 2, 3
+      Advances in neural information processing systems, 30,
+      2017. 4                                                       [74] Yichi Zhang et al. I2p-mae: Image-to-point masked autoen-
+[62] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszko-              coders for self-supervised learning on 3d data. ICCV, 2023.
+      reit, Llion Jones, Aidan N Gomez, !ukasz Kaiser, and Illia          1
+      Polosukhin. Attention is all you need. Advances in neural
+      information processing systems, 30, 2017. 3                   [75] Zhihao Zhang, Shengcao Cao, and Yu-Xiong Wang. Tamm:
+[63] Heng Wang, Chaoyi Zhang, Jianhui Yu, and Weidong Cai.                Triadapter multi-modal learning for 3d shape understanding.
+      Spatiality-guided transformer for 3d dense captioning on            In Proceedings of the IEEE/CVF Conference on Computer
+      point clouds. arXiv preprint arXiv:2204.10688, 2022. 2              Vision and Pattern Recognition, pages 21413≠21423, 2024.
+[64] Haochen Wang, Yucheng Zhao, Tiancai Wang, Haoqiang                   2, 3
+      Fan, Xiangyu Zhang, and Zhaoxiang Zhang. Ross3d: Recon-
+      structive visual instruction tuning with 3d-awareness. arXiv  [76] Duo Zheng, Shijia Huang, and Liwei Wang. Video-3d llm:
+      preprint arXiv:2504.01901, 2025. 3                                  Learning position-aware video representation for 3d scene
+[65] Zhirong Wu, Shuran Song, Aditya Khosla, Fisher Yu, Lin-              understanding. In Proceedings of the Computer Vision and
+      guang Zhang, Xiaoou Tang, and Jianxiong Xiao. 3d                    Pattern Recognition Conference, pages 8995≠9006, 2025. 3
+      shapenets: A deep representation for volumetric shapes. In
+      Proceedings of the IEEE conference on computer vision and     [77] Junsheng Zhou, Jinsheng Wang, Baorui Ma, Yu-Shen Liu,
+      pattern recognition, pages 1912≠1920, 2015. 2, 3                    Tiejun Huang, and Xinlong Wang. Uni3d: Exploring unified
+[66] Jinheng Xie, Weijia Mao, Zechen Bai, David Junhao Zhang,             3d representation at scale. arXiv preprint arXiv:2310.06773,
+      Weihao Wang, Kevin Qinghong Lin, Yuchao Gu, Zhijie                  2023. 2, 3
+      Chen, Zhenheng Yang, and Mike Zheng Shou. Show-o:
+      One single transformer to unify multimodal understanding      [78] Chenming Zhu, Tai Wang, Wenwei Zhang, Jiangmiao Pang,
+      and generation. The Thirteenth International Conference on          and Xihui Liu. Llava-3d: A simple yet effective pathway
+      Learning Representations, 2025. 3                                   to empowering lmms with 3d-awareness. arXiv preprint
+[67] Saining Xie et al. Pointcontrast: Unsupervised pre-training          arXiv:2409.18125, 2024. 3, 2
+      for 3d point cloud understanding. ECCV, 2020. 1, 3
+                                                                    [79] Jian Zhu, Hanli Wang, and Miaojing Shi. Multi-modal large
+                                                                          language model enhanced pseudo 3d perception framework
+                                                                          for visual commonsense reasoning. IEEE Transactions on
+                                                                          Circuits and Systems for Video Technology, 2024. 3
+
+                                                                    [80] Xiangyang Zhu, Renrui Zhang, Bowei He, Ziyu Guo, Ziyao
+                                                                          Zeng, Zipeng Qin, Shanghang Zhang, and Peng Gao. Point-
+                                                                          clip v2: Prompting clip and gpt for powerful 3d open-world
+                                                                          learning. In Proceedings of the IEEE/CVF international con-
+                                                                          ference on computer vision, pages 2639≠2650, 2023. 2, 3
+
+                                                                    [81] Ziyu Zhu, Xiaojian Ma, Yixin Chen, Zhidong Deng, Siyuan
+                                                                          Huang, and Qing Li. 3d-vista: Pre-trained transformer for 3d
+vision and text alignment. In Proceedings of the IEEE/CVF
+International Conference on Computer Vision, pages 2911≠
+2921, 2023. 2
+

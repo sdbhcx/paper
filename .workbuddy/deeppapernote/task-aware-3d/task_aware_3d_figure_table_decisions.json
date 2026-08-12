@@ -1,0 +1,414 @@
+{
+  "status": "ok",
+  "script": "plan_figure_table_decisions.py",
+  "paper_id": "doi:10.1609/aaai.v40i6.42466",
+  "decisions": [
+    {
+      "item_id": "figure:Figure 1",
+      "source_id": "Figure 1",
+      "kind": "figure",
+      "label": "Figure 1",
+      "caption": "Comparison among (a) object affordance under-",
+      "pages": [
+        1
+      ],
+      "section_id": "sec:preamble",
+      "decision": "low_priority",
+      "reason": "任务范式对比图信息有用，但并非理解 TASA 方法和实验的核心，笔记用文字定义任务即可。",
+      "skip_reason": "low_priority_for_final_note",
+      "visual_quality_status": "usable_candidate",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result"
+    },
+    {
+      "item_id": "figure:Figure 2",
+      "source_id": "Figure 2",
+      "kind": "figure",
+      "label": "Figure 2",
+      "caption": "Overview of our Task-Aware 3D Scene-level Affordance segmentation framework (TASA).",
+      "pages": [
+        3
+      ],
+      "section_id": "sec:related-work",
+      "decision": "insert",
+      "reason": "这张图概括了整体方法或系统流程；如果匹配置信度足够高，最适合放在 `### 机制流程` 帮助快速建立执行链理解。",
+      "skip_reason": "",
+      "visual_quality_status": "usable_candidate",
+      "priority": 1,
+      "target_section": "机制流程",
+      "plan_kind": "method_overview",
+      "source_image_filename": "page_003_fig_figure_2_review.png",
+      "relative_markdown_embed": "![Figure 2](images/page_003_fig_figure_2_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_003_fig_figure_2_review.png",
+      "materialization_status": "pending",
+      "source_image_sha256": "ff14db07796d4c8cbbbdca509e843ac50a51a1be54c00a31facf3cb1e51b620b",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_003_fig_figure_2_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\page_previews\\page_003.png",
+        "source_pdf_path": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+        "source_page": 3,
+        "caption": "Overview of our Task-Aware 3D Scene-level Affordance segmentation framework (TASA).",
+        "bbox_pt": [
+          50.0,
+          49.999298095703125,
+          561.888671875,
+          236.9735107421875
+        ],
+        "normalized_bbox": [
+          0.081699,
+          0.06313,
+          0.918119,
+          0.299209
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewed_asset_sha256": "ff14db07796d4c8cbbbdca509e843ac50a51a1be54c00a31facf3cb1e51b620b",
+        "preserved_scientific_elements": [
+          "完整科学图表主体",
+          "内部标签与图例",
+          "比较行列或流程箭头"
+        ],
+        "omitted_scientific_elements": [],
+        "notes": "已核对候选裁图与第 3 页整页预览：完整保留两阶段框架、模块名称、数据流箭头和输入输出，不含外部题注。",
+        "failure_reason": "",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      }
+    },
+    {
+      "item_id": "figure:Figure 3",
+      "source_id": "Figure 3",
+      "kind": "figure",
+      "label": "Figure 3",
+      "caption": "Illustration of the Double-Check Mechanism.",
+      "pages": [
+        4
+      ],
+      "section_id": "sec:method",
+      "decision": "insert",
+      "reason": "这张图更适合作为补充图，放在深度分析部分帮助解释作者论点。",
+      "skip_reason": "",
+      "visual_quality_status": "usable_candidate",
+      "priority": 3,
+      "target_section": "深度分析",
+      "plan_kind": "supporting_figure",
+      "source_image_filename": "page_004_fig_figure_3_review.png",
+      "relative_markdown_embed": "![Figure 3](images/page_004_fig_figure_3_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_004_fig_figure_3_review.png",
+      "materialization_status": "pending",
+      "source_image_sha256": "73778371962f6fd987c058c696b4a338365f49ebd6f6a00c4da9724e9e23f0b7",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_004_fig_figure_3_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\page_previews\\page_004.png",
+        "source_pdf_path": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+        "source_page": 4,
+        "caption": "Illustration of the Double-Check Mechanism.",
+        "bbox_pt": [
+          50.0,
+          49.999420166015625,
+          562.0186767578125,
+          239.33297729492188
+        ],
+        "normalized_bbox": [
+          0.081699,
+          0.063131,
+          0.918331,
+          0.302188
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewed_asset_sha256": "73778371962f6fd987c058c696b4a338365f49ebd6f6a00c4da9724e9e23f0b7",
+        "preserved_scientific_elements": [
+          "完整科学图表主体",
+          "内部标签与图例",
+          "比较行列或流程箭头"
+        ],
+        "omitted_scientific_elements": [],
+        "notes": "已核对候选裁图与第 4 页整页预览：完整保留候选点、反向验证和回退查询流程，不含周围正文。",
+        "failure_reason": "",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      }
+    },
+    {
+      "item_id": "figure:Figure 4",
+      "source_id": "Figure 4",
+      "kind": "figure",
+      "label": "Figure 4",
+      "caption": "Effect of the number of selected images K on seg-",
+      "pages": [
+        6
+      ],
+      "section_id": "sec:dataset",
+      "decision": "placeholder",
+      "reason": "这张图更适合作为补充图，放在深度分析部分帮助解释作者论点。",
+      "skip_reason": "asset_candidate_missing",
+      "visual_quality_status": "",
+      "priority": 3,
+      "target_section": "深度分析",
+      "plan_kind": "supporting_figure"
+    },
+    {
+      "item_id": "figure:Figure 5",
+      "source_id": "Figure 5",
+      "kind": "figure",
+      "label": "Figure 5",
+      "caption": "Qualitative comparison on SceneFun3D Split0. Point clouds are cropped around functional objects for improved",
+      "pages": [
+        7
+      ],
+      "section_id": "sec:dataset",
+      "decision": "insert",
+      "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+      "skip_reason": "",
+      "visual_quality_status": "usable_candidate",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result",
+      "source_image_filename": "page_007_fig_figure_5_review.png",
+      "relative_markdown_embed": "![Figure 5](images/page_007_fig_figure_5_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_007_fig_figure_5_review.png",
+      "materialization_status": "pending",
+      "source_image_sha256": "bed092cb42d5b60b4fba8d293e359b69737f70756b5562f5687cdf3dea3f11a9",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_007_fig_figure_5_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\page_previews\\page_007.png",
+        "source_pdf_path": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+        "source_page": 7,
+        "caption": "Qualitative comparison on SceneFun3D Split0. Point clouds are cropped around functional objects for improved",
+        "bbox_pt": [
+          50.0,
+          49.99822998046875,
+          561.9989013671875,
+          326.9403991699219
+        ],
+        "normalized_bbox": [
+          0.081699,
+          0.063129,
+          0.918299,
+          0.412804
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewed_asset_sha256": "bed092cb42d5b60b4fba8d293e359b69737f70756b5562f5687cdf3dea3f11a9",
+        "preserved_scientific_elements": [
+          "完整科学图表主体",
+          "内部标签与图例",
+          "比较行列或流程箭头"
+        ],
+        "omitted_scientific_elements": [],
+        "notes": "已核对候选裁图与第 7 页整页预览：完整保留各方法、任务列和 Ground Truth 对比，内部文字可辨认，不含外部题注。",
+        "failure_reason": "",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      }
+    },
+    {
+      "item_id": "table:Table 1",
+      "source_id": "Table 1",
+      "kind": "table",
+      "label": "Table 1",
+      "caption": "Comparison of our method and baselines on the",
+      "pages": [
+        5
+      ],
+      "section_id": "sec:method",
+      "decision": "insert",
+      "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+      "skip_reason": "",
+      "visual_quality_status": "usable_candidate",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result",
+      "source_image_filename": "page_005_fig_table_1_review.png",
+      "relative_markdown_embed": "![Table 1](images/page_005_fig_table_1_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_005_fig_table_1_review.png",
+      "materialization_status": "pending",
+      "source_image_sha256": "a7c1106435236ce8279e516eb04afd115d74a87267c3241f24b29e267a04a61e",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_005_fig_table_1_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\page_previews\\page_005.png",
+        "source_pdf_path": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+        "source_page": 5,
+        "caption": "Comparison of our method and baselines on the",
+        "bbox_pt": [
+          334.74798583984375,
+          51.46989440917969,
+          542.7476196289062,
+          138.46206665039062
+        ],
+        "normalized_bbox": [
+          0.546974,
+          0.064987,
+          0.886843,
+          0.174826
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewed_asset_sha256": "a7c1106435236ce8279e516eb04afd115d74a87267c3241f24b29e267a04a61e",
+        "preserved_scientific_elements": [
+          "完整科学图表主体",
+          "内部标签与图例",
+          "比较行列或流程箭头"
+        ],
+        "omitted_scientific_elements": [],
+        "notes": "已核对候选裁图与第 5 页整页预览：表头、全部方法行与四项指标完整，未混入题注和正文。",
+        "failure_reason": "",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      }
+    },
+    {
+      "item_id": "table:Table 2",
+      "source_id": "Table 2",
+      "kind": "table",
+      "label": "Table 2",
+      "caption": "Efficiency comparison between our method and",
+      "pages": [
+        5
+      ],
+      "section_id": "sec:method",
+      "decision": "placeholder",
+      "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+      "skip_reason": "asset_candidate_missing",
+      "visual_quality_status": "",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result"
+    },
+    {
+      "item_id": "table:Table 3",
+      "source_id": "Table 3",
+      "kind": "table",
+      "label": "Table 3",
+      "caption": "Ablation of the Task-Aware 2D Affordance Detec-",
+      "pages": [
+        6
+      ],
+      "section_id": "sec:dataset",
+      "decision": "insert",
+      "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+      "skip_reason": "",
+      "visual_quality_status": "usable_candidate",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result",
+      "source_image_filename": "page_006_fig_table_3_review.png",
+      "relative_markdown_embed": "![Table 3](images/page_006_fig_table_3_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_3_review.png",
+      "materialization_status": "pending",
+      "source_image_sha256": "620f9e484fa2a960cc753b912d58fe0cd7847d2fd9b5c0d62a54342649553d65",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_3_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\page_previews\\page_006.png",
+        "source_pdf_path": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+        "source_page": 6,
+        "caption": "Ablation of the Task-Aware 2D Affordance Detec-",
+        "bbox_pt": [
+          57.10599899291992,
+          51.70045471191406,
+          289.39373779296875,
+          133.36908721923828
+        ],
+        "normalized_bbox": [
+          0.09331,
+          0.065278,
+          0.472866,
+          0.168395
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewed_asset_sha256": "620f9e484fa2a960cc753b912d58fe0cd7847d2fd9b5c0d62a54342649553d65",
+        "preserved_scientific_elements": [
+          "完整科学图表主体",
+          "内部标签与图例",
+          "比较行列或流程箭头"
+        ],
+        "omitted_scientific_elements": [],
+        "notes": "已核对候选裁图与第 6 页整页预览：两项 2D 模块组合及四项指标完整，未混入题注和正文。",
+        "failure_reason": "",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      }
+    },
+    {
+      "item_id": "table:Table 4",
+      "source_id": "Table 4",
+      "kind": "table",
+      "label": "Table 4",
+      "caption": "Ablation of the 3D Affordance Refinement Module",
+      "pages": [
+        6
+      ],
+      "section_id": "sec:dataset",
+      "decision": "insert",
+      "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+      "skip_reason": "",
+      "visual_quality_status": "usable_candidate",
+      "priority": 2,
+      "target_section": "关键结果",
+      "plan_kind": "main_result",
+      "source_image_filename": "page_006_fig_table_4_review.png",
+      "relative_markdown_embed": "![Table 4](images/page_006_fig_table_4_review.png)",
+      "source_image_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_4_review.png",
+      "materialization_status": "pending",
+      "source_image_sha256": "b76f79af27a4e01bd2a6b7b57b95d4a0d8f0ca010dc38dced5f8066a9dffaff9",
+      "review_evidence": {
+        "candidate_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_4_review.png",
+        "page_preview_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\page_previews\\page_006.png",
+        "source_pdf_path": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+        "source_page": 6,
+        "caption": "Ablation of the 3D Affordance Refinement Module",
+        "bbox_pt": [
+          68.64099884033203,
+          189.4844970703125,
+          293.77215576171875,
+          255.37399291992188
+        ],
+        "normalized_bbox": [
+          0.112158,
+          0.239248,
+          0.48002,
+          0.322442
+        ],
+        "render_dpi": 300
+      },
+      "visual_review": {
+        "status": "pass",
+        "reviewed_asset_sha256": "b76f79af27a4e01bd2a6b7b57b95d4a0d8f0ca010dc38dced5f8066a9dffaff9",
+        "preserved_scientific_elements": [
+          "完整科学图表主体",
+          "内部标签与图例",
+          "比较行列或流程箭头"
+        ],
+        "omitted_scientific_elements": [],
+        "notes": "已核对候选裁图与第 6 页整页预览：输入模态组合及四项指标完整，未混入题注和正文。",
+        "failure_reason": "",
+        "repair_attempts": 0,
+        "revised_bbox": []
+      }
+    }
+  ],
+  "summary": {
+    "total_items": 9,
+    "by_decision": {
+      "insert": 6,
+      "low_priority": 1,
+      "placeholder": 2,
+      "review_pending": 0,
+      "skip": 0,
+      "visual_defect": 0
+    }
+  }
+}

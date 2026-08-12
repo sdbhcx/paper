@@ -1,0 +1,1415 @@
+{
+  "status": "ok",
+  "script": "extract_source_text.py",
+  "schema_version": 1,
+  "paper_id": "arxiv:2412.09511",
+  "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+  "source_kind": "pdf_text",
+  "raw_sections_path": "D:\\study\\deep-learning\\paper\\tmp\\2412.09511\\2412.09511_raw_sections.jsonl",
+  "full_text_md_path": "D:\\study\\deep-learning\\paper\\tmp\\2412.09511\\2412.09511_full_text.md",
+  "pdf": {
+    "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\pdfs\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency.pdf",
+    "total_pages": 22,
+    "text_pages_extracted": 22,
+    "text_max_pages": null,
+    "text_truncated": false
+  },
+  "coverage": {
+    "total_pages": 22,
+    "text_max_pages": null,
+    "text_pages_extracted": 22,
+    "text_pages_scanned": 22,
+    "text_truncated": false,
+    "truncated_due_to_page_limit": false,
+    "appendix_detected": true,
+    "appendix_start_page": 9,
+    "references_start_page": 20
+  },
+  "sections": [
+    {
+      "section_id": "sec:preamble",
+      "kind": "preamble",
+      "title": "preamble",
+      "page_start": 1,
+      "page_end": 1,
+      "char_count": 349,
+      "text_hash_sha256": "0514f2270296a43259951ec9c5046925dc4a5217e3ef7e208069eb273744f86f"
+    },
+    {
+      "section_id": "sec:abstract",
+      "kind": "abstract",
+      "title": "Abstract",
+      "page_start": 1,
+      "page_end": 1,
+      "char_count": 1435,
+      "text_hash_sha256": "b2f041cc336b8273305d0ba28de42fc70c83c77619758ba996bcd5626bf148bd"
+    },
+    {
+      "section_id": "sec:introduction",
+      "kind": "introduction",
+      "title": "1. Introduction",
+      "page_start": 1,
+      "page_end": 2,
+      "char_count": 5754,
+      "text_hash_sha256": "b043dcf410c5a8a3113cd77de76f87b5db18faf19a432b919cffd6b5abb0fe04"
+    },
+    {
+      "section_id": "sec:related-work",
+      "kind": "introduction",
+      "title": "2. Related Work",
+      "page_start": 2,
+      "page_end": 3,
+      "char_count": 2515,
+      "text_hash_sha256": "ba8fd0a0f60999ca774387e09d79fac1c1bac37bf99c041f2c50d48a828f1855"
+    },
+    {
+      "section_id": "sec:methodology",
+      "kind": "method",
+      "title": "3. Methodology",
+      "page_start": 3,
+      "page_end": 6,
+      "char_count": 15762,
+      "text_hash_sha256": "05c40fe058ccc27086ff9fe2c260a7d3543cbb725820c0d12afb76d4843a45b3"
+    },
+    {
+      "section_id": "sec:method",
+      "kind": "method",
+      "title": "Method",
+      "page_start": 6,
+      "page_end": 6,
+      "char_count": 989,
+      "text_hash_sha256": "ac13a9ed732e6d95178ba81f0919222b8d090fd05697e234f80d01949dae4a8e"
+    },
+    {
+      "section_id": "sec:method-2",
+      "kind": "method",
+      "title": "Method",
+      "page_start": 6,
+      "page_end": 7,
+      "char_count": 783,
+      "text_hash_sha256": "eeb9b2e7f716900a953df9a7abf1a030bee9ff68ecd24efd8da9e2f4b1ee4162"
+    },
+    {
+      "section_id": "sec:experiments",
+      "kind": "experiment",
+      "title": "4. Experiments",
+      "page_start": 7,
+      "page_end": 7,
+      "char_count": 453,
+      "text_hash_sha256": "d23824d1f0820385a0b0ee1eb5582d1c32a9651a12e4ca08342c973468e2093a"
+    },
+    {
+      "section_id": "sec:datasets",
+      "kind": "data",
+      "title": "Datasets.",
+      "page_start": 7,
+      "page_end": 9,
+      "char_count": 10007,
+      "text_hash_sha256": "111f71a27bac8822743d88e746ebcc1e47adb48837e0f480330e7a550ca37434"
+    },
+    {
+      "section_id": "sec:conclusion",
+      "kind": "conclusion",
+      "title": "5. Conclusion",
+      "page_start": 9,
+      "page_end": 9,
+      "char_count": 747,
+      "text_hash_sha256": "b9c1df9341d15a9ec777c74f97d02ca360d4fbe33c9543c54816c9a32ba5de4b"
+    },
+    {
+      "section_id": "sec:appendix",
+      "kind": "appendix",
+      "title": "Appendix",
+      "page_start": 9,
+      "page_end": 10,
+      "char_count": 2916,
+      "text_hash_sha256": "9c2768d1632fb761868ba063136580f9969c38b9c89b9f30bc5b7cd7d4ee1aea"
+    },
+    {
+      "section_id": "sec:data",
+      "kind": "data",
+      "title": "Data",
+      "page_start": 10,
+      "page_end": 10,
+      "char_count": 865,
+      "text_hash_sha256": "6a83aef6715c5c6fdd6120df62f2ba3ac5c490d2d0d606666176e49d3826fe22"
+    },
+    {
+      "section_id": "sec:data-2",
+      "kind": "data",
+      "title": "Data",
+      "page_start": 10,
+      "page_end": 10,
+      "char_count": 1401,
+      "text_hash_sha256": "351aae07919c33b55d725347eb22250736bc13b6a5ba4a5e07243569f2c32dc3"
+    },
+    {
+      "section_id": "sec:method-3",
+      "kind": "method",
+      "title": "– Method:",
+      "page_start": 10,
+      "page_end": 10,
+      "char_count": 794,
+      "text_hash_sha256": "d58fa48e06ce56dc00158652238a0fd40a4897596623533de4d449ca6b196548"
+    },
+    {
+      "section_id": "sec:method-4",
+      "kind": "method",
+      "title": "– Method:",
+      "page_start": 10,
+      "page_end": 20,
+      "char_count": 23920,
+      "text_hash_sha256": "6ade873ce3ce3c6f91fd247f18b9fc4f54263d06a860343a3e3e2d5ae2b6c5b7"
+    },
+    {
+      "section_id": "sec:references",
+      "kind": "references",
+      "title": "References",
+      "page_start": 20,
+      "page_end": 22,
+      "char_count": 16196,
+      "text_hash_sha256": "70a9ca69b8fbcba99e4848d702a04776b202637040ba3d47e61f6e79f057b0b2"
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "char_count": 3304,
+      "section_ids": [
+        "sec:preamble",
+        "sec:abstract",
+        "sec:introduction"
+      ]
+    },
+    {
+      "page": 2,
+      "char_count": 5768,
+      "section_ids": [
+        "sec:introduction",
+        "sec:related-work"
+      ]
+    },
+    {
+      "page": 3,
+      "char_count": 5441,
+      "section_ids": [
+        "sec:related-work",
+        "sec:methodology"
+      ]
+    },
+    {
+      "page": 4,
+      "char_count": 4230,
+      "section_ids": [
+        "sec:methodology"
+      ]
+    },
+    {
+      "page": 5,
+      "char_count": 4501,
+      "section_ids": [
+        "sec:methodology"
+      ]
+    },
+    {
+      "page": 6,
+      "char_count": 4547,
+      "section_ids": [
+        "sec:methodology",
+        "sec:method",
+        "sec:method-2"
+      ]
+    },
+    {
+      "page": 7,
+      "char_count": 5599,
+      "section_ids": [
+        "sec:method-2",
+        "sec:experiments",
+        "sec:datasets"
+      ]
+    },
+    {
+      "page": 8,
+      "char_count": 4144,
+      "section_ids": [
+        "sec:datasets"
+      ]
+    },
+    {
+      "page": 9,
+      "char_count": 4447,
+      "section_ids": [
+        "sec:datasets",
+        "sec:conclusion",
+        "sec:appendix"
+      ]
+    },
+    {
+      "page": 10,
+      "char_count": 3855,
+      "section_ids": [
+        "sec:appendix",
+        "sec:data",
+        "sec:data-2",
+        "sec:method-3",
+        "sec:method-4"
+      ]
+    },
+    {
+      "page": 11,
+      "char_count": 5235,
+      "section_ids": [
+        "sec:method-4"
+      ]
+    },
+    {
+      "page": 12,
+      "char_count": 2460,
+      "section_ids": [
+        "sec:method-4"
+      ]
+    },
+    {
+      "page": 13,
+      "char_count": 2228,
+      "section_ids": [
+        "sec:method-4"
+      ]
+    },
+    {
+      "page": 14,
+      "char_count": 4036,
+      "section_ids": [
+        "sec:method-4"
+      ]
+    },
+    {
+      "page": 15,
+      "char_count": 2113,
+      "section_ids": [
+        "sec:method-4"
+      ]
+    },
+    {
+      "page": 16,
+      "char_count": 3051,
+      "section_ids": [
+        "sec:method-4"
+      ]
+    },
+    {
+      "page": 17,
+      "char_count": 510,
+      "section_ids": [
+        "sec:method-4"
+      ]
+    },
+    {
+      "page": 18,
+      "char_count": 570,
+      "section_ids": [
+        "sec:method-4"
+      ]
+    },
+    {
+      "page": 19,
+      "char_count": 3808,
+      "section_ids": [
+        "sec:method-4"
+      ]
+    },
+    {
+      "page": 20,
+      "char_count": 5681,
+      "section_ids": [
+        "sec:method-4",
+        "sec:references"
+      ]
+    },
+    {
+      "page": 21,
+      "char_count": 6033,
+      "section_ids": [
+        "sec:references"
+      ]
+    },
+    {
+      "page": 22,
+      "char_count": 4528,
+      "section_ids": [
+        "sec:references"
+      ]
+    }
+  ],
+  "captions": {
+    "figures": [
+      {
+        "id": "Figure 1",
+        "caption": "3D affordance prediction under varied data noises.",
+        "page": 1,
+        "pages": [
+          1
+        ],
+        "section_id": "sec:preamble"
+      },
+      {
+        "id": "Fig 1",
+        "caption": "shows an example of the text description and the",
+        "page": 2,
+        "pages": [
+          2
+        ],
+        "section_id": "sec:introduction"
+      },
+      {
+        "id": "Figure 2",
+        "caption": "(Left): Framework Overview. The proposed GEAL consists of two branches: 3D and 2D. The 2D branch is established through",
+        "page": 4,
+        "pages": [
+          4
+        ],
+        "section_id": "sec:methodology"
+      },
+      {
+        "id": "Figure 3",
+        "caption": "Illustration of the Granularity-Adaptive Fusion Mod-",
+        "page": 5,
+        "pages": [
+          5
+        ],
+        "section_id": "sec:methodology"
+      },
+      {
+        "id": "Figure 4",
+        "caption": "Qualitative comparisons between GEAL and LASO [32]",
+        "page": 8,
+        "pages": [
+          8
+        ],
+        "section_id": "sec:datasets"
+      },
+      {
+        "id": "Figure 5",
+        "caption": "Visualization examples of the PIAD-C dataset. We show 7 corruption types across 5 severity levels.",
+        "page": 12,
+        "pages": [
+          12
+        ],
+        "section_id": "sec:method-4"
+      },
+      {
+        "id": "Figure 6",
+        "caption": "Visualization examples of the LASO-C dataset. We show 7 corruption types across 5 severity levels.",
+        "page": 13,
+        "pages": [
+          13
+        ],
+        "section_id": "sec:method-4"
+      },
+      {
+        "id": "Figure 7",
+        "caption": "Qualitative comparisons between GEAL and LASO [32] on the PIAD-C dataset, highlighting the superior robustness of our",
+        "page": 17,
+        "pages": [
+          17
+        ],
+        "section_id": "sec:method-4"
+      },
+      {
+        "id": "Figure 8",
+        "caption": "Qualitative comparisons between GEAL and LASO [32] on the PIAD dataset.",
+        "page": 18,
+        "pages": [
+          18
+        ],
+        "section_id": "sec:method-4"
+      }
+    ],
+    "tables": [
+      {
+        "id": "Table 1",
+        "caption": "The overall results of all comparative methods on PIAD",
+        "page": 6,
+        "pages": [
+          6
+        ],
+        "section_id": "sec:methodology"
+      },
+      {
+        "id": "Table 2",
+        "caption": "The overall results of all comparative methods on the",
+        "page": 6,
+        "pages": [
+          6
+        ],
+        "section_id": "sec:methodology"
+      },
+      {
+        "id": "Table 3",
+        "caption": "Comparison of different methods under various corrup-",
+        "page": 7,
+        "pages": [
+          7
+        ],
+        "section_id": "sec:method-2"
+      },
+      {
+        "id": "Table 4",
+        "caption": "Comparison of different methods under various corrup-",
+        "page": 7,
+        "pages": [
+          7
+        ],
+        "section_id": "sec:method-2"
+      },
+      {
+        "id": "Table 5",
+        "caption": "Ablation study on the impact of different components",
+        "page": 7,
+        "pages": [
+          7
+        ],
+        "section_id": "sec:method-2"
+      },
+      {
+        "id": "Table 6",
+        "caption": "Ablation study on the configuration of Gaussian Splatting",
+        "page": 8,
+        "pages": [
+          8
+        ],
+        "section_id": "sec:datasets"
+      },
+      {
+        "id": "Table 7",
+        "caption": "Detailed statistics of the proposed PIAD-C dataset, show-",
+        "page": 10,
+        "pages": [
+          10
+        ],
+        "section_id": "sec:appendix"
+      },
+      {
+        "id": "Table 8",
+        "caption": "Detailed statistics of the proposed LASO-C dataset,",
+        "page": 10,
+        "pages": [
+          10
+        ],
+        "section_id": "sec:appendix"
+      },
+      {
+        "id": "Table 9",
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the PIAD dataset [70]. AUC and aIOU scores",
+        "page": 15,
+        "pages": [
+          15
+        ],
+        "section_id": "sec:method-4"
+      },
+      {
+        "id": "Table 10",
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the PIAD dataset [70]. AUC and aIOU",
+        "page": 15,
+        "pages": [
+          15
+        ],
+        "section_id": "sec:method-4"
+      },
+      {
+        "id": "Table 11",
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the LASO dataset [32]. AUC and aIOU",
+        "page": 16,
+        "pages": [
+          16
+        ],
+        "section_id": "sec:method-4"
+      },
+      {
+        "id": "Table 12",
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the LASO dataset [32]. AUC and aIOU",
+        "page": 16,
+        "pages": [
+          16
+        ],
+        "section_id": "sec:method-4"
+      }
+    ]
+  },
+  "math_index": [
+    {
+      "text": "an object point cloud P ∈RN×3 with N points, GEAL pre-",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "dicts an affordance score y ∈RN, where each value in y",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "C(v) =",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "i∈N ciαi",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "j=1(1 −αj),",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "Gaussians within the tile, and αi = oiG2D",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "D(v) =",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "i∈N diαi",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "j=1(1 −αj),",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "mean positions to match the point coordinates, i.e. µ = P.",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "ages I ∈RV ×3×H×W that preserve both semantics and",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "y ∈[0, 1] as grayscale color, we assign the color of each",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "Gaussian to match its affordance score, i.e. c = y. We gen-",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "erate 2D affordance masks y2D ∈RV ×H×W , where each",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "= ϕ3D",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "= ϕ2D",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "∈RB×C3D",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "∈RB×V ×C2D×NI. B is",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "h3D = ω3D(Q),",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "h2D = ω2D(Q2D),",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "where h3D ∈RB×Ctxt×L and h2D ∈RB×V ×Ctxt×L, with L",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "con ∈RB×V ×(m×C2D)×N I. Inspired by previous works",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "W = Softmax",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "where Wg ∈R(m×C2D)×m is a trainable weight matrix,",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "W ∈RB×m represents the concatenation of weights wi",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "𝐟$%&",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "f 2D =",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "i=1 wi ⊙f 2D",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "where ⊙denotes element-wise multiplication and wi ∈W.",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "enh ∈RB×Ctxt×N I by querying",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "cam ∈RB×Ccam×N. This processed feature acts as the rep-",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "F(v) =",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "i∈N",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "j=1",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "cam ∈",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "= {F(v)|v ∈M}. We",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "Lconsis = MSE(f 3D−2D",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "ˆy2D = sigmoid",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "where ˆy2D ∈RN denotes affordance scores.",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "L2D = L2D",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "L3D = L3D",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 6
+    },
+    {
+      "text": "r = 112, V = 12, and the use of view-dependent prompts.",
+      "section_id": "sec:datasets",
+      "page_start": 7,
+      "page_end": 9
+    },
+    {
+      "text": "σ ∈{0.01, 0.02, 0.03, 0.04, 0.05}.",
+      "section_id": "sec:appendix",
+      "page_start": 9,
+      "page_end": 10
+    },
+    {
+      "text": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+      "section_id": "sec:appendix",
+      "page_start": 9,
+      "page_end": 10
+    },
+    {
+      "text": "θ ∈{π/30, π/15, π/10, π/7.5, π/6}.",
+      "section_id": "sec:data-2",
+      "page_start": 10,
+      "page_end": 10
+    },
+    {
+      "text": "SO(3), but provides sufficient variation to simulate di-",
+      "section_id": "sec:data-2",
+      "page_start": 10,
+      "page_end": 10
+    },
+    {
+      "text": "where N = 2048 is the total number of points.",
+      "section_id": "sec:data-2",
+      "page_start": 10,
+      "page_end": 10
+    },
+    {
+      "text": "ρ ∈{0.25, 0.375, 0.5, 0.675, 0.75}.",
+      "section_id": "sec:data-2",
+      "page_start": 10,
+      "page_end": 10
+    },
+    {
+      "text": "K ∈{100, 200, 300, 400, 500}.",
+      "section_id": "sec:method-3",
+      "page_start": 10,
+      "page_end": 10
+    },
+    {
+      "text": "K ∈{10, 20, 30, 40, 50}.",
+      "section_id": "sec:method-3",
+      "page_start": 10,
+      "page_end": 10
+    },
+    {
+      "text": "K ∈{100, 200, 300, 400, 500}.",
+      "section_id": "sec:method-4",
+      "page_start": 10,
+      "page_end": 20
+    },
+    {
+      "text": "IoU =",
+      "section_id": "sec:method-4",
+      "page_start": 10,
+      "page_end": 20
+    },
+    {
+      "text": "SIM(P, Q) =",
+      "section_id": "sec:method-4",
+      "page_start": 10,
+      "page_end": 20
+    },
+    {
+      "text": "i Qi = 1. SIM provides a measure of how well the",
+      "section_id": "sec:method-4",
+      "page_start": 10,
+      "page_end": 20
+    },
+    {
+      "text": "MAE = 1",
+      "section_id": "sec:method-4",
+      "page_start": 10,
+      "page_end": 20
+    },
+    {
+      "text": "i=1",
+      "section_id": "sec:method-4",
+      "page_start": 10,
+      "page_end": 20
+    }
+  ],
+  "appendix_index": {
+    "appendix_detected": true,
+    "start_page": 9,
+    "sections": [
+      {
+        "title": "r = 112, V = 12, and the use of view-dependent prompts.",
+        "page": 9
+      },
+      {
+        "title": "A. Corrupt Data Benchmark",
+        "page": 9
+      },
+      {
+        "title": "B. Benchmark Configuration",
+        "page": 9
+      },
+      {
+        "title": "C. Additional Quantitative Results",
+        "page": 9
+      },
+      {
+        "title": "D. Additional Qualitative Results",
+        "page": 9
+      },
+      {
+        "title": "E. Broader Impact & Limitations",
+        "page": 9
+      },
+      {
+        "title": "F. Public Resource Used",
+        "page": 9
+      },
+      {
+        "title": "S , S",
+        "page": 9
+      },
+      {
+        "title": "S ∈{1.6, 1.7, 1.8, 1.9, 2.0}.",
+        "page": 9
+      },
+      {
+        "title": "K ∈{100, 200, 300, 400, 500}.",
+        "page": 10
+      },
+      {
+        "title": "K ∈{10, 20, 30, 40, 50}.",
+        "page": 10
+      },
+      {
+        "title": "i I),",
+        "page": 10
+      },
+      {
+        "title": "a time.",
+        "page": 11
+      },
+      {
+        "title": "a total of 1, 035 distinct clean object shapes.",
+        "page": 11
+      },
+      {
+        "title": "i Qi = 1. SIM provides a measure of how well the",
+        "page": 13
+      },
+      {
+        "title": "a method that grounds 3D affordances by transferring",
+        "page": 14
+      },
+      {
+        "title": "a lack of accountability in critical decision-making sce-",
+        "page": 19
+      }
+    ],
+    "figure_captions": [
+      {
+        "id": "Figure 5",
+        "caption": "Visualization examples of the PIAD-C dataset. We show 7 corruption types across 5 severity levels.",
+        "page_hint": "p.12"
+      },
+      {
+        "id": "Figure 6",
+        "caption": "Visualization examples of the LASO-C dataset. We show 7 corruption types across 5 severity levels.",
+        "page_hint": "p.13"
+      },
+      {
+        "id": "Figure 7",
+        "caption": "Qualitative comparisons between GEAL and LASO [32] on the PIAD-C dataset, highlighting the superior robustness of our",
+        "page_hint": "p.17"
+      },
+      {
+        "id": "Figure 8",
+        "caption": "Qualitative comparisons between GEAL and LASO [32] on the PIAD dataset.",
+        "page_hint": "p.18"
+      }
+    ],
+    "table_captions": [
+      {
+        "id": "Table 7",
+        "caption": "Detailed statistics of the proposed PIAD-C dataset, show-",
+        "page_hint": "p.10"
+      },
+      {
+        "id": "Table 8",
+        "caption": "Detailed statistics of the proposed LASO-C dataset,",
+        "page_hint": "p.10"
+      },
+      {
+        "id": "Table 9",
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the PIAD dataset [70]. AUC and aIOU scores",
+        "page_hint": "p.15"
+      },
+      {
+        "id": "Table 10",
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the PIAD dataset [70]. AUC and aIOU",
+        "page_hint": "p.15"
+      },
+      {
+        "id": "Table 11",
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the LASO dataset [32]. AUC and aIOU",
+        "page_hint": "p.16"
+      },
+      {
+        "id": "Table 12",
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the LASO dataset [32]. AUC and aIOU",
+        "page_hint": "p.16"
+      }
+    ]
+  },
+  "language_hint": "en",
+  "text_hash_sha256": "298d033e251502a0ff32a67f7eee32a8a4ac54a3cb44678454f918c0620a2a23",
+  "identity_contract": {
+    "artifact_type": "canonical_identity",
+    "schema_version": 2,
+    "paper_id": "arxiv:2412.09511",
+    "identity_verdict": "accepted",
+    "work_level_identity": {
+      "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+      "translated_title": "",
+      "authors": [
+        "Dongyue Lu",
+        "Lingdong Kong",
+        "Tianxin Huang",
+        "Gim Hee Lee"
+      ],
+      "year": "2024",
+      "venue": "",
+      "doi": "",
+      "arxiv_id": "2412.09511",
+      "zotero_key": ""
+    },
+    "source_manifestation": {
+      "source_kind": "arxiv",
+      "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+      "year": "",
+      "venue": "",
+      "source_url": "https://arxiv.org/pdf/2412.09511",
+      "pdf_url": "https://arxiv.org/pdf/2412.09511.pdf",
+      "local_pdf_path": "",
+      "doi": "",
+      "arxiv_id": "",
+      "zotero_key": ""
+    },
+    "accepted_metadata": {
+      "status": "ok",
+      "script": "resolve_paper.py",
+      "paper_id": "arxiv:2412.09511",
+      "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+      "pdf_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\pdfs\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency.pdf",
+      "pdf_source": "downloaded",
+      "source_url": "https://arxiv.org/pdf/2412.09511",
+      "pdf_url": "https://arxiv.org/pdf/2412.09511.pdf",
+      "file_size": 6825253,
+      "identity_contract": {
+        "artifact_type": "canonical_identity",
+        "schema_version": 2,
+        "paper_id": "arxiv:2412.09511",
+        "identity_verdict": "accepted",
+        "work_level_identity": {
+          "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+          "translated_title": "",
+          "authors": [
+            "Dongyue Lu",
+            "Lingdong Kong",
+            "Tianxin Huang",
+            "Gim Hee Lee"
+          ],
+          "year": "2024",
+          "venue": "",
+          "doi": "",
+          "arxiv_id": "2412.09511",
+          "zotero_key": ""
+        },
+        "source_manifestation": {
+          "source_kind": "arxiv_url",
+          "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+          "year": "",
+          "venue": "",
+          "source_url": "https://arxiv.org/pdf/2412.09511",
+          "pdf_url": "https://arxiv.org/pdf/2412.09511.pdf",
+          "local_pdf_path": "",
+          "doi": "",
+          "arxiv_id": "2412.09511",
+          "zotero_key": ""
+        },
+        "accepted_metadata": {
+          "status": "ok",
+          "source_type": "arxiv_url",
+          "source_url": "https://arxiv.org/pdf/2412.09511",
+          "arxiv_id": "2412.09511",
+          "pdf_url": "https://arxiv.org/pdf/2412.09511.pdf",
+          "metadata_sources": [
+            "arxiv_url",
+            "arxiv"
+          ],
+          "paper_id": "arxiv:2412.09511",
+          "identity_confidence": "high",
+          "identity_confidence_reasons": [
+            "arxiv_id_present"
+          ],
+          "zotero_lookup": {
+            "mode": "auto",
+            "status": "error",
+            "match_kind": "arxiv_url",
+            "error": {
+              "code": "zotero_timeout",
+              "message": "Timed out while connecting to the Zotero Local API.",
+              "retryable": true
+            }
+          },
+          "script": "resolve_paper.py",
+          "source": "arxiv",
+          "url": "http://arxiv.org/abs/2412.09511v1",
+          "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+          "abstract": "Identifying affordance regions on 3D objects from semantic cues is essential for robotics and human-machine interaction. However, existing 3D affordance learning methods struggle with generalization and robustness due to limited annotated data and a reliance on 3D backbones focused on geometric encoding, which often lack resilience to real-world noise and data corruption. We propose GEAL, a novel framework designed to enhance the generalization and robustness of 3D affordance learning by leveraging large-scale pre-trained 2D models. We employ a dual-branch architecture with Gaussian splatting to establish consistent mappings between 3D point clouds and 2D representations, enabling realistic 2D renderings from sparse point clouds. A granularity-adaptive fusion module and a 2D-3D consistency alignment module further strengthen cross-modal alignment and knowledge transfer, allowing the 3D branch to benefit from the rich semantics and generalization capacity of 2D models. To holistically assess the robustness, we introduce two new corruption-based benchmarks: PIAD-C and LASO-C. Extensive experiments on public datasets and our benchmarks show that GEAL consistently outperforms existing methods across seen and novel object categories, as well as corrupted data, demonstrating robust and adaptable affordance prediction under diverse conditions. Code and corruption datasets have been made publicly available.",
+          "authors": [
+            "Dongyue Lu",
+            "Lingdong Kong",
+            "Tianxin Huang",
+            "Gim Hee Lee"
+          ],
+          "published": "2024-12-12T17:59:03Z",
+          "year": "2024"
+        },
+        "bound_sources": [
+          {
+            "kind": "pdf_url",
+            "value": "https://arxiv.org/pdf/2412.09511.pdf",
+            "provider": "arxiv_url",
+            "binding_reason": "trusted_input"
+          },
+          {
+            "kind": "pdf_url",
+            "value": "https://arxiv.org/pdf/2412.09511v1",
+            "provider": "arxiv",
+            "binding_reason": "shared_identifier"
+          }
+        ],
+        "field_provenance": {
+          "arxiv_id": {
+            "provider": "arxiv_url",
+            "retrieved_by": {
+              "kind": "input",
+              "value": "arxiv:2412.09511"
+            }
+          },
+          "source_url": {
+            "provider": "arxiv_url",
+            "retrieved_by": {
+              "kind": "input",
+              "value": "arxiv:2412.09511"
+            }
+          },
+          "pdf_url": {
+            "provider": "arxiv_url",
+            "retrieved_by": {
+              "kind": "input",
+              "value": "arxiv:2412.09511"
+            }
+          },
+          "title": {
+            "provider": "arxiv",
+            "retrieved_by": {
+              "kind": "arxiv_id",
+              "value": "2412.09511"
+            }
+          },
+          "authors": {
+            "provider": "arxiv",
+            "retrieved_by": {
+              "kind": "arxiv_id",
+              "value": "2412.09511"
+            }
+          },
+          "year": {
+            "provider": "arxiv",
+            "retrieved_by": {
+              "kind": "arxiv_id",
+              "value": "2412.09511"
+            }
+          },
+          "abstract": {
+            "provider": "arxiv",
+            "retrieved_by": {
+              "kind": "arxiv_id",
+              "value": "2412.09511"
+            }
+          }
+        },
+        "selected_identity_evidence": [
+          {
+            "kind": "arxiv_id",
+            "value": "2412.09511",
+            "trust": "strong",
+            "source": "metadata"
+          },
+          {
+            "kind": "title",
+            "value": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+            "trust": "metadata",
+            "source": "metadata"
+          },
+          {
+            "kind": "pdf_url",
+            "value": "https://arxiv.org/pdf/2412.09511.pdf",
+            "trust": "source_manifestation",
+            "source": "metadata"
+          },
+          {
+            "kind": "source_url",
+            "value": "https://arxiv.org/pdf/2412.09511",
+            "trust": "source_manifestation",
+            "source": "metadata"
+          },
+          {
+            "kind": "pdf_url",
+            "value": "https://arxiv.org/pdf/2412.09511.pdf",
+            "trust": "source_manifestation",
+            "source": "source_manifestation"
+          },
+          {
+            "kind": "source_url",
+            "value": "https://arxiv.org/pdf/2412.09511",
+            "trust": "source_manifestation",
+            "source": "source_manifestation"
+          }
+        ],
+        "equivalence_decision": {
+          "status": "equivalent",
+          "reason": "shared_work_identifier",
+          "location_binding": "source_manifestation",
+          "evidence": [
+            {
+              "kind": "shared_identifier",
+              "value": "arxiv_id:2412.09511"
+            }
+          ]
+        },
+        "warnings": [],
+        "repair_trace_path": "D:\\study\\deep-learning\\paper\\tmp\\2412.09511\\2412.09511_identity_repair_trace.json",
+        "provenance": {
+          "resolve_artifact_path": "D:\\study\\deep-learning\\paper\\tmp\\2412.09511\\2412.09511_resolve.json",
+          "metadata_artifact_path": "D:\\study\\deep-learning\\paper\\tmp\\2412.09511\\2412.09511_metadata.json"
+        }
+      },
+      "source_manifestation": {
+        "source_kind": "arxiv_url",
+        "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+        "year": "",
+        "venue": "",
+        "source_url": "https://arxiv.org/pdf/2412.09511",
+        "pdf_url": "https://arxiv.org/pdf/2412.09511.pdf",
+        "local_pdf_path": "",
+        "doi": "",
+        "arxiv_id": "2412.09511",
+        "zotero_key": ""
+      },
+      "source": "arxiv",
+      "source_type": "arxiv",
+      "metadata_sources": [
+        "arxiv"
+      ],
+      "url": "http://arxiv.org/abs/2412.09511v1",
+      "arxiv_id": "2412.09511",
+      "abstract": "Identifying affordance regions on 3D objects from semantic cues is essential for robotics and human-machine interaction. However, existing 3D affordance learning methods struggle with generalization and robustness due to limited annotated data and a reliance on 3D backbones focused on geometric encoding, which often lack resilience to real-world noise and data corruption. We propose GEAL, a novel framework designed to enhance the generalization and robustness of 3D affordance learning by leveraging large-scale pre-trained 2D models. We employ a dual-branch architecture with Gaussian splatting to establish consistent mappings between 3D point clouds and 2D representations, enabling realistic 2D renderings from sparse point clouds. A granularity-adaptive fusion module and a 2D-3D consistency alignment module further strengthen cross-modal alignment and knowledge transfer, allowing the 3D branch to benefit from the rich semantics and generalization capacity of 2D models. To holistically assess the robustness, we introduce two new corruption-based benchmarks: PIAD-C and LASO-C. Extensive experiments on public datasets and our benchmarks show that GEAL consistently outperforms existing methods across seen and novel object categories, as well as corrupted data, demonstrating robust and adaptable affordance prediction under diverse conditions. Code and corruption datasets have been made publicly available.",
+      "authors": [
+        "Dongyue Lu",
+        "Lingdong Kong",
+        "Tianxin Huang",
+        "Gim Hee Lee"
+      ],
+      "published": "2024-12-12T17:59:03Z",
+      "year": "2024",
+      "identity_confidence": "high",
+      "identity_confidence_reasons": [
+        "arxiv_id_present"
+      ]
+    },
+    "bound_sources": [
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2412.09511.pdf",
+        "provider": "input",
+        "binding_reason": "trusted_input"
+      },
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2412.09511v1",
+        "provider": "arxiv",
+        "binding_reason": "shared_identifier"
+      }
+    ],
+    "field_provenance": {
+      "title": {
+        "provider": "input",
+        "retrieved_by": {
+          "kind": "input",
+          "value": "arxiv:2412.09511"
+        }
+      },
+      "source_url": {
+        "provider": "input",
+        "retrieved_by": {
+          "kind": "input",
+          "value": "arxiv:2412.09511"
+        }
+      },
+      "pdf_url": {
+        "provider": "input",
+        "retrieved_by": {
+          "kind": "input",
+          "value": "arxiv:2412.09511"
+        }
+      },
+      "authors": {
+        "provider": "arxiv",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency"
+        }
+      },
+      "year": {
+        "provider": "arxiv",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency"
+        }
+      },
+      "arxiv_id": {
+        "provider": "arxiv",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency"
+        }
+      },
+      "abstract": {
+        "provider": "arxiv",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency"
+        }
+      }
+    },
+    "selected_identity_evidence": [
+      {
+        "kind": "arxiv_id",
+        "value": "2412.09511",
+        "trust": "strong",
+        "source": "metadata"
+      },
+      {
+        "kind": "title",
+        "value": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+        "trust": "metadata",
+        "source": "metadata"
+      },
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2412.09511.pdf",
+        "trust": "source_manifestation",
+        "source": "metadata"
+      },
+      {
+        "kind": "source_url",
+        "value": "https://arxiv.org/pdf/2412.09511",
+        "trust": "source_manifestation",
+        "source": "metadata"
+      },
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2412.09511.pdf",
+        "trust": "source_manifestation",
+        "source": "source_manifestation"
+      },
+      {
+        "kind": "source_url",
+        "value": "https://arxiv.org/pdf/2412.09511",
+        "trust": "source_manifestation",
+        "source": "source_manifestation"
+      }
+    ],
+    "equivalence_decision": {
+      "status": "equivalent",
+      "reason": "shared_work_identifier",
+      "location_binding": "source_manifestation",
+      "evidence": [
+        {
+          "kind": "shared_identifier",
+          "value": "arxiv_id:2412.09511"
+        },
+        {
+          "kind": "title_similarity",
+          "status": "match",
+          "score": 1.0,
+          "source_value": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+          "work_value": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency"
+        }
+      ]
+    },
+    "warnings": [],
+    "repair_trace_path": "D:\\study\\deep-learning\\paper\\tmp\\2412.09511\\2412.09511_identity_repair_trace.json",
+    "provenance": {
+      "resolve_artifact_path": "D:\\study\\deep-learning\\paper\\tmp\\2412.09511\\2412.09511_resolve.json",
+      "metadata_artifact_path": "D:\\study\\deep-learning\\paper\\tmp\\2412.09511\\2412.09511_metadata.json"
+    }
+  },
+  "source_manifestation": {
+    "source_kind": "arxiv",
+    "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+    "year": "",
+    "venue": "",
+    "source_url": "https://arxiv.org/pdf/2412.09511",
+    "pdf_url": "https://arxiv.org/pdf/2412.09511.pdf",
+    "local_pdf_path": "",
+    "doi": "",
+    "arxiv_id": "",
+    "zotero_key": ""
+  }
+}

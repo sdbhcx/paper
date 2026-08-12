@@ -1,0 +1,19 @@
+{
+  "status": "ok",
+  "source_type": "local_pdf",
+  "source_url": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+  "local_pdf_path": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+  "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+  "metadata_sources": [
+    "local_pdf"
+  ],
+  "local_pdf_title_source": "pdf_metadata_title_used",
+  "arxiv_id": "2511.11702",
+  "paper_id": "arxiv:2511.11702",
+  "identity_confidence": "high",
+  "identity_confidence_reasons": [
+    "arxiv_id_present",
+    "pdf_metadata_title_used"
+  ],
+  "script": "resolve_paper.py"
+}

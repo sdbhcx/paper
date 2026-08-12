@@ -1,0 +1,147 @@
+{
+  "status": "ok",
+  "source_type": "local_pdf",
+  "source_url": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+  "local_pdf_path": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+  "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+  "metadata_sources": [
+    "local_pdf"
+  ],
+  "local_pdf_title_source": "pdf_metadata_title_used",
+  "arxiv_id": "2511.11702",
+  "paper_id": "arxiv:2511.11702",
+  "identity_confidence": "high",
+  "identity_confidence_reasons": [
+    "arxiv_id_present",
+    "pdf_metadata_title_used"
+  ],
+  "script": "collect_metadata.py",
+  "identity_observations": [
+    {
+      "provider": "arxiv",
+      "retrieved_by": {
+        "kind": "arxiv_id",
+        "value": "2511.11702"
+      },
+      "record": {
+        "source": "arxiv",
+        "source_type": "arxiv",
+        "metadata_sources": [
+          "arxiv"
+        ],
+        "source_url": "http://arxiv.org/abs/2511.11702v1",
+        "url": "http://arxiv.org/abs/2511.11702v1",
+        "arxiv_id": "2511.11702",
+        "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+        "abstract": "Understanding 3D scene-level affordances from natural language instructions is essential for enabling embodied agents to interact meaningfully in complex environments. However, this task remains challenging due to the need for semantic reasoning and spatial grounding. Existing methods mainly focus on object-level affordances or merely lift 2D predictions to 3D, neglecting rich geometric structure information in point clouds and incurring high computational costs. To address these limitations, we introduce Task-Aware 3D Scene-level Affordance segmentation (TASA), a novel geometry-optimized framework that jointly leverages 2D semantic cues and 3D geometric reasoning in a coarse-to-fine manner. To improve the affordance detection efficiency, TASA features a task-aware 2D affordance detection module to identify manipulable points from language and visual inputs, guiding the selection of task-relevant views. To fully exploit 3D geometric information, a 3D affordance refinement module is proposed to integrate 2D semantic priors with local 3D geometry, resulting in accurate and spatially coherent 3D affordance masks. Experiments on SceneFun3D demonstrate that TASA significantly outperforms the baselines in both accuracy and efficiency in scene-level affordance segmentation.",
+        "authors": [
+          "Lian He",
+          "Meng Liu",
+          "Qilang Ye",
+          "Yu Zhou",
+          "Xiang Deng",
+          "Gangyi Ding"
+        ],
+        "published": "2025-11-12T13:36:37Z",
+        "year": "2025",
+        "pdf_url": "https://arxiv.org/pdf/2511.11702v1"
+      }
+    },
+    {
+      "provider": "openalex",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement"
+      },
+      "record": {
+        "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+        "authors": [
+          "Lian He",
+          "Meng Liu",
+          "Qilang Ye",
+          "Yu Zhou",
+          "Xiang Deng",
+          "Gangyi Ding"
+        ],
+        "affiliations": [
+          "Beijing Institute of Technology",
+          "Beijing Academy of Science and Technology",
+          "Shandong Jianzhu University",
+          "State Key Laboratory of Cryptology",
+          "Harbin Institute of Technology"
+        ],
+        "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+        "year": "2026",
+        "doi": "10.1609/aaai.v40i6.42466",
+        "source": "openalex",
+        "source_type": "openalex",
+        "source_url": "https://doi.org/10.1609/aaai.v40i6.42466",
+        "pdf_url": "",
+        "abstract": "",
+        "metadata_sources": [
+          "openalex"
+        ]
+      }
+    },
+    {
+      "provider": "crossref",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement"
+      },
+      "record": {
+        "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+        "authors": [
+          "Lian He",
+          "Meng Liu",
+          "Qilang Ye",
+          "Yu Zhou",
+          "Xiang Deng",
+          "Gangyi Ding"
+        ],
+        "affiliations": [],
+        "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+        "doi": "10.1609/aaai.v40i6.42466",
+        "source": "crossref",
+        "source_type": "crossref",
+        "source_url": "https://doi.org/10.1609/aaai.v40i6.42466",
+        "year": "2026",
+        "published": "2026",
+        "abstract": "Understanding 3D scene-level affordances from natural language instructions is essential for enabling embodied agents to interact meaningfully in complex environments. However, this task remains challenging due to the need for semantic reasoning and spatial grounding. Existing methods mainly focus on object-level affordances or merely lift 2D predictions to 3D, neglecting rich geometric structure information in point clouds and incurring high computational costs. To address these limitations, we introduce Task-Aware 3D Scene-level Affordance segmentation (TASA), a novel geometry-optimized framework that jointly leverages 2D semantic cues and 3D geometric reasoning in a coarse-to-fine manner. To improve the affordance detection efficiency, TASA features a task-aware 2D affordance detection module to identify manipulable points from language and visual inputs, guiding the selection of task-relevant views. To fully exploit 3D geometric information, a 3D affordance refinement module is proposed to integrate 2D semantic priors with local 3D geometry, resulting in accurate and spatially coherent 3D affordance masks. Experiments on SceneFun3D demonstrate that TASA significantly outperforms the baselines in both accuracy and efficiency in scene-level affordance segmentation.",
+        "metadata_sources": [
+          "crossref"
+        ]
+      }
+    },
+    {
+      "provider": "arxiv",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement"
+      },
+      "record": {
+        "source": "arxiv",
+        "source_type": "arxiv",
+        "metadata_sources": [
+          "arxiv"
+        ],
+        "source_url": "http://arxiv.org/abs/2511.11702v1",
+        "url": "http://arxiv.org/abs/2511.11702v1",
+        "arxiv_id": "2511.11702",
+        "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+        "abstract": "Understanding 3D scene-level affordances from natural language instructions is essential for enabling embodied agents to interact meaningfully in complex environments. However, this task remains challenging due to the need for semantic reasoning and spatial grounding. Existing methods mainly focus on object-level affordances or merely lift 2D predictions to 3D, neglecting rich geometric structure information in point clouds and incurring high computational costs. To address these limitations, we introduce Task-Aware 3D Scene-level Affordance segmentation (TASA), a novel geometry-optimized framework that jointly leverages 2D semantic cues and 3D geometric reasoning in a coarse-to-fine manner. To improve the affordance detection efficiency, TASA features a task-aware 2D affordance detection module to identify manipulable points from language and visual inputs, guiding the selection of task-relevant views. To fully exploit 3D geometric information, a 3D affordance refinement module is proposed to integrate 2D semantic priors with local 3D geometry, resulting in accurate and spatially coherent 3D affordance masks. Experiments on SceneFun3D demonstrate that TASA significantly outperforms the baselines in both accuracy and efficiency in scene-level affordance segmentation.",
+        "authors": [
+          "Lian He",
+          "Meng Liu",
+          "Qilang Ye",
+          "Yu Zhou",
+          "Xiang Deng",
+          "Gangyi Ding"
+        ],
+        "published": "2025-11-12T13:36:37Z",
+        "year": "2025",
+        "pdf_url": "https://arxiv.org/pdf/2511.11702v1"
+      }
+    }
+  ]
+}

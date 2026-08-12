@@ -1,0 +1,142 @@
+{
+  "status": "ok",
+  "script": "lint_note.py",
+  "paper_id": "",
+  "input_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_note_draft.md",
+  "headers": [
+    "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+    "核心信息",
+    "原文摘要翻译",
+    "创新点",
+    "一句话总结",
+    "研究问题",
+    "数据与任务定义",
+    "任务定义",
+    "数据来源",
+    "评测指标",
+    "方法主线",
+    "机制流程",
+    "Stage 0: 二维语义知识提取",
+    "Stage 1: Cross-Modal Affinity Transfer",
+    "Stage 2: Lightweight Affordance Segmentor",
+    "关键结果",
+    "定量比较",
+    "消融实验",
+    "定性结果",
+    "深度分析",
+    "为什么 CMAT 有效?",
+    "与相关工作的定位差异",
+    "哪些地方容易被误读",
+    "局限",
+    "我的笔记",
+    "引用"
+  ],
+  "missing_sections": [],
+  "warnings": [
+    "mixed_language_lines_present"
+  ],
+  "mixed_language_issues": [
+    {
+      "line_number": 119,
+      "line": "2. **Stage 1: 跨模态 affinity 迁移 (`CMAT`)。** 将点云划分为 64 个 patch, 通过 `PointMAE`-style Transformer 编码器得到三维 patch 特征, 构建三维 affinity 矩阵。以语义对齐损失最小化三维与二维 affinity 的差异, 并辅以几何重建损失和特征多样性损失。预训练 150 epochs 后得到结构化的三维骨干。",
+      "english_word_count": 11,
+      "function_word_hits": []
+    },
+    {
+      "line_number": 120,
+      "line": "3. **Stage 2: 轻量可供性分割器 (`LAS`)。** 将 `CMAT` 预训练骨干生成的几何 patch 词元与文本/视觉提示词元投影到共享嵌入空间, 加入可学习的模态嵌入后拼接, 经六层 `co-attention Transformer` 双向交互, 再上采样到原始点分辨率, 通过轻量 MLP 头输出最终功能区域掩码。",
+      "english_word_count": 7,
+      "function_word_hits": []
+    },
+    {
+      "line_number": 154,
+      "line": "核心损失是 **Semantic Alignment Loss**, 直接对齐 $A^{3D}$ 与 $A^{2D}$:",
+      "english_word_count": 5,
+      "function_word_hits": [
+        "A",
+        "A"
+      ]
+    },
+    {
+      "line_number": 186,
+      "line": "将所有可用提示词元聚合为 $T^Q$, 与几何词元拼接成序列 $[T^Q; T^P]$, 输入六层 `co-attentional Transformer blocks`。",
+      "english_word_count": 9,
+      "function_word_hits": []
+    },
+    {
+      "line_number": 205,
+      "line": "| 方法 | Seen AUC ↑ | Seen aIoU ↑ | Seen SIM ↑ | Seen MAE ↓ | Unseen AUC ↑ | Unseen aIoU ↑ | Unseen SIM ↑ | Unseen MAE ↓ |",
+      "english_word_count": 16,
+      "function_word_hits": []
+    },
+    {
+      "line_number": 215,
+      "line": "| 方法 | Seen AUC ↑ | Seen aIoU ↑ | Seen SIM ↑ | Seen MAE ↓ | Unseen AUC ↑ | Unseen aIoU ↑ | Unseen SIM ↑ | Unseen MAE ↓ |",
+      "english_word_count": 16,
+      "function_word_hits": []
+    },
+    {
+      "line_number": 223,
+      "line": "*注: 表中 `GREAT` 在 `PIAD` 上有数据, 在 `PIADv2` 上原文未列出直接对比行; 部分 baseline 在 `PIADv2` 上数据来自原文表 1。原文定位: 表 1, 第 7 页, `sec:method`。*",
+      "english_word_count": 7,
+      "function_word_hits": []
+    },
+    {
+      "line_number": 226,
+      "line": "在更具挑战性的 `PIADv2` 上, 本文模型在 Seen 划分上比此前最佳高出 5.33–7.85 个 aIoU 点, 在 Unseen Object 划分上也有显著提升, 表明 `CMAT` 不仅提升 seen 对象识别, 也改善了对新类别的泛化。",
+      "english_word_count": 7,
+      "function_word_hits": []
+    },
+    {
+      "line_number": 269,
+      "line": "4. **预训练本身改变表征质量。** 即使使用 `PointMAE` 原始预训练权重 (`Ours(w/o CMAT)`) 也只有 `38.16`, 而 `CMAT` 预训练后达到 `44.88`, 差距超过 6.7 个 aIoU 点, 表明 `CMAT` 不只是更好的初始化, 而是从根本上改变了三维空间的语义组织。",
+      "english_word_count": 8,
+      "function_word_hits": []
+    },
+    {
+      "line_number": 282,
+      "line": "在文本提示“open the door”下, 本文模型 highlighting 出完整的门把手区域, 而其他方法只捕捉到部分碎片。",
+      "english_word_count": 4,
+      "function_word_hits": [
+        "the"
+      ]
+    },
+    {
+      "line_number": 302,
+      "line": "- **其他二维到三维特征迁移工作** (如 `Locate3D`, `ConceptFusion`, `D3Fields`) 也使用 lifted 二维特征, 但主要对齐单点特征或保证粗粒度语义一致。`CMAT` 的差异化在于显式建模并迁移 patch 间的 affinity 关系, 从而得到更结构化的三维表征。",
+      "english_word_count": 7,
+      "function_word_hits": []
+    },
+    {
+      "line_number": 314,
+      "line": "3. **CMAT 与数据量的贡献未完全解耦。** `PointMAE` from scratch (`38.16`) 与 `CMAT` (`44.88`) 的差距可能同时来自预训练数据 (`Objaverse`+`Behavior-1K`) 和 affinity 目标, 消融未单独控制数据量变量。",
+      "english_word_count": 8,
+      "function_word_hits": [
+        "from"
+      ]
+    },
+    {
+      "line_number": 326,
+      "line": "- **与自身研究的关联:** 本工作属于 affordance grounding 知识库, 核心概念 (cross-modal affinity transfer, lifted 二维特征, lightweight prompt fusion) 可作为后续阅读 `Locate3D`, `ConceptFusion`, `D3Fields`, `GREAT` 时的参照系。",
+      "english_word_count": 13,
+      "function_word_hits": []
+    }
+  ],
+  "mechanical_translation_artifact_issues": [],
+  "linebreak_issues": [],
+  "code_math_issues": [],
+  "math_render_issues": [],
+  "figure_structure_issues": [],
+  "core_info_structure_issues": [],
+  "reference_hygiene_issues": [],
+  "substantive_content_issues": [],
+  "planning_artifact_found": true,
+  "planning_artifact_issues": [],
+  "passes_basic_structure": true,
+  "passes_style_gate": false,
+  "passes_math_gate": true,
+  "passes_figure_gate": true,
+  "passes_reference_hygiene_gate": true,
+  "passes_plan_gate": true,
+  "passes_substantive_content": true
+}

@@ -1,0 +1,81 @@
+Table 1. Performance comparison on various 3D downstream tasks. Here, the Objaverse dataset is used for 3D object captioning and
+recognition tasks, and the MM-Vet dataset is used for 3D VQA. In addition to our full model (SAGE), we provide the results without the
+preference optimization (SAGE). Additional comparisons with existing methods on different datasets are provided in the Appendix A3.
+Model
+Captioning Cls. VQA
+GPT-4 Sentence-BERT SimCSE BLEU-1 ROUGE-L METEOR GPT-4 GPT-4
+InstructBLIP-7B [15] 43.54 47.41 48.48 4.27 8.28 12.99 43.50 ­
+InstructBLIP-13B [15] 44.97 45.90 48.86 4.65 8.85 13.23 44.25 ­
+LLaVA-7B [39] 46.71 45.61 47.10 3.64 7.70 12.14 50.00 ­
+LLaVA-13B [39] 38.28 46.37 45.90 4.02 8.15 12.58 51.75 47.90
+PointLLM-7B [68] 44.85 47.47 48.55 3.87 7.30 11.92 53.00 41.20
+PointLLM-13B [68] 48.15 47.91 49.12 3.83 7.23 12.26 54.00 46.60
+ShapeLLM-7B [48] 46.92 48.20 49.23 ­ ­ ­ 54.50 47.40
+ShapeLLM-13B [48] 48.94 48.52 49.98 ­ ­ ­ 54.00 53.10
+SAGE-7B 49.05 49.23 48.56 7.41 10.25 14.35 55.71 46.38
+SAGE-7B 50.98 50.11 49.70 9.50 12.66 16.95 57.11 49.53
+SAGE-13B 48.54 48.99 50.18 7.98 12.48 14.27 56.39 53.21
+SAGE-13B 52.87 51.91 51.03 9.72 13.25 16.99 58.48 54.89
+Table 2. Runtime Complexity Comparison. Inference latency
+(ms) and memory (GB) on H100 GPU, 8K points, and Objaverse
+dataset.
+Model
+Latency Throughput
+(ms)  (Sample/s) 
+PointLLM-7B 239 4.2
+SAGE-7B 100 10.0
+ods that rely on pre-trained encoders. This demonstrates
+that the feature misalignment between pre-trained 3D en-
+coders and the LLM input space is too large to be effec-
+tively bridged by a simple projection layer, as adopted in
+previous approaches. In contrast, our lightweight yet well-
+structured tokenizer learns a more coherent representation
+space, enabling the LLM to interpret 3D data analogously
+to a foreign language.
+4.3.2 SAGE Is Computationally Efficient Than
+Encoder-based 3D MLLMs
+A key motivation behind the proposed encoder-free design
+of SAGE is to address the excessive latency and compu-
+tational overhead introduced by traditional encoder-based
+3D MLLMs. In existing methods such as PointLLM, the
+3D encoder must first process dense point clouds into latent
+features before the language model can begin text genera-
+tion. This additional preprocessing stage significantly slows
+inference, making real-time or large-scale deployment im-
+practical.
+To quantify these differences, we compare inference la-
+tency and throughput between SAGE and PointLLM on
+an H100 GPU using 8K-point inputs from the Objaverse
+dataset (Table 2). Our results show that SAGE achieves an
+inference latency of 100 ms, representing more than a 2.3
+Resolution 2K 4K 8K
+Tokens 128 256 512
+Throughput 11.0 10.5 10.0
+Score (S-BERT)
+Figure 4. Performance of SAGE on diverse ranges of point cloud
+resolution on 3D captioning task on Objaverse dataset.
+speedup over PointLLM (239 ms), while simultaneously
+improving throughput from 4.2 to 10.0 samples per sec-
+ond. This efficiency gain stems from eliminating the heavy
+geometric encoder and replacing it with a lightweight geo-
+metric tokenizer that directly projects spatial features into
+the LLM's embedding space.
+4.3.3 Robustness to Varying Input Resolutions
+Another limitation of encoder-based models, such as
+PointLLM, lies in their fixed input resolution. When en-
+countering high-resolution point clouds, these models must
+subsample the input, inevitably discarding fine-grained ge-
+ometric details. Conversely, when presented with low-
+resolution inputs, they must upsample points to match
+the expected resolution--introducing redundant informa-
+tion that provides no additional semantic value while in-
+creasing inference overhead. In contrast, SAGE naturally
+supports variable-resolution inputs, efficiently adapting to
+the density of the point cloud. It achieves higher efficiency
+with smaller inputs while maintaining strong performance
+on high-resolution data--offering the best of both worlds.
+As shown in Figure 4, we evaluate performance across
+different input resolutions (2K, 4K, and 8K points) on the
+Objaverse dataset. Since PointLLM requires a fixed input
+16682
+

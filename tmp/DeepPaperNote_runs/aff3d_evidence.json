@@ -1,0 +1,902 @@
+{
+  "status": "ok",
+  "script": "extract_evidence.py",
+  "paper_id": "doi:10.48550/arxiv.2510.08316",
+  "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+  "evidence_pack": {
+    "paper_id": "doi:10.48550/arxiv.2510.08316",
+    "problem_evidence": [
+      {
+        "claim": "However, many affordances are not uniquely determined by local geometry: the graspable handle of a mug can be geometrically sim- ilar to its rim, and surfaces that afford support or contact often exhibit smooth or symmetric forms.",
+        "evidence": "However, many affordances are not uniquely determined by local geometry: the graspable handle of a mug can be geometrically sim- ilar to its rim, and surfaces that afford support or contact often exhibit smooth or symmetric forms.",
+        "source_section": "introduction",
+        "page_hint": ""
+      },
+      {
+        "claim": "However, even with improved prompt processing, these approaches often yield constrained improvements relative to their added com- plexity.",
+        "evidence": "However, even with improved prompt processing, these approaches often yield constrained improvements relative to their added com- plexity.",
+        "source_section": "introduction",
+        "page_hint": ""
+      },
+      {
+        "claim": "Motivated by these limitations, our work ex- plores a semantic-grounded approach that more explicitly structures 3D representations, aiming to achieve finer part- level discrimination required for affordance segmentation.",
+        "evidence": "Motivated by these limitations, our work ex- plores a semantic-grounded approach that more explicitly structures 3D representations, aiming to achieve finer part- level discrimination required for affordance segmentation.",
+        "source_section": "introduction",
+        "page_hint": ""
+      }
+    ],
+    "task_evidence": [
+      {
+        "claim": "Built upon the CMAT-pretrained backbone, we employ a lightweight affordance segmentor that injects text or vi- sual prompts into the learned 3D space through an efficient cross-attention interface, enabling dense and prompt-aware affordance prediction while preserving the semantic orga- nization established during pretraining.",
+        "evidence": "Built upon the CMAT-pretrained backbone, we employ a lightweight affordance segmentor that injects text or vi- sual prompts into the learned 3D space through an efficient cross-attention interface, enabling dense and prompt-aware affordance prediction while preserving the semantic orga- nization established during pretraining.",
+        "source_section": "task",
+        "page_hint": ""
+      },
+      {
+        "claim": "By identifying such functional components, intelligent systems can move beyond passive object recognition and start learn- ing about how to interact with the object in purposeful ways.",
+        "evidence": "By identifying such functional components, intelligent systems can move beyond passive object recognition and start learn- ing about how to interact with the object in purposeful ways.",
+        "source_section": "task",
+        "page_hint": ""
+      },
+      {
+        "claim": "Early approaches predominantly followed the pipeline of 3D semantic segmentation [7, 35, 43], where point cloud encoders predict part-level labels based solely on geometric information.",
+        "evidence": "Early approaches predominantly followed the pipeline of 3D semantic segmentation [7, 35, 43], where point cloud encoders predict part-level labels based solely on geometric information.",
+        "source_section": "task",
+        "page_hint": ""
+      },
+      {
+        "claim": "To compensate for missing functional semantics, recent methods introduce prompt-based affordance segmentation, where visual demonstrations or textual instructions guide the prediction process [15, 21, 37, 56].",
+        "evidence": "To compensate for missing functional semantics, recent methods introduce prompt-based affordance segmentation, where visual demonstrations or textual instructions guide the prediction process [15, 21, 37, 56].",
+        "source_section": "task",
+        "page_hint": ""
+      },
+      {
+        "claim": "We then deploy our CMAT-pretrained backbone within a lightweight affordance segmentor (LAS), which serves as an efficient architecture for the task while simultane- ously validating our backbone’s effectiveness.",
+        "evidence": "We then deploy our CMAT-pretrained backbone within a lightweight affordance segmentor (LAS), which serves as an efficient architecture for the task while simultane- ously validating our backbone’s effectiveness.",
+        "source_section": "task",
+        "page_hint": ""
+      }
+    ],
+    "data_evidence": [
+      {
+        "claim": "Modern approaches to 3D affordance segmentation [13, 22–24, 48, 53, 54] pri- marily rely on deep neural networks trained on fully anno- tated datasets.",
+        "evidence": "Modern approaches to 3D affordance segmentation [13, 22–24, 48, 53, 54] pri- marily rely on deep neural networks trained on fully anno- tated datasets.",
+        "source_section": "data",
+        "page_hint": ""
+      },
+      {
+        "claim": "Stage 0: 2D Semantic Knowledge Extraction To establish transferable semantic knowledge for 3D learn- ing, we prepare a dataset of 3D objects paired with multi- view 2D features.",
+        "evidence": "Stage 0: 2D Semantic Knowledge Extraction To establish transferable semantic knowledge for 3D learn- ing, we prepare a dataset of 3D objects paired with multi- view 2D features.",
+        "source_section": "data",
+        "page_hint": ""
+      },
+      {
+        "claim": "The dataset includes over 10,000 3D models from Objaverse [6] and Behavior-1K [12], covering 101 everyday object categories such as furniture, kitchen- ware, and tools, ensuring rich semantic coverage.",
+        "evidence": "The dataset includes over 10,000 3D models from Objaverse [6] and Behavior-1K [12], covering 101 everyday object categories such as furniture, kitchen- ware, and tools, ensuring rich semantic coverage.",
+        "source_section": "data",
+        "page_hint": ""
+      },
+      {
+        "claim": "The overall results of all comparative methods on the LASO dataset.",
+        "evidence": "The overall results of all comparative methods on the LASO dataset.",
+        "source_section": "data",
+        "page_hint": ""
+      },
+      {
+        "claim": "Seen and Unseen are two partitions of the dataset.",
+        "evidence": "Seen and Unseen are two partitions of the dataset.",
+        "source_section": "data",
+        "page_hint": ""
+      }
+    ],
+    "method_evidence": [
+      {
+        "claim": "Our approach builds a unified framework for 3D affordance segmentation by progressively introducing semantic knowl- edge into 3D representations and adapting them to prompt- driven affordance segmentation task.",
+        "evidence": "Our approach builds a unified framework for 3D affordance segmentation by progressively introducing semantic knowl- edge into 3D representations and adapting them to prompt- driven affordance segmentation task.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "Given an input 3D point cloud P = {pi ∈R3}N i=1 with N points, our framework’s goal is to produce a dense, prompt- conditioned affordance map M ∈RN.",
+        "evidence": "Given an input 3D point cloud P = {pi ∈R3}N i=1 with N points, our framework’s goal is to produce a dense, prompt- conditioned affordance map M ∈RN.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "In Stage 1 (Cross-Modal Affinity Transfer, CMAT), we leverage these F 2D features to pretrain our 3D back- bone Φ3D.",
+        "evidence": "In Stage 1 (Cross-Modal Affinity Transfer, CMAT), we leverage these F 2D features to pretrain our 3D back- bone Φ3D.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "This stage results in a 3D model that internal- izes a functionally structured 3D representation by aligning 3D patch affinity with 2D patch affinity.",
+        "evidence": "This stage results in a 3D model that internal- izes a functionally structured 3D representation by aligning 3D patch affinity with 2D patch affinity.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "Stage 0: 2D Semantic Knowledge Extraction To establish transferable semantic knowledge for 3D learn- ing, we prepare a dataset of 3D objects paired with multi- view 2D features.",
+        "evidence": "Stage 0: 2D Semantic Knowledge Extraction To establish transferable semantic knowledge for 3D learn- ing, we prepare a dataset of 3D objects paired with multi- view 2D features.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "The dataset includes over 10,000 3D models from Objaverse [6] and Behavior-1K [12], covering 101 everyday object categories such as furniture, kitchen- ware, and tools, ensuring rich semantic coverage.",
+        "evidence": "The dataset includes over 10,000 3D models from Objaverse [6] and Behavior-1K [12], covering 101 everyday object categories such as furniture, kitchen- ware, and tools, ensuring rich semantic coverage.",
+        "source_section": "method",
+        "page_hint": ""
+      }
+    ],
+    "mechanism_evidence": [
+      {
+        "claim": "Our approach builds a unified framework for 3D affordance segmentation by progressively introducing semantic knowl- edge into 3D representations and adapting them to prompt- driven affordance segmentation task.",
+        "evidence": "Our approach builds a unified framework for 3D affordance segmentation by progressively introducing semantic knowl- edge into 3D representations and adapting them to prompt- driven affordance segmentation task.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "This stage results in a 3D model that internal- izes a functionally structured 3D representation by aligning 3D patch affinity with 2D patch affinity.",
+        "evidence": "This stage results in a 3D model that internal- izes a functionally structured 3D representation by aligning 3D patch affinity with 2D patch affinity.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "Finally, in Stage 2 (Lightweight Affordance Segmentor), this pretrained back- bone Φ3D is integrated with a multi-modal fusion module, which accepts P and a text or visual prompt to output the final segmentation map M.",
+        "evidence": "Finally, in Stage 2 (Lightweight Affordance Segmentor), this pretrained back- bone Φ3D is integrated with a multi-modal fusion module, which accepts P and a text or visual prompt to output the final segmentation map M.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "Stage 0: 2D Semantic Knowledge Extraction To establish transferable semantic knowledge for 3D learn- ing, we prepare a dataset of 3D objects paired with multi- view 2D features.",
+        "evidence": "Stage 0: 2D Semantic Knowledge Extraction To establish transferable semantic knowledge for 3D learn- ing, we prepare a dataset of 3D objects paired with multi- view 2D features.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "We render V RGB views under uniformly dis- tributed camera poses and process them using a frozen 2D encoder Φ2D (DINOv3 [38]) to obtain dense feature maps.",
+        "evidence": "We render V RGB views under uniformly dis- tributed camera poses and process them using a frozen 2D encoder Φ2D (DINOv3 [38]) to obtain dense feature maps.",
+        "source_section": "method",
+        "page_hint": ""
+      },
+      {
+        "claim": "These per-pixel embeddings are back-projected and interpolated onto the corresponding 3D points following es- tablished feature lifting techniques [45], producing the per- point semantic descriptors: F 2D = {f 2D ∈Rd2D}N i=1.",
+        "evidence": "These per-pixel embeddings are back-projected and interpolated onto the corresponding 3D points following es- tablished feature lifting techniques [45], producing the per- point semantic descriptors: F 2D = {f 2D ∈Rd2D}N i=1.",
+        "source_section": "method",
+        "page_hint": ""
+      }
+    ],
+    "results_evidence": [
+      {
+        "claim": "These examples visually corroborate our quantitative improvements and highlight our framework’s superior fine-grained segmentation capability.",
+        "evidence": "These examples visually corroborate our quantitative improvements and highlight our framework’s superior fine-grained segmentation capability.",
+        "source_section": "experiment",
+        "page_hint": ""
+      }
+    ],
+    "ablation_evidence": [
+      {
+        "claim": "Finally, we perform extensive ablation studies to analyze the contri- bution of each key component in our framework and show- case qualitative results to provide intuitive insights.",
+        "evidence": "Finally, we perform extensive ablation studies to analyze the contri- bution of each key component in our framework and show- case qualitative results to provide intuitive insights.",
+        "source_section": "experiment",
+        "page_hint": ""
+      }
+    ],
+    "limitations_evidence": [
+      {
+        "claim": "Ultimately, this work presents a generalizable and powerful paradigm for injecting 2D semantic knowledge into 3D feature learn- ing, holding significant promise for a wide range of future 3D understanding tasks.",
+        "evidence": "Ultimately, this work presents a generalizable and powerful paradigm for injecting 2D semantic knowledge into 3D feature learn- ing, holding significant promise for a wide range of future 3D understanding tasks.",
+        "source_section": "conclusion",
+        "page_hint": ""
+      }
+    ],
+    "equation_candidates": [],
+    "reference_candidates": [],
+    "figure_captions": [
+      {
+        "id": "Figure 1",
+        "caption": "Qualitative comparison of 3D feature representations. We visualize learned features across different objects to examine how",
+        "page_hint": "p.1",
+        "section_id": "sec:preamble"
+      },
+      {
+        "id": "Figure 2",
+        "caption": "Overview of our three-stage framework for prompt-guided 3D affordance segmentation. Stage 0 (2D Semantic Knowledge",
+        "page_hint": "p.4",
+        "section_id": "sec:methodology"
+      },
+      {
+        "id": "Figure 3",
+        "caption": "Architecture of the Lightweight Affordance Segmentor. This module fuses geometric patch tokens from our pretrained 3D",
+        "page_hint": "p.5",
+        "section_id": "sec:methodology"
+      },
+      {
+        "id": "Figure 4",
+        "caption": "Qualitative comparison on challenging cases from the PIADv2 [37] (visual prompt) and LASO [15] (text prompt) datasets. These",
+        "page_hint": "p.6",
+        "section_id": "sec:experiments"
+      },
+      {
+        "id": "Figure 4",
+        "caption": "visualizes qualitative comparisons on PIADv2 and",
+        "page_hint": "p.8",
+        "section_id": "sec:method-2"
+      }
+    ],
+    "table_captions": [
+      {
+        "id": "Table 1",
+        "caption": "Quantitative comparison with state-of-the-art methods on the PIAD and PIADv2 datasets. We report results on both Seen",
+        "page_hint": "p.7",
+        "section_id": "sec:datasets"
+      },
+      {
+        "id": "Table 2",
+        "caption": "The overall results of all comparative methods on the",
+        "page_hint": "p.7",
+        "section_id": "sec:datasets"
+      },
+      {
+        "id": "Table 3",
+        "caption": "Comparison of model efficiency. aIoU is evaluated on the",
+        "page_hint": "p.8",
+        "section_id": "sec:method-2"
+      },
+      {
+        "id": "Table 4",
+        "caption": "Ablation studies on the PIADv2 Seen split. We analyze",
+        "page_hint": "p.8",
+        "section_id": "sec:method-2"
+      }
+    ],
+    "sections": [
+      {
+        "name": "preamble",
+        "length": 1081,
+        "preview": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge Yu Huang1, Zelin Peng1,†, Changsong Wen1, Xiaokang Yang1, and Wei Shen1(B) 1MoE Key Lab of Artificial Intelligence, School of Computer Science, Shanghai Jiaotong University {ye"
+      },
+      {
+        "name": "abstract",
+        "length": 1580,
+        "preview": "Affordance segmentation aims to decompose 3D objects into parts that serve distinct functional roles, enabling models to reason about object interactions rather than mere recognition. Existing methods, mostly following the paradigm of 3D se"
+      },
+      {
+        "name": "introduction",
+        "length": 7849,
+        "preview": "Affordance segmentation focuses on dividing a 3D object into parts that carry distinct functional roles. For example, a chair can be separated into a seat, a backrest, and legs. By identifying such functional components, intelligent systems"
+      },
+      {
+        "name": "method",
+        "length": 15710,
+        "preview": "Our approach builds a unified framework for 3D affordance segmentation by progressively introducing semantic knowl- edge into 3D representations and adapting them to prompt- driven affordance segmentation task. The entire process in- volves"
+      },
+      {
+        "name": "experiment",
+        "length": 1477,
+        "preview": "In this section, we conduct a series of experiments to thor- oughly evaluate our proposed three-stage framework. We first introduce the experimental setup, including the datasets and evaluation metrics. We then detail our implementation for"
+      },
+      {
+        "name": "data",
+        "length": 2704,
+        "preview": "We conduct our evaluation on several estab- lished benchmarks for affordance segmentation. We utilize the Point Image Affordance Dataset (PIAD) [51] and its large-scale extension, PIADv2 [37]. PIAD contains 5162 interaction images and 7012 "
+      },
+      {
+        "name": "conclusion",
+        "length": 987,
+        "preview": "In this work, we address the inherent semantic ambiguity of 3D point clouds by proposing a novel paradigm that grounds 3D representations in the rich knowledge of 2D Vision Foundation Models. Our method is centered on a Cross-Modal Affinity"
+      },
+      {
+        "name": "references",
+        "length": 12483,
+        "preview": "[1] Emanuele Aiello, Diego Valsesia, and Enrico Magli. Cross- modal learning for image-guided point cloud shape comple- tion. In Advances in Neural Information Processing Systems, 2022. 7 [2] Sergio Arnaud, Paul McVay, Ada Martin, Arjun Maj"
+      }
+    ],
+    "section_texts": {
+      "preamble": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge Yu Huang1, Zelin Peng1,†, Changsong Wen1, Xiaokang Yang1, and Wei Shen1(B) 1MoE Key Lab of Artificial Intelligence, School of Computer Science, Shanghai Jiaotong University {yellowfish, zelin.peng, changsong, xkyang, wei.shen}@sjtu.edu.cn Figure 1. Qualitative comparison of 3D feature representations. We visualize learned features across different objects to examine how semantic structure emerges in 3D space. In the 2D Semantics column, lifted features from multi-view renderings encoded by a 2D vision foundation model (e.g., DINOv3 [38]) reveal clear functional clusters such as handles and seats. The 3D-Only column, derived from a pure 3D encoder (e.g., PointNet++ [32]), shows less organized patterns, where boundaries between object parts remain fuzzy and inconsistent. In contrast, the Ours column shows features that inherit 2D semantic organization and express it coherently in 3D. Functional parts become more distinctly separated, and similar regions stay consistent across different object categories.",
+      "abstract": "Affordance segmentation aims to decompose 3D objects into parts that serve distinct functional roles, enabling models to reason about object interactions rather than mere recognition. Existing methods, mostly following the paradigm of 3D semantic segmentation or prompt-based frameworks, struggle when geometric cues are weak or ambiguous, as sparse point clouds provide limited func- tional information. To overcome this limitation, we lever- age the rich semantic knowledge embedded in large-scale 2D Vision Foundation Models (VFMs) to guide 3D repre- sentation learning through a cross-modal alignment mech- B Corresponding Author: wei.shen@sjtu.edu.cn † Project Leader. anism. Specifically, we propose Cross-Modal Affinity Trans- fer (CMAT), a pretraining strategy that compels the 3D encoder to align with the semantic structures induced by lifted 2D features. CMAT is driven by a core affinity align- ment objective, supported by two auxiliary losses, geo- metric reconstruction and feature diversity, which together encourage structured and discriminative feature learning. Built upon the CMAT-pretrained backbone, we employ a lightweight affordance segmentor that injects text or vi- sual prompts into the learned 3D space through an efficient cross-attention interface, enabling dense and prompt-aware affordance prediction while preserving the semantic orga- nization established during pretraining. Extensive experi- ments demonstrate consistent improvements over previous state-of-the-art methods in both accuracy and efficiency. arXiv:2510.08316v3 [cs.CV] 19 Mar 2026",
+      "introduction": "Affordance segmentation focuses on dividing a 3D object into parts that carry distinct functional roles. For example, a chair can be separated into a seat, a backrest, and legs. By identifying such functional components, intelligent systems can move beyond passive object recognition and start learn- ing about how to interact with the object in purposeful ways. Early approaches predominantly followed the pipeline of 3D semantic segmentation [7, 35, 43], where point cloud encoders predict part-level labels based solely on geometric information. This paradigm assumes that functional distinc- tions can be inferred directly from shape. However, many affordances are not uniquely determined by local geometry: the graspable handle of a mug can be geometrically sim- ilar to its rim, and surfaces that afford support or contact often exhibit smooth or symmetric forms. When geometric cues are weak or ambiguous, especially under sparse scan- ning, occlusion, or noisy reconstruction, these models tend to produce unstable or coarse functional boundaries. These observations indicate that geometric structure alone is in- sufficient to capture part-level semantics. To compensate for missing functional semantics, recent methods introduce prompt-based affordance segmentation, where visual demonstrations or textual instructions guide the prediction process [15, 21, 37, 56]. For example, a tex- tual query such as “Where should this mug be grasped?” or a visual prompt showing a hand-holding posture can highlight the relevant functional regions. Building on this idea, some systems further incorporate multimodal large language models (MLLMs) [5, 11, 17, 46] to make prompt interpretation more flexible and expressive. However, even with improved prompt processing, these approaches often yield constrained improvements relative to their added com- plexity. We believe this may point to a deeper issue: their performance remains suboptimal partly because they still rely on a 3D encoder trained primarily as a geometric fea- ture extractor. This suggests that the bottleneck lies not in the prompts themselves, but in the representational capac- ity of the encoder. Sparse point clouds inherently contain limited functional cues, and without a feature space that encodes semantic-aware structure, prompts cannot reliably impose such semantics. Thus, affordance segmentation re- quires rethinking how 3D features are learned, rather than simply enriching the prompting modalities. Since the core bottleneck lies in the 3D encoder’s se- mantic capacity, a natural question arises: how can we inject stronger semantic structure into 3D features? One promising path is to draw on large-scale 2D Vision Founda- tion Models (VFMs) [3, 28, 33, 38]. These models, which are trained on extensive image corpora without supervision, naturally learn feature spaces that inherently capture clear and structured semantic organization. As shown in Fig. 1 (2D Semantics), features derived from models such as DI- NOv3 [38] already form clusters that correspond closely to functionally coherent regions of objects. This indicates that 2D visual representations naturally encode semantic-aware structure more readily than purely geometric 3D embed- dings. Motivated by this, recent works [2, 10, 42, 45] seek to transfer such semantic knowledge into the 3D domain by “lifting” multi-view 2D features onto point clouds. The lifted features can serve as dense semantic supervision sig- nals, guiding the 3D encoder to develop a well-structured feature space. Building on this insight, we propose a novel learning paradigm for affordance segmentation. Our approach be- gins by distilling semantic knowledge from a VFM into the 3D domain through multi-view feature lifting, thereby gen- erating dense, per-point semantic-aware guidance. To en- sure that our 3D encoder effectively internalizes this knowl- edge, we introduce Cross-Modal Affinity Transfer (CMAT), a novel pretraining strategy that compels the encoder to align with the semantic structures induced by the lifted 2D features. By optimizing our core affinity alignment objec- tive, which is supported by two auxiliary losses, namely ge- ometric reconstruction and feature diversity, CMAT builds a 3D backbone capable of producing highly structured and discriminative features. We then deploy our CMAT-pretrained backbone within a lightweight affordance segmentor (LAS), which serves as an efficient architecture for the task while simultane- ously validating our backbone’s effectiveness. Unlike pre- vious prompt-driven pipelines that depend on large multi- modal language models to interpret interaction cues, our segmentor employs a lightweight cross-attention interface that injects text or visual prompts directly into the CMAT- pretrained 3D feature space. This simple-but-effective de- sign avoids redundant reasoning modules and preserves the clean, structured semantics learned during pretrain- ing. Empirically, this compact architecture supports dense, prompt-aware affordance segmentation with less computa- tional overhead, and consistently achieves a clear perfor- mance margin over state-of-the-art methods. Affordance Segmentation in 3D. Modern approaches to 3D affordance segmentation [13, 22–24, 48, 53, 54] pri- marily rely on deep neural networks trained on fully anno- tated datasets. These methods have become adept at learn- ing the correspondence between local geometric patterns in point clouds and their associated functional labels. How- ever, their performance is fundamentally tied to the quality and scale of 3D supervision, often struggling to generalize to unseen object categories. A core limitation is their re- liance on geometric cues alone, which can be ambiguous; for instance, a flat surface could be a “sittable” seat or a “supportable” tabletop, a distinction that requires contex- tual semantic reasoning beyond local shape. Multi-modal Guidance for 3D Affordance Segmenta- tion. To enhance semantic reasoning, a dominant trend [8, 15, 26, 44, 51, 52, 55] is the use of multi-modal guid- ance, particularly from Vision-Language Models (VLMs) [5, 9, 11, 17, 30, 31, 46] like CLIP [33]. Beyond CLIP- based alignment, OpenAD [27] and OpenKD [20] fur- ther explore text–point correlation and synonym substitu- tion for open-vocabulary affordance grounding [20, 27]. These prompt-driven architectures enable remarkable zero- shot and open-vocabulary segmentation by aligning point cloud features with textual or visual prompts. While these models demonstrate impressive flexibility, their success still depends heavily on the representational quality of the un- derlying 3D encoder, which may lack fine-grained discrim- inability to separate functionally distinct parts. Knowledge Transfer from 2D VFMs to 3D. A promising direction for improving 3D representations is transferring semantic knowledge from large-scale 2D Vision Founda- tion Models (VFMs). A prevalent technique [42] is to lift features from multi-view images extracted by models such as DINO and project them into 3D space, enriching point cloud representations with semantic cues that raw geometry cannot provide. Prior studies [2, 10, 45] show that these lifted features inject strong semantic signals, helping to impose organization on otherwise ambiguous point clouds and leading to more discriminative feature spaces. How- ever, most existing work focuses on aligning individual fea- tures or ensuring broad consistency between 2D and 3D se- mantics, without explicitly modeling the relational structure among parts, which can leave representations fragmented or inconsistent. Motivated by these limitations, our work ex- plores a semantic-grounded approach that more explicitly structures 3D representations, aiming to achieve finer part- level discrimination required for affordance segmentation.",
+      "method": "Our approach builds a unified framework for 3D affordance segmentation by progressively introducing semantic knowl- edge into 3D representations and adapting them to prompt- driven affordance segmentation task. The entire process in- volves three tightly connected stages that move from cross- modal grounding to task-specific adaptation. 3.1. Overview. Given an input 3D point cloud P = {pi ∈R3}N i=1 with N points, our framework’s goal is to produce a dense, prompt- conditioned affordance map M ∈RN. The overall process consists of three progressive stages. In Stage 0 (2D Seman- tic Knowledge Extraction), we pre-process 3D objects to obtain per-point 2D semantic descriptors, F 2D = {f 2D Rd2D}N i=1, which serve as the foundational supervision sig- nal. In Stage 1 (Cross-Modal Affinity Transfer, CMAT), we leverage these F 2D features to pretrain our 3D back- bone Φ3D. This stage results in a 3D model that internal- izes a functionally structured 3D representation by aligning 3D patch affinity with 2D patch affinity. Finally, in Stage 2 (Lightweight Affordance Segmentor), this pretrained back- bone Φ3D is integrated with a multi-modal fusion module, which accepts P and a text or visual prompt to output the final segmentation map M. 3.2. Stage 0: 2D Semantic Knowledge Extraction To establish transferable semantic knowledge for 3D learn- ing, we prepare a dataset of 3D objects paired with multi- view 2D features. The dataset includes over 10,000 3D models from Objaverse [6] and Behavior-1K [12], covering 101 everyday object categories such as furniture, kitchen- ware, and tools, ensuring rich semantic coverage. Each 3D model is represented as a point cloud P = pi ∈R3N i=1. We render V RGB views under uniformly dis- tributed camera poses and process them using a frozen 2D encoder Φ2D (DINOv3 [38]) to obtain dense feature maps. This multi-view setup ensures that both visible and pre- viously occluded surfaces receive consistent 2D semantic cues. These per-pixel embeddings are back-projected and interpolated onto the corresponding 3D points following es- tablished feature lifting techniques [45], producing the per- point semantic descriptors: F 2D = {f 2D ∈Rd2D}N i=1. These lifted features act as a high-quality semantic ground- ing signal that guides the subsequent CMAT pretraining stage. 3.3. Stage 1: Cross-Modal Affinity Transfer Stage 0 provides semantic knowledge for each point, but we still need a training strategy to enable the 3D backbone Φ3D to internalize this structure. Unlike self-supervised meth- ods [29, 32] that focus mainly on geometric reconstruction, our goal is not only to preserve geometric continuity but also to infuse the backbone with functional structure de- rived from the 2D domain. We accomplish this through our Cross-Modal Affinity Transfer (CMAT) scheme. The backbone follows a PointMAE-style [29] trans- former encoder, processing the point cloud as patch tokens PS = {Pj}m j=1. For each patch, we obtain patch-level 2D and 3D features by average pooling: ¯f 2D |Pj| pi∈Pj f 2D (1) ¯f 3D |Pj| pi∈Pj f 3D (2) where f 2D is the lifted semantic feature from Stage 1 and f 3D is the output of Φ3D. Figure 2. Overview of our three-stage framework for prompt-guided 3D affordance segmentation. Stage 0 (2D Semantic Knowledge Extraction) associates each point cloud P with multi-view 2D features extracted by a frozen encoder Φ2D, producing lifted per-point semantic knowledge F 2D and affinity matrix A2D. Stage 1 (Cross-Modal Affinity Transfer) pretrains the 3D backbone Φ3D by aligning the affinity matrix of 3D features A3D with the corresponding 2D affinity matrix A2D. Stage 2 utilizes the Lightweight Affordance Segmentor (LAS) to fine-tune Φ3D with multi-modal prompts (textual or visual) to generate the final prompt-conditioned affordance map We then construct cross-modal affinity matrices to cap- ture relational structure. The teacher affinity matrix A2D is defined as: A2D jk = ¯f 2D · ¯f 2D ∥¯f 2D ∥∥¯f 2D (3) and A3D is computed analogously from ¯f 3D Here, m is the total number of patches, and the indices j, k ∈ {1, . . . , m} iterate over all patch pairs. These matrices en- code part–whole semantic relationships in two modalities, with the 2D space providing structural guidance for the 3D encoder. The pretraining objective is centered on our proposed se- mantic alignment loss, supported by two auxiliary losses for geometric stability and feature diversity. Semantic Alignment (ℓaff). Our primary objective is to transfer the structured functional relationships from the 2D teacher space. We introduce the Semantic Alignment Loss (ℓaff) to align the affinity matrix produced by the 3D student encoder (A3D) with the teacher affinity matrix (A2D). This forces the 3D feature space to reflect the same inter-part semantic relations encoded in the 2D space, injecting func- tional structure without requiring explicit semantic labels or part annotations: ℓaff = j=1 k=1 \u0000A3D jk −A2D \u00012. (4) To maintain capability of geometry reconstruction, we adopt two established auxiliary objectives. First, to main- tain the underlying structure of the 3D shape, we employ a geometric fidelity loss (ℓrec) based on the masked autoen- coding strategy from PointMAE [29], which preserves the backbone’s ability for geometric reconstruction and under- standing of point clouds. Second, to prevent feature col- lapse and ensure the embeddings are well-separated and ex- pressive, we apply a feature diversity loss (ℓdiv). We use the KoLeo regularizer [36] for this purpose, which penalizes small nearest-neighbor distances in the embedding space to maximize feature entropy. The final pretraining loss is a weighted sum of these Figure 3. Architecture of the Lightweight Affordance Segmentor. This module fuses geometric patch tokens from our pretrained 3D backbone with multi-modal prompts (text and/or visual) in a shared embedding space. A stack of co-attentional Transformer blocks enables bidirectional interaction between geometric features and prompt tokens, leading to prompt-conditioned 3D understanding. The resulting patch features are then upsampled to per-point resolution to generate the final affordance mask. components: ℓpretrain = λaffℓaff + λrecℓrec + λdivℓdiv. (5) 3.4. Stage 2: Lightweight Affordance Segmention In the final stage, we adapt the CMAT-pretrained backbone for the prompt-guided affordance segmentation task. We employ a lightweight segmentation transformer based on a standard co-attentional architecture to efficiently fuse geo- metric and prompt features. The segmentor first processes the input point cloud us- ing the pretrained encoder Φ3D to obtain geometric patch tokens F 3D. User-provided prompts are encoded into fea- ture vectors: a textual phrase (e.g.“Which part of the mug should be grasped”) by Φtext to Ftext, and a visual exem- plar by Φimg to Fimg. To enable cross-modal interaction, these features are projected into a shared embedding space, with learnable modality embeddings added to preserve their source identity: TP = Proj3D(F 3D) + Epoint, (6) Ttext = Projtext(Ftext) + Etext, (7) Timg = Projimg(Fimg) + Eimg. (8) All available prompt tokens (e.g., Ttext, Timg, or both) are aggregated into a set TQ and concatenated with the ge- ometric tokens to form the fused sequence [TQ; TP ]. This sequence is processed by a stack of L co-attentional trans- former blocks. The self-attention mechanism facilitates deep, bidirectional interaction, allowing geometric tokens to be conditioned by prompts and prompts to ground in the 3D geometry. Finally, the resulting prompt-conditioned patch features, F 3D fused, are upsampled to the original point resolution via feature propagation. A lightweight MLP head then maps these per-point features to the final segmentation logits M. AUC ↑aIoU ↑SIM ↑MAE ↓AUC ↑aIoU ↑SIM ↑MAE ↓AUC ↑aIoU ↑SIM ↑MAE ↓AUC ↑aIoU ↑SIM ↑MAE ↓ State-of-the-art Methods MBDF [41] 74.9 9.3 0.415 0.143 58.2 4.2 0.325 0.213 PMF [40] 75.1 10.1 0.425 0.141 60.3 4.7 0.330 0.211 FRCNN [50] 76.1 12.0 0.429 0.136 61.9 5.1 0.332 0.195 87.05 33.55 0.600 0.082 72.20 18.08 0.362 0.152 ILN [4] 75.8 11.5 0.427 0.137 59.7 4.7 0.325 0.207 PFusion [49] 77.5 12.3 0.432 0.135 61.9 5.3 0.330 0.193 XMF [1] 78.2 12.9 0.441 0.127 62.6 5.7 0.342 0.188 87.39 33.91 0.604 0.078 74.61 17.40 0.361 0.126 IAGNet [51] 84.9 20.5 0.545 0.098 71.8 8.0 0.352 0.127 89.03 34.29 0.623 0.076 73.03 16.78 0.351 0.123 LASO [15] 84.2 19.7 0.590 0.096 69.2 8.0 0.386 0.118 90.34 34.88 0.627 0.077 73.32 16.05 0.354 0.123 GREAT [37] 91.99 38.03 0.676 0.067 79.57 20.16 0.402 0.109 Our Models Ours(w/o CMAT) 85.5 19.9 0.621 0.105 71.0 7.8 0.379 0.130 91.45 38.16 0.752 0.089 76.87 22.07 0.542 0.142 Ours(w/CMAT) 88.0 21.4 0.725 0.099 74.8 8.4 0.426 0.125 93.01 44.88 0.783 0.071 83.95 27.40 0.593 0.127 Table 2. The overall results of all comparative methods on the LASO dataset. Seen and Unseen are two partitions of the dataset. The best and 2nd best scores from each metric are highlighted in bold and underlined, respectively. Type aIoU ↑ AUC ↑ SIM ↑ MAE ↓ Seen ReferTrans [14] 13.7 79.8 0.497 0.124 ReLA [16] 15.2 78.9 0.532 0.118 3D-SPS [25] 11.4 76.2 0.433 0.138 IAGNet [51] 17.8 82.3 0.561 0.109 LASO [15] 20.8 87.3 0.629 0.093 Ours 21.7 88.2 0.681 0.096 Unseen ReferTrans [14] 10.2 69.1 0.432 0.145 ReLA [16] 10.7 69.7 0.429 0.144 3D-SPS [25] 7.9 68.8 0.402 0.158 IAGNet [51] 12.9 77.8 0.443 0.129 LASO [15] 14.6 80.2 0.507 0.119 Ours 17.5 82.9 0.625 0.112 We pretrain the model for 150 epochs with a batch size of 128 using the AdamW optimizer. The learning rate starts at 1e-4 and decays following a cosine schedule with a warmup period of 15 epochs. Stage 2: Lightweight Affordance Segmentor. For prompt encoding, the text encoder Φtext is a pretrained RoBERTa-base model [18]. The visual prompt encoder Φimg is a pretrained DINOv3 with a ViT-B backbone. The weights of both prompt encoders are kept frozen during fine-tuning. The affordance segmentor is built with L = 6 co-attentional fusion blocks. All input point clouds for downstream tasks are uniformly sampled to 2048 points. During fine-tuning, we employ a differential learning rate: the pretrained backbone Φ3D uses a lower learning rate of 1e-5, while the newly initialized modules in segmentor and segmentation head use a higher rate of 1e-4. The weights for the segmentation loss are λfocal = 1.0 and λdice = 1.0. Each model is fine-tuned for 100 epochs with a batch size of 16. All three stages are conducted on 4 NVIDIA RTX 3090 GPUs. 4.3. Quantitative Results Evaluation on PIAD [51] and PIADv2 [37]. Table 1 summarizes the quantitative comparison on the visual- prompted affordance segmentation benchmarks. On PIAD, our method achieves a SOTA performance, particularly ex- celling in maintaining fine structural consistency. The SIM score reaches 0.725, marking a 22.9% relative improve- ment over the previous best. The advantage becomes even clearer on PIADv2, a dataset designed with higher visual complexity and denser affordance categories. Our model outperforms the prior top performer by 7.85 aIoU points on the Seen split and 5.33 points on the Unseen Object split, demonstrating not only strong recognition of seen objects but also reliable generalization to novel categories. These results indicate that aligning 3D representations with se- mantic structure through CMAT fundamentally strengthens affordance reasoning beyond geometric similarity. Evaluation on LASO. We further evaluate on LASO, where segmentation is guided purely by textual instructions. As shown in Table 2, our framework achieves the highest aIoU on both the Seen and Unseen splits, reaching 21.7% and 17.5%, respectively. Unlike previous works that strug- gle to connect linguistic cues to precise 3D regions, our ap- proach consistently grounds language into meaningful geo- metric contexts. This suggests that the learned feature space after CMAT pretraining provides a stable semantic founda- tion, allowing even short prompts to activate correct func- tional regions in complex 3D structures. Model Efficiency Analysis. A key strength of our frame- work lies in its efficiency–performance trade-off. As sum- marized in Table 3, our model maintains a modest foot- print of 300M parameters and 4–8 GB VRAM, compara- ble to conventional non-MLLM architectures. In contrast, recent MLLM-based methods such as GREAT [37] require more than 4B parameters and up to 30 GB of memory. De- spite being nearly an order of magnitude smaller, our model achieves 44.88 aIoU on PIADv2, outperforming all previ- ous methods. This balance between scalability and preci- sion highlights the practicality of our framework for real- world affordance understanding systems. Table 3. Comparison of model efficiency. aIoU is evaluated on the PIADv2 seen split. † denotes the use of an MLLM backbone. Params VRAM aIoU IAGNet (ICCV23) 30M 0.8–2.0 GB 34.29 LASO (CVPR24) 130M 2.0–3.5 GB 34.88 GREAT† (CVPR25) 16–30 GB 38.03 Ours 300M 4–8 GB 44.88 4.4. Ablation Studies To better understand each component’s contribution, we perform detailed ablation studies on the PIADv2 Seen split, summarized in Table 4. We begin with the pretraining ob- jectives in Stage 1. A model trained with only the recon- struction loss (Lrec) reaches 39.27% aIoU, indicating that geometric signals alone are insufficient for functional rea- soning. Increasing the amount of training data can slightly enhance the backbone’s representational ability, but this im- provement does not lead to a fundamental change. Introduc- ing the core affinity alignment loss (Laff) yields a significant jump to 44.13%, confirming that aligning cross-modal fea- ture affinities is central to the success of CMAT. Adding the feature diversity regularization (Ldiv) further improves the score to 44.88%, indicating that encouraging local feature variation helps capture fine-grained affordance boundaries. We also observe that a stronger 2D teacher (DINOv3 vs. DINOv2) consistently enhances downstream results, sup- porting the idea that richer 2D semantics transfer more ef- fectively into 3D. For the segmentation backbone, we compare PointNet++ and PointMAE trained from scratch. Although PointMAE performs slightly better, both lag far behind our CMAT- pretrained model, which reaches 44.88%. This clear margin demonstrates that CMAT provides not just better initializa- tion, but a fundamentally stronger semantic organization of 3D space. Table 4. Ablation studies on the PIADv2 Seen split. We analyze Stage 2 pretraining components and Stage 3 backbone choices. Configuration aIoU (%) ↑ Stage 1: pretraining Objective (on PointMAE with DINOv3 Teacher) (1) Lrec only 39.27 (2) Lrec + Laff 44.13 (3) Full Objective (Lrec + Laff + Ldiv) 44.88 (4) Full Objective (Replacing DINOv3 with DINOv2) 43.26 Stage 2: Segmentor Backbone Choices (5) PointNet++ Backbone 37.91 (6) PointMAE Backbone 38.16 4.5. Qualitative Analysis Figure 4 visualizes qualitative comparisons on PIADv2 and LASO, focusing on challenging, fine-grained interactions. Given a visual prompt showing a hand grasping scissors, our model precisely isolates the handle region, while the baseline misidentifies nearby metallic edges. Similarly, when given the text prompt “open the door”, our model highlights the entire handle area with accurate boundaries, whereas others capture only partial fragments. Across di- verse categories, our predictions show consistent localiza- tion of functionally relevant parts, reflecting a nuanced un- derstanding of how objects afford actions. These visual findings indicate that CMAT enables representations that re- spect both geometry and purpose, leading to more human- like affordance perception in 3D.",
+      "experiment": "In this section, we conduct a series of experiments to thor- oughly evaluate our proposed three-stage framework. We first introduce the experimental setup, including the datasets and evaluation metrics. We then detail our implementation for reproducibility. Subsequently, we present quantitative comparisons against state-of-the-art methods on both visual and text-prompted affordance segmentation tasks. Finally, we perform extensive ablation studies to analyze the contri- bution of each key component in our framework and show- case qualitative results to provide intuitive insights. It is important to note that our framework is inherently designed to process multi-modal prompts, such as a com- bination of visual cues and textual instructions. However, existing benchmarks are constrained to single-modality in- puts, supporting either visual or text prompts but not their concurrent use. To ensure a fair comparison on these datasets, we adapt our model by providing a null input for the modality not supported by the specific benchmark. We posit that the full capabilities of our method will be even more evident on future benchmarks designed for true multi- modal queries. Figure 4. Qualitative comparison on challenging cases from the PIADv2 [37] (visual prompt) and LASO [15] (text prompt) datasets. These examples visually corroborate our quantitative improvements and highlight our framework’s superior fine-grained segmentation capability. 4.1. Experimental Setup",
+      "data": "We conduct our evaluation on several estab- lished benchmarks for affordance segmentation. We utilize the Point Image Affordance Dataset (PIAD) [51] and its large-scale extension, PIADv2 [37]. PIAD contains 5162 interaction images and 7012 3D objects across 23 cate- gories, while PIADv2 significantly increases this scale to approximately 15213 images and 38889 3D instances span- ning 43 object categories. These datasets provide diverse object interactions and affordance types, covering both sim- ple tools and complex articulated categories. Addition- ally, we employ the Language-guided Affordance Segmen- tation on 3D Objects (LASO) dataset [15], which consists of 19751 point-question pairs covering 8434 object shapes. LASO further evaluates a model’s ability to understand natural-language queries and generalize across heteroge- neous object geometries. For all datasets, we strictly ad- here to their official train/test splits and Seen/Unseen splits to ensure fair comparison. Evaluation Metrics. We assess segmentation quality us- ing six metrics. We evaluate performance on average IoU (aIoU) [34], confidence ranking (AUC) [19], shape fidelity (SIM) [39], and score error (MAE) [47]. This comprehen- sive suite enables a multi-faceted evaluation beyond simple segmentation overlap. 4.2. Implementation Details Stage 0: 2D Semantic Knowledge Extraction. The 2D teacher model, Φ2D, is a pretrained DINOv3 with a ViT- Large backbone, with its weights kept frozen throughout the process. For each 3D object in our pretraining dataset, we render V = 12 RGB views at a resolution of 224x224. These views are rendered from camera poses uniformly dis- tributed around the object to maximize the coverage of its visible surface. We extract dense features from the final layer of Φ2D and lift them back to the 3D point cloud using an inverse projection and nearest-neighbor interpolation, re- sulting in the per-point semantic feature set F 2D. Stage 1: Cross-Modal Affinity Transfer (CMAT). Our 3D backbone, Φ3D, is a PointMAE-style transformer en- coder with 12 blocks and an embedding dimension of 384. The input point cloud is grouped into 64 patches. For the geometric reconstruction task, we employ a high masking ratio of 60%. The weights for the combined pretraining ob- jective are set to λrec = 1.0, λaff = 0.1, and λdiv = 0.2. Table 1. Quantitative comparison with state-of-the-art methods on the PIAD and PIADv2 datasets. We report results on both Seen and Unseen splits. The best and second-best results are highlighted. Ours(w/o CMAT) denotes our LAS segmentor paired with the standard PointMAE backbone [29], using its original pretrained weights. PIAD PIADv2 Seen Unseen Seen Unseen",
+      "conclusion": "In this work, we address the inherent semantic ambiguity of 3D point clouds by proposing a novel paradigm that grounds 3D representations in the rich knowledge of 2D Vision Foundation Models. Our method is centered on a Cross-Modal Affinity Transfer (CMAT) pretraining strat- egy, which teaches a 3D encoder to learn a structurally su- perior feature space, later adapted for affordance segmenta- tion tasks by our lightweight affordance segmentor. Our ap- proach achieves state-of-the-art performance, with compre- hensive ablations confirming that these significant gains are directly attributable to our CMAT strategy’s effective trans- fer of relational knowledge across modalities. Ultimately, this work presents a generalizable and powerful paradigm for injecting 2D semantic knowledge into 3D feature learn- ing, holding significant promise for a wide range of future 3D understanding tasks. 6. Acknowledgment This work was supported by the NSFC under Grant 62322604 and 62576207.",
+      "references": "[1] Emanuele Aiello, Diego Valsesia, and Enrico Magli. Cross- modal learning for image-guided point cloud shape comple- tion. In Advances in Neural Information Processing Systems, 2022. 7 [2] Sergio Arnaud, Paul McVay, Ada Martin, Arjun Majumdar, Krishna Murthy Jatavallabhula, Phillip Thomas, Ruslan Part- sey, Daniel Dugas, Abha Gejji, Alexander Sax, et al. Locate 3d: Real-world object localization via self-supervised learn- ing in 3d. arXiv preprint arXiv:2504.14151, 2025. 2, 3 [3] Mathilde Caron, Hugo Touvron, Ishan Misra, Hervé Jégou, Julien Mairal, Piotr Bojanowski, and Armand Joulin. Emerg- ing properties in self-supervised vision transformers. In Pro- ceedings of the IEEE/CVF international conference on com- puter vision, pages 9650–9660, 2021. 2 [4] Honghua Chen, Zeyong Wei, Yabin Xu, Mingqiang Wei, and Jun Wang. Imlovenet: Misaligned image-supported regis- tration network for low-overlap point cloud pairs. In ACM SIGGRAPH 2022 conference proceedings, pages 1–9, 2022. [5] Zhe Chen, Weiyun Wang, Hao Tian, Shenglong Ye, Zhang- wei Gao, Erfei Cui, Wenwen Tong, Kongzhi Hu, Jiapeng Luo, Zheng Ma, et al. How far are we to gpt-4v? closing the gap to commercial multimodal models with open-source suites. arXiv preprint arXiv:2404.16821, 2024. 2, 3 [6] Matt Deitke, Dustin Schwenk, Jordi Salvador, Luca Weihs, Oscar Michel, Eli VanderBilt, Ludwig Schmidt, Kiana Ehsani, Aniruddha Kembhavi, and Ali Farhadi. Obja- verse: A universe of annotated 3d objects. arXiv preprint arXiv:2212.08051, 2022. 3 [7] Benjamin Graham, Martin Engelcke, and Laurens Van Der Maaten. 3d semantic segmentation with submani- fold sparse convolutional networks. In Proceedings of the IEEE conference on computer vision and pattern recogni- tion, pages 9224–9232, 2018. 2 [8] Yejie Guo, Yunzhong Hou, Wufei Ma, Meng Tang, and Ming-Hsuan Yang. Pursuing minimal sufficiency in spatial reasoning, 2026. 3 [9] Bangxin Hu and Yanhui Zhang. How ai and humans express comfort differently: A corpus-based appraisal analysis. Cor- pus Pragmatics, 10, 2025. 3 [10] Krishna Murthy Jatavallabhula, Alihusein Kuwajerwala, Qiao Gu, Mohd Omama, Tao Chen, Alaa Maalouf, Shuang Li, Ganesh Iyer, Soroush Saryazdi, Nikhil Keetha, et al. Conceptfusion: Open-set multimodal 3d mapping. arXiv preprint arXiv:2302.07241, 2023. 2, 3 [11] Wu Jiannan, Zhong Muyan, Xing Sen, Lai Zeqiang, Liu Zhaoyang, Chen Zhe, Wang Wenhai, Zhu Xizhou, Lu Lewei, Lu Tong, Luo Ping, Qiao Yu, and Dai Jifeng. Visionllm v2: An end-to-end generalist multimodal large language model for hundreds of vision-language tasks. arXiv preprint arXiv:2406.08394, 2024. 2, 3 [12] Chengshu Li, Ruohan Zhang, Josiah Wong, Cem Gok- men, Sanjana Srivastava, Roberto Martín-Martín, Chen Wang, Gabrael Levine, Wensi Ai, Benjamin Martinez, et al. Behavior-1k: A human-centered, embodied ai benchmark with 1,000 everyday activities and realistic simulation. arXiv preprint arXiv:2403.09227, 2024. 3 [13] Gen Li, Deqing Sun, Laura Sevilla-Lara, and Varun Jampani. One-shot open affordance learning with foundation models. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2024. 2 [14] Muchen Li and Leonid Sigal. Referring transformer: A one-step approach to multi-task visual grounding. Advances in neural information processing systems, 34:19652–19664, 2021. 7 [15] Y. Li, N. Zhao, J. Xiao, C. Feng, X. Wang, and T. Chua. Laso: Language-guided affordance segmentation on 3d ob- ject. In 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024. 2, 3, 6, 7 [16] Chang Liu, Henghui Ding, and Xudong Jiang. Gres: Gener- alized referring expression segmentation, 2023. 7 [17] Haotian Liu, Chunyuan Li, Qingyang Wu, and Yong Jae Lee. Visual instruction tuning, 2023. 2, 3 [18] Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke Zettle- moyer, and Veselin Stoyanov. Roberta: A robustly optimized bert pretraining approach. arXiv preprint arXiv:1907.11692, 2019. 7 [19] Jorge M. Lobo, Alberto Jiménez-Valverde, and Raimundo Real. Auc: a misleading measure of the performance of pre- dictive distribution models. Global Ecology and Biogeogra- phy, 17:145–151, 2008. 6 [20] Changsheng Lu, Zheyuan Liu, and Piotr Koniusz. Openkd: Opening prompt diversity for zero- and few-shot keypoint detection, 2024. 3 [21] Dongyue Lu, Lingdong Kong, Tianxin Huang, and Gim Hee Lee. Geal: Generalizable 3d affordance learning with cross- modal consistency. In Proceedings of the Computer Vi- sion and Pattern Recognition Conference, pages 1680–1690, 2025. 2 [22] Hongchen Luo, Wei Zhai, Jing Zhang, Yang Cao, and Dacheng Tao. One-shot affordance detection. In IJCAI, 2021. 2 [23] Hongchen Luo, Wei Zhai, Jing Zhang, Yang Cao, and Dacheng Tao. Leverage interactive affinity for affordance learning. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pages 6809–6819, 2023. [24] Hongchen Luo, Wei Zhai, Jing Zhang, Yang Cao, and Dacheng Tao. Learning visual affordance grounding from demonstration videos. IEEE Transactions on Neural Net- works and Learning Systems, 35(11):16857–16871, 2024. 2 [25] Junyu Luo, Jiahui Fu, Xianghao Kong, Chen Gao, Haibing Ren, Hao Shen, Huaxia Xia, and Si Liu. 3d-sps: Single-stage 3d visual grounding via referred point progressive selection. In 2022 IEEE/CVF Conference on Computer Vision and Pat- tern Recognition (CVPR), page 16433–16442. IEEE, 2022. [26] Toan Nguyen, Minh Nhat Vu, An Vuong, Dzung Nguyen, Thieu Vo, Ngan Le, and Anh Nguyen. Open-vocabulary af- fordance detection in 3d point clouds. In 2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pages 5692–5698. IEEE, 2023. 3 [27] Toan Nguyen, Minh Nhat Vu, An Vuong, Dzung Nguyen, Thieu Vo, Ngan Le, and Anh Nguyen. Open-vocabulary af- fordance detection in 3d point clouds. In 2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pages 5692–5698. IEEE, 2023. 3 [28] Maxime Oquab, Timothée Darcet, Théo Moutakanni, Huy Vo, Marc Szafraniec, Vasil Khalidov, Pierre Fernandez, Daniel Haziza, Francisco Massa, Alaaeldin El-Nouby, et al. Dinov2: Learning robust visual features without supervision. arXiv preprint arXiv:2304.07193, 2023. 2 [29] Yatian Pang, Eng Hock Francis Tay, Li Yuan, and Zhenghua Chen. Masked autoencoders for 3d point cloud self- supervised learning. World Scientific Annual Review of Arti- ficial Intelligence, 1:2440001, 2023. 3, 4, 7 [30] Zelin Peng, Yu Huang, Zhengqin Xu, Feilong Tang, Ming Hu, Xiaokang Yang, and Wei Shen. Star with bilinear map- ping. In Proceedings of the Computer Vision and Pattern Recognition Conference, pages 25292–25302, 2025. 3 [31] Zelin Peng, Zhengqin Xu, Zhilin Zeng, Yu Huang, Yaom- ing Wang, and Wei Shen. Parameter-efficient fine-tuning in hyperspherical space for open-vocabulary semantic segmen- tation. In Proceedings of the Computer Vision and Pattern Recognition Conference, pages 15009–15020, 2025. 3 [32] Charles R Qi, Li Yi, Hao Su, and Leonidas J Guibas. Point- net++: Deep hierarchical feature learning on point sets in a metric space. arXiv preprint arXiv:1706.02413, 2017. 1, 3 [33] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, et al. Learning transferable visual models from natural language supervi- sion. In International conference on machine learning, pages 8748–8763. PmLR, 2021. 2, 3 [34] Md.Atiqur Rahman and Yang Wang. Optimizing intersection-over-union in deep neural networks for image segmentation. In International Symposium on Visual Com- puting, 2016. 6 [35] David Rozenberszki, Or Litany, and Angela Dai. Language- grounded indoor 3d semantic segmentation in the wild. In European conference on computer vision, pages 125–141. Springer, 2022. 2 [36] Alexandre Sablayrolles, Matthijs Douze, Cordelia Schmid, and Hervé Jégou. Spreading vectors for similarity search. arXiv preprint arXiv:1806.03198, 2018. 4 [37] Yawen Shao, Wei Zhai, Yuhang Yang, Hongchen Luo, Yang Cao, and Zheng-Jun Zha. Great: Geometry-intention collab- orative inference for open-vocabulary 3d object affordance grounding. In Proceedings of the Computer Vision and Pat- tern Recognition Conference, pages 17326–17336, 2025. 2, 6, 7, 8 [38] Oriane Siméoni, Huy V Vo, Maximilian Seitzer, Federico Baldassarre, Maxime Oquab, Cijo Jose, Vasil Khalidov, Marc Szafraniec, Seungeun Yi, Michaël Ramamonjisoa, et al. Dinov3. arXiv preprint arXiv:2508.10104, 2025. 1, 2, 3 [39] Michael J. Swain and Dana H. Ballard. Color indexing. In- ternational Journal of Computer Vision, 7:11–32, 1991. 6 [40] Mingkui Tan, Zhuangwei Zhuang, Sitao Chen, Rong Li, Kui Jia, Qicheng Wang, and Yuanqing Li. Epmf: Efficient perception-aware multi-sensor fusion for 3d semantic seg- mentation. IEEE Transactions on Pattern Analysis and Ma- chine Intelligence, 2024. 7 [41] Xun Tan, Xingyu Chen, Guowei Zhang, Jishiyu Ding, and Xuguang Lan. Mbdf-net: Multi-branch deep fusion network for 3d object detection, 2021. 7 [42] Yihe Tang, Wenlong Huang, Yingke Wang, Chengshu Li, Roy Yuan, Ruohan Zhang, Jiajun Wu, and Li Fei-Fei. Uad: Unsupervised affordance distillation for generalization in robotic manipulation. arXiv preprint arXiv:2506.09284, 2025. 2, 3 [43] Lyne Tchapmi, Christopher Choy, Iro Armeni, JunYoung Gwak, and Silvio Savarese. Segcloud: Semantic segmen- tation of 3d point clouds. In 2017 international conference on 3D vision (3DV), pages 537–547. IEEE, 2017. 2 [44] Tuan Van Vo, Minh Nhat Vu, Baoru Huang, Toan Nguyen, Ngan Le, Thieu Vo, and Anh Nguyen. Open-vocabulary affordance detection using knowledge distillation and text- point correlation. In 2024 IEEE International Conference on Robotics and Automation (ICRA), pages 13968–13975. IEEE, 2024. 3 [45] Yixuan Wang, Mingtong Zhang, Zhuoran Li, Tarik Keleste- mur, Katherine Driggs-Campbell, Jiajun Wu, Li Fei-Fei, and Yunzhu Li. D3fields: Dynamic 3d descriptor fields for zero- shot generalizable rearrangement, 2024. 2, 3 [46] Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Ed H. Chi, Quoc Le, and Denny Zhou. Chain of thought prompting elicits reasoning in large language mod- els. CoRR, abs/2201.11903, 2022. 2, 3 [47] Cort J. Willmott and Kenji Matsuura. Advantages of the mean absolute error (mae) over the root mean square error (rmse) in assessing average model performance. Climate Re- search, 30:79–82, 2005. 6 [48] Chao Xu, Yixin Chen, He Wang, Song-Chun Zhu, Yixin Zhu, and Siyuan Huang. Partafford: Part-level affordance discovery from 3d objects. arXiv preprint arXiv:2202.13519, 2022. 2 [49] Danfei Xu, Dragomir Anguelov, and Ashesh Jain. Pointfu- sion: Deep sensor fusion for 3d bounding box estimation. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 244–253, 2018. 7 [50] Xinli Xu, Shaocong Dong, Tingfa Xu, Lihe Ding, Jie Wang, Peng Jiang, Liqiang Song, and Jianan Li. Fusionrcnn: Lidar- camera fusion for two-stage 3d object detection. arXiv preprint arXiv:2209.10733, 2022. 7 [51] Yuhang Yang, Wei Zhai, Hongchen Luo, Yang Cao, Jiebo Luo, and Zheng-Jun Zha. Grounding 3d object affordance from 2d interactions in images. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 10905–10915, 2023. 3, 6, 7 [52] Yuhang Yang, Wei Zhai, Chengfeng Wang, Chengjun Yu, Yang Cao, and Zheng-Jun Zha. Egochoir: Capturing 3d human-object interaction regions from egocentric views. arXiv preprint arXiv:2405.13659, 2024. 3 [53] Wei Zhai, Hongchen Luo, Jing Zhang, Yang Cao, and Dacheng Tao. One-shot object affordance detection in the wild. arXiv preprint arXiv:2108.03658, 2021. 2 [54] Wei Zhai, Pingyu Wu, Kai Zhu, Yang Cao, Feng Wu, and Zheng-Jun Zha. Background activation suppression for weakly supervised object localization and semantic segmen- tation. International Journal of Computer Vision, pages 1– 26, 2023. 2 [55] Wei Zhai, Yang Cao, Jing Zhang, Haiyong Xie, Dacheng Tao, and Zheng-Jun Zha. On exploring multiplicity of prim- itives and attributes for texture recognition in the wild. IEEE Transactions on Pattern Analysis and Machine Intelligence, 46(1):403–420, 2024. 3 [56] He Zhu, Quyu Kong, Kechun Xu, Xunlong Xia, Bing Deng, Jieping Ye, Rong Xiong, and Yue Wang. Grounding 3d object affordance with language instructions, visual obser- vations and interactions. In Proceedings of the Computer Vision and Pattern Recognition Conference, pages 17337– 17346, 2025. 2"
+    },
+    "candidate_chunks": {
+      "abstract": [
+        {
+          "text": "Affordance segmentation aims to decompose 3D objects into parts that serve distinct functional roles, enabling models to reason about object interactions rather than mere recognition. Existing methods, mostly following the paradigm of 3D semantic segmentation or prompt-based frameworks, struggle when geometric cues are weak or ambiguous, as sparse point clouds provide limited func- tional information.",
+          "source_section": "abstract",
+          "page_hint": "",
+          "kind_hint": "abstract",
+          "actual_source_section": "abstract"
+        },
+        {
+          "text": "To overcome this limitation, we lever- age the rich semantic knowledge embedded in large-scale 2D Vision Foundation Models (VFMs) to guide 3D repre- sentation learning through a cross-modal alignment mech- B Corresponding Author: wei.shen@sjtu.edu.cn † Project Leader. anism.",
+          "source_section": "abstract",
+          "page_hint": "",
+          "kind_hint": "abstract",
+          "actual_source_section": "abstract"
+        },
+        {
+          "text": "Specifically, we propose Cross-Modal Affinity Trans- fer (CMAT), a pretraining strategy that compels the 3D encoder to align with the semantic structures induced by lifted 2D features. CMAT is driven by a core affinity align- ment objective, supported by two auxiliary losses, geo- metric reconstruction and feature diversity, which together encourage structured and discriminative feature learning.",
+          "source_section": "abstract",
+          "page_hint": "",
+          "kind_hint": "abstract",
+          "actual_source_section": "abstract"
+        },
+        {
+          "text": "Built upon the CMAT-pretrained backbone, we employ a lightweight affordance segmentor that injects text or vi- sual prompts into the learned 3D space through an efficient cross-attention interface, enabling dense and prompt-aware affordance prediction while preserving the semantic orga- nization established during pretraining. Extensive experi- ments demonstrate consistent improvements over previous state-of-the-art methods in both accuracy and efficiency.",
+          "source_section": "abstract",
+          "page_hint": "",
+          "kind_hint": "abstract",
+          "actual_source_section": "abstract"
+        },
+        {
+          "text": "arXiv:2510.08316v3 [cs.CV] 19 Mar 2026",
+          "source_section": "abstract",
+          "page_hint": "",
+          "kind_hint": "abstract",
+          "actual_source_section": "abstract"
+        }
+      ],
+      "introduction": [
+        {
+          "text": "Affordance segmentation focuses on dividing a 3D object into parts that carry distinct functional roles. For example, a chair can be separated into a seat, a backrest, and legs.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "By identifying such functional components, intelligent systems can move beyond passive object recognition and start learn- ing about how to interact with the object in purposeful ways. Early approaches predominantly followed the pipeline of 3D semantic segmentation [7, 35, 43], where point cloud encoders predict part-level labels based solely on geometric information.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "This paradigm assumes that functional distinc- tions can be inferred directly from shape. However, many affordances are not uniquely determined by local geometry: the graspable handle of a mug can be geometrically sim- ilar to its rim, and surfaces that afford support or contact often exhibit smooth or symmetric forms.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "When geometric cues are weak or ambiguous, especially under sparse scan- ning, occlusion, or noisy reconstruction, these models tend to produce unstable or coarse functional boundaries. These observations indicate that geometric structure alone is in- sufficient to capture part-level semantics.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "To compensate for missing functional semantics, recent methods introduce prompt-based affordance segmentation, where visual demonstrations or textual instructions guide the prediction process [15, 21, 37, 56]. For example, a tex- tual query such as “Where should this mug be grasped?” or a visual prompt showing a hand-holding posture can highlight the relevant functional regions.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "Building on this idea, some systems further incorporate multimodal large language models (MLLMs) [5, 11, 17, 46] to make prompt interpretation more flexible and expressive. However, even with improved prompt processing, these approaches often yield constrained improvements relative to their added com- plexity.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "We believe this may point to a deeper issue: their performance remains suboptimal partly because they still rely on a 3D encoder trained primarily as a geometric fea- ture extractor. This suggests that the bottleneck lies not in the prompts themselves, but in the representational capac- ity of the encoder.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "Sparse point clouds inherently contain limited functional cues, and without a feature space that encodes semantic-aware structure, prompts cannot reliably impose such semantics. Thus, affordance segmentation re- quires rethinking how 3D features are learned, rather than simply enriching the prompting modalities.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "Since the core bottleneck lies in the 3D encoder’s se- mantic capacity, a natural question arises: how can we inject stronger semantic structure into 3D features? One promising path is to draw on large-scale 2D Vision Founda- tion Models (VFMs) [3, 28, 33, 38].",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "These models, which are trained on extensive image corpora without supervision, naturally learn feature spaces that inherently capture clear and structured semantic organization. As shown in Fig.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "1 (2D Semantics), features derived from models such as DI- NOv3 [38] already form clusters that correspond closely to functionally coherent regions of objects. This indicates that 2D visual representations naturally encode semantic-aware structure more readily than purely geometric 3D embed- dings.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        },
+        {
+          "text": "Motivated by this, recent works [2, 10, 42, 45] seek to transfer such semantic knowledge into the 3D domain by “lifting” multi-view 2D features onto point clouds. The lifted features can serve as dense semantic supervision sig- nals, guiding the 3D encoder to develop a well-structured feature space.",
+          "source_section": "introduction",
+          "page_hint": "",
+          "kind_hint": "problem",
+          "actual_source_section": "introduction"
+        }
+      ],
+      "method": [
+        {
+          "text": "Our approach builds a unified framework for 3D affordance segmentation by progressively introducing semantic knowl- edge into 3D representations and adapting them to prompt- driven affordance segmentation task. The entire process in- volves three tightly connected stages that move from cross- modal grounding to task-specific adaptation.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "3.1. Overview.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "Given an input 3D point cloud P = {pi ∈R3}N i=1 with N points, our framework’s goal is to produce a dense, prompt- conditioned affordance map M ∈RN. The overall process consists of three progressive stages.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "In Stage 0 (2D Seman- tic Knowledge Extraction), we pre-process 3D objects to obtain per-point 2D semantic descriptors, F 2D = {f 2D Rd2D}N i=1, which serve as the foundational supervision sig- nal. In Stage 1 (Cross-Modal Affinity Transfer, CMAT), we leverage these F 2D features to pretrain our 3D back- bone Φ3D.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "This stage results in a 3D model that internal- izes a functionally structured 3D representation by aligning 3D patch affinity with 2D patch affinity. Finally, in Stage 2 (Lightweight Affordance Segmentor), this pretrained back- bone Φ3D is integrated with a multi-modal fusion module, which accepts P and a text or visual prompt to output the final segmentation map M.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "3.2. Stage 0: 2D Semantic Knowledge Extraction To establish transferable semantic knowledge for 3D learn- ing, we prepare a dataset of 3D objects paired with multi- view 2D features.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "The dataset includes over 10,000 3D models from Objaverse [6] and Behavior-1K [12], covering 101 everyday object categories such as furniture, kitchen- ware, and tools, ensuring rich semantic coverage. Each 3D model is represented as a point cloud P = pi ∈R3N i=1.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "We render V RGB views under uniformly dis- tributed camera poses and process them using a frozen 2D encoder Φ2D (DINOv3 [38]) to obtain dense feature maps. This multi-view setup ensures that both visible and pre- viously occluded surfaces receive consistent 2D semantic cues.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "These per-pixel embeddings are back-projected and interpolated onto the corresponding 3D points following es- tablished feature lifting techniques [45], producing the per- point semantic descriptors: F 2D = {f 2D ∈Rd2D}N i=1. These lifted features act as a high-quality semantic ground- ing signal that guides the subsequent CMAT pretraining stage.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "3.3. Stage 1: Cross-Modal Affinity Transfer Stage 0 provides semantic knowledge for each point, but we still need a training strategy to enable the 3D backbone Φ3D to internalize this structure.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "Unlike self-supervised meth- ods [29, 32] that focus mainly on geometric reconstruction, our goal is not only to preserve geometric continuity but also to infuse the backbone with functional structure de- rived from the 2D domain. We accomplish this through our Cross-Modal Affinity Transfer (CMAT) scheme.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        },
+        {
+          "text": "The backbone follows a PointMAE-style [29] trans- former encoder, processing the point cloud as patch tokens PS = {Pj}m j=1. For each patch, we obtain patch-level 2D and 3D features by average pooling: ¯f 2D |Pj| pi∈Pj f 2D (1) ¯f 3D |Pj| pi∈Pj f 3D (2) where f 2D is the lifted semantic feature from Stage 1 and f 3D is the output of Φ3D.",
+          "source_section": "method",
+          "page_hint": "",
+          "kind_hint": "method",
+          "actual_source_section": "method"
+        }
+      ],
+      "experiment": [
+        {
+          "text": "In this section, we conduct a series of experiments to thor- oughly evaluate our proposed three-stage framework. We first introduce the experimental setup, including the datasets and evaluation metrics.",
+          "source_section": "experiment",
+          "page_hint": "",
+          "kind_hint": "results",
+          "actual_source_section": "experiment"
+        },
+        {
+          "text": "We then detail our implementation for reproducibility. Subsequently, we present quantitative comparisons against state-of-the-art methods on both visual and text-prompted affordance segmentation tasks.",
+          "source_section": "experiment",
+          "page_hint": "",
+          "kind_hint": "results",
+          "actual_source_section": "experiment"
+        },
+        {
+          "text": "Finally, we perform extensive ablation studies to analyze the contri- bution of each key component in our framework and show- case qualitative results to provide intuitive insights. It is important to note that our framework is inherently designed to process multi-modal prompts, such as a com- bination of visual cues and textual instructions.",
+          "source_section": "experiment",
+          "page_hint": "",
+          "kind_hint": "results",
+          "actual_source_section": "experiment"
+        },
+        {
+          "text": "However, existing benchmarks are constrained to single-modality in- puts, supporting either visual or text prompts but not their concurrent use. To ensure a fair comparison on these datasets, we adapt our model by providing a null input for the modality not supported by the specific benchmark.",
+          "source_section": "experiment",
+          "page_hint": "",
+          "kind_hint": "results",
+          "actual_source_section": "experiment"
+        },
+        {
+          "text": "We posit that the full capabilities of our method will be even more evident on future benchmarks designed for true multi- modal queries. Figure 4.",
+          "source_section": "experiment",
+          "page_hint": "",
+          "kind_hint": "results",
+          "actual_source_section": "experiment"
+        },
+        {
+          "text": "Qualitative comparison on challenging cases from the PIADv2 [37] (visual prompt) and LASO [15] (text prompt) datasets. These examples visually corroborate our quantitative improvements and highlight our framework’s superior fine-grained segmentation capability.",
+          "source_section": "experiment",
+          "page_hint": "",
+          "kind_hint": "results",
+          "actual_source_section": "experiment"
+        },
+        {
+          "text": "4.1. Experimental Setup",
+          "source_section": "experiment",
+          "page_hint": "",
+          "kind_hint": "results",
+          "actual_source_section": "experiment"
+        }
+      ],
+      "conclusion": [
+        {
+          "text": "In this work, we address the inherent semantic ambiguity of 3D point clouds by proposing a novel paradigm that grounds 3D representations in the rich knowledge of 2D Vision Foundation Models. Our method is centered on a Cross-Modal Affinity Transfer (CMAT) pretraining strat- egy, which teaches a 3D encoder to learn a structurally su- perior feature space, later adapted for affordance segmenta- tion tasks by our lightweight affordance segmentor.",
+          "source_section": "conclusion",
+          "page_hint": "",
+          "kind_hint": "limitations",
+          "actual_source_section": "conclusion"
+        },
+        {
+          "text": "Our ap- proach achieves state-of-the-art performance, with compre- hensive ablations confirming that these significant gains are directly attributable to our CMAT strategy’s effective trans- fer of relational knowledge across modalities. Ultimately, this work presents a generalizable and powerful paradigm for injecting 2D semantic knowledge into 3D feature learn- ing, holding significant promise for a wide range of future 3D understanding tasks.",
+          "source_section": "conclusion",
+          "page_hint": "",
+          "kind_hint": "limitations",
+          "actual_source_section": "conclusion"
+        },
+        {
+          "text": "6. Acknowledgment This work was supported by the NSFC under Grant 62322604 and 62576207.",
+          "source_section": "conclusion",
+          "page_hint": "",
+          "kind_hint": "limitations",
+          "actual_source_section": "conclusion"
+        }
+      ],
+      "data": [
+        {
+          "text": "Affordance segmentation aims to decompose 3D objects into parts that serve distinct functional roles, enabling models to reason about object interactions rather than mere recognition. Existing methods, mostly following the paradigm of 3D semantic segmentation or prompt-based frameworks, struggle when geometric cues are weak or ambiguous, as sparse point clouds provide limited func- tional information.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "To overcome this limitation, we lever- age the rich semantic knowledge embedded in large-scale 2D Vision Foundation Models (VFMs) to guide 3D repre- sentation learning through a cross-modal alignment mech- B Corresponding Author: wei.shen@sjtu.edu.cn † Project Leader. anism.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "Specifically, we propose Cross-Modal Affinity Trans- fer (CMAT), a pretraining strategy that compels the 3D encoder to align with the semantic structures induced by lifted 2D features. CMAT is driven by a core affinity align- ment objective, supported by two auxiliary losses, geo- metric reconstruction and feature diversity, which together encourage structured and discriminative feature learning.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "Built upon the CMAT-pretrained backbone, we employ a lightweight affordance segmentor that injects text or vi- sual prompts into the learned 3D space through an efficient cross-attention interface, enabling dense and prompt-aware affordance prediction while preserving the semantic orga- nization established during pretraining. Extensive experi- ments demonstrate consistent improvements over previous state-of-the-art methods in both accuracy and efficiency.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "arXiv:2510.08316v3 [cs.CV] 19 Mar 2026 Affordance segmentation focuses on dividing a 3D object into parts that carry distinct functional roles. For example, a chair can be separated into a seat, a backrest, and legs.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "By identifying such functional components, intelligent systems can move beyond passive object recognition and start learn- ing about how to interact with the object in purposeful ways. Early approaches predominantly followed the pipeline of 3D semantic segmentation [7, 35, 43], where point cloud encoders predict part-level labels based solely on geometric information.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "This paradigm assumes that functional distinc- tions can be inferred directly from shape. However, many affordances are not uniquely determined by local geometry: the graspable handle of a mug can be geometrically sim- ilar to its rim, and surfaces that afford support or contact often exhibit smooth or symmetric forms.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "When geometric cues are weak or ambiguous, especially under sparse scan- ning, occlusion, or noisy reconstruction, these models tend to produce unstable or coarse functional boundaries. These observations indicate that geometric structure alone is in- sufficient to capture part-level semantics.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "To compensate for missing functional semantics, recent methods introduce prompt-based affordance segmentation, where visual demonstrations or textual instructions guide the prediction process [15, 21, 37, 56]. For example, a tex- tual query such as “Where should this mug be grasped?” or a visual prompt showing a hand-holding posture can highlight the relevant functional regions.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "Building on this idea, some systems further incorporate multimodal large language models (MLLMs) [5, 11, 17, 46] to make prompt interpretation more flexible and expressive. However, even with improved prompt processing, these approaches often yield constrained improvements relative to their added com- plexity.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "We believe this may point to a deeper issue: their performance remains suboptimal partly because they still rely on a 3D encoder trained primarily as a geometric fea- ture extractor. This suggests that the bottleneck lies not in the prompts themselves, but in the representational capac- ity of the encoder.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        },
+        {
+          "text": "Sparse point clouds inherently contain limited functional cues, and without a feature space that encodes semantic-aware structure, prompts cannot reliably impose such semantics. Thus, affordance segmentation re- quires rethinking how 3D features are learned, rather than simply enriching the prompting modalities.",
+          "source_section": "data",
+          "page_hint": "",
+          "kind_hint": "data",
+          "actual_source_section": "data"
+        }
+      ],
+      "general": [
+        {
+          "text": "Affordance segmentation aims to decompose 3D objects into parts that serve distinct functional roles, enabling models to reason about object interactions rather than mere recognition. Existing methods, mostly following the paradigm of 3D semantic segmentation or prompt-based frameworks, struggle when geometric cues are weak or ambiguous, as sparse point clouds provide limited func- tional information.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "To overcome this limitation, we lever- age the rich semantic knowledge embedded in large-scale 2D Vision Foundation Models (VFMs) to guide 3D repre- sentation learning through a cross-modal alignment mech- B Corresponding Author: wei.shen@sjtu.edu.cn † Project Leader. anism.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "Specifically, we propose Cross-Modal Affinity Trans- fer (CMAT), a pretraining strategy that compels the 3D encoder to align with the semantic structures induced by lifted 2D features. CMAT is driven by a core affinity align- ment objective, supported by two auxiliary losses, geo- metric reconstruction and feature diversity, which together encourage structured and discriminative feature learning.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "Built upon the CMAT-pretrained backbone, we employ a lightweight affordance segmentor that injects text or vi- sual prompts into the learned 3D space through an efficient cross-attention interface, enabling dense and prompt-aware affordance prediction while preserving the semantic orga- nization established during pretraining. Extensive experi- ments demonstrate consistent improvements over previous state-of-the-art methods in both accuracy and efficiency.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "arXiv:2510.08316v3 [cs.CV] 19 Mar 2026 Affordance segmentation focuses on dividing a 3D object into parts that carry distinct functional roles. For example, a chair can be separated into a seat, a backrest, and legs.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "By identifying such functional components, intelligent systems can move beyond passive object recognition and start learn- ing about how to interact with the object in purposeful ways. Early approaches predominantly followed the pipeline of 3D semantic segmentation [7, 35, 43], where point cloud encoders predict part-level labels based solely on geometric information.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "This paradigm assumes that functional distinc- tions can be inferred directly from shape. However, many affordances are not uniquely determined by local geometry: the graspable handle of a mug can be geometrically sim- ilar to its rim, and surfaces that afford support or contact often exhibit smooth or symmetric forms.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "When geometric cues are weak or ambiguous, especially under sparse scan- ning, occlusion, or noisy reconstruction, these models tend to produce unstable or coarse functional boundaries. These observations indicate that geometric structure alone is in- sufficient to capture part-level semantics.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "To compensate for missing functional semantics, recent methods introduce prompt-based affordance segmentation, where visual demonstrations or textual instructions guide the prediction process [15, 21, 37, 56]. For example, a tex- tual query such as “Where should this mug be grasped?” or a visual prompt showing a hand-holding posture can highlight the relevant functional regions.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "Building on this idea, some systems further incorporate multimodal large language models (MLLMs) [5, 11, 17, 46] to make prompt interpretation more flexible and expressive. However, even with improved prompt processing, these approaches often yield constrained improvements relative to their added com- plexity.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "We believe this may point to a deeper issue: their performance remains suboptimal partly because they still rely on a 3D encoder trained primarily as a geometric fea- ture extractor. This suggests that the bottleneck lies not in the prompts themselves, but in the representational capac- ity of the encoder.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        },
+        {
+          "text": "Sparse point clouds inherently contain limited functional cues, and without a feature space that encodes semantic-aware structure, prompts cannot reliably impose such semantics. Thus, affordance segmentation re- quires rethinking how 3D features are learned, rather than simply enriching the prompting modalities.",
+          "source_section": "general",
+          "page_hint": "",
+          "kind_hint": "general",
+          "actual_source_section": "mixed"
+        }
+      ]
+    },
+    "language_hint": "en",
+    "section_sources": {
+      "abstract": "abstract",
+      "introduction": "introduction",
+      "method": "method",
+      "experiment": "experiment",
+      "conclusion": "conclusion",
+      "data": "data"
+    },
+    "section_extraction_coverage": {
+      "coverage_status": "good",
+      "recognized_sections": [
+        "preamble",
+        "abstract",
+        "introduction",
+        "method",
+        "experiment",
+        "data",
+        "conclusion",
+        "references"
+      ],
+      "core_sections_found": [
+        "introduction",
+        "method",
+        "experiment"
+      ],
+      "missing_core_sections": [],
+      "section_text_chars": {
+        "preamble": 1081,
+        "abstract": 1580,
+        "introduction": 7849,
+        "method": 15710,
+        "experiment": 1477,
+        "data": 2704,
+        "conclusion": 987,
+        "references": 12483
+      },
+      "fallback_sections": []
+    },
+    "pdf_coverage": {
+      "total_pages": 11,
+      "text_max_pages": null,
+      "text_pages_extracted": 11,
+      "text_pages_scanned": 11,
+      "text_truncated": false,
+      "truncated_due_to_page_limit": false,
+      "appendix_detected": false,
+      "appendix_start_page": null,
+      "references_start_page": 9,
+      "section_stop_reason": "",
+      "section_stop_page": null
+    },
+    "appendix_index": {
+      "appendix_detected": false,
+      "start_page": null,
+      "sections": [],
+      "figure_captions": [],
+      "table_captions": []
+    },
+    "appendix_evidence": {
+      "ablation": [],
+      "implementation_details": [],
+      "dataset_details": [],
+      "extra_results": [],
+      "qualitative_examples": []
+    },
+    "quotes": [],
+    "extraction_failures": [],
+    "evidence_quality": "medium"
+  },
+  "summary": {
+    "paper_type": "AI_method",
+    "paper_type_rationale": "The paper is best treated as a method-focused technical paper.",
+    "datasets": [
+      "Modern",
+      "Stage",
+      "Semantic Knowledge",
+      "Extraction",
+      "The",
+      "Objaverse",
+      "Behavior-1K",
+      "LASO"
+    ],
+    "metrics": [],
+    "mechanism_signals": [
+      "Our approach builds a unified framework for 3D affordance segmentation by progressively introducing semantic knowl- edge into 3D representations and adapting them to prompt- driven affordance segmentation task.",
+      "This stage results in a 3D model that internal- izes a functionally structured 3D representation by aligning 3D patch affinity with 2D patch affinity.",
+      "Finally, in Stage 2 (Lightweight Affordance Segmentor), this pretrained back- bone Φ3D is integrated with a multi-modal fusion module, which accepts P and a text or visual prompt to output the final segmentation map M.",
+      "Stage 0: 2D Semantic Knowledge Extraction To establish transferable semantic knowledge for 3D learn- ing, we prepare a dataset of 3D objects paired with multi- view 2D features.",
+      "We render V RGB views under uniformly dis- tributed camera poses and process them using a frozen 2D encoder Φ2D (DINOv3 [38]) to obtain dense feature maps.",
+      "These per-pixel embeddings are back-projected and interpolated onto the corresponding 3D points following es- tablished feature lifting techniques [45], producing the per- point semantic descriptors: F 2D = {f 2D ∈Rd2D}N i=1."
+    ],
+    "ablation_signals": [
+      "Finally, we perform extensive ablation studies to analyze the contri- bution of each key component in our framework and show- case qualitative results to provide intuitive insights."
+    ],
+    "equation_candidates": [],
+    "section_keys": [
+      "preamble",
+      "abstract",
+      "introduction",
+      "method",
+      "experiment",
+      "data",
+      "conclusion",
+      "references"
+    ],
+    "language_hint": "en",
+    "section_coverage_status": "good",
+    "fallback_sections": [],
+    "pdf_coverage": {
+      "total_pages": 11,
+      "text_max_pages": null,
+      "text_pages_extracted": 11,
+      "text_pages_scanned": 11,
+      "text_truncated": false,
+      "truncated_due_to_page_limit": false,
+      "appendix_detected": false,
+      "appendix_start_page": null,
+      "references_start_page": 9,
+      "section_stop_reason": "",
+      "section_stop_page": null
+    },
+    "appendix_evidence_counts": {
+      "ablation": 0,
+      "implementation_details": 0,
+      "dataset_details": 0,
+      "extra_results": 0,
+      "qualitative_examples": 0
+    },
+    "pdf_used": false,
+    "source_corpus_used": true,
+    "candidate_chunk_sections": [
+      "abstract",
+      "conclusion",
+      "data",
+      "experiment",
+      "general",
+      "introduction",
+      "method"
+    ]
+  }
+}

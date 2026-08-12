@@ -1,0 +1,15 @@
+{
+  "status": "ok",
+  "script": "materialize_figure_asset.py",
+  "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+  "note_path": "D:\\study\\deep-learning\\paper\\2-Ai work\\GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency\\GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency.md",
+  "source_image": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_004_fig_figure_2_review.png",
+  "dest_image_path": "D:\\study\\deep-learning\\paper\\2-Ai work\\GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency\\images\\page_004_fig_figure_2_review.png",
+  "absolute_markdown_embed": "![Figure 2](D:/study/deep-learning/paper/2-Ai work/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/images/page_004_fig_figure_2_review.png)",
+  "relative_markdown_embed": "![Figure 2](images/page_004_fig_figure_2_review.png)",
+  "label": "Figure 2",
+  "output_mode": "obsidian",
+  "subdir": "GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+  "vault_relative_image_path": "2-Ai work/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/images/page_004_fig_figure_2_review.png",
+  "obsidian_embed": "![[2-Ai work/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/images/page_004_fig_figure_2_review.png]]"
+}

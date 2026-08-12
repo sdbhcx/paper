@@ -1,0 +1,374 @@
+{
+  "status": "ok",
+  "run_status": "ok",
+  "script": "build_identity_contract.py",
+  "artifact_type": "identity_repair_trace",
+  "schema_version": 2,
+  "paper_id": "doi:10.1609/aaai.v40i6.42466",
+  "identity_verdict": "accepted",
+  "identity_failure_class": "",
+  "repair_attempts": [
+    {
+      "attempt": 1,
+      "action": "accept_identity_promotion",
+      "status": "accepted",
+      "evidence_used": [
+        {
+          "kind": "title_author_year",
+          "value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+          "source": "openalex"
+        }
+      ],
+      "rejected_candidate_identity": {
+        "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+        "translated_title": "",
+        "authors": [
+          "Lian He",
+          "Meng Liu",
+          "Qilang Ye",
+          "Yu Zhou",
+          "Xiang Deng",
+          "Gangyi Ding"
+        ],
+        "year": "2025",
+        "venue": "",
+        "doi": "",
+        "arxiv_id": "2511.11702",
+        "zotero_key": ""
+      },
+      "accepted_correction": {
+        "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+        "translated_title": "",
+        "authors": [
+          "Lian He",
+          "Meng Liu",
+          "Qilang Ye",
+          "Yu Zhou",
+          "Xiang Deng",
+          "Gangyi Ding"
+        ],
+        "year": "2025",
+        "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+        "doi": "10.1609/aaai.v40i6.42466",
+        "arxiv_id": "2511.11702",
+        "zotero_key": ""
+      },
+      "promoted_identifiers": {
+        "doi": "10.1609/aaai.v40i6.42466"
+      },
+      "previous_paper_id": "arxiv:2511.11702",
+      "accepted_paper_id": "doi:10.1609/aaai.v40i6.42466"
+    }
+  ],
+  "accepted_observations": [
+    {
+      "provider": "arxiv",
+      "retrieved_by": {
+        "kind": "arxiv_id",
+        "value": "2511.11702"
+      },
+      "status": "accepted",
+      "reason": "shared_identifier",
+      "record": {
+        "source": "arxiv",
+        "source_type": "arxiv",
+        "metadata_sources": [
+          "arxiv"
+        ],
+        "source_url": "http://arxiv.org/abs/2511.11702v1",
+        "url": "http://arxiv.org/abs/2511.11702v1",
+        "arxiv_id": "2511.11702",
+        "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+        "abstract": "Understanding 3D scene-level affordances from natural language instructions is essential for enabling embodied agents to interact meaningfully in complex environments. However, this task remains challenging due to the need for semantic reasoning and spatial grounding. Existing methods mainly focus on object-level affordances or merely lift 2D predictions to 3D, neglecting rich geometric structure information in point clouds and incurring high computational costs. To address these limitations, we introduce Task-Aware 3D Scene-level Affordance segmentation (TASA), a novel geometry-optimized framework that jointly leverages 2D semantic cues and 3D geometric reasoning in a coarse-to-fine manner. To improve the affordance detection efficiency, TASA features a task-aware 2D affordance detection module to identify manipulable points from language and visual inputs, guiding the selection of task-relevant views. To fully exploit 3D geometric information, a 3D affordance refinement module is proposed to integrate 2D semantic priors with local 3D geometry, resulting in accurate and spatially coherent 3D affordance masks. Experiments on SceneFun3D demonstrate that TASA significantly outperforms the baselines in both accuracy and efficiency in scene-level affordance segmentation.",
+        "authors": [
+          "Lian He",
+          "Meng Liu",
+          "Qilang Ye",
+          "Yu Zhou",
+          "Xiang Deng",
+          "Gangyi Ding"
+        ],
+        "published": "2025-11-12T13:36:37Z",
+        "year": "2025",
+        "pdf_url": "https://arxiv.org/pdf/2511.11702v1"
+      }
+    },
+    {
+      "provider": "openalex",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement"
+      },
+      "status": "accepted",
+      "reason": "title_author_year",
+      "record": {
+        "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+        "authors": [
+          "Lian He",
+          "Meng Liu",
+          "Qilang Ye",
+          "Yu Zhou",
+          "Xiang Deng",
+          "Gangyi Ding"
+        ],
+        "affiliations": [
+          "Beijing Institute of Technology",
+          "Beijing Academy of Science and Technology",
+          "Shandong Jianzhu University",
+          "State Key Laboratory of Cryptology",
+          "Harbin Institute of Technology"
+        ],
+        "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+        "year": "2026",
+        "doi": "10.1609/aaai.v40i6.42466",
+        "source": "openalex",
+        "source_type": "openalex",
+        "source_url": "https://doi.org/10.1609/aaai.v40i6.42466",
+        "pdf_url": "",
+        "abstract": "",
+        "metadata_sources": [
+          "openalex"
+        ]
+      }
+    },
+    {
+      "provider": "crossref",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement"
+      },
+      "status": "accepted",
+      "reason": "shared_identifier",
+      "record": {
+        "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+        "authors": [
+          "Lian He",
+          "Meng Liu",
+          "Qilang Ye",
+          "Yu Zhou",
+          "Xiang Deng",
+          "Gangyi Ding"
+        ],
+        "affiliations": [],
+        "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+        "doi": "10.1609/aaai.v40i6.42466",
+        "source": "crossref",
+        "source_type": "crossref",
+        "source_url": "https://doi.org/10.1609/aaai.v40i6.42466",
+        "year": "2026",
+        "published": "2026",
+        "abstract": "Understanding 3D scene-level affordances from natural language instructions is essential for enabling embodied agents to interact meaningfully in complex environments. However, this task remains challenging due to the need for semantic reasoning and spatial grounding. Existing methods mainly focus on object-level affordances or merely lift 2D predictions to 3D, neglecting rich geometric structure information in point clouds and incurring high computational costs. To address these limitations, we introduce Task-Aware 3D Scene-level Affordance segmentation (TASA), a novel geometry-optimized framework that jointly leverages 2D semantic cues and 3D geometric reasoning in a coarse-to-fine manner. To improve the affordance detection efficiency, TASA features a task-aware 2D affordance detection module to identify manipulable points from language and visual inputs, guiding the selection of task-relevant views. To fully exploit 3D geometric information, a 3D affordance refinement module is proposed to integrate 2D semantic priors with local 3D geometry, resulting in accurate and spatially coherent 3D affordance masks. Experiments on SceneFun3D demonstrate that TASA significantly outperforms the baselines in both accuracy and efficiency in scene-level affordance segmentation.",
+        "metadata_sources": [
+          "crossref"
+        ]
+      }
+    },
+    {
+      "provider": "arxiv",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement"
+      },
+      "status": "accepted",
+      "reason": "shared_identifier",
+      "record": {
+        "source": "arxiv",
+        "source_type": "arxiv",
+        "metadata_sources": [
+          "arxiv"
+        ],
+        "source_url": "http://arxiv.org/abs/2511.11702v1",
+        "url": "http://arxiv.org/abs/2511.11702v1",
+        "arxiv_id": "2511.11702",
+        "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+        "abstract": "Understanding 3D scene-level affordances from natural language instructions is essential for enabling embodied agents to interact meaningfully in complex environments. However, this task remains challenging due to the need for semantic reasoning and spatial grounding. Existing methods mainly focus on object-level affordances or merely lift 2D predictions to 3D, neglecting rich geometric structure information in point clouds and incurring high computational costs. To address these limitations, we introduce Task-Aware 3D Scene-level Affordance segmentation (TASA), a novel geometry-optimized framework that jointly leverages 2D semantic cues and 3D geometric reasoning in a coarse-to-fine manner. To improve the affordance detection efficiency, TASA features a task-aware 2D affordance detection module to identify manipulable points from language and visual inputs, guiding the selection of task-relevant views. To fully exploit 3D geometric information, a 3D affordance refinement module is proposed to integrate 2D semantic priors with local 3D geometry, resulting in accurate and spatially coherent 3D affordance masks. Experiments on SceneFun3D demonstrate that TASA significantly outperforms the baselines in both accuracy and efficiency in scene-level affordance segmentation.",
+        "authors": [
+          "Lian He",
+          "Meng Liu",
+          "Qilang Ye",
+          "Yu Zhou",
+          "Xiang Deng",
+          "Gangyi Ding"
+        ],
+        "published": "2025-11-12T13:36:37Z",
+        "year": "2025",
+        "pdf_url": "https://arxiv.org/pdf/2511.11702v1"
+      }
+    }
+  ],
+  "rejected_observations": [],
+  "bound_sources": [
+    {
+      "kind": "local_pdf",
+      "value": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+      "provider": "local_pdf",
+      "binding_reason": "trusted_input"
+    },
+    {
+      "kind": "pdf_url",
+      "value": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+      "provider": "local_pdf",
+      "binding_reason": "trusted_input"
+    },
+    {
+      "kind": "pdf_url",
+      "value": "https://arxiv.org/pdf/2511.11702.pdf",
+      "provider": "local_pdf",
+      "binding_reason": "accepted_identifier_derived"
+    },
+    {
+      "kind": "pdf_url",
+      "value": "https://arxiv.org/pdf/2511.11702v1",
+      "provider": "arxiv",
+      "binding_reason": "shared_identifier"
+    }
+  ],
+  "field_provenance": {
+    "title": {
+      "provider": "local_pdf",
+      "retrieved_by": {
+        "kind": "input",
+        "value": "arxiv:2511.11702"
+      }
+    },
+    "arxiv_id": {
+      "provider": "local_pdf",
+      "retrieved_by": {
+        "kind": "input",
+        "value": "arxiv:2511.11702"
+      }
+    },
+    "source_url": {
+      "provider": "local_pdf",
+      "retrieved_by": {
+        "kind": "input",
+        "value": "arxiv:2511.11702"
+      }
+    },
+    "local_pdf_path": {
+      "provider": "local_pdf",
+      "retrieved_by": {
+        "kind": "input",
+        "value": "arxiv:2511.11702"
+      }
+    },
+    "authors": {
+      "provider": "arxiv",
+      "retrieved_by": {
+        "kind": "arxiv_id",
+        "value": "2511.11702"
+      }
+    },
+    "year": {
+      "provider": "arxiv",
+      "retrieved_by": {
+        "kind": "arxiv_id",
+        "value": "2511.11702"
+      }
+    },
+    "abstract": {
+      "provider": "arxiv",
+      "retrieved_by": {
+        "kind": "arxiv_id",
+        "value": "2511.11702"
+      }
+    },
+    "pdf_url": {
+      "provider": "arxiv",
+      "retrieved_by": {
+        "kind": "arxiv_id",
+        "value": "2511.11702"
+      }
+    },
+    "affiliations": {
+      "provider": "openalex",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement"
+      }
+    },
+    "venue": {
+      "provider": "openalex",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement"
+      }
+    },
+    "doi": {
+      "provider": "openalex",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement"
+      }
+    }
+  },
+  "selected_identity_evidence": [
+    {
+      "kind": "doi",
+      "value": "10.1609/aaai.v40i6.42466",
+      "trust": "strong",
+      "source": "metadata"
+    },
+    {
+      "kind": "arxiv_id",
+      "value": "2511.11702",
+      "trust": "strong",
+      "source": "metadata"
+    },
+    {
+      "kind": "title",
+      "value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+      "trust": "metadata",
+      "source": "metadata"
+    },
+    {
+      "kind": "trusted_source_path",
+      "value": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+      "trust": "strong",
+      "source": "source_manifestation"
+    },
+    {
+      "kind": "pdf_url",
+      "value": "https://arxiv.org/pdf/2511.11702v1",
+      "trust": "source_manifestation",
+      "source": "metadata"
+    },
+    {
+      "kind": "source_url",
+      "value": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+      "trust": "source_manifestation",
+      "source": "metadata"
+    },
+    {
+      "kind": "source_url",
+      "value": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+      "trust": "source_manifestation",
+      "source": "source_manifestation"
+    }
+  ],
+  "equivalence_decision": {
+    "status": "equivalent",
+    "reason": "shared_work_identifier",
+    "location_binding": "source_manifestation",
+    "evidence": [
+      {
+        "kind": "shared_identifier",
+        "value": "arxiv_id:2511.11702"
+      },
+      {
+        "kind": "title_similarity",
+        "status": "match",
+        "score": 1.0,
+        "source_value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+        "work_value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement"
+      }
+    ]
+  },
+  "warnings": [],
+  "unresolved_risks": [],
+  "failure_summary": "",
+  "provenance": {
+    "resolve_artifact_path": "D:\\study\\deep-learning\\paper\\.workbuddy\\deeppapernote\\task-aware-3d\\task_aware_3d_resolve.json",
+    "metadata_artifact_path": "D:\\study\\deep-learning\\paper\\.workbuddy\\deeppapernote\\task-aware-3d\\task_aware_3d_metadata.json"
+  }
+}

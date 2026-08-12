@@ -1,0 +1,3559 @@
+{
+  "status": "ok",
+  "script": "build_synthesis_bundle.py",
+  "paper_id": "doi:10.48550/arxiv.2510.08316",
+  "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+  "identity_contract": {
+    "artifact_type": "canonical_identity",
+    "schema_version": 2,
+    "paper_id": "doi:10.48550/arxiv.2510.08316",
+    "identity_verdict": "accepted",
+    "work_level_identity": {
+      "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+      "translated_title": "",
+      "authors": [
+        "Yu Huang",
+        "Zelin Peng",
+        "Changsong Wen",
+        "Xiaokang Yang",
+        "Weifeng Shen"
+      ],
+      "year": "2025",
+      "venue": "arXiv (Cornell University)",
+      "doi": "10.48550/arxiv.2510.08316",
+      "arxiv_id": "2510.08316",
+      "zotero_key": ""
+    },
+    "source_manifestation": {
+      "source_kind": "title_query",
+      "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+      "year": "",
+      "venue": "",
+      "source_url": "http://arxiv.org/abs/2510.08316",
+      "pdf_url": "https://arxiv.org/pdf/2510.08316",
+      "local_pdf_path": "",
+      "doi": "",
+      "arxiv_id": "",
+      "zotero_key": ""
+    },
+    "accepted_metadata": {
+      "status": "ok",
+      "source_type": "title_query",
+      "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+      "source_url": "http://arxiv.org/abs/2510.08316",
+      "metadata_sources": [
+        "title_query",
+        "openalex",
+        "arxiv"
+      ],
+      "paper_id": "doi:10.48550/arxiv.2510.08316",
+      "identity_confidence": "high",
+      "identity_confidence_reasons": [
+        "title_query_unmatched",
+        "doi_present",
+        "arxiv_id_present"
+      ],
+      "zotero_lookup": {
+        "mode": "auto",
+        "status": "error",
+        "match_kind": "title",
+        "error": {
+          "code": "zotero_timeout",
+          "message": "Timed out while connecting to the Zotero Local API.",
+          "retryable": true
+        }
+      },
+      "script": "resolve_paper.py",
+      "authors": [
+        "Yu Huang",
+        "Zelin Peng",
+        "Changsong Wen",
+        "Xiaokang Yang",
+        "Weifeng Shen"
+      ],
+      "venue": "arXiv (Cornell University)",
+      "year": "2025",
+      "doi": "10.48550/arxiv.2510.08316",
+      "source": "openalex",
+      "pdf_url": "https://arxiv.org/pdf/2510.08316",
+      "url": "http://arxiv.org/abs/2510.08316v3",
+      "arxiv_id": "2510.08316",
+      "abstract": "Affordance segmentation aims to decompose 3D objects into parts that serve distinct functional roles, enabling models to reason about object interactions rather than mere recognition. Existing methods, mostly following the paradigm of 3D semantic segmentation or prompt-based frameworks, struggle when geometric cues are weak or ambiguous, as sparse point clouds provide limited functional information. To overcome this limitation, we leverage the rich semantic knowledge embedded in large-scale 2D Vision Foundation Models (VFMs) to guide 3D representation learning through a cross-modal alignment mechanism. Specifically, we propose Cross-Modal Affinity Transfer (CMAT), a pretraining strategy that compels the 3D encoder to align with the semantic structures induced by lifted 2D features. CMAT is driven by a core affinity alignment objective, supported by two auxiliary losses, geometric reconstruction and feature diversity, which together encourage structured and discriminative feature learning. Built upon the CMAT-pretrained backbone, we employ a lightweight affordance segmentor that injects text or visual prompts into the learned 3D space through an efficient cross-attention interface, enabling dense and prompt-aware affordance prediction while preserving the semantic organization established during pretraining. Extensive experiments demonstrate consistent improvements over previous state-of-the-art methods in both accuracy and efficiency.",
+      "published": "2025-10-09T15:01:26Z"
+    },
+    "bound_sources": [
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2510.08316",
+        "provider": "openalex",
+        "binding_reason": "title_author_year"
+      },
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2510.08316.pdf",
+        "provider": "openalex",
+        "binding_reason": "accepted_identifier_derived"
+      },
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2510.08316v3",
+        "provider": "arxiv",
+        "binding_reason": "shared_identifier"
+      }
+    ],
+    "field_provenance": {
+      "title": {
+        "provider": "title_query",
+        "retrieved_by": {
+          "kind": "input",
+          "value": "title:9ec63386b700"
+        }
+      },
+      "authors": {
+        "provider": "openalex",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      },
+      "year": {
+        "provider": "openalex",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      },
+      "venue": {
+        "provider": "openalex",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      },
+      "doi": {
+        "provider": "openalex",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      },
+      "source_url": {
+        "provider": "openalex",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      },
+      "pdf_url": {
+        "provider": "openalex",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      },
+      "arxiv_id": {
+        "provider": "arxiv",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      },
+      "abstract": {
+        "provider": "arxiv",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      }
+    },
+    "selected_identity_evidence": [
+      {
+        "kind": "doi",
+        "value": "10.48550/arxiv.2510.08316",
+        "trust": "strong",
+        "source": "metadata"
+      },
+      {
+        "kind": "arxiv_id",
+        "value": "2510.08316",
+        "trust": "strong",
+        "source": "metadata"
+      },
+      {
+        "kind": "title",
+        "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+        "trust": "metadata",
+        "source": "metadata"
+      },
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2510.08316",
+        "trust": "source_manifestation",
+        "source": "metadata"
+      },
+      {
+        "kind": "source_url",
+        "value": "http://arxiv.org/abs/2510.08316",
+        "trust": "source_manifestation",
+        "source": "metadata"
+      }
+    ],
+    "equivalence_decision": {
+      "status": "equivalent",
+      "reason": "minor_title_variation_only",
+      "location_binding": "source_manifestation",
+      "evidence": [
+        {
+          "kind": "title_similarity",
+          "status": "match",
+          "score": 1.0,
+          "source_value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+          "work_value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      ]
+    },
+    "warnings": [],
+    "repair_trace_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_identity_repair_trace.json",
+    "provenance": {
+      "resolve_artifact_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_resolve.json",
+      "metadata_artifact_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_metadata.json"
+    }
+  },
+  "metadata": {
+    "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+    "translated_title": "",
+    "authors": [
+      "Yu Huang",
+      "Zelin Peng",
+      "Changsong Wen",
+      "Xiaokang Yang",
+      "Weifeng Shen"
+    ],
+    "affiliations": [],
+    "year": "2025",
+    "venue": "arXiv (Cornell University)",
+    "doi": "10.48550/arxiv.2510.08316",
+    "source_url": "http://arxiv.org/abs/2510.08316",
+    "abstract": "Affordance segmentation aims to decompose 3D objects into parts that serve distinct functional roles, enabling models to reason about object interactions rather than mere recognition. Existing methods, mostly following the paradigm of 3D semantic segmentation or prompt-based frameworks, struggle when geometric cues are weak or ambiguous, as sparse point clouds provide limited functional information. To overcome this limitation, we leverage the rich semantic knowledge embedded in large-scale 2D Vision Foundation Models (VFMs) to guide 3D representation learning through a cross-modal alignment mechanism. Specifically, we propose Cross-Modal Affinity Transfer (CMAT), a pretraining strategy that compels the 3D encoder to align with the semantic structures induced by lifted 2D features. CMAT is driven by a core affinity alignment objective, supported by two auxiliary losses, geometric reconstruction and feature diversity, which together encourage structured and discriminative feature learning. Built upon the CMAT-pretrained backbone, we employ a lightweight affordance segmentor that injects text or visual prompts into the learned 3D space through an efficient cross-attention interface, enabling dense and prompt-aware affordance prediction while preserving the semantic organization established during pretraining. Extensive experiments demonstrate consistent improvements over previous state-of-the-art methods in both accuracy and efficiency.",
+    "arxiv_id": "2510.08316",
+    "zotero_key": "",
+    "metadata_sources": [
+      "title_query",
+      "openalex",
+      "arxiv"
+    ],
+    "identity_confidence": "high",
+    "identity_confidence_reasons": [
+      "title_query_unmatched",
+      "doi_present",
+      "arxiv_id_present"
+    ]
+  },
+  "evidence_quality": "medium",
+  "coverage": {
+    "language_hint": "en",
+    "section_extraction_coverage": {
+      "coverage_status": "good",
+      "recognized_sections": [
+        "preamble",
+        "abstract",
+        "introduction",
+        "method",
+        "experiment",
+        "data",
+        "conclusion",
+        "references"
+      ],
+      "core_sections_found": [
+        "introduction",
+        "method",
+        "experiment"
+      ],
+      "missing_core_sections": [],
+      "section_text_chars": {
+        "preamble": 1081,
+        "abstract": 1580,
+        "introduction": 7849,
+        "method": 15710,
+        "experiment": 1477,
+        "data": 2704,
+        "conclusion": 987,
+        "references": 12483
+      },
+      "fallback_sections": []
+    },
+    "pdf_coverage": {
+      "total_pages": 11,
+      "text_max_pages": null,
+      "text_pages_extracted": 11,
+      "text_pages_scanned": 11,
+      "text_truncated": false,
+      "truncated_due_to_page_limit": false,
+      "appendix_detected": false,
+      "appendix_start_page": null,
+      "references_start_page": 9,
+      "section_stop_reason": "",
+      "section_stop_page": null
+    },
+    "source_coverage": {
+      "total_pages": 11,
+      "text_max_pages": null,
+      "text_pages_extracted": 11,
+      "text_pages_scanned": 11,
+      "text_truncated": false,
+      "truncated_due_to_page_limit": false,
+      "appendix_detected": false,
+      "appendix_start_page": null,
+      "references_start_page": 9
+    },
+    "source_manifest": {
+      "raw_sections_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_raw_sections.jsonl",
+      "full_text_md_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_full_text.md",
+      "section_count": 12,
+      "page_count": 11,
+      "text_hash_sha256": "c0181767e9421bfbf19fec3bfd3340f5985676ad373eeb4c0e1e8aa56a9a084d"
+    },
+    "appendix_evidence_counts": {
+      "ablation": 0,
+      "implementation_details": 0,
+      "dataset_details": 0,
+      "extra_results": 0,
+      "qualitative_examples": 0
+    },
+    "extraction_failures": [],
+    "asset_coverage": {
+      "total_pages": 11,
+      "asset_max_pages": 40,
+      "asset_pages_scanned": 11,
+      "truncated_due_to_asset_page_limit": false
+    },
+    "figure_quality_summary": {
+      "usable": 7,
+      "review": 0,
+      "reject": 1,
+      "unknown": 0
+    },
+    "truncation_warnings": [],
+    "identity_confidence": "high",
+    "identity_confidence_reasons": [
+      "title_query_unmatched",
+      "doi_present",
+      "arxiv_id_present"
+    ]
+  },
+  "source_manifest": {
+    "paper_id": "doi:10.48550/arxiv.2510.08316",
+    "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+    "source_kind": "pdf_text",
+    "raw_sections_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_raw_sections.jsonl",
+    "full_text_md_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_full_text.md",
+    "pdf": {
+      "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\pdfs\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge.pdf",
+      "total_pages": 11,
+      "text_pages_extracted": 11,
+      "text_max_pages": null,
+      "text_truncated": false
+    },
+    "coverage": {
+      "total_pages": 11,
+      "text_max_pages": null,
+      "text_pages_extracted": 11,
+      "text_pages_scanned": 11,
+      "text_truncated": false,
+      "truncated_due_to_page_limit": false,
+      "appendix_detected": false,
+      "appendix_start_page": null,
+      "references_start_page": 9
+    }
+  },
+  "source_index": {
+    "raw_sections_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_raw_sections.jsonl",
+    "full_text_md_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_full_text.md",
+    "sections": [
+      {
+        "section_id": "sec:preamble",
+        "kind": "preamble",
+        "title": "preamble",
+        "page_start": 1,
+        "page_end": 1,
+        "char_count": 1081,
+        "text_hash_sha256": "6a5882cd0670937796ef68fa7ca082347fff798c401e9f25ee807b7eef861c93"
+      },
+      {
+        "section_id": "sec:abstract",
+        "kind": "abstract",
+        "title": "Abstract",
+        "page_start": 1,
+        "page_end": 1,
+        "char_count": 1580,
+        "text_hash_sha256": "d9363da3f97ff70edf727400a35b86a09e1d8c36d0667d0229bef7d57716359f"
+      },
+      {
+        "section_id": "sec:introduction",
+        "kind": "introduction",
+        "title": "1. Introduction",
+        "page_start": 2,
+        "page_end": 2,
+        "char_count": 5165,
+        "text_hash_sha256": "04cd609f4693610dac3dc45b8a4407d582bedcc4c0c73c1c4aeec6418c657e23"
+      },
+      {
+        "section_id": "sec:related-work",
+        "kind": "introduction",
+        "title": "2. Related Work",
+        "page_start": 2,
+        "page_end": 3,
+        "char_count": 2683,
+        "text_hash_sha256": "ad3271d7a9eddd2945c1c9de60beb1dba45ef76a724b6b0cf17e2d6029615f7f"
+      },
+      {
+        "section_id": "sec:methodology",
+        "kind": "method",
+        "title": "3. Methodology",
+        "page_start": 3,
+        "page_end": 5,
+        "char_count": 7798,
+        "text_hash_sha256": "692e2fa74d33f10efd7ae40800ab7904c7d2a31f3b5493bea4214e39cde9917a"
+      },
+      {
+        "section_id": "sec:experiments",
+        "kind": "experiment",
+        "title": "4. Experiments",
+        "page_start": 5,
+        "page_end": 6,
+        "char_count": 1477,
+        "text_hash_sha256": "b961b342b886db7a7291212d535f5ed420b5f3c51b190dfe2bb9f07ffa6585fc"
+      },
+      {
+        "section_id": "sec:datasets",
+        "kind": "data",
+        "title": "Datasets.",
+        "page_start": 6,
+        "page_end": 7,
+        "char_count": 2704,
+        "text_hash_sha256": "b9e7a24f82f60a093514a57703b5f63df12fdfcd4e32f7a6eb005fc7b5900a25"
+      },
+      {
+        "section_id": "sec:method",
+        "kind": "method",
+        "title": "Method",
+        "page_start": 7,
+        "page_end": 7,
+        "char_count": 1238,
+        "text_hash_sha256": "1af67f08065a11f10fdfe39d9a31aa8bb4983d5dac77ff765859996309b0f18f"
+      },
+      {
+        "section_id": "sec:method-2",
+        "kind": "method",
+        "title": "Method",
+        "page_start": 7,
+        "page_end": 8,
+        "char_count": 3805,
+        "text_hash_sha256": "b6870fdd1ba31135ba56bae9d8f7ed9a47359dd0d02846cfee4c901d75785e03"
+      },
+      {
+        "section_id": "sec:model",
+        "kind": "method",
+        "title": "Model",
+        "page_start": 8,
+        "page_end": 8,
+        "char_count": 2866,
+        "text_hash_sha256": "9ec4ce54aaa9cd40c19493dd2cccfcd0a549b254d87dbdff9adf87901f7a1950"
+      },
+      {
+        "section_id": "sec:conclusion",
+        "kind": "conclusion",
+        "title": "5. Conclusion",
+        "page_start": 8,
+        "page_end": 8,
+        "char_count": 987,
+        "text_hash_sha256": "d83404064b23a01f29d6fe9524751db4045d07cea054940b8a93f9761a818a8e"
+      },
+      {
+        "section_id": "sec:references",
+        "kind": "references",
+        "title": "References",
+        "page_start": 9,
+        "page_end": 11,
+        "char_count": 12483,
+        "text_hash_sha256": "20b7b1202926f3ea7c848dcc0f3c3e1634c45c02cdfe54f83ebbca8d1864ff16"
+      }
+    ],
+    "pages": [
+      {
+        "page": 1,
+        "char_count": 2671,
+        "section_ids": [
+          "sec:preamble",
+          "sec:abstract"
+        ]
+      },
+      {
+        "page": 2,
+        "char_count": 5897,
+        "section_ids": [
+          "sec:introduction",
+          "sec:related-work"
+        ]
+      },
+      {
+        "page": 3,
+        "char_count": 5194,
+        "section_ids": [
+          "sec:related-work",
+          "sec:methodology"
+        ]
+      },
+      {
+        "page": 4,
+        "char_count": 2568,
+        "section_ids": [
+          "sec:methodology"
+        ]
+      },
+      {
+        "page": 5,
+        "char_count": 3298,
+        "section_ids": [
+          "sec:methodology",
+          "sec:experiments"
+        ]
+      },
+      {
+        "page": 6,
+        "char_count": 2649,
+        "section_ids": [
+          "sec:experiments",
+          "sec:datasets"
+        ]
+      },
+      {
+        "page": 7,
+        "char_count": 4437,
+        "section_ids": [
+          "sec:datasets",
+          "sec:method",
+          "sec:method-2"
+        ]
+      },
+      {
+        "page": 8,
+        "char_count": 4939,
+        "section_ids": [
+          "sec:method-2",
+          "sec:model",
+          "sec:conclusion"
+        ]
+      },
+      {
+        "page": 9,
+        "char_count": 5723,
+        "section_ids": [
+          "sec:references"
+        ]
+      },
+      {
+        "page": 10,
+        "char_count": 5972,
+        "section_ids": [
+          "sec:references"
+        ]
+      },
+      {
+        "page": 11,
+        "char_count": 801,
+        "section_ids": [
+          "sec:references"
+        ]
+      }
+    ],
+    "captions": {
+      "figures": [
+        {
+          "id": "Figure 1",
+          "caption": "Qualitative comparison of 3D feature representations. We visualize learned features across different objects to examine how",
+          "page": 1,
+          "pages": [
+            1
+          ],
+          "section_id": "sec:preamble"
+        },
+        {
+          "id": "Figure 2",
+          "caption": "Overview of our three-stage framework for prompt-guided 3D affordance segmentation. Stage 0 (2D Semantic Knowledge",
+          "page": 4,
+          "pages": [
+            4
+          ],
+          "section_id": "sec:methodology"
+        },
+        {
+          "id": "Figure 3",
+          "caption": "Architecture of the Lightweight Affordance Segmentor. This module fuses geometric patch tokens from our pretrained 3D",
+          "page": 5,
+          "pages": [
+            5
+          ],
+          "section_id": "sec:methodology"
+        },
+        {
+          "id": "Figure 4",
+          "caption": "Qualitative comparison on challenging cases from the PIADv2 [37] (visual prompt) and LASO [15] (text prompt) datasets. These",
+          "page": 6,
+          "pages": [
+            6
+          ],
+          "section_id": "sec:experiments"
+        },
+        {
+          "id": "Figure 4",
+          "caption": "visualizes qualitative comparisons on PIADv2 and",
+          "page": 8,
+          "pages": [
+            8
+          ],
+          "section_id": "sec:method-2"
+        }
+      ],
+      "tables": [
+        {
+          "id": "Table 1",
+          "caption": "Quantitative comparison with state-of-the-art methods on the PIAD and PIADv2 datasets. We report results on both Seen",
+          "page": 7,
+          "pages": [
+            7
+          ],
+          "section_id": "sec:datasets"
+        },
+        {
+          "id": "Table 2",
+          "caption": "The overall results of all comparative methods on the",
+          "page": 7,
+          "pages": [
+            7
+          ],
+          "section_id": "sec:datasets"
+        },
+        {
+          "id": "Table 3",
+          "caption": "Comparison of model efficiency. aIoU is evaluated on the",
+          "page": 8,
+          "pages": [
+            8
+          ],
+          "section_id": "sec:method-2"
+        },
+        {
+          "id": "Table 4",
+          "caption": "Ablation studies on the PIADv2 Seen split. We analyze",
+          "page": 8,
+          "pages": [
+            8
+          ],
+          "section_id": "sec:method-2"
+        }
+      ]
+    },
+    "math_index": [
+      {
+        "text": "Given an input 3D point cloud P = {pi ∈R3}N",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "i=1 with N",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "conditioned affordance map M ∈RN. The overall process",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "obtain per-point 2D semantic descriptors, F 2D = {f 2D",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "i=1, which serve as the foundational supervision sig-",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "Each 3D model is represented as a point cloud P =",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "pi ∈R3N",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "i=1. We render V RGB views under uniformly dis-",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "F 2D = {f 2D",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "∈Rd2D}N",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "i=1.",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "PS = {Pj}m",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "j=1. For each patch, we obtain patch-level 2D",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "pi∈Pj",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "pi∈Pj",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "jk =",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "is the total number of patches, and the indices j, k ∈",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "ℓaff =",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "j=1",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "k=1",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "ℓpretrain = λaffℓaff + λrecℓrec + λdivℓdiv.",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "TP = Proj3D(F 3D) + Epoint,",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "Ttext = Projtext(Ftext) + Etext,",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "Timg = Projimg(Fimg) + Eimg.",
+        "section_id": "sec:methodology",
+        "page_start": 3,
+        "page_end": 5
+      },
+      {
+        "text": "we render V = 12 RGB views at a resolution of 224x224.",
+        "section_id": "sec:datasets",
+        "page_start": 6,
+        "page_end": 7
+      },
+      {
+        "text": "jective are set to λrec = 1.0, λaff = 0.1, and λdiv = 0.2.",
+        "section_id": "sec:datasets",
+        "page_start": 6,
+        "page_end": 7
+      },
+      {
+        "text": "fine-tuning. The affordance segmentor is built with L = 6",
+        "section_id": "sec:method-2",
+        "page_start": 7,
+        "page_end": 8
+      },
+      {
+        "text": "for the segmentation loss are λfocal = 1.0 and λdice = 1.0.",
+        "section_id": "sec:method-2",
+        "page_start": 7,
+        "page_end": 8
+      }
+    ],
+    "appendix_index": {
+      "appendix_detected": false,
+      "start_page": null,
+      "sections": [],
+      "figure_captions": [],
+      "table_captions": []
+    },
+    "language_hint": "en",
+    "text_hash_sha256": "c0181767e9421bfbf19fec3bfd3340f5985676ad373eeb4c0e1e8aa56a9a084d"
+  },
+  "references": {
+    "candidates": []
+  },
+  "figure_plan": {
+    "paper_id": "doi:10.48550/arxiv.2510.08316",
+    "figures": [
+      {
+        "id": "Figure 2",
+        "caption": "Overview of our three-stage framework for prompt-guided 3D affordance segmentation. Stage 0 (2D Semantic Knowledge",
+        "kind": "method_overview",
+        "section": "机制流程",
+        "reason": "这张图概括了整体方法或系统流程；如果匹配置信度足够高，最适合放在 `### 机制流程` 帮助快速建立执行链理解。",
+        "priority": 1,
+        "anchor_text": "机制流程",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_004_fig_figure_2.png",
+          "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_004_fig_figure_2.png",
+          "width": 670,
+          "height": 399,
+          "size_bytes": 123196,
+          "label": "Figure 2",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.310946,
+            "visual_rect_count": 1,
+            "visual_body_ratio": 0.957821,
+            "paragraph_text_chars": 0,
+            "table_body_rows": 0,
+            "caption_text_chars": 654,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 4,
+            "score": 8,
+            "matched_terms": [
+              "figure 2",
+              "three-stage",
+              "framework",
+              "prompt-guided",
+              "affordance",
+              "segmentation"
+            ],
+            "snippet": "Figure 2. Overview of our three-stage framework for prompt-guided 3D affordance segmentation. Stag",
+            "images": [
+              {
+                "filename": "page_004_img_01.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_004_img_01.png",
+                "width": 3532,
+                "height": 2081,
+                "size_bytes": 1436802
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_004_fig_figure_2.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_004_fig_figure_2.png",
+                "width": 670,
+                "height": 399,
+                "size_bytes": 123196,
+                "label": "Figure 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.310946,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.957821,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 654,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "framework",
+              "affordance",
+              "segmentation"
+            ],
+            "snippet": "isting methods, mostly following the paradigm of 3D semantic segmentation or prompt-based frameworks, struggle when geometric cues are weak or ambiguous, as sparse point clouds provide limi",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_img_01.jpeg",
+                "width": 4429,
+                "height": 2233,
+                "size_bytes": 1441494
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_fig_figure_1.png",
+                "width": 734,
+                "height": 358,
+                "size_bytes": 197100,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.305402,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.83454,
+                  "paragraph_text_chars": 97,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 778,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 5,
+            "score": 3,
+            "matched_terms": [
+              "three-stage",
+              "framework",
+              "prompt-guided",
+              "affordance",
+              "segmentation"
+            ],
+            "snippet": "In this section, we conduct a series of experiments to thor- oughly evaluate our proposed three-stage framework. We first introduce the experimental setup, including the datasets and evaluati",
+            "images": [
+              {
+                "filename": "page_005_img_01.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_005_img_01.png",
+                "width": 3343,
+                "height": 1367,
+                "size_bytes": 366837
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_005_fig_figure_3.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_005_fig_figure_3.png",
+                "width": 670,
+                "height": 280,
+                "size_bytes": 50774,
+                "label": "Figure 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.218363,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.946681,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 495,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Figure 3",
+        "caption": "Architecture of the Lightweight Affordance Segmentor. This module fuses geometric patch tokens from our pretrained 3D",
+        "kind": "method_overview",
+        "section": "机制流程",
+        "reason": "这张图概括了整体方法或系统流程；如果匹配置信度足够高，最适合放在 `### 机制流程` 帮助快速建立执行链理解。",
+        "priority": 1,
+        "anchor_text": "机制流程",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_005_fig_figure_3.png",
+          "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_005_fig_figure_3.png",
+          "width": 670,
+          "height": 280,
+          "size_bytes": 50774,
+          "label": "Figure 3",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.218363,
+            "visual_rect_count": 1,
+            "visual_body_ratio": 0.946681,
+            "paragraph_text_chars": 0,
+            "table_body_rows": 0,
+            "caption_text_chars": 495,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 5,
+            "score": 8,
+            "matched_terms": [
+              "figure 3",
+              "architecture",
+              "lightweight",
+              "affordance",
+              "segmentor",
+              "module"
+            ],
+            "snippet": "Figure 3. Architecture of the Lightweight Affordance Segmentor. This module fuses geometric patch",
+            "images": [
+              {
+                "filename": "page_005_img_01.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_005_img_01.png",
+                "width": 3343,
+                "height": 1367,
+                "size_bytes": 366837
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_005_fig_figure_3.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_005_fig_figure_3.png",
+                "width": 670,
+                "height": 280,
+                "size_bytes": 50774,
+                "label": "Figure 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.218363,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.946681,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 495,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "lightweight",
+              "affordance",
+              "segmentor"
+            ],
+            "snippet": "and discriminative feature learning. Built upon the CMAT-pretrained backbone, we employ a lightweight affordance segmentor that injects text or vi- sual prompts into the learned 3D space thro",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_img_01.jpeg",
+                "width": 4429,
+                "height": 2233,
+                "size_bytes": 1441494
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_fig_figure_1.png",
+                "width": 734,
+                "height": 358,
+                "size_bytes": 197100,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.305402,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.83454,
+                  "paragraph_text_chars": 97,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 778,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 4,
+            "score": 3,
+            "matched_terms": [
+              "lightweight",
+              "affordance",
+              "segmentor"
+            ],
+            "snippet": "ix of 3D features A3D with the corresponding 2D affinity matrix A2D. Stage 2 utilizes the Lightweight Affordance Segmentor (LAS) to fine-tune Φ3D with multi-modal prompts (textual or visual)",
+            "images": [
+              {
+                "filename": "page_004_img_01.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_004_img_01.png",
+                "width": 3532,
+                "height": 2081,
+                "size_bytes": 1436802
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_004_fig_figure_2.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_004_fig_figure_2.png",
+                "width": 670,
+                "height": 399,
+                "size_bytes": 123196,
+                "label": "Figure 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.310946,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.957821,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 654,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Figure 1",
+        "caption": "Qualitative comparison of 3D feature representations. We visualize learned features across different objects to examine how",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_001_fig_figure_1.png",
+          "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_fig_figure_1.png",
+          "width": 734,
+          "height": 358,
+          "size_bytes": 197100,
+          "label": "Figure 1",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.305402,
+            "visual_rect_count": 1,
+            "visual_body_ratio": 0.83454,
+            "paragraph_text_chars": 97,
+            "table_body_rows": 0,
+            "caption_text_chars": 778,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 1,
+            "score": 8,
+            "matched_terms": [
+              "figure 1",
+              "qualitative",
+              "comparison",
+              "feature",
+              "representations",
+              "visualize"
+            ],
+            "snippet": "hai Jiaotong University {yellowfish, zelin.peng, changsong, xkyang, wei.shen}@sjtu.edu.cn Figure 1. Qualitative comparison of 3D feature representations. We visualize learned features acro",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_img_01.jpeg",
+                "width": 4429,
+                "height": 2233,
+                "size_bytes": 1441494
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_fig_figure_1.png",
+                "width": 734,
+                "height": 358,
+                "size_bytes": 197100,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.305402,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.83454,
+                  "paragraph_text_chars": 97,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 778,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 5,
+            "score": 3,
+            "matched_terms": [
+              "qualitative",
+              "comparison",
+              "feature"
+            ],
+            "snippet": "udies to analyze the contri- bution of each key component in our framework and show- case qualitative results to provide intuitive insights. It is important to note that our framework is inhe",
+            "images": [
+              {
+                "filename": "page_005_img_01.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_005_img_01.png",
+                "width": 3343,
+                "height": 1367,
+                "size_bytes": 366837
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_005_fig_figure_3.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_005_fig_figure_3.png",
+                "width": 670,
+                "height": 280,
+                "size_bytes": 50774,
+                "label": "Figure 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.218363,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.946681,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 495,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 6,
+            "score": 3,
+            "matched_terms": [
+              "qualitative",
+              "comparison",
+              "feature"
+            ],
+            "snippet": "Figure 4. Qualitative comparison on challenging cases from the PIADv2 [37] (visual prompt) and LASO [15] (text",
+            "images": [
+              {
+                "filename": "page_006_img_01.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_006_img_01.png",
+                "width": 3300,
+                "height": 2030,
+                "size_bytes": 3215071
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_figure_4.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_006_fig_figure_4.png",
+                "width": 670,
+                "height": 416,
+                "size_bytes": 173363,
+                "label": "Figure 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.324296,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.958903,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 271,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Figure 4",
+        "caption": "Qualitative comparison on challenging cases from the PIADv2 [37] (visual prompt) and LASO [15] (text prompt) datasets. These",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_006_fig_figure_4.png",
+          "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_006_fig_figure_4.png",
+          "width": 670,
+          "height": 416,
+          "size_bytes": 173363,
+          "label": "Figure 4",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.324296,
+            "visual_rect_count": 1,
+            "visual_body_ratio": 0.958903,
+            "paragraph_text_chars": 0,
+            "table_body_rows": 0,
+            "caption_text_chars": 271,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 6,
+            "score": 8,
+            "matched_terms": [
+              "figure 4",
+              "qualitative",
+              "comparison",
+              "challenging",
+              "cases",
+              "piadv"
+            ],
+            "snippet": "Figure 4. Qualitative comparison on challenging cases from the PIADv2 [37] (visual prompt) and LAS",
+            "images": [
+              {
+                "filename": "page_006_img_01.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_006_img_01.png",
+                "width": 3300,
+                "height": 2030,
+                "size_bytes": 3215071
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_figure_4.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_006_fig_figure_4.png",
+                "width": 670,
+                "height": 416,
+                "size_bytes": 173363,
+                "label": "Figure 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.324296,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.958903,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 271,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 8,
+            "score": 8,
+            "matched_terms": [
+              "figure 4",
+              "qualitative",
+              "comparison",
+              "challenging",
+              "piadv"
+            ],
+            "snippet": "oices (5) PointNet++ Backbone 37.91 (6) PointMAE Backbone 38.16 4.5. Qualitative Analysis Figure 4 visualizes qualitative comparisons on PIADv2 and LASO, focusing on challenging, fine-grai",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_008_fig_table_4.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_008_fig_table_4.png",
+                "width": 331,
+                "height": 204,
+                "size_bytes": 22896,
+                "label": "Table 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.078683,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 301,
+                  "table_body_rows": 10,
+                  "caption_text_chars": 123,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_008_fig_table_3.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_008_fig_table_3.png",
+                "width": 305,
+                "height": 135,
+                "size_bytes": 10423,
+                "label": "Table 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.048035,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 129,
+                  "table_body_rows": 6,
+                  "caption_text_chars": 123,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 2,
+            "matched_terms": [
+              "qualitative",
+              "comparison"
+            ],
+            "snippet": "ng University {yellowfish, zelin.peng, changsong, xkyang, wei.shen}@sjtu.edu.cn Figure 1. Qualitative comparison of 3D feature representations. We visualize learned features across different",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_img_01.jpeg",
+                "width": 4429,
+                "height": 2233,
+                "size_bytes": 1441494
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_fig_figure_1.png",
+                "width": 734,
+                "height": 358,
+                "size_bytes": 197100,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.305402,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.83454,
+                  "paragraph_text_chars": 97,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 778,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Table 1",
+        "caption": "Quantitative comparison with state-of-the-art methods on the PIAD and PIADv2 datasets. We report results on both Seen",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_007_fig_table_1.png",
+          "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_007_fig_table_1.png",
+          "width": 816,
+          "height": 95,
+          "size_bytes": 535,
+          "label": "Table 1",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "reject",
+            "quality_reason_codes": [
+              "table_body_missing",
+              "caption_only_suspected"
+            ],
+            "page_coverage_ratio": 0.090643,
+            "visual_rect_count": 0,
+            "visual_body_ratio": 0.0,
+            "paragraph_text_chars": 0,
+            "table_body_rows": 0,
+            "caption_text_chars": 324,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "reject_visual_quality"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 7,
+            "score": 8,
+            "matched_terms": [
+              "table 1",
+              "quantitative",
+              "comparison",
+              "state-of-the-art",
+              "methods",
+              "piad"
+            ],
+            "snippet": "Table 1. Quantitative comparison with state-of-the-art methods on the PIAD and PIADv2 datasets. W",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_007_fig_table_1.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_007_fig_table_1.png",
+                "width": 816,
+                "height": 95,
+                "size_bytes": 535,
+                "label": "Table 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "reject",
+                  "quality_reason_codes": [
+                    "table_body_missing",
+                    "caption_only_suspected"
+                  ],
+                  "page_coverage_ratio": 0.090643,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 324,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "reject_visual_quality"
+              },
+              {
+                "filename": "page_007_fig_table_2.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_007_fig_table_2.png",
+                "width": 693,
+                "height": 195,
+                "size_bytes": 33194,
+                "label": "Table 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.15725,
+                  "visual_rect_count": 2,
+                  "visual_body_ratio": 0.107271,
+                  "paragraph_text_chars": 999,
+                  "table_body_rows": 11,
+                  "caption_text_chars": 227,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "comparison",
+              "state-of-the-art",
+              "methods"
+            ],
+            "snippet": "y {yellowfish, zelin.peng, changsong, xkyang, wei.shen}@sjtu.edu.cn Figure 1. Qualitative comparison of 3D feature representations. We visualize learned features across different objects to",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_img_01.jpeg",
+                "width": 4429,
+                "height": 2233,
+                "size_bytes": 1441494
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_fig_figure_1.png",
+                "width": 734,
+                "height": 358,
+                "size_bytes": 197100,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.305402,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.83454,
+                  "paragraph_text_chars": 97,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 778,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 5,
+            "score": 3,
+            "matched_terms": [
+              "quantitative",
+              "comparison",
+              "state-of-the-art",
+              "methods"
+            ],
+            "snippet": "metrics. We then detail our implementation for reproducibility. Subsequently, we present quantitative comparisons against state-of-the-art methods on both visual and text-prompted affordance",
+            "images": [
+              {
+                "filename": "page_005_img_01.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_005_img_01.png",
+                "width": 3343,
+                "height": 1367,
+                "size_bytes": 366837
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_005_fig_figure_3.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_005_fig_figure_3.png",
+                "width": 670,
+                "height": 280,
+                "size_bytes": 50774,
+                "label": "Figure 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.218363,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.946681,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 495,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Table 2",
+        "caption": "The overall results of all comparative methods on the",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_007_fig_table_2.png",
+          "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_007_fig_table_2.png",
+          "width": 693,
+          "height": 195,
+          "size_bytes": 33194,
+          "label": "Table 2",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.15725,
+            "visual_rect_count": 2,
+            "visual_body_ratio": 0.107271,
+            "paragraph_text_chars": 999,
+            "table_body_rows": 11,
+            "caption_text_chars": 227,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 7,
+            "score": 8,
+            "matched_terms": [
+              "table 2",
+              "overall",
+              "comparative",
+              "methods"
+            ],
+            "snippet": "8.0 21.4 0.725 0.099 74.8 8.4 0.426 0.125 93.01 44.88 0.783 0.071 83.95 27.40 0.593 0.127 Table 2. The overall results of all comparative methods on the LASO dataset. Seen and Unseen are",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_007_fig_table_1.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_007_fig_table_1.png",
+                "width": 816,
+                "height": 95,
+                "size_bytes": 535,
+                "label": "Table 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "reject",
+                  "quality_reason_codes": [
+                    "table_body_missing",
+                    "caption_only_suspected"
+                  ],
+                  "page_coverage_ratio": 0.090643,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 324,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "reject_visual_quality"
+              },
+              {
+                "filename": "page_007_fig_table_2.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_007_fig_table_2.png",
+                "width": 693,
+                "height": 195,
+                "size_bytes": 33194,
+                "label": "Table 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.15725,
+                  "visual_rect_count": 2,
+                  "visual_body_ratio": 0.107271,
+                  "paragraph_text_chars": 999,
+                  "table_body_rows": 11,
+                  "caption_text_chars": 227,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 1,
+            "matched_terms": [
+              "methods"
+            ],
+            "snippet": "nabling models to reason about object interactions rather than mere recognition. Existing methods, mostly following the paradigm of 3D semantic segmentation or prompt-based frameworks, st",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_img_01.jpeg",
+                "width": 4429,
+                "height": 2233,
+                "size_bytes": 1441494
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_fig_figure_1.png",
+                "width": 734,
+                "height": 358,
+                "size_bytes": 197100,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.305402,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.83454,
+                  "paragraph_text_chars": 97,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 778,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 5,
+            "score": 1,
+            "matched_terms": [
+              "methods"
+            ],
+            "snippet": "producibility. Subsequently, we present quantitative comparisons against state-of-the-art methods on both visual and text-prompted affordance segmentation tasks. Finally, we perform exten",
+            "images": [
+              {
+                "filename": "page_005_img_01.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_005_img_01.png",
+                "width": 3343,
+                "height": 1367,
+                "size_bytes": 366837
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_005_fig_figure_3.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_005_fig_figure_3.png",
+                "width": 670,
+                "height": 280,
+                "size_bytes": 50774,
+                "label": "Figure 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.218363,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.946681,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 495,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Table 3",
+        "caption": "Comparison of model efficiency. aIoU is evaluated on the",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_008_fig_table_3.png",
+          "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_008_fig_table_3.png",
+          "width": 305,
+          "height": 135,
+          "size_bytes": 10423,
+          "label": "Table 3",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.048035,
+            "visual_rect_count": 0,
+            "visual_body_ratio": 0.0,
+            "paragraph_text_chars": 129,
+            "table_body_rows": 6,
+            "caption_text_chars": 123,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 8,
+            "score": 8,
+            "matched_terms": [
+              "table 3",
+              "comparison",
+              "model",
+              "efficiency",
+              "aiou",
+              "evaluated"
+            ],
+            "snippet": "ength of our frame- work lies in its efficiency–performance trade-off. As sum- marized in Table 3, our model maintains a modest foot- print of 300M parameters and 4–8 GB VRAM, compara- bl",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_008_fig_table_4.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_008_fig_table_4.png",
+                "width": 331,
+                "height": 204,
+                "size_bytes": 22896,
+                "label": "Table 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.078683,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 301,
+                  "table_body_rows": 10,
+                  "caption_text_chars": 123,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_008_fig_table_3.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_008_fig_table_3.png",
+                "width": 305,
+                "height": 135,
+                "size_bytes": 10423,
+                "label": "Table 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.048035,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 129,
+                  "table_body_rows": 6,
+                  "caption_text_chars": 123,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "comparison",
+              "model",
+              "efficiency"
+            ],
+            "snippet": "y {yellowfish, zelin.peng, changsong, xkyang, wei.shen}@sjtu.edu.cn Figure 1. Qualitative comparison of 3D feature representations. We visualize learned features across different objects to",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_img_01.jpeg",
+                "width": 4429,
+                "height": 2233,
+                "size_bytes": 1441494
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_fig_figure_1.png",
+                "width": 734,
+                "height": 358,
+                "size_bytes": 197100,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.305402,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.83454,
+                  "paragraph_text_chars": 97,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 778,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 6,
+            "score": 3,
+            "matched_terms": [
+              "comparison",
+              "model",
+              "aiou"
+            ],
+            "snippet": "Figure 4. Qualitative comparison on challenging cases from the PIADv2 [37] (visual prompt) and LASO [15] (text prompt) dat",
+            "images": [
+              {
+                "filename": "page_006_img_01.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_006_img_01.png",
+                "width": 3300,
+                "height": 2030,
+                "size_bytes": 3215071
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_figure_4.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_006_fig_figure_4.png",
+                "width": 670,
+                "height": 416,
+                "size_bytes": 173363,
+                "label": "Figure 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.324296,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.958903,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 271,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Table 4",
+        "caption": "Ablation studies on the PIADv2 Seen split. We analyze",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_008_fig_table_4.png",
+          "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_008_fig_table_4.png",
+          "width": 331,
+          "height": 204,
+          "size_bytes": 22896,
+          "label": "Table 4",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.078683,
+            "visual_rect_count": 0,
+            "visual_body_ratio": 0.0,
+            "paragraph_text_chars": 301,
+            "table_body_rows": 10,
+            "caption_text_chars": 123,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 8,
+            "score": 8,
+            "matched_terms": [
+              "table 4",
+              "ablation",
+              "studies",
+              "piadv",
+              "seen",
+              "split"
+            ],
+            "snippet": "ontribution, we perform detailed ablation studies on the PIADv2 Seen split, summarized in Table 4. We begin with the pretraining ob- jectives in Stage 1. A model trained with only the rec",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_008_fig_table_4.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_008_fig_table_4.png",
+                "width": 331,
+                "height": 204,
+                "size_bytes": 22896,
+                "label": "Table 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.078683,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 301,
+                  "table_body_rows": 10,
+                  "caption_text_chars": 123,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_008_fig_table_3.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_008_fig_table_3.png",
+                "width": 305,
+                "height": 135,
+                "size_bytes": 10423,
+                "label": "Table 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.048035,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 129,
+                  "table_body_rows": 6,
+                  "caption_text_chars": 123,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 6,
+            "score": 3,
+            "matched_terms": [
+              "piadv",
+              "seen",
+              "split"
+            ],
+            "snippet": "Figure 4. Qualitative comparison on challenging cases from the PIADv2 [37] (visual prompt) and LASO [15] (text prompt) datasets. These examples visually corro",
+            "images": [
+              {
+                "filename": "page_006_img_01.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_006_img_01.png",
+                "width": 3300,
+                "height": 2030,
+                "size_bytes": 3215071
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_figure_4.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_006_fig_figure_4.png",
+                "width": 670,
+                "height": 416,
+                "size_bytes": 173363,
+                "label": "Figure 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.324296,
+                  "visual_rect_count": 1,
+                  "visual_body_ratio": 0.958903,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 271,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 7,
+            "score": 3,
+            "matched_terms": [
+              "piadv",
+              "seen",
+              "split"
+            ],
+            "snippet": "Table 1. Quantitative comparison with state-of-the-art methods on the PIAD and PIADv2 datasets. We report results on both Seen and Unseen splits. The best and second-best res",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_007_fig_table_1.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_007_fig_table_1.png",
+                "width": 816,
+                "height": 95,
+                "size_bytes": 535,
+                "label": "Table 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "reject",
+                  "quality_reason_codes": [
+                    "table_body_missing",
+                    "caption_only_suspected"
+                  ],
+                  "page_coverage_ratio": 0.090643,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 324,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "reject_visual_quality"
+              },
+              {
+                "filename": "page_007_fig_table_2.png",
+                "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_007_fig_table_2.png",
+                "width": 693,
+                "height": 195,
+                "size_bytes": 33194,
+                "label": "Table 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.15725,
+                  "visual_rect_count": 2,
+                  "visual_body_ratio": 0.107271,
+                  "paragraph_text_chars": 999,
+                  "table_body_rows": 11,
+                  "caption_text_chars": 227,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      }
+    ]
+  },
+  "figure_table_manifest": {
+    "decisions_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_figure_table_decisions.json",
+    "decisions": [
+      {
+        "item_id": "figure:Figure 1",
+        "source_id": "Figure 1",
+        "kind": "figure",
+        "label": "Figure 1",
+        "caption": "Qualitative comparison of 3D feature representations. We visualize learned features across different objects to examine how",
+        "pages": [
+          1
+        ],
+        "section_id": "sec:preamble",
+        "decision": "review_pending",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "skip_reason": "",
+        "visual_quality_status": "usable_candidate",
+        "priority": 2,
+        "target_section": "关键结果",
+        "plan_kind": "main_result",
+        "source_image_filename": "page_001_fig_figure_1_review.png",
+        "relative_markdown_embed": "![Figure 1](images/page_001_fig_figure_1_review.png)",
+        "source_image_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_fig_figure_1_review.png",
+        "materialization_status": "pending",
+        "source_image_sha256": "0e9584dc494fd861fc049ca0fd9686d76bd072c699a2b17ed0d673ca48b2b5eb",
+        "review_evidence": {
+          "candidate_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_fig_figure_1_review.png",
+          "page_preview_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\page_previews\\page_001.png",
+          "source_pdf_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\pdfs\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge.pdf",
+          "source_page": 1,
+          "caption": "Qualitative comparison of 3D feature representations. We visualize learned features across different objects to examine how",
+          "bbox_pt": [
+            6.940000534057617,
+            171.42697143554688,
+            557.5011596679688,
+            440.2970886230469
+          ],
+          "normalized_bbox": [
+            0.01134,
+            0.216448,
+            0.91095,
+            0.555931
+          ],
+          "render_dpi": 300
+        },
+        "visual_review": {
+          "status": "pending",
+          "reviewed_asset_sha256": "",
+          "preserved_scientific_elements": [],
+          "omitted_scientific_elements": [],
+          "notes": "",
+          "failure_reason": "",
+          "repair_attempts": 0,
+          "revised_bbox": []
+        }
+      },
+      {
+        "item_id": "figure:Figure 2",
+        "source_id": "Figure 2",
+        "kind": "figure",
+        "label": "Figure 2",
+        "caption": "Overview of our three-stage framework for prompt-guided 3D affordance segmentation. Stage 0 (2D Semantic Knowledge",
+        "pages": [
+          4
+        ],
+        "section_id": "sec:methodology",
+        "decision": "review_pending",
+        "reason": "这张图概括了整体方法或系统流程；如果匹配置信度足够高，最适合放在 `### 机制流程` 帮助快速建立执行链理解。",
+        "skip_reason": "",
+        "visual_quality_status": "usable_candidate",
+        "priority": 1,
+        "target_section": "机制流程",
+        "plan_kind": "method_overview",
+        "source_image_filename": "page_004_fig_figure_2_review.png",
+        "relative_markdown_embed": "![Figure 2](images/page_004_fig_figure_2_review.png)",
+        "source_image_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_004_fig_figure_2_review.png",
+        "materialization_status": "pending",
+        "source_image_sha256": "afdf6242a038016a8a02934cf66a83c7c4c90b1beb9659c380f9b658d9851588",
+        "review_evidence": {
+          "candidate_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_004_fig_figure_2_review.png",
+          "page_preview_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\page_previews\\page_004.png",
+          "source_pdf_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\pdfs\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge.pdf",
+          "source_page": 4,
+          "caption": "Overview of our three-stage framework for prompt-guided 3D affordance segmentation. Stage 0 (2D Semantic Knowledge",
+          "bbox_pt": [
+            54.5,
+            68.00079345703125,
+            557.4912109375,
+            367.6419982910156
+          ],
+          "normalized_bbox": [
+            0.089052,
+            0.08586,
+            0.910933,
+            0.464194
+          ],
+          "render_dpi": 300
+        },
+        "visual_review": {
+          "status": "pending",
+          "reviewed_asset_sha256": "",
+          "preserved_scientific_elements": [],
+          "omitted_scientific_elements": [],
+          "notes": "",
+          "failure_reason": "",
+          "repair_attempts": 0,
+          "revised_bbox": []
+        }
+      },
+      {
+        "item_id": "figure:Figure 3",
+        "source_id": "Figure 3",
+        "kind": "figure",
+        "label": "Figure 3",
+        "caption": "Architecture of the Lightweight Affordance Segmentor. This module fuses geometric patch tokens from our pretrained 3D",
+        "pages": [
+          5
+        ],
+        "section_id": "sec:methodology",
+        "decision": "review_pending",
+        "reason": "这张图概括了整体方法或系统流程；如果匹配置信度足够高，最适合放在 `### 机制流程` 帮助快速建立执行链理解。",
+        "skip_reason": "",
+        "visual_quality_status": "usable_candidate",
+        "priority": 1,
+        "target_section": "机制流程",
+        "plan_kind": "method_overview",
+        "source_image_filename": "page_005_fig_figure_3_review.png",
+        "relative_markdown_embed": "![Figure 3](images/page_005_fig_figure_3_review.png)",
+        "source_image_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_005_fig_figure_3_review.png",
+        "materialization_status": "pending",
+        "source_image_sha256": "ed526daa9d178876c1ce4ec1ff1bbe538c7c3875c60291c48c1605a901801077",
+        "review_evidence": {
+          "candidate_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_005_fig_figure_3_review.png",
+          "page_preview_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\page_previews\\page_005.png",
+          "source_pdf_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\pdfs\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge.pdf",
+          "source_page": 5,
+          "caption": "Architecture of the Lightweight Affordance Segmentor. This module fuses geometric patch tokens from our pretrained 3D",
+          "bbox_pt": [
+            54.5,
+            67.99763488769531,
+            557.509521484375,
+            278.41400146484375
+          ],
+          "normalized_bbox": [
+            0.089052,
+            0.085856,
+            0.910963,
+            0.351533
+          ],
+          "render_dpi": 300
+        },
+        "visual_review": {
+          "status": "pending",
+          "reviewed_asset_sha256": "",
+          "preserved_scientific_elements": [],
+          "omitted_scientific_elements": [],
+          "notes": "",
+          "failure_reason": "",
+          "repair_attempts": 0,
+          "revised_bbox": []
+        }
+      },
+      {
+        "item_id": "figure:Figure 4",
+        "source_id": "Figure 4",
+        "kind": "figure",
+        "label": "Figure 4",
+        "caption": "Qualitative comparison on challenging cases from the PIADv2 [37] (visual prompt) and LASO [15] (text prompt) datasets. These",
+        "pages": [
+          6
+        ],
+        "section_id": "sec:experiments",
+        "decision": "review_pending",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "skip_reason": "",
+        "visual_quality_status": "usable_candidate",
+        "priority": 2,
+        "target_section": "关键结果",
+        "plan_kind": "main_result",
+        "source_image_filename": "page_006_fig_figure_4_review.png",
+        "relative_markdown_embed": "![Figure 4](images/page_006_fig_figure_4_review.png)",
+        "source_image_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_006_fig_figure_4_review.png",
+        "materialization_status": "pending",
+        "source_image_sha256": "b6f42d0132cdc258fc50927e74e8db302488b74b4dc24e01d53105c437a5aaee",
+        "review_evidence": {
+          "candidate_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_006_fig_figure_4_review.png",
+          "page_preview_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\page_previews\\page_006.png",
+          "source_pdf_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\pdfs\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge.pdf",
+          "source_page": 6,
+          "caption": "Qualitative comparison on challenging cases from the PIADv2 [37] (visual prompt) and LASO [15] (text prompt) datasets. These",
+          "bbox_pt": [
+            54.5,
+            67.99899291992188,
+            557.5,
+            380.4989929199219
+          ],
+          "normalized_bbox": [
+            0.089052,
+            0.085857,
+            0.910948,
+            0.480428
+          ],
+          "render_dpi": 300
+        },
+        "visual_review": {
+          "status": "pending",
+          "reviewed_asset_sha256": "",
+          "preserved_scientific_elements": [],
+          "omitted_scientific_elements": [],
+          "notes": "",
+          "failure_reason": "",
+          "repair_attempts": 0,
+          "revised_bbox": []
+        }
+      },
+      {
+        "item_id": "table:Table 1",
+        "source_id": "Table 1",
+        "kind": "table",
+        "label": "Table 1",
+        "caption": "Quantitative comparison with state-of-the-art methods on the PIAD and PIADv2 datasets. We report results on both Seen",
+        "pages": [
+          7
+        ],
+        "section_id": "sec:datasets",
+        "decision": "visual_defect",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "skip_reason": "visual_quality_gate_rejected_candidate",
+        "visual_quality_status": "reject_visual_quality",
+        "priority": 2,
+        "target_section": "关键结果",
+        "plan_kind": "main_result",
+        "source_image_filename": "page_007_fig_table_1.png",
+        "relative_markdown_embed": "![Table 1](images/page_007_fig_table_1.png)",
+        "source_image_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_007_fig_table_1.png"
+      },
+      {
+        "item_id": "table:Table 2",
+        "source_id": "Table 2",
+        "kind": "table",
+        "label": "Table 2",
+        "caption": "The overall results of all comparative methods on the",
+        "pages": [
+          7
+        ],
+        "section_id": "sec:datasets",
+        "decision": "review_pending",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "skip_reason": "",
+        "visual_quality_status": "usable_candidate",
+        "priority": 2,
+        "target_section": "关键结果",
+        "plan_kind": "main_result",
+        "source_image_filename": "page_007_fig_table_2_review.png",
+        "relative_markdown_embed": "![Table 2](images/page_007_fig_table_2_review.png)",
+        "source_image_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_007_fig_table_2_review.png",
+        "materialization_status": "pending",
+        "source_image_sha256": "b7009b1b24013f907263512cd61abc7a9edab23656f207ccdfb440ca94538e24",
+        "review_evidence": {
+          "candidate_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_007_fig_table_2_review.png",
+          "page_preview_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\page_previews\\page_007.png",
+          "source_pdf_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\pdfs\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge.pdf",
+          "source_page": 7,
+          "caption": "The overall results of all comparative methods on the",
+          "bbox_pt": [
+            52.5,
+            172.73495483398438,
+            572.7130126953125,
+            319.25140380859375
+          ],
+          "normalized_bbox": [
+            0.085784,
+            0.2181,
+            0.935806,
+            0.403095
+          ],
+          "render_dpi": 300
+        },
+        "visual_review": {
+          "status": "pending",
+          "reviewed_asset_sha256": "",
+          "preserved_scientific_elements": [],
+          "omitted_scientific_elements": [],
+          "notes": "",
+          "failure_reason": "",
+          "repair_attempts": 0,
+          "revised_bbox": []
+        }
+      },
+      {
+        "item_id": "table:Table 3",
+        "source_id": "Table 3",
+        "kind": "table",
+        "label": "Table 3",
+        "caption": "Comparison of model efficiency. aIoU is evaluated on the",
+        "pages": [
+          8
+        ],
+        "section_id": "sec:method-2",
+        "decision": "review_pending",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "skip_reason": "",
+        "visual_quality_status": "usable_candidate",
+        "priority": 2,
+        "target_section": "关键结果",
+        "plan_kind": "main_result",
+        "source_image_filename": "page_008_fig_table_3_review.png",
+        "relative_markdown_embed": "![Table 3](images/page_008_fig_table_3_review.png)",
+        "source_image_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_008_fig_table_3_review.png",
+        "materialization_status": "pending",
+        "source_image_sha256": "5aed553923d5aa7c49479957bc82fa6443131f1afa6d861330539d2149eb423f",
+        "review_evidence": {
+          "candidate_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_008_fig_table_3_review.png",
+          "page_preview_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\page_previews\\page_008.png",
+          "source_pdf_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\pdfs\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge.pdf",
+          "source_page": 8,
+          "caption": "Comparison of model efficiency. aIoU is evaluated on the",
+          "bbox_pt": [
+            52.5,
+            336.9519958496094,
+            281.5216064453125,
+            438.6137390136719
+          ],
+          "normalized_bbox": [
+            0.085784,
+            0.425444,
+            0.460003,
+            0.553805
+          ],
+          "render_dpi": 300
+        },
+        "visual_review": {
+          "status": "pending",
+          "reviewed_asset_sha256": "",
+          "preserved_scientific_elements": [],
+          "omitted_scientific_elements": [],
+          "notes": "",
+          "failure_reason": "",
+          "repair_attempts": 0,
+          "revised_bbox": []
+        }
+      },
+      {
+        "item_id": "table:Table 4",
+        "source_id": "Table 4",
+        "kind": "table",
+        "label": "Table 4",
+        "caption": "Ablation studies on the PIADv2 Seen split. We analyze",
+        "pages": [
+          8
+        ],
+        "section_id": "sec:method-2",
+        "decision": "review_pending",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "skip_reason": "",
+        "visual_quality_status": "usable_candidate",
+        "priority": 2,
+        "target_section": "关键结果",
+        "plan_kind": "main_result",
+        "source_image_filename": "page_008_fig_table_4_review.png",
+        "relative_markdown_embed": "![Table 4](images/page_008_fig_table_4_review.png)",
+        "source_image_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_008_fig_table_4_review.png",
+        "materialization_status": "pending",
+        "source_image_sha256": "952c641c114737cea843a6a7649a019e66a366ceb0944d2ed43dc96036b60e68",
+        "review_evidence": {
+          "candidate_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_008_fig_table_4_review.png",
+          "page_preview_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\page_previews\\page_008.png",
+          "source_pdf_path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\pdfs\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge.pdf",
+          "source_page": 8,
+          "caption": "Ablation studies on the PIADv2 Seen split. We analyze",
+          "bbox_pt": [
+            311.25,
+            147.86215209960938,
+            559.5031127929688,
+            301.4880676269531
+          ],
+          "normalized_bbox": [
+            0.508578,
+            0.186695,
+            0.914221,
+            0.380667
+          ],
+          "render_dpi": 300
+        },
+        "visual_review": {
+          "status": "pending",
+          "reviewed_asset_sha256": "",
+          "preserved_scientific_elements": [],
+          "omitted_scientific_elements": [],
+          "notes": "",
+          "failure_reason": "",
+          "repair_attempts": 0,
+          "revised_bbox": []
+        }
+      }
+    ],
+    "caption_counts": {
+      "figures": 5,
+      "tables": 4
+    },
+    "planned_items": 8,
+    "requires_full_decision_table": true
+  },
+  "pdf_assets": {
+    "asset_root": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge",
+    "images_dir": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images",
+    "page_assets": [
+      {
+        "page_number": 1,
+        "searchable_text_chars": 2671,
+        "text_extraction_method": "text",
+        "ocr_used": false,
+        "image_count": 1,
+        "text_preview": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge Yu Huang1, Zelin Peng1,†, Changsong Wen1, Xiaokang Yang1, and Wei Shen1(B) 1MoE Key Lab of Artificial Intelligence, School of Computer Science, Shanghai Jiaotong University {ye"
+      },
+      {
+        "page_number": 2,
+        "searchable_text_chars": 5897,
+        "text_extraction_method": "text",
+        "ocr_used": false,
+        "image_count": 0,
+        "text_preview": "1. Introduction Affordance segmentation focuses on dividing a 3D object into parts that carry distinct functional roles. For example, a chair can be separated into a seat, a backrest, and legs. By identifying such functional components, int"
+      },
+      {
+        "page_number": 3,
+        "searchable_text_chars": 5194,
+        "text_extraction_method": "text",
+        "ocr_used": false,
+        "image_count": 0,
+        "text_preview": "tual semantic reasoning beyond local shape. Multi-modal Guidance for 3D Affordance Segmenta- tion. To enhance semantic reasoning, a dominant trend [8, 15, 26, 44, 51, 52, 55] is the use of multi-modal guid- ance, particularly from Vision-La"
+      },
+      {
+        "page_number": 4,
+        "searchable_text_chars": 2568,
+        "text_extraction_method": "text",
+        "ocr_used": false,
+        "image_count": 1,
+        "text_preview": "Figure 2. Overview of our three-stage framework for prompt-guided 3D affordance segmentation. Stage 0 (2D Semantic Knowledge Extraction) associates each point cloud P with multi-view 2D features extracted by a frozen encoder Φ2D, producing "
+      },
+      {
+        "page_number": 5,
+        "searchable_text_chars": 3298,
+        "text_extraction_method": "text",
+        "ocr_used": false,
+        "image_count": 1,
+        "text_preview": "Figure 3. Architecture of the Lightweight Affordance Segmentor. This module fuses geometric patch tokens from our pretrained 3D backbone with multi-modal prompts (text and/or visual) in a shared embedding space. A stack of co-attentional Tr"
+      },
+      {
+        "page_number": 6,
+        "searchable_text_chars": 2649,
+        "text_extraction_method": "text",
+        "ocr_used": false,
+        "image_count": 1,
+        "text_preview": "Figure 4. Qualitative comparison on challenging cases from the PIADv2 [37] (visual prompt) and LASO [15] (text prompt) datasets. These examples visually corroborate our quantitative improvements and highlight our framework’s superior fine-g"
+      },
+      {
+        "page_number": 7,
+        "searchable_text_chars": 4437,
+        "text_extraction_method": "text",
+        "ocr_used": false,
+        "image_count": 0,
+        "text_preview": "Table 1. Quantitative comparison with state-of-the-art methods on the PIAD and PIADv2 datasets. We report results on both Seen and Unseen splits. The best and second-best results are highlighted. Ours(w/o CMAT) denotes our LAS segmentor pai"
+      },
+      {
+        "page_number": 8,
+        "searchable_text_chars": 4939,
+        "text_extraction_method": "text",
+        "ocr_used": false,
+        "image_count": 0,
+        "text_preview": "proach consistently grounds language into meaningful geo- metric contexts. This suggests that the learned feature space after CMAT pretraining provides a stable semantic founda- tion, allowing even short prompts to activate correct func- ti"
+      },
+      {
+        "page_number": 9,
+        "searchable_text_chars": 5723,
+        "text_extraction_method": "text",
+        "ocr_used": false,
+        "image_count": 0,
+        "text_preview": "References [1] Emanuele Aiello, Diego Valsesia, and Enrico Magli. Cross- modal learning for image-guided point cloud shape comple- tion. In Advances in Neural Information Processing Systems, 2022. 7 [2] Sergio Arnaud, Paul McVay, Ada Martin"
+      },
+      {
+        "page_number": 10,
+        "searchable_text_chars": 5972,
+        "text_extraction_method": "text",
+        "ocr_used": false,
+        "image_count": 0,
+        "text_preview": "[27] Toan Nguyen, Minh Nhat Vu, An Vuong, Dzung Nguyen, Thieu Vo, Ngan Le, and Anh Nguyen. Open-vocabulary af- fordance detection in 3d point clouds. In 2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pages "
+      },
+      {
+        "page_number": 11,
+        "searchable_text_chars": 801,
+        "text_extraction_method": "text",
+        "ocr_used": false,
+        "image_count": 0,
+        "text_preview": "[54] Wei Zhai, Pingyu Wu, Kai Zhu, Yang Cao, Feng Wu, and Zheng-Jun Zha. Background activation suppression for weakly supervised object localization and semantic segmen- tation. International Journal of Computer Vision, pages 1– 26, 2023. 2"
+      }
+    ],
+    "image_assets": [
+      {
+        "page_number": 1,
+        "image_index": 1,
+        "xref": 73,
+        "filename": "page_001_img_01.jpeg",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_img_01.jpeg",
+        "ext": "jpeg",
+        "width": 4429,
+        "height": 2233,
+        "colorspace": 3,
+        "size_bytes": 1441494,
+        "extraction_level": "xref"
+      },
+      {
+        "page_number": 4,
+        "image_index": 1,
+        "xref": 439,
+        "filename": "page_004_img_01.png",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_004_img_01.png",
+        "ext": "png",
+        "width": 3532,
+        "height": 2081,
+        "colorspace": 3,
+        "size_bytes": 1436802,
+        "extraction_level": "xref"
+      },
+      {
+        "page_number": 5,
+        "image_index": 1,
+        "xref": 440,
+        "filename": "page_005_img_01.png",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_005_img_01.png",
+        "ext": "png",
+        "width": 3343,
+        "height": 1367,
+        "colorspace": 3,
+        "size_bytes": 366837,
+        "extraction_level": "xref"
+      },
+      {
+        "page_number": 6,
+        "image_index": 1,
+        "xref": 441,
+        "filename": "page_006_img_01.png",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_006_img_01.png",
+        "ext": "png",
+        "width": 3300,
+        "height": 2030,
+        "colorspace": 3,
+        "size_bytes": 3215071,
+        "extraction_level": "xref"
+      }
+    ],
+    "figure_assets": [
+      {
+        "filename": "page_001_fig_figure_1.png",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_001_fig_figure_1.png",
+        "page_number": 1,
+        "label": "Figure 1",
+        "kind": "figure",
+        "caption_text": "Figure 1. Qualitative comparison of 3D feature representations. We visualize learned features across different objects to examine how semantic structure emerges in 3D space. In the 2D Semantics column, lifted features from multi-view renderings encoded by a 2D vision foundation model (e.g., DINOv3 [38]) reveal clear functional clusters such as handles and seats. The 3D-Only column, derived from a pure 3D encoder (e.g., PointNet++ [32]), shows less organized patterns, where boundaries between object parts remain fuzzy and inconsistent. In contrast, the Ours column shows features that inherit 2D semantic organization and express it coherently in 3D. Functional parts become more distinctly separated, and similar regions stay consistent across different object categories.",
+        "width": 734,
+        "height": 358,
+        "size_bytes": 197100,
+        "extraction_level": "figure",
+        "quality_signals": {
+          "visual_quality_status": "usable",
+          "quality_reason_codes": [],
+          "page_coverage_ratio": 0.305402,
+          "visual_rect_count": 1,
+          "visual_body_ratio": 0.83454,
+          "paragraph_text_chars": 97,
+          "table_body_rows": 0,
+          "caption_text_chars": 778,
+          "other_caption_count": 0,
+          "other_caption_labels": []
+        }
+      },
+      {
+        "filename": "page_004_fig_figure_2.png",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_004_fig_figure_2.png",
+        "page_number": 4,
+        "label": "Figure 2",
+        "kind": "figure",
+        "caption_text": "Figure 2. Overview of our three-stage framework for prompt-guided 3D affordance segmentation. Stage 0 (2D Semantic Knowledge Extraction) associates each point cloud P with multi-view 2D features extracted by a frozen encoder Φ2D, producing lifted per-point semantic knowledge F 2D and affinity matrix A2D. Stage 1 (Cross-Modal Affinity Transfer) pretrains the 3D backbone Φ3D by aligning the affinity matrix of 3D features A3D with the corresponding 2D affinity matrix A2D. Stage 2 utilizes the Lightweight Affordance Segmentor (LAS) to fine-tune Φ3D with multi-modal prompts (textual or visual) to generate the final prompt-conditioned affordance map M.",
+        "width": 670,
+        "height": 399,
+        "size_bytes": 123196,
+        "extraction_level": "figure",
+        "quality_signals": {
+          "visual_quality_status": "usable",
+          "quality_reason_codes": [],
+          "page_coverage_ratio": 0.310946,
+          "visual_rect_count": 1,
+          "visual_body_ratio": 0.957821,
+          "paragraph_text_chars": 0,
+          "table_body_rows": 0,
+          "caption_text_chars": 654,
+          "other_caption_count": 0,
+          "other_caption_labels": []
+        }
+      },
+      {
+        "filename": "page_005_fig_figure_3.png",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_005_fig_figure_3.png",
+        "page_number": 5,
+        "label": "Figure 3",
+        "kind": "figure",
+        "caption_text": "Figure 3. Architecture of the Lightweight Affordance Segmentor. This module fuses geometric patch tokens from our pretrained 3D backbone with multi-modal prompts (text and/or visual) in a shared embedding space. A stack of co-attentional Transformer blocks enables bidirectional interaction between geometric features and prompt tokens, leading to prompt-conditioned 3D understanding. The resulting patch features are then upsampled to per-point resolution to generate the final affordance mask.",
+        "width": 670,
+        "height": 280,
+        "size_bytes": 50774,
+        "extraction_level": "figure",
+        "quality_signals": {
+          "visual_quality_status": "usable",
+          "quality_reason_codes": [],
+          "page_coverage_ratio": 0.218363,
+          "visual_rect_count": 1,
+          "visual_body_ratio": 0.946681,
+          "paragraph_text_chars": 0,
+          "table_body_rows": 0,
+          "caption_text_chars": 495,
+          "other_caption_count": 0,
+          "other_caption_labels": []
+        }
+      },
+      {
+        "filename": "page_006_fig_figure_4.png",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_006_fig_figure_4.png",
+        "page_number": 6,
+        "label": "Figure 4",
+        "kind": "figure",
+        "caption_text": "Figure 4. Qualitative comparison on challenging cases from the PIADv2 [37] (visual prompt) and LASO [15] (text prompt) datasets. These examples visually corroborate our quantitative improvements and highlight our framework’s superior fine-grained segmentation capability.",
+        "width": 670,
+        "height": 416,
+        "size_bytes": 173363,
+        "extraction_level": "figure",
+        "quality_signals": {
+          "visual_quality_status": "usable",
+          "quality_reason_codes": [],
+          "page_coverage_ratio": 0.324296,
+          "visual_rect_count": 1,
+          "visual_body_ratio": 0.958903,
+          "paragraph_text_chars": 0,
+          "table_body_rows": 0,
+          "caption_text_chars": 271,
+          "other_caption_count": 0,
+          "other_caption_labels": []
+        }
+      },
+      {
+        "filename": "page_007_fig_table_1.png",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_007_fig_table_1.png",
+        "page_number": 7,
+        "label": "Table 1",
+        "kind": "table",
+        "caption_text": "Table 1. Quantitative comparison with state-of-the-art methods on the PIAD and PIADv2 datasets. We report results on both Seen and Unseen splits. The best and second-best results are highlighted. Ours(w/o CMAT) denotes our LAS segmentor paired with the standard PointMAE backbone [29], using its original pretrained weights.",
+        "width": 816,
+        "height": 95,
+        "size_bytes": 535,
+        "extraction_level": "figure",
+        "quality_signals": {
+          "visual_quality_status": "reject",
+          "quality_reason_codes": [
+            "table_body_missing",
+            "caption_only_suspected"
+          ],
+          "page_coverage_ratio": 0.090643,
+          "visual_rect_count": 0,
+          "visual_body_ratio": 0.0,
+          "paragraph_text_chars": 0,
+          "table_body_rows": 0,
+          "caption_text_chars": 324,
+          "other_caption_count": 0,
+          "other_caption_labels": []
+        }
+      },
+      {
+        "filename": "page_007_fig_table_2.png",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_007_fig_table_2.png",
+        "page_number": 7,
+        "label": "Table 2",
+        "kind": "table",
+        "caption_text": "Table 2. The overall results of all comparative methods on the LASO dataset. Seen and Unseen are two partitions of the dataset. The best and 2nd best scores from each metric are highlighted in bold and underlined, respectively.",
+        "width": 693,
+        "height": 195,
+        "size_bytes": 33194,
+        "extraction_level": "figure",
+        "quality_signals": {
+          "visual_quality_status": "usable",
+          "quality_reason_codes": [],
+          "page_coverage_ratio": 0.15725,
+          "visual_rect_count": 2,
+          "visual_body_ratio": 0.107271,
+          "paragraph_text_chars": 999,
+          "table_body_rows": 11,
+          "caption_text_chars": 227,
+          "other_caption_count": 0,
+          "other_caption_labels": []
+        }
+      },
+      {
+        "filename": "page_008_fig_table_4.png",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_008_fig_table_4.png",
+        "page_number": 8,
+        "label": "Table 4",
+        "kind": "table",
+        "caption_text": "Table 4. Ablation studies on the PIADv2 Seen split. We analyze Stage 2 pretraining components and Stage 3 backbone choices.",
+        "width": 331,
+        "height": 204,
+        "size_bytes": 22896,
+        "extraction_level": "figure",
+        "quality_signals": {
+          "visual_quality_status": "usable",
+          "quality_reason_codes": [],
+          "page_coverage_ratio": 0.078683,
+          "visual_rect_count": 0,
+          "visual_body_ratio": 0.0,
+          "paragraph_text_chars": 301,
+          "table_body_rows": 10,
+          "caption_text_chars": 123,
+          "other_caption_count": 0,
+          "other_caption_labels": []
+        }
+      },
+      {
+        "filename": "page_008_fig_table_3.png",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\assets\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge\\images\\page_008_fig_table_3.png",
+        "page_number": 8,
+        "label": "Table 3",
+        "kind": "table",
+        "caption_text": "Table 3. Comparison of model efficiency. aIoU is evaluated on the PIADv2 seen split. † denotes the use of an MLLM backbone.",
+        "width": 305,
+        "height": 135,
+        "size_bytes": 10423,
+        "extraction_level": "figure",
+        "quality_signals": {
+          "visual_quality_status": "usable",
+          "quality_reason_codes": [],
+          "page_coverage_ratio": 0.048035,
+          "visual_rect_count": 0,
+          "visual_body_ratio": 0.0,
+          "paragraph_text_chars": 129,
+          "table_body_rows": 6,
+          "caption_text_chars": 123,
+          "other_caption_count": 0,
+          "other_caption_labels": []
+        }
+      }
+    ],
+    "ocr_available": false
+  },
+  "writing_contract": {
+    "language": "zh-CN",
+    "contract_role": "manifest_quality_contract",
+    "canonical_source": "SKILL.md defines the workflow; scripts/contracts.py defines machine-checkable contract data.",
+    "must_include_sections": [
+      "核心信息",
+      "原文摘要翻译",
+      "创新点",
+      "一句话总结",
+      "研究问题",
+      "数据与任务定义",
+      "方法主线",
+      "关键结果",
+      "深度分析",
+      "局限",
+      "我的笔记",
+      "引用"
+    ],
+    "note_plan_contract": {
+      "required_fields": [
+        "paper_type",
+        "paper_type_rationale",
+        "dominant_domain",
+        "must_cover",
+        "key_numbers",
+        "real_comparisons",
+        "central_claims",
+        "claim_boundaries",
+        "negative_or_limiting_results",
+        "mechanism_result_map",
+        "comparative_positioning",
+        "reuse_takeaways",
+        "followup_questions",
+        "section_plan"
+      ],
+      "field_types": {
+        "paper_type": "string",
+        "paper_type_rationale": "string",
+        "dominant_domain": "string",
+        "must_cover": "array",
+        "key_numbers": "array",
+        "real_comparisons": "array",
+        "central_claims": "array",
+        "claim_boundaries": "array",
+        "negative_or_limiting_results": "array",
+        "mechanism_result_map": "array",
+        "comparative_positioning": "array",
+        "reuse_takeaways": "array",
+        "followup_questions": "array",
+        "section_plan": "array"
+      },
+      "required_field_checks": {
+        "string": {
+          "non_empty": true
+        },
+        "array": {
+          "non_empty": true
+        }
+      },
+      "artifact_preference": "short_json_planning_file",
+      "grounding_field": "section_plan[*].evidence_sources",
+      "analysis_coverage_field": "central_claims[*]"
+    },
+    "paper_type_selection": {
+      "source_of_truth": "note_plan.paper_type",
+      "suggested_paper_type_role": "none",
+      "allowed_paper_types": [
+        "AI_method",
+        "benchmark_or_dataset",
+        "clinical_or_psychology_empirical",
+        "humanities_or_social_science",
+        "survey_or_review"
+      ]
+    },
+    "contracts_by_paper_type": {
+      "AI_method": {
+        "paper_type": "AI_method",
+        "reader_lens": "面向能复现方法机制的技术读者",
+        "section_focus": [
+          "问题设置",
+          "方法机制",
+          "训练/推理流程",
+          "关键公式",
+          "比较基线",
+          "消融与失败边界"
+        ],
+        "required_checks": [
+          "需要说明机制流程、关键公式、实验设计、消融含义和失败边界。"
+        ],
+        "formula_rules": [
+          "仅保留理解方法必需的 1 到 3 个关键公式，并解释其工程含义。"
+        ],
+        "avoid_rules": [
+          "不要把非 AI_method 论文强行改写成模型架构。"
+        ],
+        "boundary_questions": [
+          "核心机制的收益由哪个实验或消融支撑，而不是只由主结果暗示？",
+          "哪些比较只能证明在当前数据、基线、算力或协议下有效，不能外推到通用场景？",
+          "论文是否给出失败、退化、不稳定或成本上升的证据；如果没有，结论边界是什么？"
+        ],
+        "section_semantics": {
+          "研究问题": "方法要解决的具体技术问题和现有方法短板。",
+          "数据与任务定义": "数据集、输入输出、评测任务和实验设置。",
+          "方法主线": "模型、算法、训练或推理机制。",
+          "关键结果": "主结果、强基线、消融和关键数字。",
+          "深度分析": "方法为什么有效、何处脆弱、复现和扩展代价。"
+        },
+        "recommended_subsections": {
+          "方法主线": [
+            "机制流程",
+            "模型结构",
+            "训练目标",
+            "推理与采样链路",
+            "关键实现细节"
+          ],
+          "关键结果": [
+            "主结果与强基线",
+            "消融到底说明了什么",
+            "失败或不稳定设置"
+          ],
+          "深度分析": [
+            "为什么有效",
+            "复杂度与扩展性",
+            "复现注意点"
+          ]
+        },
+        "mechanism_flow_contract": {
+          "apply_when_paper_type_in": [
+            "AI_method"
+          ],
+          "required_step_count": "3_to_4",
+          "required_step_fields": [
+            "input",
+            "operation",
+            "output_destination"
+          ]
+        }
+      },
+      "benchmark_or_dataset": {
+        "paper_type": "benchmark_or_dataset",
+        "reader_lens": "面向要判断 benchmark/dataset 可用性和偏差边界的研究者",
+        "section_focus": [
+          "任务拆分",
+          "数据来源与构建流程",
+          "标注协议",
+          "评测指标",
+          "覆盖范围与偏差",
+          "样本统计与数据开放限制"
+        ],
+        "required_checks": [
+          "需要说明数据来源、构建/标注流程、评测指标、基线表现、样本统计、数据开放或隐私限制和适用边界。"
+        ],
+        "formula_rules": [
+          "仅保留核心评测指标、采样规则或划分定义。"
+        ],
+        "avoid_rules": [
+          "不要把数据构建流程写成模型 pipeline。"
+        ],
+        "boundary_questions": [
+          "这个 benchmark/dataset 实际测量的构念是什么，哪些能力只是间接近似？",
+          "任务、标签、采样、过滤或评测协议会引入哪些覆盖缺口或偏差？",
+          "基线结果证明了评测集有区分度，还是只证明某类模型适应该协议？",
+          "样本时长、语料长度、人口统计、类别分布、数据可访问性或隐私限制如何影响复现和外推？"
+        ],
+        "section_semantics": {
+          "研究问题": "这个 benchmark/dataset 想补足的评测或数据缺口。",
+          "数据与任务定义": "数据来源、任务拆分、标签/题目定义、样本范围。",
+          "方法主线": "数据构建、筛选、标注和评测协议，不写成模型 pipeline。",
+          "关键结果": "基线表现、难度分布、覆盖范围和偏差。",
+          "深度分析": "它真正测到了什么，以及不能代表什么。"
+        },
+        "recommended_subsections": {
+          "数据与任务定义": [
+            "数据来源",
+            "任务拆分",
+            "标注/筛选协议"
+          ],
+          "方法主线": [
+            "构建流程",
+            "评测协议",
+            "Baseline 设置"
+          ],
+          "关键结果": [
+            "基线表现",
+            "难度分布",
+            "覆盖与偏差"
+          ],
+          "深度分析": [
+            "benchmark 真正测到了什么",
+            "适用边界"
+          ]
+        }
+      },
+      "clinical_or_psychology_empirical": {
+        "paper_type": "clinical_or_psychology_empirical",
+        "reader_lens": "面向关注临床/心理学样本、变量关系和外推边界的研究读者",
+        "section_focus": [
+          "样本来源",
+          "纳排标准",
+          "变量或量表",
+          "分析管线",
+          "效应量与不确定性",
+          "样本统计、伦理和数据可访问性"
+        ],
+        "required_checks": [
+          "需要区分相关、预测、组间差异和因果解释，说明样本统计、伦理/隐私约束与外推边界。"
+        ],
+        "formula_rules": [
+          "仅保留核心统计模型、效应量、置信区间或量表定义。"
+        ],
+        "avoid_rules": [
+          "不要把相关性、预测性能或组间差异写成未经证明的因果结论。"
+        ],
+        "boundary_questions": [
+          "样本来源、纳排标准、测量工具和标注流程如何限制外推？",
+          "结果支持相关、预测、组间差异还是因果解释；不要越过论文设计能证明的范围。",
+          "临床或心理学意义是否依赖未观测混杂、量表阈值、文本/语音缺失或场景约束？",
+          "样本构成、数据缺失、隐私限制或材料不可公开会怎样限制复现与再分析？"
+        ],
+        "section_semantics": {
+          "研究问题": "临床、心理学或行为科学中的研究问题、假设或变量关系。",
+          "数据与任务定义": "样本来源、纳排标准、变量/量表、测量方式。",
+          "方法主线": "研究设计、分组、测量流程和统计分析路径。",
+          "关键结果": "主要效应、相关性、组间差异、不确定性或显著性。",
+          "深度分析": "结果解释、因果边界、临床/心理学意义和外推限制。"
+        },
+        "recommended_subsections": {
+          "数据与任务定义": [
+            "样本与纳排标准",
+            "变量与量表",
+            "测量流程"
+          ],
+          "方法主线": [
+            "研究设计",
+            "分析模型",
+            "主要比较"
+          ],
+          "关键结果": [
+            "主要效应",
+            "不确定性与显著性",
+            "临床或心理学解释"
+          ],
+          "深度分析": [
+            "因果解释边界",
+            "外推限制"
+          ]
+        }
+      },
+      "humanities_or_social_science": {
+        "paper_type": "humanities_or_social_science",
+        "reader_lens": "面向关注理论框架、材料解释和论证结构的研究读者",
+        "section_focus": [
+          "研究对象",
+          "材料来源",
+          "理论框架",
+          "论证路径",
+          "概念贡献",
+          "解释边界"
+        ],
+        "required_checks": [
+          "需要区分作者论证、材料证据、规范性判断和实验事实。"
+        ],
+        "formula_rules": [
+          "通常不强行保留公式；仅保留核心形式化定义或编码规则。"
+        ],
+        "avoid_rules": [
+          "不要把规范性判断、文本解释或案例分析写成实验事实。"
+        ],
+        "boundary_questions": [
+          "作者的解释依赖哪些材料、案例或理论前提？",
+          "是否存在同样能解释材料的替代解释，论文如何排除或没有排除？",
+          "哪些结论是概念贡献或规范性判断，而不是可直接当作经验事实？"
+        ],
+        "section_semantics": {
+          "研究问题": "作者要解释的社会、文化、历史、制度或理论问题。",
+          "数据与任务定义": "材料、案例、文本、访谈、档案或语料范围，不写成 ML task。",
+          "方法主线": "理论框架、概念区分和论证路径。",
+          "关键结果": "核心解释性发现、概念贡献或对既有观点的修正。",
+          "深度分析": "论证强度、材料边界、解释替代性和可迁移性。"
+        },
+        "recommended_subsections": {
+          "数据与任务定义": [
+            "材料范围",
+            "选择标准",
+            "案例或语料边界"
+          ],
+          "方法主线": [
+            "理论框架",
+            "概念区分",
+            "论证路径"
+          ],
+          "关键结果": [
+            "核心解释性发现",
+            "概念贡献"
+          ],
+          "深度分析": [
+            "论证强度",
+            "替代解释",
+            "材料边界"
+          ]
+        }
+      },
+      "survey_or_review": {
+        "paper_type": "survey_or_review",
+        "reader_lens": "面向需要梳理综述脉络、分类体系和证据边界的研究读者",
+        "section_focus": [
+          "综述范围",
+          "纳入排除标准",
+          "主题分类",
+          "方法谱系",
+          "共识与分歧",
+          "开放问题"
+        ],
+        "required_checks": [
+          "需要说明综述范围、文献选择、分类体系、共识分歧和开放问题。"
+        ],
+        "formula_rules": [
+          "仅保留分类轴、纳入排除准则、证据汇总规则或 meta-analysis 统计量。"
+        ],
+        "avoid_rules": [
+          "不要把综述中的代表性结论写成作者自己完成的单项实验结果。"
+        ],
+        "boundary_questions": [
+          "检索范围、纳入排除标准或分类轴会遗漏哪些研究路线？",
+          "综述给出的是领域共识、作者分类，还是尚未解决的分歧？",
+          "哪些趋势结论来自覆盖范围内的文献分布，不能直接当作技术成熟度判断？"
+        ],
+        "section_semantics": {
+          "研究问题": "综述试图整理的领域问题、争议或知识缺口。",
+          "数据与任务定义": "纳入文献范围、检索/筛选标准和综述对象。",
+          "方法主线": "分类体系、综述组织方式和证据综合逻辑，不写成单篇方法架构。",
+          "关键结果": "领域共识、分歧、趋势、代表性方向和开放问题。",
+          "深度分析": "综述覆盖的盲区、分类体系的解释力和未来研究机会。"
+        },
+        "recommended_subsections": {
+          "数据与任务定义": [
+            "综述范围",
+            "纳入/排除标准",
+            "文献覆盖"
+          ],
+          "方法主线": [
+            "分类体系",
+            "方法谱系",
+            "证据组织方式"
+          ],
+          "关键结果": [
+            "代表性方向",
+            "共识与分歧",
+            "开放问题"
+          ],
+          "深度分析": [
+            "分类体系的局限",
+            "未覆盖区域",
+            "后续研究机会"
+          ]
+        }
+      }
+    },
+    "grounding_contract": {
+      "source_of_truth": "source_manifest",
+      "source_index_source_of_truth": "source_manifest",
+      "truncation_source_of_truth": "source_manifest.coverage_or_pdf",
+      "partial_reading_acceptance_owner": "note_plan_or_grounding",
+      "accepted_reference_forms": [
+        "section_id",
+        "pages"
+      ],
+      "required_sections": [
+        "研究问题",
+        "数据与任务定义",
+        "方法主线",
+        "关键结果",
+        "深度分析",
+        "局限"
+      ],
+      "note_plan_depth_requirements": {
+        "required_section_focus_min_chars": 20,
+        "required_section_focus_fields": [
+          "focus",
+          "reading_goal",
+          "purpose"
+        ],
+        "generic_focus_phrases": [
+          "use the raw source to explain",
+          "paper-specific role of",
+          "explain the paper-specific role",
+          "explain this section",
+          "summarize this section"
+        ]
+      },
+      "excluded_model_input_fields": [
+        "evidence",
+        "evidence_pack",
+        "candidate_chunks",
+        "section_texts",
+        "summary",
+        "summary_hints"
+      ],
+      "reject_old_references": [
+        "synthesis_bundle.evidence",
+        "bundle.evidence",
+        "synthesis_bundle.candidate_chunks",
+        "synthesis_bundle.section_texts",
+        "synthesis_bundle.summary",
+        "bundle.candidate_chunks",
+        "bundle.section_texts",
+        "bundle.summary"
+      ],
+      "lint_command": "scripts/lint_grounding.py --note-plan ... --source-manifest ... --bundle-json ... --figure-decisions ..."
+    },
+    "figure_table_contract": {
+      "placeholder_first": true,
+      "visual_quality_gate": "fail_closed",
+      "decision_table_required": true,
+      "decision_values": [
+        "review_pending",
+        "insert",
+        "placeholder",
+        "low_priority",
+        "visual_defect",
+        "skip"
+      ],
+      "usable_insert_candidate": {
+        "kinds": [
+          "figure",
+          "table"
+        ],
+        "visual_quality_status": "usable_candidate",
+        "requires_source_image_path": true
+      },
+      "allowed_usable_placeholder_reasons": [
+        "visual_defect",
+        "materialization_blocked"
+      ],
+      "manual_visual_review_required_statuses": [
+        "usable_candidate",
+        "needs_visual_quality_check",
+        "review"
+      ],
+      "automatic_fail_closed_visual_statuses": [
+        "reject_visual_quality",
+        "asset_candidate_missing"
+      ],
+      "manual_review_claim_requires_image_inspection": true,
+      "visual_review": {
+        "selected_render_dpi": 300,
+        "page_preview_dpi": 96,
+        "review_fields": [
+          "status",
+          "reviewed_asset_sha256",
+          "preserved_scientific_elements",
+          "omitted_scientific_elements",
+          "notes",
+          "failure_reason",
+          "repair_attempts",
+          "revised_bbox"
+        ],
+        "review_status_values": [
+          "pending",
+          "pass",
+          "fail",
+          "repair_requested"
+        ],
+        "repair_limit": 1,
+        "asset_sha256_bound": true,
+        "caption_free_visual_body_required": true,
+        "decision_freeze_before": "note_plan",
+        "review_evidence_fields": [
+          "candidate_path",
+          "page_preview_path",
+          "source_pdf_path",
+          "source_page",
+          "caption",
+          "bbox_pt",
+          "normalized_bbox",
+          "render_dpi"
+        ],
+        "repairable_failure_reasons": [
+          "caption_contamination",
+          "surrounding_prose_contamination",
+          "scientific_content_clipped",
+          "insufficient_safety_margin"
+        ],
+        "terminal_failure_reasons": [
+          "identity_mismatch",
+          "caption_inseparable",
+          "ambiguous_visual_body",
+          "unreadable_source",
+          "scientific_content_missing",
+          "repair_limit_exhausted"
+        ]
+      }
+    },
+    "analysis_coverage_contract": {
+      "central_claim_fields": [
+        "claim",
+        "supporting_evidence",
+        "what_it_actually_proves",
+        "what_it_does_not_prove"
+      ],
+      "central_claim_field_types": {
+        "claim": "string",
+        "supporting_evidence": "array",
+        "what_it_actually_proves": "string",
+        "what_it_does_not_prove": "string"
+      },
+      "central_claim_required_field_checks": {
+        "string": {
+          "non_empty": true
+        },
+        "array": {
+          "non_empty": true
+        }
+      },
+      "required_plan_fields": [
+        "central_claims",
+        "claim_boundaries",
+        "negative_or_limiting_results",
+        "mechanism_result_map",
+        "comparative_positioning",
+        "reuse_takeaways",
+        "followup_questions"
+      ],
+      "final_quality_review_checks": [
+        "central_claims_are_supported_by_raw_sections_or_pages",
+        "key_experimental_settings_and_numbers_are_present",
+        "mechanisms_or_protocol_choices_are_mapped_to_results",
+        "comparisons_explain_positioning_against_alternatives",
+        "discussion_or_limitation_claims_are_explained_mechanistically",
+        "proven_claims_are_separated_from_unproven_or_unvalidated_claims",
+        "research_or_engineering_takeaways_are_specific_and_reusable",
+        "followup_questions_are_specific_to_replication_or_extension"
+      ]
+    }
+  }
+}

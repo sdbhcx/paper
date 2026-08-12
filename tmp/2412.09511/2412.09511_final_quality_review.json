@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "paper_id": "arxiv:2412.09511",
+  "review": "final_quality_review",
+  "checks": {
+    "central_evidence_chain_complete": true,
+    "key_settings_and_numbers_present": true,
+    "mechanisms_mapped_to_results": true,
+    "comparative_positioning_explained": true,
+    "limitations_explained_mechanistically": true,
+    "proven_and_unproven_claims_separated": true,
+    "reuse_takeaways_specific": true
+  },
+  "notes": [
+    "方法链覆盖 3DGS、GAFM、CAM、解码、两阶段训练与 3D-only 推理。",
+    "主结果、七类 corruption、模块消融和渲染配置均转写为紧凑 Markdown 表。",
+    "明确指出 Table 5 缺少 GAFM-only 因子组合，不能完全分离模块独立贡献。",
+    "明确区分合成原子 corruption 与真实传感器、场景级和机器人闭环鲁棒性。",
+    "类别级非全胜结果已纳入，避免把聚合最优写成每类全胜。"
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "status": "ok",
+  "run_status": "ok",
+  "script": "build_identity_contract.py",
+  "producer": "build_identity_contract.py",
+  "artifact_type": "canonical_identity",
+  "schema_version": 2,
+  "paper_id": "doi:10.48550/arxiv.2510.08316",
+  "identity_verdict": "accepted",
+  "identity_failure_class": "",
+  "failure_summary": "",
+  "work_level_identity": {
+    "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+    "translated_title": "",
+    "authors": [
+      "Yu Huang",
+      "Zelin Peng",
+      "Changsong Wen",
+      "Xiaokang Yang",
+      "Weifeng Shen"
+    ],
+    "year": "2025",
+    "venue": "arXiv (Cornell University)",
+    "doi": "10.48550/arxiv.2510.08316",
+    "arxiv_id": "2510.08316",
+    "zotero_key": ""
+  },
+  "source_manifestation": {
+    "source_kind": "title_query",
+    "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+    "year": "",
+    "venue": "",
+    "source_url": "http://arxiv.org/abs/2510.08316",
+    "pdf_url": "https://arxiv.org/pdf/2510.08316",
+    "local_pdf_path": "",
+    "doi": "",
+    "arxiv_id": "",
+    "zotero_key": ""
+  },
+  "accepted_metadata": {
+    "status": "ok",
+    "source_type": "title_query",
+    "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+    "source_url": "http://arxiv.org/abs/2510.08316",
+    "metadata_sources": [
+      "title_query",
+      "openalex",
+      "arxiv"
+    ],
+    "paper_id": "doi:10.48550/arxiv.2510.08316",
+    "identity_confidence": "high",
+    "identity_confidence_reasons": [
+      "title_query_unmatched",
+      "doi_present",
+      "arxiv_id_present"
+    ],
+    "zotero_lookup": {
+      "mode": "auto",
+      "status": "error",
+      "match_kind": "title",
+      "error": {
+        "code": "zotero_timeout",
+        "message": "Timed out while connecting to the Zotero Local API.",
+        "retryable": true
+      }
+    },
+    "script": "resolve_paper.py",
+    "authors": [
+      "Yu Huang",
+      "Zelin Peng",
+      "Changsong Wen",
+      "Xiaokang Yang",
+      "Weifeng Shen"
+    ],
+    "venue": "arXiv (Cornell University)",
+    "year": "2025",
+    "doi": "10.48550/arxiv.2510.08316",
+    "source": "openalex",
+    "pdf_url": "https://arxiv.org/pdf/2510.08316",
+    "url": "http://arxiv.org/abs/2510.08316v3",
+    "arxiv_id": "2510.08316",
+    "abstract": "Affordance segmentation aims to decompose 3D objects into parts that serve distinct functional roles, enabling models to reason about object interactions rather than mere recognition. Existing methods, mostly following the paradigm of 3D semantic segmentation or prompt-based frameworks, struggle when geometric cues are weak or ambiguous, as sparse point clouds provide limited functional information. To overcome this limitation, we leverage the rich semantic knowledge embedded in large-scale 2D Vision Foundation Models (VFMs) to guide 3D representation learning through a cross-modal alignment mechanism. Specifically, we propose Cross-Modal Affinity Transfer (CMAT), a pretraining strategy that compels the 3D encoder to align with the semantic structures induced by lifted 2D features. CMAT is driven by a core affinity alignment objective, supported by two auxiliary losses, geometric reconstruction and feature diversity, which together encourage structured and discriminative feature learning. Built upon the CMAT-pretrained backbone, we employ a lightweight affordance segmentor that injects text or visual prompts into the learned 3D space through an efficient cross-attention interface, enabling dense and prompt-aware affordance prediction while preserving the semantic organization established during pretraining. Extensive experiments demonstrate consistent improvements over previous state-of-the-art methods in both accuracy and efficiency.",
+    "published": "2025-10-09T15:01:26Z"
+  },
+  "bound_sources": [
+    {
+      "kind": "pdf_url",
+      "value": "https://arxiv.org/pdf/2510.08316",
+      "provider": "openalex",
+      "binding_reason": "title_author_year"
+    },
+    {
+      "kind": "pdf_url",
+      "value": "https://arxiv.org/pdf/2510.08316.pdf",
+      "provider": "openalex",
+      "binding_reason": "accepted_identifier_derived"
+    },
+    {
+      "kind": "pdf_url",
+      "value": "https://arxiv.org/pdf/2510.08316v3",
+      "provider": "arxiv",
+      "binding_reason": "shared_identifier"
+    }
+  ],
+  "accepted_observations": [
+    {
+      "provider": "openalex",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+      },
+      "status": "accepted",
+      "reason": "title_author_year",
+      "record": {
+        "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+        "authors": [
+          "Yu Huang",
+          "Zelin Peng",
+          "Changsong Wen",
+          "Xiaokang Yang",
+          "Weifeng Shen"
+        ],
+        "affiliations": [],
+        "venue": "arXiv (Cornell University)",
+        "year": "2025",
+        "doi": "10.48550/arxiv.2510.08316",
+        "source": "openalex",
+        "source_type": "openalex",
+        "source_url": "http://arxiv.org/abs/2510.08316",
+        "pdf_url": "https://arxiv.org/pdf/2510.08316",
+        "abstract": "",
+        "metadata_sources": [
+          "openalex"
+        ]
+      }
+    },
+    {
+      "provider": "arxiv",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+      },
+      "status": "accepted",
+      "reason": "shared_identifier",
+      "record": {
+        "source": "arxiv",
+        "source_type": "arxiv",
+        "metadata_sources": [
+          "arxiv"
+        ],
+        "source_url": "http://arxiv.org/abs/2510.08316v3",
+        "url": "http://arxiv.org/abs/2510.08316v3",
+        "arxiv_id": "2510.08316",
+        "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+        "abstract": "Affordance segmentation aims to decompose 3D objects into parts that serve distinct functional roles, enabling models to reason about object interactions rather than mere recognition. Existing methods, mostly following the paradigm of 3D semantic segmentation or prompt-based frameworks, struggle when geometric cues are weak or ambiguous, as sparse point clouds provide limited functional information. To overcome this limitation, we leverage the rich semantic knowledge embedded in large-scale 2D Vision Foundation Models (VFMs) to guide 3D representation learning through a cross-modal alignment mechanism. Specifically, we propose Cross-Modal Affinity Transfer (CMAT), a pretraining strategy that compels the 3D encoder to align with the semantic structures induced by lifted 2D features. CMAT is driven by a core affinity alignment objective, supported by two auxiliary losses, geometric reconstruction and feature diversity, which together encourage structured and discriminative feature learning. Built upon the CMAT-pretrained backbone, we employ a lightweight affordance segmentor that injects text or visual prompts into the learned 3D space through an efficient cross-attention interface, enabling dense and prompt-aware affordance prediction while preserving the semantic organization established during pretraining. Extensive experiments demonstrate consistent improvements over previous state-of-the-art methods in both accuracy and efficiency.",
+        "authors": [
+          "Yu Huang",
+          "Zelin Peng",
+          "Changsong Wen",
+          "Xiaokang Yang",
+          "Wei Shen"
+        ],
+        "published": "2025-10-09T15:01:26Z",
+        "year": "2025",
+        "pdf_url": "https://arxiv.org/pdf/2510.08316v3"
+      }
+    }
+  ],
+  "rejected_observations": [],
+  "field_provenance": {
+    "title": {
+      "provider": "title_query",
+      "retrieved_by": {
+        "kind": "input",
+        "value": "title:9ec63386b700"
+      }
+    },
+    "authors": {
+      "provider": "openalex",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+      }
+    },
+    "year": {
+      "provider": "openalex",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+      }
+    },
+    "venue": {
+      "provider": "openalex",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+      }
+    },
+    "doi": {
+      "provider": "openalex",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+      }
+    },
+    "source_url": {
+      "provider": "openalex",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+      }
+    },
+    "pdf_url": {
+      "provider": "openalex",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+      }
+    },
+    "arxiv_id": {
+      "provider": "arxiv",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+      }
+    },
+    "abstract": {
+      "provider": "arxiv",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+      }
+    }
+  },
+  "selected_identity_evidence": [
+    {
+      "kind": "doi",
+      "value": "10.48550/arxiv.2510.08316",
+      "trust": "strong",
+      "source": "metadata"
+    },
+    {
+      "kind": "arxiv_id",
+      "value": "2510.08316",
+      "trust": "strong",
+      "source": "metadata"
+    },
+    {
+      "kind": "title",
+      "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+      "trust": "metadata",
+      "source": "metadata"
+    },
+    {
+      "kind": "pdf_url",
+      "value": "https://arxiv.org/pdf/2510.08316",
+      "trust": "source_manifestation",
+      "source": "metadata"
+    },
+    {
+      "kind": "source_url",
+      "value": "http://arxiv.org/abs/2510.08316",
+      "trust": "source_manifestation",
+      "source": "metadata"
+    }
+  ],
+  "equivalence_decision": {
+    "status": "equivalent",
+    "reason": "minor_title_variation_only",
+    "location_binding": "source_manifestation",
+    "evidence": [
+      {
+        "kind": "title_similarity",
+        "status": "match",
+        "score": 1.0,
+        "source_value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+        "work_value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+      }
+    ]
+  },
+  "warnings": [],
+  "repair_trace_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_identity_repair_trace.json",
+  "provenance": {
+    "resolve_artifact_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_resolve.json",
+    "metadata_artifact_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_metadata.json"
+  },
+  "diagnostics": {
+    "identity_confidence": "high",
+    "identity_confidence_reasons": [
+      "title_query_unmatched",
+      "doi_present",
+      "arxiv_id_present"
+    ]
+  }
+}

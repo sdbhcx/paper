@@ -1,0 +1,873 @@
+{
+  "status": "ok",
+  "script": "extract_source_text.py",
+  "schema_version": 1,
+  "paper_id": "doi:10.1609/aaai.v40i6.42466",
+  "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+  "source_kind": "pdf_text",
+  "raw_sections_path": "D:\\study\\deep-learning\\paper\\.workbuddy\\deeppapernote\\task-aware-3d\\task_aware_3d_raw_sections.jsonl",
+  "full_text_md_path": "D:\\study\\deep-learning\\paper\\.workbuddy\\deeppapernote\\task-aware-3d\\task_aware_3d_full_text.md",
+  "pdf": {
+    "path": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+    "total_pages": 9,
+    "text_pages_extracted": 9,
+    "text_max_pages": null,
+    "text_truncated": false
+  },
+  "coverage": {
+    "total_pages": 9,
+    "text_max_pages": null,
+    "text_pages_extracted": 9,
+    "text_pages_scanned": 9,
+    "text_truncated": false,
+    "truncated_due_to_page_limit": false,
+    "appendix_detected": false,
+    "appendix_start_page": null,
+    "references_start_page": null
+  },
+  "sections": [
+    {
+      "section_id": "sec:preamble",
+      "kind": "preamble",
+      "title": "preamble",
+      "page_start": 1,
+      "page_end": 1,
+      "char_count": 441,
+      "text_hash_sha256": "de39cea50cafbaac2720595224c4ea084e54f684edf4afbb10675dcc3b50997b"
+    },
+    {
+      "section_id": "sec:abstract",
+      "kind": "abstract",
+      "title": "Abstract",
+      "page_start": 1,
+      "page_end": 1,
+      "char_count": 1353,
+      "text_hash_sha256": "315251c43bd714c3a80a621116bf9d2745303884bc032d66c5df0b5601ab2722"
+    },
+    {
+      "section_id": "sec:introduction",
+      "kind": "introduction",
+      "title": "Introduction",
+      "page_start": 1,
+      "page_end": 2,
+      "char_count": 6673,
+      "text_hash_sha256": "442f5ceba4e91f2594631ed78dfda49110f33314076f5f604f61e589dc872502"
+    },
+    {
+      "section_id": "sec:related-work",
+      "kind": "introduction",
+      "title": "Related Work",
+      "page_start": 2,
+      "page_end": 3,
+      "char_count": 4140,
+      "text_hash_sha256": "b7a30f264472159b404d7710f6dea54eac26773b16bc9c2a04d39bc6f0a6356b"
+    },
+    {
+      "section_id": "sec:method",
+      "kind": "method",
+      "title": "Method",
+      "page_start": 3,
+      "page_end": 5,
+      "char_count": 9051,
+      "text_hash_sha256": "38d48abf2bb5745b881a785e174c5633baf9e2f940365212b1cb4dd487801867"
+    },
+    {
+      "section_id": "sec:framework",
+      "kind": "method",
+      "title": "framework.",
+      "page_start": 5,
+      "page_end": 5,
+      "char_count": 2383,
+      "text_hash_sha256": "adefc600fb770f0ffb2fa5686de2bc107a43f3f97e32b702e2ccc90289abf4dc"
+    },
+    {
+      "section_id": "sec:method-2",
+      "kind": "method",
+      "title": "Method",
+      "page_start": 5,
+      "page_end": 5,
+      "char_count": 302,
+      "text_hash_sha256": "799fc514b8cfdaee5320a6bf3e51e977fc81b11ebf1d5b3b9474ba282d9dfc33"
+    },
+    {
+      "section_id": "sec:model",
+      "kind": "method",
+      "title": "Model",
+      "page_start": 5,
+      "page_end": 5,
+      "char_count": 729,
+      "text_hash_sha256": "61fb7d9dd466c351c0e7372ccd4bf47b9100131fcc39e5d545f33c988eb4c2b6"
+    },
+    {
+      "section_id": "sec:experiment",
+      "kind": "experiment",
+      "title": "Experiment",
+      "page_start": 5,
+      "page_end": 5,
+      "char_count": 21,
+      "text_hash_sha256": "df508025de4a7a62b30b83ef30810d1750ca6ebbf0db803b048bf67556029461"
+    },
+    {
+      "section_id": "sec:dataset",
+      "kind": "data",
+      "title": "Dataset.",
+      "page_start": 5,
+      "page_end": 7,
+      "char_count": 9231,
+      "text_hash_sha256": "b783503fed2e601b2718658934809e8c54a17c4ff74cd8a0fc15e64ff27c28ca"
+    },
+    {
+      "section_id": "sec:conclusion",
+      "kind": "conclusion",
+      "title": "Conclusion",
+      "page_start": 7,
+      "page_end": 8,
+      "char_count": 439,
+      "text_hash_sha256": "2ac2abe8f377fd71f79f9dae9d29b7dc8d6e7ed83ab75fa8ddbee5e71cf132be"
+    },
+    {
+      "section_id": "sec:acknowledgments",
+      "kind": "acknowledgments",
+      "title": "Acknowledgments",
+      "page_start": 8,
+      "page_end": 8,
+      "char_count": 246,
+      "text_hash_sha256": "d47ca5f2cac2be784ee168260aa4afbb97dcded7896980028cd7a40935dc0c9e"
+    },
+    {
+      "section_id": "sec:references",
+      "kind": "references",
+      "title": "References",
+      "page_start": 8,
+      "page_end": 9,
+      "char_count": 8063,
+      "text_hash_sha256": "4d2ea81d4501a3842b133e34af9d9cc42d7ffd7f0f4fe65e4fb06181b979091a"
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "char_count": 4703,
+      "section_ids": [
+        "sec:preamble",
+        "sec:abstract",
+        "sec:introduction"
+      ]
+    },
+    {
+      "page": 2,
+      "char_count": 6386,
+      "section_ids": [
+        "sec:introduction",
+        "sec:related-work"
+      ]
+    },
+    {
+      "page": 3,
+      "char_count": 4534,
+      "section_ids": [
+        "sec:related-work",
+        "sec:method"
+      ]
+    },
+    {
+      "page": 4,
+      "char_count": 6090,
+      "section_ids": [
+        "sec:method"
+      ]
+    },
+    {
+      "page": 5,
+      "char_count": 4797,
+      "section_ids": [
+        "sec:method",
+        "sec:framework",
+        "sec:method-2",
+        "sec:model",
+        "sec:experiment",
+        "sec:dataset"
+      ]
+    },
+    {
+      "page": 6,
+      "char_count": 4957,
+      "section_ids": [
+        "sec:dataset"
+      ]
+    },
+    {
+      "page": 7,
+      "char_count": 3505,
+      "section_ids": [
+        "sec:dataset",
+        "sec:conclusion"
+      ]
+    },
+    {
+      "page": 8,
+      "char_count": 5604,
+      "section_ids": [
+        "sec:conclusion",
+        "sec:acknowledgments",
+        "sec:references"
+      ]
+    },
+    {
+      "page": 9,
+      "char_count": 2730,
+      "section_ids": [
+        "sec:references"
+      ]
+    }
+  ],
+  "captions": {
+    "figures": [
+      {
+        "id": "Figure 1",
+        "caption": "Comparison among (a) object affordance under-",
+        "page": 1,
+        "pages": [
+          1
+        ],
+        "section_id": "sec:preamble"
+      },
+      {
+        "id": "Figure 2",
+        "caption": "Overview of our Task-Aware 3D Scene-level Affordance segmentation framework (TASA).",
+        "page": 3,
+        "pages": [
+          3
+        ],
+        "section_id": "sec:related-work"
+      },
+      {
+        "id": "Figure 3",
+        "caption": "Illustration of the Double-Check Mechanism.",
+        "page": 4,
+        "pages": [
+          4
+        ],
+        "section_id": "sec:method"
+      },
+      {
+        "id": "Figure 4",
+        "caption": "Effect of the number of selected images K on seg-",
+        "page": 6,
+        "pages": [
+          6
+        ],
+        "section_id": "sec:dataset"
+      },
+      {
+        "id": "Figure 5",
+        "caption": "Qualitative comparison on SceneFun3D Split0. Point clouds are cropped around functional objects for improved",
+        "page": 7,
+        "pages": [
+          7
+        ],
+        "section_id": "sec:dataset"
+      }
+    ],
+    "tables": [
+      {
+        "id": "Table 1",
+        "caption": "Comparison of our method and baselines on the",
+        "page": 5,
+        "pages": [
+          5
+        ],
+        "section_id": "sec:method"
+      },
+      {
+        "id": "Table 2",
+        "caption": "Efficiency comparison between our method and",
+        "page": 5,
+        "pages": [
+          5
+        ],
+        "section_id": "sec:method"
+      },
+      {
+        "id": "Table 3",
+        "caption": "Ablation of the Task-Aware 2D Affordance Detec-",
+        "page": 6,
+        "pages": [
+          6
+        ],
+        "section_id": "sec:dataset"
+      },
+      {
+        "id": "Table 4",
+        "caption": "Ablation of the 3D Affordance Refinement Module",
+        "page": 6,
+        "pages": [
+          6
+        ],
+        "section_id": "sec:dataset"
+      },
+      {
+        "id": "Table 1",
+        "caption": "presents a comparison of our method with baselines",
+        "page": 6,
+        "pages": [
+          6
+        ],
+        "section_id": "sec:dataset"
+      }
+    ]
+  },
+  "math_index": [
+    {
+      "text": "ℳ#$",
+      "section_id": "sec:related-work",
+      "page_start": 2,
+      "page_end": 3
+    },
+    {
+      "text": "ℳ%$",
+      "section_id": "sec:related-work",
+      "page_start": 2,
+      "page_end": 3
+    },
+    {
+      "text": "ℳ%$",
+      "section_id": "sec:related-work",
+      "page_start": 2,
+      "page_end": 3
+    },
+    {
+      "text": "PC = {pi ∈R3 | i = 1, ..., M}, and set of multi-view",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "RGB images V = {v1, v2, ..., vN} ∈RN×H×W ×3, where",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "Formally, let A = {a1, a2, ..., ak} denote the set of extracted",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "A = VLMaffordance(T; θVLM),",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "embedding dimension d = 512. For each image frame",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "vi ∈V and task T, we compute eimg",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "= CLIPimg(vi), serv-",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "SimCLIP(vi, T) =",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "∈[−1, 1],",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "dance concept ai ∈A:",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "ai = CLIPtxt(ai) ∈Rd.",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "\u001aS = 1",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "ai∈A exp(etxt",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "Z = P",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "ai∈A exp(etxt",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "FinalScore(vi) = αa · SimCLIP(vi, T) + (1 −αa) · S (5)",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "where α ∈[0, 1] balances contextual and affordance priori-",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "For each select frame v ∈",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "candidate points: P = {(x1, y1), ..., (xm, ym)}, which rep-",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "(xi, yi) ∈P, we verify whether interacting with this",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "we first generate 2D binary masks for each frame vi ∈V∗,",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "into the 3D point cloud PC = {pi ∈R3}M",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "i=1 using known",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "camera intrinsics K ∈R3×3 and extrinsics [R | t] ∈R3×4,",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "resulting in an initial 3D mask Minit ∈RM×1. This provides",
+      "section_id": "sec:method",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "tive positional encoding. Given input point coordinates p ∈",
+      "section_id": "sec:framework",
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "text": "RN×3 and features x ∈RN×C, the process is as follows:",
+      "section_id": "sec:framework",
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "text": "qi = Wqxi, kj = Wkxj, vj = Wvxj.",
+      "section_id": "sec:framework",
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "text": "j=1 and compute the relative positions δi,j = pj −",
+      "section_id": "sec:framework",
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "text": "γi,j = MLPpos(pj −pi).",
+      "section_id": "sec:framework",
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "text": "wi,j = MLPw (kj −qi + γi,j) ,",
+      "section_id": "sec:framework",
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "text": "αi,j =",
+      "section_id": "sec:framework",
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "text": "l=1 exp(wi,l)",
+      "section_id": "sec:framework",
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "text": "i =",
+      "section_id": "sec:framework",
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "text": "j=1",
+      "section_id": "sec:framework",
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "text": "Ltotal = α1LBCE + α2LDice + α3LFocal + α4LIoU,",
+      "section_id": "sec:framework",
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "text": "where αi ≥0 and P4",
+      "section_id": "sec:framework",
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "text": "i=1 αi = 1. Each loss term ad-",
+      "section_id": "sec:framework",
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "text": "Eqn. (11). We set the loss weights to: α1 = 0.3, α2 = 0.3,",
+      "section_id": "sec:dataset",
+      "page_start": 5,
+      "page_end": 7
+    },
+    {
+      "text": "α3 = 0.2, and α4 = 0.2. For geometric feature extraction,",
+      "section_id": "sec:dataset",
+      "page_start": 5,
+      "page_end": 7
+    },
+    {
+      "text": "multi-view context. Although K=20 has the highest mIoU,",
+      "section_id": "sec:dataset",
+      "page_start": 5,
+      "page_end": 7
+    },
+    {
+      "text": "K=10 achieves comparable performance while effectively",
+      "section_id": "sec:dataset",
+      "page_start": 5,
+      "page_end": 7
+    },
+    {
+      "text": "capturing critical visual cues. Therefore, we select K=10 as",
+      "section_id": "sec:dataset",
+      "page_start": 5,
+      "page_end": 7
+    }
+  ],
+  "appendix_index": {
+    "appendix_detected": false,
+    "start_page": null,
+    "sections": [],
+    "figure_captions": [],
+    "table_captions": []
+  },
+  "language_hint": "en",
+  "text_hash_sha256": "e012d25d4cd5ca2a3b638375e85bdc144a6a8804213c689cba4c695a2e664e3f",
+  "identity_contract": {
+    "artifact_type": "canonical_identity",
+    "schema_version": 2,
+    "paper_id": "doi:10.1609/aaai.v40i6.42466",
+    "identity_verdict": "accepted",
+    "work_level_identity": {
+      "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+      "translated_title": "",
+      "authors": [
+        "Lian He",
+        "Meng Liu",
+        "Qilang Ye",
+        "Yu Zhou",
+        "Xiang Deng",
+        "Gangyi Ding"
+      ],
+      "year": "2025",
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+      "doi": "10.1609/aaai.v40i6.42466",
+      "arxiv_id": "2511.11702",
+      "zotero_key": ""
+    },
+    "source_manifestation": {
+      "source_kind": "local_pdf",
+      "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+      "year": "",
+      "venue": "",
+      "source_url": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+      "pdf_url": "https://arxiv.org/pdf/2511.11702v1",
+      "local_pdf_path": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+      "doi": "",
+      "arxiv_id": "2511.11702",
+      "zotero_key": ""
+    },
+    "accepted_metadata": {
+      "status": "ok",
+      "source_type": "local_pdf",
+      "source_url": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+      "local_pdf_path": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+      "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+      "metadata_sources": [
+        "local_pdf",
+        "arxiv",
+        "openalex",
+        "crossref"
+      ],
+      "local_pdf_title_source": "pdf_metadata_title_used",
+      "arxiv_id": "2511.11702",
+      "paper_id": "doi:10.1609/aaai.v40i6.42466",
+      "identity_confidence": "high",
+      "identity_confidence_reasons": [
+        "arxiv_id_present",
+        "pdf_metadata_title_used",
+        "doi_present"
+      ],
+      "script": "resolve_paper.py",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2511.11702v1",
+      "abstract": "Understanding 3D scene-level affordances from natural language instructions is essential for enabling embodied agents to interact meaningfully in complex environments. However, this task remains challenging due to the need for semantic reasoning and spatial grounding. Existing methods mainly focus on object-level affordances or merely lift 2D predictions to 3D, neglecting rich geometric structure information in point clouds and incurring high computational costs. To address these limitations, we introduce Task-Aware 3D Scene-level Affordance segmentation (TASA), a novel geometry-optimized framework that jointly leverages 2D semantic cues and 3D geometric reasoning in a coarse-to-fine manner. To improve the affordance detection efficiency, TASA features a task-aware 2D affordance detection module to identify manipulable points from language and visual inputs, guiding the selection of task-relevant views. To fully exploit 3D geometric information, a 3D affordance refinement module is proposed to integrate 2D semantic priors with local 3D geometry, resulting in accurate and spatially coherent 3D affordance masks. Experiments on SceneFun3D demonstrate that TASA significantly outperforms the baselines in both accuracy and efficiency in scene-level affordance segmentation.",
+      "authors": [
+        "Lian He",
+        "Meng Liu",
+        "Qilang Ye",
+        "Yu Zhou",
+        "Xiang Deng",
+        "Gangyi Ding"
+      ],
+      "published": "2025-11-12T13:36:37Z",
+      "year": "2025",
+      "pdf_url": "https://arxiv.org/pdf/2511.11702v1",
+      "affiliations": [
+        "Beijing Institute of Technology",
+        "Beijing Academy of Science and Technology",
+        "Shandong Jianzhu University",
+        "State Key Laboratory of Cryptology",
+        "Harbin Institute of Technology"
+      ],
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+      "doi": "10.1609/aaai.v40i6.42466"
+    },
+    "bound_sources": [
+      {
+        "kind": "local_pdf",
+        "value": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+        "provider": "local_pdf",
+        "binding_reason": "trusted_input"
+      },
+      {
+        "kind": "pdf_url",
+        "value": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+        "provider": "local_pdf",
+        "binding_reason": "trusted_input"
+      },
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2511.11702.pdf",
+        "provider": "local_pdf",
+        "binding_reason": "accepted_identifier_derived"
+      },
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2511.11702v1",
+        "provider": "arxiv",
+        "binding_reason": "shared_identifier"
+      }
+    ],
+    "field_provenance": {
+      "title": {
+        "provider": "local_pdf",
+        "retrieved_by": {
+          "kind": "input",
+          "value": "arxiv:2511.11702"
+        }
+      },
+      "arxiv_id": {
+        "provider": "local_pdf",
+        "retrieved_by": {
+          "kind": "input",
+          "value": "arxiv:2511.11702"
+        }
+      },
+      "source_url": {
+        "provider": "local_pdf",
+        "retrieved_by": {
+          "kind": "input",
+          "value": "arxiv:2511.11702"
+        }
+      },
+      "local_pdf_path": {
+        "provider": "local_pdf",
+        "retrieved_by": {
+          "kind": "input",
+          "value": "arxiv:2511.11702"
+        }
+      },
+      "authors": {
+        "provider": "arxiv",
+        "retrieved_by": {
+          "kind": "arxiv_id",
+          "value": "2511.11702"
+        }
+      },
+      "year": {
+        "provider": "arxiv",
+        "retrieved_by": {
+          "kind": "arxiv_id",
+          "value": "2511.11702"
+        }
+      },
+      "abstract": {
+        "provider": "arxiv",
+        "retrieved_by": {
+          "kind": "arxiv_id",
+          "value": "2511.11702"
+        }
+      },
+      "pdf_url": {
+        "provider": "arxiv",
+        "retrieved_by": {
+          "kind": "arxiv_id",
+          "value": "2511.11702"
+        }
+      },
+      "affiliations": {
+        "provider": "openalex",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement"
+        }
+      },
+      "venue": {
+        "provider": "openalex",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement"
+        }
+      },
+      "doi": {
+        "provider": "openalex",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement"
+        }
+      }
+    },
+    "selected_identity_evidence": [
+      {
+        "kind": "doi",
+        "value": "10.1609/aaai.v40i6.42466",
+        "trust": "strong",
+        "source": "metadata"
+      },
+      {
+        "kind": "arxiv_id",
+        "value": "2511.11702",
+        "trust": "strong",
+        "source": "metadata"
+      },
+      {
+        "kind": "title",
+        "value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+        "trust": "metadata",
+        "source": "metadata"
+      },
+      {
+        "kind": "trusted_source_path",
+        "value": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+        "trust": "strong",
+        "source": "source_manifestation"
+      },
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2511.11702v1",
+        "trust": "source_manifestation",
+        "source": "metadata"
+      },
+      {
+        "kind": "source_url",
+        "value": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+        "trust": "source_manifestation",
+        "source": "metadata"
+      },
+      {
+        "kind": "source_url",
+        "value": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+        "trust": "source_manifestation",
+        "source": "source_manifestation"
+      }
+    ],
+    "equivalence_decision": {
+      "status": "equivalent",
+      "reason": "shared_work_identifier",
+      "location_binding": "source_manifestation",
+      "evidence": [
+        {
+          "kind": "shared_identifier",
+          "value": "arxiv_id:2511.11702"
+        },
+        {
+          "kind": "title_similarity",
+          "status": "match",
+          "score": 1.0,
+          "source_value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+          "work_value": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement"
+        }
+      ]
+    },
+    "warnings": [],
+    "repair_trace_path": "D:\\study\\deep-learning\\paper\\.workbuddy\\deeppapernote\\task-aware-3d\\task_aware_3d_identity_repair_trace.json",
+    "provenance": {
+      "resolve_artifact_path": "D:\\study\\deep-learning\\paper\\.workbuddy\\deeppapernote\\task-aware-3d\\task_aware_3d_resolve.json",
+      "metadata_artifact_path": "D:\\study\\deep-learning\\paper\\.workbuddy\\deeppapernote\\task-aware-3d\\task_aware_3d_metadata.json"
+    }
+  },
+  "source_manifestation": {
+    "source_kind": "local_pdf",
+    "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+    "year": "",
+    "venue": "",
+    "source_url": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+    "pdf_url": "https://arxiv.org/pdf/2511.11702v1",
+    "local_pdf_path": "D:\\edge-download\\article\\2026-7-2Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.pdf",
+    "doi": "",
+    "arxiv_id": "2511.11702",
+    "zotero_key": ""
+  }
+}

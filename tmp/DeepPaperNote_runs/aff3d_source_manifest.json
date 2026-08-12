@@ -1,0 +1,720 @@
+{
+  "status": "ok",
+  "script": "extract_source_text.py",
+  "schema_version": 1,
+  "paper_id": "doi:10.48550/arxiv.2510.08316",
+  "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+  "source_kind": "pdf_text",
+  "raw_sections_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_raw_sections.jsonl",
+  "full_text_md_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_full_text.md",
+  "pdf": {
+    "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\deeppapernote\\tmp\\DeepPaperNote\\pdfs\\Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge.pdf",
+    "total_pages": 11,
+    "text_pages_extracted": 11,
+    "text_max_pages": null,
+    "text_truncated": false
+  },
+  "coverage": {
+    "total_pages": 11,
+    "text_max_pages": null,
+    "text_pages_extracted": 11,
+    "text_pages_scanned": 11,
+    "text_truncated": false,
+    "truncated_due_to_page_limit": false,
+    "appendix_detected": false,
+    "appendix_start_page": null,
+    "references_start_page": 9
+  },
+  "sections": [
+    {
+      "section_id": "sec:preamble",
+      "kind": "preamble",
+      "title": "preamble",
+      "page_start": 1,
+      "page_end": 1,
+      "char_count": 1081,
+      "text_hash_sha256": "6a5882cd0670937796ef68fa7ca082347fff798c401e9f25ee807b7eef861c93"
+    },
+    {
+      "section_id": "sec:abstract",
+      "kind": "abstract",
+      "title": "Abstract",
+      "page_start": 1,
+      "page_end": 1,
+      "char_count": 1580,
+      "text_hash_sha256": "d9363da3f97ff70edf727400a35b86a09e1d8c36d0667d0229bef7d57716359f"
+    },
+    {
+      "section_id": "sec:introduction",
+      "kind": "introduction",
+      "title": "1. Introduction",
+      "page_start": 2,
+      "page_end": 2,
+      "char_count": 5165,
+      "text_hash_sha256": "04cd609f4693610dac3dc45b8a4407d582bedcc4c0c73c1c4aeec6418c657e23"
+    },
+    {
+      "section_id": "sec:related-work",
+      "kind": "introduction",
+      "title": "2. Related Work",
+      "page_start": 2,
+      "page_end": 3,
+      "char_count": 2683,
+      "text_hash_sha256": "ad3271d7a9eddd2945c1c9de60beb1dba45ef76a724b6b0cf17e2d6029615f7f"
+    },
+    {
+      "section_id": "sec:methodology",
+      "kind": "method",
+      "title": "3. Methodology",
+      "page_start": 3,
+      "page_end": 5,
+      "char_count": 7798,
+      "text_hash_sha256": "692e2fa74d33f10efd7ae40800ab7904c7d2a31f3b5493bea4214e39cde9917a"
+    },
+    {
+      "section_id": "sec:experiments",
+      "kind": "experiment",
+      "title": "4. Experiments",
+      "page_start": 5,
+      "page_end": 6,
+      "char_count": 1477,
+      "text_hash_sha256": "b961b342b886db7a7291212d535f5ed420b5f3c51b190dfe2bb9f07ffa6585fc"
+    },
+    {
+      "section_id": "sec:datasets",
+      "kind": "data",
+      "title": "Datasets.",
+      "page_start": 6,
+      "page_end": 7,
+      "char_count": 2704,
+      "text_hash_sha256": "b9e7a24f82f60a093514a57703b5f63df12fdfcd4e32f7a6eb005fc7b5900a25"
+    },
+    {
+      "section_id": "sec:method",
+      "kind": "method",
+      "title": "Method",
+      "page_start": 7,
+      "page_end": 7,
+      "char_count": 1238,
+      "text_hash_sha256": "1af67f08065a11f10fdfe39d9a31aa8bb4983d5dac77ff765859996309b0f18f"
+    },
+    {
+      "section_id": "sec:method-2",
+      "kind": "method",
+      "title": "Method",
+      "page_start": 7,
+      "page_end": 8,
+      "char_count": 3805,
+      "text_hash_sha256": "b6870fdd1ba31135ba56bae9d8f7ed9a47359dd0d02846cfee4c901d75785e03"
+    },
+    {
+      "section_id": "sec:model",
+      "kind": "method",
+      "title": "Model",
+      "page_start": 8,
+      "page_end": 8,
+      "char_count": 2866,
+      "text_hash_sha256": "9ec4ce54aaa9cd40c19493dd2cccfcd0a549b254d87dbdff9adf87901f7a1950"
+    },
+    {
+      "section_id": "sec:conclusion",
+      "kind": "conclusion",
+      "title": "5. Conclusion",
+      "page_start": 8,
+      "page_end": 8,
+      "char_count": 987,
+      "text_hash_sha256": "d83404064b23a01f29d6fe9524751db4045d07cea054940b8a93f9761a818a8e"
+    },
+    {
+      "section_id": "sec:references",
+      "kind": "references",
+      "title": "References",
+      "page_start": 9,
+      "page_end": 11,
+      "char_count": 12483,
+      "text_hash_sha256": "20b7b1202926f3ea7c848dcc0f3c3e1634c45c02cdfe54f83ebbca8d1864ff16"
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "char_count": 2671,
+      "section_ids": [
+        "sec:preamble",
+        "sec:abstract"
+      ]
+    },
+    {
+      "page": 2,
+      "char_count": 5897,
+      "section_ids": [
+        "sec:introduction",
+        "sec:related-work"
+      ]
+    },
+    {
+      "page": 3,
+      "char_count": 5194,
+      "section_ids": [
+        "sec:related-work",
+        "sec:methodology"
+      ]
+    },
+    {
+      "page": 4,
+      "char_count": 2568,
+      "section_ids": [
+        "sec:methodology"
+      ]
+    },
+    {
+      "page": 5,
+      "char_count": 3298,
+      "section_ids": [
+        "sec:methodology",
+        "sec:experiments"
+      ]
+    },
+    {
+      "page": 6,
+      "char_count": 2649,
+      "section_ids": [
+        "sec:experiments",
+        "sec:datasets"
+      ]
+    },
+    {
+      "page": 7,
+      "char_count": 4437,
+      "section_ids": [
+        "sec:datasets",
+        "sec:method",
+        "sec:method-2"
+      ]
+    },
+    {
+      "page": 8,
+      "char_count": 4939,
+      "section_ids": [
+        "sec:method-2",
+        "sec:model",
+        "sec:conclusion"
+      ]
+    },
+    {
+      "page": 9,
+      "char_count": 5723,
+      "section_ids": [
+        "sec:references"
+      ]
+    },
+    {
+      "page": 10,
+      "char_count": 5972,
+      "section_ids": [
+        "sec:references"
+      ]
+    },
+    {
+      "page": 11,
+      "char_count": 801,
+      "section_ids": [
+        "sec:references"
+      ]
+    }
+  ],
+  "captions": {
+    "figures": [
+      {
+        "id": "Figure 1",
+        "caption": "Qualitative comparison of 3D feature representations. We visualize learned features across different objects to examine how",
+        "page": 1,
+        "pages": [
+          1
+        ],
+        "section_id": "sec:preamble"
+      },
+      {
+        "id": "Figure 2",
+        "caption": "Overview of our three-stage framework for prompt-guided 3D affordance segmentation. Stage 0 (2D Semantic Knowledge",
+        "page": 4,
+        "pages": [
+          4
+        ],
+        "section_id": "sec:methodology"
+      },
+      {
+        "id": "Figure 3",
+        "caption": "Architecture of the Lightweight Affordance Segmentor. This module fuses geometric patch tokens from our pretrained 3D",
+        "page": 5,
+        "pages": [
+          5
+        ],
+        "section_id": "sec:methodology"
+      },
+      {
+        "id": "Figure 4",
+        "caption": "Qualitative comparison on challenging cases from the PIADv2 [37] (visual prompt) and LASO [15] (text prompt) datasets. These",
+        "page": 6,
+        "pages": [
+          6
+        ],
+        "section_id": "sec:experiments"
+      },
+      {
+        "id": "Figure 4",
+        "caption": "visualizes qualitative comparisons on PIADv2 and",
+        "page": 8,
+        "pages": [
+          8
+        ],
+        "section_id": "sec:method-2"
+      }
+    ],
+    "tables": [
+      {
+        "id": "Table 1",
+        "caption": "Quantitative comparison with state-of-the-art methods on the PIAD and PIADv2 datasets. We report results on both Seen",
+        "page": 7,
+        "pages": [
+          7
+        ],
+        "section_id": "sec:datasets"
+      },
+      {
+        "id": "Table 2",
+        "caption": "The overall results of all comparative methods on the",
+        "page": 7,
+        "pages": [
+          7
+        ],
+        "section_id": "sec:datasets"
+      },
+      {
+        "id": "Table 3",
+        "caption": "Comparison of model efficiency. aIoU is evaluated on the",
+        "page": 8,
+        "pages": [
+          8
+        ],
+        "section_id": "sec:method-2"
+      },
+      {
+        "id": "Table 4",
+        "caption": "Ablation studies on the PIADv2 Seen split. We analyze",
+        "page": 8,
+        "pages": [
+          8
+        ],
+        "section_id": "sec:method-2"
+      }
+    ]
+  },
+  "math_index": [
+    {
+      "text": "Given an input 3D point cloud P = {pi ∈R3}N",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "i=1 with N",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "conditioned affordance map M ∈RN. The overall process",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "obtain per-point 2D semantic descriptors, F 2D = {f 2D",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "i=1, which serve as the foundational supervision sig-",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "Each 3D model is represented as a point cloud P =",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "pi ∈R3N",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "i=1. We render V RGB views under uniformly dis-",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "F 2D = {f 2D",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "∈Rd2D}N",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "i=1.",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "PS = {Pj}m",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "j=1. For each patch, we obtain patch-level 2D",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "pi∈Pj",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "pi∈Pj",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "jk =",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "is the total number of patches, and the indices j, k ∈",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "ℓaff =",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "j=1",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "k=1",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "ℓpretrain = λaffℓaff + λrecℓrec + λdivℓdiv.",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "TP = Proj3D(F 3D) + Epoint,",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "Ttext = Projtext(Ftext) + Etext,",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "Timg = Projimg(Fimg) + Eimg.",
+      "section_id": "sec:methodology",
+      "page_start": 3,
+      "page_end": 5
+    },
+    {
+      "text": "we render V = 12 RGB views at a resolution of 224x224.",
+      "section_id": "sec:datasets",
+      "page_start": 6,
+      "page_end": 7
+    },
+    {
+      "text": "jective are set to λrec = 1.0, λaff = 0.1, and λdiv = 0.2.",
+      "section_id": "sec:datasets",
+      "page_start": 6,
+      "page_end": 7
+    },
+    {
+      "text": "fine-tuning. The affordance segmentor is built with L = 6",
+      "section_id": "sec:method-2",
+      "page_start": 7,
+      "page_end": 8
+    },
+    {
+      "text": "for the segmentation loss are λfocal = 1.0 and λdice = 1.0.",
+      "section_id": "sec:method-2",
+      "page_start": 7,
+      "page_end": 8
+    }
+  ],
+  "appendix_index": {
+    "appendix_detected": false,
+    "start_page": null,
+    "sections": [],
+    "figure_captions": [],
+    "table_captions": []
+  },
+  "language_hint": "en",
+  "text_hash_sha256": "c0181767e9421bfbf19fec3bfd3340f5985676ad373eeb4c0e1e8aa56a9a084d",
+  "identity_contract": {
+    "artifact_type": "canonical_identity",
+    "schema_version": 2,
+    "paper_id": "doi:10.48550/arxiv.2510.08316",
+    "identity_verdict": "accepted",
+    "work_level_identity": {
+      "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+      "translated_title": "",
+      "authors": [
+        "Yu Huang",
+        "Zelin Peng",
+        "Changsong Wen",
+        "Xiaokang Yang",
+        "Weifeng Shen"
+      ],
+      "year": "2025",
+      "venue": "arXiv (Cornell University)",
+      "doi": "10.48550/arxiv.2510.08316",
+      "arxiv_id": "2510.08316",
+      "zotero_key": ""
+    },
+    "source_manifestation": {
+      "source_kind": "title_query",
+      "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+      "year": "",
+      "venue": "",
+      "source_url": "http://arxiv.org/abs/2510.08316",
+      "pdf_url": "https://arxiv.org/pdf/2510.08316",
+      "local_pdf_path": "",
+      "doi": "",
+      "arxiv_id": "",
+      "zotero_key": ""
+    },
+    "accepted_metadata": {
+      "status": "ok",
+      "source_type": "title_query",
+      "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+      "source_url": "http://arxiv.org/abs/2510.08316",
+      "metadata_sources": [
+        "title_query",
+        "openalex",
+        "arxiv"
+      ],
+      "paper_id": "doi:10.48550/arxiv.2510.08316",
+      "identity_confidence": "high",
+      "identity_confidence_reasons": [
+        "title_query_unmatched",
+        "doi_present",
+        "arxiv_id_present"
+      ],
+      "zotero_lookup": {
+        "mode": "auto",
+        "status": "error",
+        "match_kind": "title",
+        "error": {
+          "code": "zotero_timeout",
+          "message": "Timed out while connecting to the Zotero Local API.",
+          "retryable": true
+        }
+      },
+      "script": "resolve_paper.py",
+      "authors": [
+        "Yu Huang",
+        "Zelin Peng",
+        "Changsong Wen",
+        "Xiaokang Yang",
+        "Weifeng Shen"
+      ],
+      "venue": "arXiv (Cornell University)",
+      "year": "2025",
+      "doi": "10.48550/arxiv.2510.08316",
+      "source": "openalex",
+      "pdf_url": "https://arxiv.org/pdf/2510.08316",
+      "url": "http://arxiv.org/abs/2510.08316v3",
+      "arxiv_id": "2510.08316",
+      "abstract": "Affordance segmentation aims to decompose 3D objects into parts that serve distinct functional roles, enabling models to reason about object interactions rather than mere recognition. Existing methods, mostly following the paradigm of 3D semantic segmentation or prompt-based frameworks, struggle when geometric cues are weak or ambiguous, as sparse point clouds provide limited functional information. To overcome this limitation, we leverage the rich semantic knowledge embedded in large-scale 2D Vision Foundation Models (VFMs) to guide 3D representation learning through a cross-modal alignment mechanism. Specifically, we propose Cross-Modal Affinity Transfer (CMAT), a pretraining strategy that compels the 3D encoder to align with the semantic structures induced by lifted 2D features. CMAT is driven by a core affinity alignment objective, supported by two auxiliary losses, geometric reconstruction and feature diversity, which together encourage structured and discriminative feature learning. Built upon the CMAT-pretrained backbone, we employ a lightweight affordance segmentor that injects text or visual prompts into the learned 3D space through an efficient cross-attention interface, enabling dense and prompt-aware affordance prediction while preserving the semantic organization established during pretraining. Extensive experiments demonstrate consistent improvements over previous state-of-the-art methods in both accuracy and efficiency.",
+      "published": "2025-10-09T15:01:26Z"
+    },
+    "bound_sources": [
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2510.08316",
+        "provider": "openalex",
+        "binding_reason": "title_author_year"
+      },
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2510.08316.pdf",
+        "provider": "openalex",
+        "binding_reason": "accepted_identifier_derived"
+      },
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2510.08316v3",
+        "provider": "arxiv",
+        "binding_reason": "shared_identifier"
+      }
+    ],
+    "field_provenance": {
+      "title": {
+        "provider": "title_query",
+        "retrieved_by": {
+          "kind": "input",
+          "value": "title:9ec63386b700"
+        }
+      },
+      "authors": {
+        "provider": "openalex",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      },
+      "year": {
+        "provider": "openalex",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      },
+      "venue": {
+        "provider": "openalex",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      },
+      "doi": {
+        "provider": "openalex",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      },
+      "source_url": {
+        "provider": "openalex",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      },
+      "pdf_url": {
+        "provider": "openalex",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      },
+      "arxiv_id": {
+        "provider": "arxiv",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      },
+      "abstract": {
+        "provider": "arxiv",
+        "retrieved_by": {
+          "kind": "title",
+          "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      }
+    },
+    "selected_identity_evidence": [
+      {
+        "kind": "doi",
+        "value": "10.48550/arxiv.2510.08316",
+        "trust": "strong",
+        "source": "metadata"
+      },
+      {
+        "kind": "arxiv_id",
+        "value": "2510.08316",
+        "trust": "strong",
+        "source": "metadata"
+      },
+      {
+        "kind": "title",
+        "value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+        "trust": "metadata",
+        "source": "metadata"
+      },
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2510.08316",
+        "trust": "source_manifestation",
+        "source": "metadata"
+      },
+      {
+        "kind": "source_url",
+        "value": "http://arxiv.org/abs/2510.08316",
+        "trust": "source_manifestation",
+        "source": "metadata"
+      }
+    ],
+    "equivalence_decision": {
+      "status": "equivalent",
+      "reason": "minor_title_variation_only",
+      "location_binding": "source_manifestation",
+      "evidence": [
+        {
+          "kind": "title_similarity",
+          "status": "match",
+          "score": 1.0,
+          "source_value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+          "work_value": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge"
+        }
+      ]
+    },
+    "warnings": [],
+    "repair_trace_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_identity_repair_trace.json",
+    "provenance": {
+      "resolve_artifact_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_resolve.json",
+      "metadata_artifact_path": "E:\\my\\paper\\tmp\\DeepPaperNote_runs\\aff3d_metadata.json"
+    }
+  },
+  "source_manifestation": {
+    "source_kind": "title_query",
+    "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+    "year": "",
+    "venue": "",
+    "source_url": "http://arxiv.org/abs/2510.08316",
+    "pdf_url": "https://arxiv.org/pdf/2510.08316",
+    "local_pdf_path": "",
+    "doi": "",
+    "arxiv_id": "",
+    "zotero_key": ""
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "status": "ok",
+  "script": "write_obsidian_note.py",
+  "paper_id": "doi:10.1609/aaai.v40i6.42466",
+  "title": "Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement",
+  "note_path": "D:\\study\\deep-learning\\paper\\2-Ai work\\Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement\\Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.md",
+  "subdir": "2-Ai work",
+  "images_dir": "D:\\study\\deep-learning\\paper\\2-Ai work\\Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement\\images",
+  "materialized_figures": [
+    {
+      "source_id": "Figure 2",
+      "source_image": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_003_fig_figure_2_review.png",
+      "dest_image_path": "D:\\study\\deep-learning\\paper\\2-Ai work\\Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement\\images\\page_003_fig_figure_2_review.png",
+      "relative_markdown_path": "images/page_003_fig_figure_2_review.png",
+      "reviewed_asset_sha256": "ff14db07796d4c8cbbbdca509e843ac50a51a1be54c00a31facf3cb1e51b620b"
+    },
+    {
+      "source_id": "Figure 3",
+      "source_image": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_004_fig_figure_3_review.png",
+      "dest_image_path": "D:\\study\\deep-learning\\paper\\2-Ai work\\Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement\\images\\page_004_fig_figure_3_review.png",
+      "relative_markdown_path": "images/page_004_fig_figure_3_review.png",
+      "reviewed_asset_sha256": "73778371962f6fd987c058c696b4a338365f49ebd6f6a00c4da9724e9e23f0b7"
+    },
+    {
+      "source_id": "Figure 5",
+      "source_image": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_007_fig_figure_5_review.png",
+      "dest_image_path": "D:\\study\\deep-learning\\paper\\2-Ai work\\Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement\\images\\page_007_fig_figure_5_review.png",
+      "relative_markdown_path": "images/page_007_fig_figure_5_review.png",
+      "reviewed_asset_sha256": "bed092cb42d5b60b4fba8d293e359b69737f70756b5562f5687cdf3dea3f11a9"
+    },
+    {
+      "source_id": "Table 1",
+      "source_image": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_005_fig_table_1_review.png",
+      "dest_image_path": "D:\\study\\deep-learning\\paper\\2-Ai work\\Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement\\images\\page_005_fig_table_1_review.png",
+      "relative_markdown_path": "images/page_005_fig_table_1_review.png",
+      "reviewed_asset_sha256": "a7c1106435236ce8279e516eb04afd115d74a87267c3241f24b29e267a04a61e"
+    },
+    {
+      "source_id": "Table 3",
+      "source_image": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_3_review.png",
+      "dest_image_path": "D:\\study\\deep-learning\\paper\\2-Ai work\\Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement\\images\\page_006_fig_table_3_review.png",
+      "relative_markdown_path": "images/page_006_fig_table_3_review.png",
+      "reviewed_asset_sha256": "620f9e484fa2a960cc753b912d58fe0cd7847d2fd9b5c0d62a54342649553d65"
+    },
+    {
+      "source_id": "Table 4",
+      "source_image": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\Task_Aware_3D_Affordance_Segmentation_via_2D_Guidance_and_Geometric_Refinement\\images\\page_006_fig_table_4_review.png",
+      "dest_image_path": "D:\\study\\deep-learning\\paper\\2-Ai work\\Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement\\images\\page_006_fig_table_4_review.png",
+      "relative_markdown_path": "images/page_006_fig_table_4_review.png",
+      "reviewed_asset_sha256": "b76f79af27a4e01bd2a6b7b57b95d4a0d8f0ca010dc38dced5f8066a9dffaff9"
+    }
+  ],
+  "output_mode": "obsidian",
+  "base_output_root": "D:\\study\\deep-learning\\paper",
+  "vault": "D:\\study\\deep-learning\\paper"
+}

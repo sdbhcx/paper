@@ -1,0 +1,232 @@
+Figure A1. Fig. (Left) Impact of the number of LLM trainable layers during the stage 1 training. Fig. (Middle) Impact of the number of
+LLM trainable layers during stage 1 training. Fig(Right) Impact of group normalization coefficient on performance of SAGE-7B.
+tioning task to demonstrate the stability of both the model
+and the training pipeline. Finally, we include a training-time
+analysis comparing SAGE with existing approaches in the
+literature.
+A3.1. Comparison to Existing Methods
+In Table A2, we compare SAGE with additional existing
+SOTA methods on 3D VQA and captioning tasks using the
+ScanQA [1] and Scan2Cap [11] datasets, respectively. On
+both 3D VQA and captioning tasks, SAGE outperforms the
+existing SOTA methods on most metrics. While no existing
+method dominantly performs best across all metrics, SAGE
+surpasses all existing methods in 4 out of 6 metrics across
+the 2 datasets, despite using less data for training and being
+computationally more efficient than existing methods.
+A3.2. Training Time Analysis
+In this section, we compare the total training time of
+our proposed method with PointLLM, which uses the same
+amount of training data and a similar training setup (Table
+A3). Here, the total training time refers to the end-to-end
+duration of the entire training pipeline. Due to its efficient
+model design, SAGE requires considerably less training
+time (18 hours compared to 26.1 hours for PointLLM). The
+preference optimization step introduces additional training
+time; however, the complete three-stage training of our
+method still takes only slightly longer than the two-stage
+training pipeline of PointLLM.
+A3.3. Zero-shot Classification
+In Table A4, we compare the zero-shot classification per-
+formance of SAGE with existing SOTA methods on the
+ModelNet40 dataset. Here, SAGE shows improved or com-
+parable performance with existing SOTA methods.
+A3.4. Performance Across Multiple Runs
+To assess the stability of our method, we report the mean
+and standard deviation of SAGE and SAGE (7B parame-
+ters) across three independent runs in Table A5. Both vari-
+ants demonstrate consistent performance with low variance
+across all metrics.
+Table A4. Performance comparison on Zero-shot 3D classifica-
+tion on ModelNet40 [65] and ScanObjectNN [60]. Here, Ensem-
+bled [40] reprsents pretraining with four datasets, ShapeNet [6],
+ABO [14] and 3D-FUTURE [20]. : Uni3D employs a
+larger EVA-CLIP-E [52] teacher, while other methods employ
+OpenCLIP-bigG [30].
+Ours uses the Objaverse dataset paired with Cap3D generated captions.
+Method
+ModelNet40 ScanObjectNN
+Top1 Top3 Top5 Top1 Top3 Top5
+2D Inference without 3D Training
+PointCLIP [73] 19.3 28.6 34.8 10.5 20.8 30.6
+PointCLIPv2 [80] 63.6 77.9 85.0 42.2 63.3 74.5
+Trained on ShapeNet
+RECON [47] 61.2 73.9 78.1 42.3 62.5 75.6
+CLIP2Point [29] 49.5 71.3 81.2 25.5 44.6 59.4
+ULIP [69] 60.4 79.0 84.4 51.5 71.1 80.2
+OpenShape [40] 70.3 86.9 91.3 47.2 72.4 84.7
+TAMM [75] 73.1 88.5 91.9 54.8 74.5 83.3
+MixCon3D [22] 72.6 87.1 91.3 52.6 69.9 78.7
+Trained on Ensembled
+ULIP-2 [70] 75.1 88.1 93.2 51.6 72.5 82.3
+OpenShape [40] 84.4 96.5 98.0 52.2 79.7 88.7
+MixCon3D [22] 86.8 96.9 98.3 58.6 80.3 89.2
+Uni3D-B [77] 86.3 96.5 97.9 63.8 82.7 90.2
+Uni3D-L [77] 86.3 96.8 98.3 58.2 81.8 89.4
+RECON++-B [48] 86.5 94.7 95.8 63.6 84.2 90.6
+SAGE-7B 88.9 94.7 98.3 65.8 80.2 90.6
+A4. Ablation and Sensitivity Studies
+In this section, we perform an in-depth sensitivity anal-
+ysis of various model-specific hyperparameters. We also
+conduct a detailed ablation study on the key components of
+our proposed model. All experiments are carried out us-
+ing the 7B-parameter setting on the 3D captioning task with
+the Objaverse dataset, and we report the S-BERT alignment
+score.
+A4.1. Sensitivity Study
+Trainable layers. Our model, SAGE, utilizes LLaMA
+as the pretrained LLM backbone, which consists of 32 lay-
+ers. In our proposed training pipeline, during the 3D tok-
+enizer warm-up stage (stage 1), we train the first 4 layers
+of the LLM backbone. Since our proposed method doesn't
+Table A5. Performance comparison across three runs on (SAGE) and (SAGE) on 7B parameters. Here, the Objaverse dataset is used for
+3D object captioning and recognition tasks, and the MM-Vet dataset is used for 3D VQA.
+Model
+Captioning Cls. VQA
+GPT-4 Sentence-BERT SimCSE BLEU-1 ROUGE-L METEOR GPT-4 GPT-4
+SAGE-7B 49.05 49.23 48.56 7.41 10.25 14.35 55.71 46.38
+SD 0.09 0.04 0.05 0.04 0.02 0.02 0.03 0.04
+SAGE-7B 50.98 50.11 49.70 9.50 12.66 16.95 57.11 49.53
+SD 0.08 0.03 0.04 0.05 0.04 0.03 0.03 0.05
+Table A6. Sensitivity study on different model-specific parameters on ModelNet40.
+(a) Codebook size.
+Size S-BERT 
+4096 48.88
+8192 50.11
+16384 49.76
+(b) Number of point tokens.
+Size S-BERT 
+128 48.98
+512 50.11
+1024 50.09
+(c) Types of pooling layers.
+Size S-BERT 
+Max pool 50.11
+Avg. pool 49.89
+Attn. pool 48.03
+What is this?
+2 wings - a left wing and a right wing that
+extend from either side of the fuselage.
+This is a 3D model of a commercial airplane depicted
+in a cartoon style. It is white, likely representing a
+clean, newly-painted aircraft. The model features
+typical elements of an airplane including wings, tail,
+and a cockpit, but with exaggerated proportions
+commonly seen in cartoons. This type of model can be
+used in animation, video games, or any graphical
+representations requiring a playful and less realistic
+style.
+How many wings does it have?
+What animal is this?
+The elephant has four legs - two at the front
+and two at the back of the body.
+How many legs does this animal
+have?
+What does this animal eat?
+This is a 3D model of an elephant, with gray color
+skin. It has two big fan-like ears, one trunk, one pair of
+large, elevated tusks and a tail.
+Elephants are herbivores that eat a variety of
+plant materials, including grasses, leaves,
+twigs, roots, and tree bark.
+Figure A2. Dialogues between PointLLM and a human user.
+Table A7. Impact of discrete vs. continuous point embeddings.
+Embedding type S-BERT 
+Continuous (w/o codebook) 47.67
+Discrete (with codebook) 50.11
+utilize any pretrained 3D encoder, here the LLM solely ex-
+tracts rich features from the point tokens along with the text
+tokens. In this experiment, we evaluate several configura-
+tions of the LLM backbone, ranging from fully freezing the
+Table A8. Impact of different LLM backbones.
+LLM Model S-BERT 
+LLaMA-3.1 PointLLM 51.23
+SAGE 55.89
+Qwen-2.5 PointLLM 52.35
+SAGE 56.91
+LLM to partially tuning 4, 8, or 16 layers, as well as full
+fine-tuning of all 32 layers. From Figure A1(left), we ob-
+Table A9. Qualitative results on the Objaverse dataset.
+Samples 1, 2
+Uid 059a7936ed89419ba9eae3153753ae86 82413f74efb84bc3b872a7a8f26cca81
+Prompt Caption this 3D model in detail. Caption this 3D model in detail.
+Human A blue cartoon A white fish with orange/red spots
+InstructBLIP [15] There is a cute blue and white pony in a still,
+looking cheerful and cheerful. It's standing
+next to a larger blue-colored object, potentially
+a barrier or structure, which provides the back-
+drop for this scene. The overall image is de-
+signed to create a fun, whimsical setting for the
+pony.
+There is a fish hanging on a string in front of
+a black background. The fish is swimming in
+the middle of the image and is a little bit up
+from the bottom of the screen. The fish has a
+red spots on the left and right sides, and is po-
+sitioned slightly towards the top of the screen.
+LLaVA [39] The image features a 3D model of a cute, color-
+ful cartoon unicorn with a blue and white body
+and a hint of pink. The unicorn has a magical
+aura and is set against a black background. Its
+long, flowing mane and tail add to its whimsi-
+cal charm. The unicorn appears to be in mo-
+tion, possibly flying or prancing, as it captures
+the viewer's imagination.
+The image features a 3D model of a fish floating
+in a dark, empty space. The fish is positioned
+towards the left side of the image and appears
+to be swimming upwards. The fish is large
+and occupies a significant portion of the image,
+giving the impression of a life-like, computer-
+generated representation. The dark background
+and lack of other objects in the scene emphasize
+the fish's presence and create a sense of depth
+and dimension.
+3D-LLM [25] A 3D model of a purple and pink pony with
+long hair, standing on its hind legs.
+A small fish with a long tail is visible in the im-
+age. It has no distinguishing features or mark-
+ings, and its color appears to be brown.
+PointLLM [68] A 3D model of a vibrant blue cartoon pony,
+characterized by its large white eyes, two
+wings, and a distinctive horn. The creature's
+overall design exudes a playful and friendly
+aura, making it appropriate for children's ani-
+mations or toy production. The noticeably large
+white eyes and the unique wing and horn fea-
+tures endow the pony with an element of fan-
+tasy, while its blue body color gives it an over-
+all appealing look.
+The 3D model is of a long fish, illustrating a
+striking color combination of red, yellow, and
+grey. It's characterized by a slender tail. The
+yellow color is mostly seen on the body of the
+fish, fading into a subtler, grayish hue towards
+the fins and tail. The model depicts a typical
+long fish species, often found in the ocean, and
+can be used in a variety of digital applications,
+like animation, games, or virtual reality.
+SAGE The 3D model is a depiction of a light blue
+pony, characterized by its vibrant color,
+large white eyes, and a notably long tail. It
+also has two vibrantly colored wings and a
+horn, which makes it look like a cartoon
+avatar.
+The 3D model represents a fish with a
+streamlined body with a vibrant mix of color
+of yellow, red and silver. It has a long dor-
+sal fin, two pectoral fins, a long anal fin, and
+large, captivating eyes.
+serve that the model's performance improves as 4 layers are
+trained compared to fully frozen LLM. Beyond this point,
+increasing the number of trainable layers leads to a perfor-
+mance drop, due to overfitting, given the relatively small
+size of the training dataset.
+Model hyperparameters. In the vector quantization
+loss,  is a crucial hyperparameter that controls the con-
+tribution of the codebook loss and the quantization loss.
+Another important hyperparameter is , which balances the
+two components of the total training objective: the next-
+token prediction loss and the vector quantization loss. We
+investigate the impact of these two coefficients on SAGE's
+

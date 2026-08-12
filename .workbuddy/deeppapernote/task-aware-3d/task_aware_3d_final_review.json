@@ -1,0 +1,24 @@
+{
+  "paper_id": "doi:10.1609/aaai.v40i6.42466",
+  "final_quality_review": {
+    "status": "pass",
+    "central_evidence_chain_complete": true,
+    "key_settings_and_numbers_present": true,
+    "mechanism_result_mapping_present": true,
+    "comparative_positioning_present": true,
+    "limitations_explained_mechanistically": true,
+    "proven_and_unproven_claims_separated": true,
+    "reuse_takeaways_specific": true,
+    "notes": "主结果、效率、两组消融、负面结果和证据边界均已写入；AP25 低于 Fun3DU、附加模态退化、计时边界和闭环缺口均明确保留。"
+  },
+  "final_readability_review": {
+    "status": "pass",
+    "natural_chinese": true,
+    "mixed_language_removed": true,
+    "mechanical_translation_artifacts_removed": true,
+    "math_rendering_checked": true,
+    "figure_captions_checked": true,
+    "new_facts_added_during_polish": false,
+    "notes": "已完成全篇语言复读；保留模型、数据集、指标和图表编号等稳定专名，其余普通英文短语已改写。"
+  }
+}

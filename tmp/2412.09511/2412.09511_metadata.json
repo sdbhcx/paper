@@ -1,0 +1,305 @@
+{
+  "status": "ok",
+  "script": "collect_metadata.py",
+  "paper_id": "arxiv:2412.09511",
+  "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+  "pdf_path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\pdfs\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency.pdf",
+  "pdf_source": "downloaded",
+  "source_url": "https://arxiv.org/pdf/2412.09511",
+  "pdf_url": "https://arxiv.org/pdf/2412.09511.pdf",
+  "file_size": 6825253,
+  "identity_contract": {
+    "artifact_type": "canonical_identity",
+    "schema_version": 2,
+    "paper_id": "arxiv:2412.09511",
+    "identity_verdict": "accepted",
+    "work_level_identity": {
+      "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+      "translated_title": "",
+      "authors": [
+        "Dongyue Lu",
+        "Lingdong Kong",
+        "Tianxin Huang",
+        "Gim Hee Lee"
+      ],
+      "year": "2024",
+      "venue": "",
+      "doi": "",
+      "arxiv_id": "2412.09511",
+      "zotero_key": ""
+    },
+    "source_manifestation": {
+      "source_kind": "arxiv_url",
+      "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+      "year": "",
+      "venue": "",
+      "source_url": "https://arxiv.org/pdf/2412.09511",
+      "pdf_url": "https://arxiv.org/pdf/2412.09511.pdf",
+      "local_pdf_path": "",
+      "doi": "",
+      "arxiv_id": "2412.09511",
+      "zotero_key": ""
+    },
+    "accepted_metadata": {
+      "status": "ok",
+      "source_type": "arxiv_url",
+      "source_url": "https://arxiv.org/pdf/2412.09511",
+      "arxiv_id": "2412.09511",
+      "pdf_url": "https://arxiv.org/pdf/2412.09511.pdf",
+      "metadata_sources": [
+        "arxiv_url",
+        "arxiv"
+      ],
+      "paper_id": "arxiv:2412.09511",
+      "identity_confidence": "high",
+      "identity_confidence_reasons": [
+        "arxiv_id_present"
+      ],
+      "zotero_lookup": {
+        "mode": "auto",
+        "status": "error",
+        "match_kind": "arxiv_url",
+        "error": {
+          "code": "zotero_timeout",
+          "message": "Timed out while connecting to the Zotero Local API.",
+          "retryable": true
+        }
+      },
+      "script": "resolve_paper.py",
+      "source": "arxiv",
+      "url": "http://arxiv.org/abs/2412.09511v1",
+      "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+      "abstract": "Identifying affordance regions on 3D objects from semantic cues is essential for robotics and human-machine interaction. However, existing 3D affordance learning methods struggle with generalization and robustness due to limited annotated data and a reliance on 3D backbones focused on geometric encoding, which often lack resilience to real-world noise and data corruption. We propose GEAL, a novel framework designed to enhance the generalization and robustness of 3D affordance learning by leveraging large-scale pre-trained 2D models. We employ a dual-branch architecture with Gaussian splatting to establish consistent mappings between 3D point clouds and 2D representations, enabling realistic 2D renderings from sparse point clouds. A granularity-adaptive fusion module and a 2D-3D consistency alignment module further strengthen cross-modal alignment and knowledge transfer, allowing the 3D branch to benefit from the rich semantics and generalization capacity of 2D models. To holistically assess the robustness, we introduce two new corruption-based benchmarks: PIAD-C and LASO-C. Extensive experiments on public datasets and our benchmarks show that GEAL consistently outperforms existing methods across seen and novel object categories, as well as corrupted data, demonstrating robust and adaptable affordance prediction under diverse conditions. Code and corruption datasets have been made publicly available.",
+      "authors": [
+        "Dongyue Lu",
+        "Lingdong Kong",
+        "Tianxin Huang",
+        "Gim Hee Lee"
+      ],
+      "published": "2024-12-12T17:59:03Z",
+      "year": "2024"
+    },
+    "bound_sources": [
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2412.09511.pdf",
+        "provider": "arxiv_url",
+        "binding_reason": "trusted_input"
+      },
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2412.09511v1",
+        "provider": "arxiv",
+        "binding_reason": "shared_identifier"
+      }
+    ],
+    "field_provenance": {
+      "arxiv_id": {
+        "provider": "arxiv_url",
+        "retrieved_by": {
+          "kind": "input",
+          "value": "arxiv:2412.09511"
+        }
+      },
+      "source_url": {
+        "provider": "arxiv_url",
+        "retrieved_by": {
+          "kind": "input",
+          "value": "arxiv:2412.09511"
+        }
+      },
+      "pdf_url": {
+        "provider": "arxiv_url",
+        "retrieved_by": {
+          "kind": "input",
+          "value": "arxiv:2412.09511"
+        }
+      },
+      "title": {
+        "provider": "arxiv",
+        "retrieved_by": {
+          "kind": "arxiv_id",
+          "value": "2412.09511"
+        }
+      },
+      "authors": {
+        "provider": "arxiv",
+        "retrieved_by": {
+          "kind": "arxiv_id",
+          "value": "2412.09511"
+        }
+      },
+      "year": {
+        "provider": "arxiv",
+        "retrieved_by": {
+          "kind": "arxiv_id",
+          "value": "2412.09511"
+        }
+      },
+      "abstract": {
+        "provider": "arxiv",
+        "retrieved_by": {
+          "kind": "arxiv_id",
+          "value": "2412.09511"
+        }
+      }
+    },
+    "selected_identity_evidence": [
+      {
+        "kind": "arxiv_id",
+        "value": "2412.09511",
+        "trust": "strong",
+        "source": "metadata"
+      },
+      {
+        "kind": "title",
+        "value": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+        "trust": "metadata",
+        "source": "metadata"
+      },
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2412.09511.pdf",
+        "trust": "source_manifestation",
+        "source": "metadata"
+      },
+      {
+        "kind": "source_url",
+        "value": "https://arxiv.org/pdf/2412.09511",
+        "trust": "source_manifestation",
+        "source": "metadata"
+      },
+      {
+        "kind": "pdf_url",
+        "value": "https://arxiv.org/pdf/2412.09511.pdf",
+        "trust": "source_manifestation",
+        "source": "source_manifestation"
+      },
+      {
+        "kind": "source_url",
+        "value": "https://arxiv.org/pdf/2412.09511",
+        "trust": "source_manifestation",
+        "source": "source_manifestation"
+      }
+    ],
+    "equivalence_decision": {
+      "status": "equivalent",
+      "reason": "shared_work_identifier",
+      "location_binding": "source_manifestation",
+      "evidence": [
+        {
+          "kind": "shared_identifier",
+          "value": "arxiv_id:2412.09511"
+        }
+      ]
+    },
+    "warnings": [],
+    "repair_trace_path": "D:\\study\\deep-learning\\paper\\tmp\\2412.09511\\2412.09511_identity_repair_trace.json",
+    "provenance": {
+      "resolve_artifact_path": "D:\\study\\deep-learning\\paper\\tmp\\2412.09511\\2412.09511_resolve.json",
+      "metadata_artifact_path": "D:\\study\\deep-learning\\paper\\tmp\\2412.09511\\2412.09511_metadata.json"
+    }
+  },
+  "source_manifestation": {
+    "source_kind": "arxiv_url",
+    "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+    "year": "",
+    "venue": "",
+    "source_url": "https://arxiv.org/pdf/2412.09511",
+    "pdf_url": "https://arxiv.org/pdf/2412.09511.pdf",
+    "local_pdf_path": "",
+    "doi": "",
+    "arxiv_id": "2412.09511",
+    "zotero_key": ""
+  },
+  "identity_observations": [
+    {
+      "provider": "openalex",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency"
+      },
+      "record": {
+        "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+        "authors": [
+          "Deyang Lu",
+          "Lingdong Kong",
+          "Tianxin Huang",
+          "Gim Hee Lee"
+        ],
+        "affiliations": [
+          "National University of Singapore"
+        ],
+        "venue": "",
+        "year": "2025",
+        "doi": "10.1109/cvpr52734.2025.00164",
+        "source": "openalex",
+        "source_type": "openalex",
+        "source_url": "https://doi.org/10.1109/cvpr52734.2025.00164",
+        "pdf_url": "",
+        "abstract": "",
+        "metadata_sources": [
+          "openalex"
+        ]
+      }
+    },
+    {
+      "provider": "crossref",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency"
+      },
+      "record": {
+        "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+        "authors": [
+          "Dongyue Lu",
+          "Lingdong Kong",
+          "Tianxin Huang",
+          "Gim Hee Lee"
+        ],
+        "affiliations": [
+          "National University of Singapore"
+        ],
+        "venue": "2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+        "doi": "10.1109/cvpr52734.2025.00164",
+        "source": "crossref",
+        "source_type": "crossref",
+        "source_url": "https://doi.org/10.1109/cvpr52734.2025.00164",
+        "year": "2025",
+        "published": "2025",
+        "abstract": "",
+        "metadata_sources": [
+          "crossref"
+        ]
+      }
+    },
+    {
+      "provider": "arxiv",
+      "retrieved_by": {
+        "kind": "title",
+        "value": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency"
+      },
+      "record": {
+        "source": "arxiv",
+        "source_type": "arxiv",
+        "metadata_sources": [
+          "arxiv"
+        ],
+        "source_url": "http://arxiv.org/abs/2412.09511v1",
+        "url": "http://arxiv.org/abs/2412.09511v1",
+        "arxiv_id": "2412.09511",
+        "title": "GEAL: Generalizable 3D Affordance Learning with Cross-Modal Consistency",
+        "abstract": "Identifying affordance regions on 3D objects from semantic cues is essential for robotics and human-machine interaction. However, existing 3D affordance learning methods struggle with generalization and robustness due to limited annotated data and a reliance on 3D backbones focused on geometric encoding, which often lack resilience to real-world noise and data corruption. We propose GEAL, a novel framework designed to enhance the generalization and robustness of 3D affordance learning by leveraging large-scale pre-trained 2D models. We employ a dual-branch architecture with Gaussian splatting to establish consistent mappings between 3D point clouds and 2D representations, enabling realistic 2D renderings from sparse point clouds. A granularity-adaptive fusion module and a 2D-3D consistency alignment module further strengthen cross-modal alignment and knowledge transfer, allowing the 3D branch to benefit from the rich semantics and generalization capacity of 2D models. To holistically assess the robustness, we introduce two new corruption-based benchmarks: PIAD-C and LASO-C. Extensive experiments on public datasets and our benchmarks show that GEAL consistently outperforms existing methods across seen and novel object categories, as well as corrupted data, demonstrating robust and adaptable affordance prediction under diverse conditions. Code and corruption datasets have been made publicly available.",
+        "authors": [
+          "Dongyue Lu",
+          "Lingdong Kong",
+          "Tianxin Huang",
+          "Gim Hee Lee"
+        ],
+        "published": "2024-12-12T17:59:03Z",
+        "year": "2024",
+        "pdf_url": "https://arxiv.org/pdf/2412.09511v1"
+      }
+    }
+  ]
+}

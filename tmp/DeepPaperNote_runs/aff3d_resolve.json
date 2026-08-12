@@ -1,0 +1,25 @@
+{
+  "status": "ok",
+  "source_type": "title_query",
+  "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+  "source_url": "",
+  "metadata_sources": [
+    "title_query"
+  ],
+  "paper_id": "title:9ec63386b700",
+  "identity_confidence": "low",
+  "identity_confidence_reasons": [
+    "title_query_unmatched"
+  ],
+  "zotero_lookup": {
+    "mode": "auto",
+    "status": "error",
+    "match_kind": "title",
+    "error": {
+      "code": "zotero_timeout",
+      "message": "Timed out while connecting to the Zotero Local API.",
+      "retryable": true
+    }
+  },
+  "script": "resolve_paper.py"
+}

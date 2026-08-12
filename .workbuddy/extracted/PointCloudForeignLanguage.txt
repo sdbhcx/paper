@@ -1,0 +1,729 @@
+This CVPR paper is the Open Access version, provided by the Computer Vision Foundation.
+                 Except for this watermark, it is identical to the accepted version;
+
+          the final published version of the proceedings is available on IEEE Xplore.
+
+Point Cloud as a Foreign Language for Multi-modal Large Language Model
+
+                              Sneha Paul, Zachary Patterson, Nizar Bouguila
+                                        Concordia University, Canada
+
+      sneha.paul@mail.concordia.ca, {zachary.patterson, nizar.bouguila}@concordia.ca
+
+                        Abstract                                        It's an apple.                                 What is this?
+                                                              Large Language Model
+   Multi-modal large language models (MLLMs) have                                       This is a 3D model of an apple, which is
+shown remarkable progress in integrating visual and lin-       Multimodal Tokenizer     vividly colored with a shiny red exterior with a
+guistic understanding. Recent efforts have extended these     What is this?             contrasting green leaf at the top.
+capabilities to 3D understanding through encoder-based
+architectures that rely on pre-trained 3D encoders to ex-                                            How is the leaf positioned relative to
+tract geometric features. However, such approaches suf-                                              the it's center?
+fer from semantic misalignment between geometric and lin-
+guistic spaces, resolution sensitivity, and substantial com-                             The leaf is at the top of the apple, angled
+putational overhead. In this work, we present SAGE, the                                  outward from the stem attachment point.
+first end-to-end 3D MLLM that directly processes raw point
+clouds without relying on a pre-trained 3D encoder. Our       Figure 1. Our proposed encoder-free 3D Multimodal Large
+approach introduces a lightweight 3D tokenizer that com-      Language Model efficiently captures 3D information from point
+bines geometric sampling and neighbourhood aggregation        clouds without relying on any pretrained 3D encoder. The figure
+with vector quantization to convert point clouds into dis-    on the left illustrates the overall architecture, while the figure on
+crete tokens--treating 3D data as a foreign language that     the right shows an example conversation about an object generated
+naturally extends the LLM's vocabulary. Furthermore, to       by our model.
+enhance the model's reasoning capability on complex 3D
+tasks, we propose a preference optimization training strat-   visual and auditory signals--with language, enabling uni-
+egy with a semantic alignment­based reward, specifically      fied and cross-modal reasoning. Building on this progress,
+designed for open-ended 3D question answering where re-       recent research [68] has explored extending MLLMs with
+sponses are descriptive. Extensive experiments across di-     3D understanding capabilities, enabling models to reason
+verse 3D understanding benchmarks demonstrate that our        about and generate content grounded in spatial structures by
+end-to-end approach outperforms existing encoder-based        incorporating point cloud data into the multimodal under-
+methods while offering significant advantages in computa-     standing framework. By coupling 3D spatial understand-
+tional efficiency, generalization across LLM backbones, and   ing with the reasoning power of LLMs, 3D MLLMs hold
+robustness to input resolution variations. Code is available  the promise of advancing high-level perception, embodied
+at:https://github.com/snehaputul/SAGE3D.                      intelligence, and human­robot interaction through natural
+                                                              3D­language reasoning and generation.
+1. Introduction
+                                                                 Current 3D-MLLMs primarily follow a pre-trained
+   Large Language Models (LLMs) [2, 5, 31, 59] have           encoder-dependent design paradigm, where a pre-trained
+demonstrated remarkable capabilities in understanding         3D encoder extracts geometric embeddings that are pro-
+complex linguistic tasks and solving challenging problems,    jected into the LLM's input space. While this design ben-
+including multi-step reasoning and advanced question an-      efits from the representational capacity of pre-trained 3D
+swering. Inspired by their success in language domains,       encoders [44, 56, 72, 74], it faces few key limitations (which
+recent research has extended the capabilities of LLMs to-     may not necessarily be unique to 3D but constitute the fo-
+ward multimodal understanding, leading to the develop-        cus of our work): (1) Semantic misalignment: Existing
+ment of Multi-modal large language models (MLLM) [37,         pre-trained 3D encoders are generally trained with self-
+38]. These models integrate multiple modalities--such as      supervised or contrastive loss [44, 46, 67] optimized for
+                                                              geometric discrimination rather than linguistic grounding,
+                                                              resulting in embeddings that remain semantically incom-
+                                                              patible with the LLM's input space. Yet, the assumption
+                                                              of the availability of a large pre-trained encoder makes it
+                                                              impractical for domains with limited in-distribution data,
+
+                                                              16676
+where pre-training such encoders is infeasible. (2) Res-       designed to enhance complex 3D understanding, we report
+olution mismatch: Existing 3D encoders assume fixed in-        results for both the complete model with preference opti-
+put sizes (e.g., 8,192 points in Point-BERT), whereas real-    mization (SAGE) and the variant without it (SAGE)--the
+world point clouds vary widely in density, leading to de-      proposed encoder-free end-to-end 3D MLLM trained under
+graded representations when dense point clouds lose fine-      the standard protocol--to validate the effectiveness of our
+grained details through downsampling, or when sparse ones      model.
+require upsampling that introduces geometric artifacts or in-
+complete coverage. (3) Computational overhead: A large            For empirical evaluation, we conduct extensive experi-
+3D encoder introduces considerable processing overhead         ments across standard 3D understanding benchmarks, in-
+before the LLM can begin generating responses, slowing         cluding captioning, question answering, and recognition.
+down inference and increasing resource demands.                Our results yield two key findings: (1) SAGE, despite hav-
+                                                               ing no pre-trained encoder, matches or surpasses the perfor-
+   To address the aforementioned limitations, we explore       mance of existing 3D MLLMs that rely on extensive pre-
+an end-to-end design for 3D MLLMs that does not rely on        training. Additionally, it exhibits significantly higher in-
+a pre-trained encoder, but instead learns 3D representations   ference efficiency, robustness to input resolution changes.
+jointly with the LLM through a 3D tokenizer. It is important   We report this variant as SAGE, and report all the main
+to clarify that "encoder-free" does not imply a parameter-     results separately for this. (2) SAGE, trained with the pro-
+free approach--the tokenizer still contains a small number     posed preference optimization, further outperforms all ex-
+of learnable parameters, but is significantly smaller than     isting methods across multiple benchmarks, with particu-
+those of a typical encoder. Moreover, techniques effective     larly strong gains on complex understanding tasks. Overall,
+in related domains (e.g., vision)--such as dividing images     we make the following contributions in this paper:
+into patches and projecting them directly into the language
+model's input space--prove ineffective for 3D data, as they       · We introduce SAGE, the first end-to-end 3D MLLM
+fail to capture the underlying geometric structure and rela-         that directly processes raw point clouds without rely-
+tive spatial relationships fundamental to 3D understanding.          ing on any pre-trained 3D encoders. Our lightweight
+                                                                     3D tokenizer integrates geometric sampling and neigh-
+   To this end, we introduce SAGE--a Spatial-Aware GEn-              bourhood aggregation with vector quantization to con-
+erative model that eliminates the need for pre-trained 3D en-        vert raw 3D data into discrete tokens--treating point
+coders and enables direct 3D-to-language generation. Cen-            clouds as a foreign language that naturally extends the
+tral to our approach is a novel lightweight 3D tokenizer that        LLM's vocabulary while preserving geometric struc-
+projects raw 3D inputs into the LLM's input space, effec-            ture and positional cues.
+tively allowing the model to interpret 3D data as a foreign
+language. Specifically, we employ farthest point sampling         · We introduce a preference optimization strategy to en-
+and nearest-neighbour grouping to capture local geometric            hance complex reasoning in 3D MLLMs. As exist-
+structures, yielding spatially-aware representations that en-        ing RL methods rely on verifiable rewards and can-
+code both positional and semantic cues of 3D input. To               not handle descriptive 3D tasks, we propose a seman-
+bridge the gap between continuous geometric features and             tic alignment­based reward that enables effective rein-
+the discrete token space of the LLM, we apply vector quan-           forcement learning for open-ended 3D reasoning.
+tization with a learnable codebook that discretizes 3D fea-
+tures into a finite vocabulary of tokens--serving as an ex-       · Extensive experiments show that SAGE matches or
+tension of the LLM tokenizer for 3D understanding.                   exceeds pre-trained encoder­based methods while be-
+                                                                     ing more efficient and robust, and SAGE with prefer-
+   To further enhance the reasoning capability of our 3D             ence optimization outperforms existing methods.
+MLLM, we introduce an RL-based preference optimization
+training strategy aimed at improving performance on chal-      2. Related Works
+lenging 3D understanding tasks that require complex rea-
+soning. Since most existing RL-based techniques, such as       2.1. 3D MLLM
+GRPO, rely on rewards derived from the correctness of final
+answers on verifiable tasks (e.g., mathematical reasoning),       Building on multimodal architectures from related do-
+they cannot be directly applied to 3D question-answering       mains, recent work has significantly advanced 3D vision-
+tasks, where answers are often descriptive and not objec-      language modelling. Early approaches such as PointLLM
+tively verifiable. To address this limitation, we propose a    [24] and ShapeLLM [48] established the encoder-based
+novel reward formulation based on semantic alignment be-       paradigm by coupling pre-trained 3D encoders with pro-
+tween the generated response and the ground-truth answer,      jection modules to bridge geometric and linguistic rep-
+enabling effective RL-based optimization for open-ended        resentations. While effective, this design inherits funda-
+3D reasoning. While the preference optimization stage is       mental limitations from the assumed availability of large-
+                                                               scale pre-trained encoders. Specifically, methods like
+
+                                                               16677
+LLaVA-3D [78], Robin3D [34], and 3D-LLaVA [17] ex-                                                       It's an apple. </s>
+tend instruction-following capabilities into 3D by incorpo-
+rating specialized projectors or spatial priors, yet remain                    Large Language Model
+constrained by the semantic misalignment between encoder
+outputs--typically trained with self-supervised objectives        Text         3D Tokenizer                 Text Tokenizer
+[45] or contrastive losses [67]--and the linguistic space of  Tokenizer
+LLMs. This misalignment necessitates complex projection                                      <p_end> What is this? ASSISTANT: It's an apple. </s>
+architectures that struggle to reconcile geometric discrimi-  USER: <p_start>
+nation with linguistic grounding.
+                                                                                             Text token  3D token Ignored token
+   A complementary line of work explores reconstruc-
+tive and instance-aware objectives to improve grounding.      Figure 2. Architecture of our proposed method, encoder-free 3D
+Ross3D [64] and Inst3D-LMM [71] incorporate auxiliary         Multimodal Large Language Model.
+losses for relational reasoning, while methods like Spa-
+tialPIN [42], MSR3D [79], and Situation3D [43] demon-         guage model's vocabulary. However, methods successful in
+strate that explicit geometric priors enhance spatial rela-   2D vision--particularly patch-based tokenization--cannot
+tion understanding. However, these approaches compound        be directly applied to 3D point clouds, which lack regular
+architectural complexity through handcrafted geometry-        grid topology and necessitate explicit preservation of local
+aware modules, and the fixed-resolution assumption of         geometric structure and inter-point spatial relationships that
+pre-trained encoders (e.g., 8,192 points in Point-BERT        patch-based approaches inherently discard. ENEL [53] is a
+[72]) creates brittleness when handling variable-density      concurrent work in an attempt towards endoer-free learning,
+point clouds--dense inputs lose fine-grained details through  yet its tokenizer contains a large number of parameters.
+downsampling, while sparse inputs require upsampling that
+introduces artifacts.                                         3. Method
+
+   Temporal and memory-based extensions such as               3.1. Preliminaries
+GPT4Scene [49], Video-3D LLM [76], and 3DLLM-Mem
+[26] enhance reasoning across sequential observations but        Let P  RN3 denote a point cloud and q be a natu-
+inherit the computational overhead of encoder prepro-         ral language question about its semantic or geometric prop-
+cessing, making real-time deployment challenging. Sim-        erties. A 3D multimodal large language model such as
+ilarly, grounding-focused methods like SeeGround [36]         PointLLM [68] aims to generate a coherent textual response
+and SplatTalk [58] achieve impressive zero-shot capabil-      r conditioned on both P and q, which comprises three com-
+ities but remain dependent on encoder-extracted features.     ponents: a pre-trained 3D encoder that extracts geometric
+Efficiency-oriented approaches, including GreenPLM [55],      features from raw point clouds, a projection module that
+Point-Bind [24], and MiniGPT-3D [54], reduce annotation       maps these features into the LLM's embedding space, and
+requirements through cross-modal alignment but do not ad-     a pre-trained large language model (LLM) backbone fllm.
+dress the fundamental encoder dependency that limits gen-     Here, fllm is a decoder-only Transformer [62] that processes
+eralization across LLM backbones and input resolutions.       a heterogeneous sequence consisting of text and point cloud
+                                                              tokens. Let T = (t1, t2, . . . , tK ) denote this input sequence
+2.2. Encoder-free MLLM                                        of K discrete token IDs. Through self-attention, fllm cap-
+                                                              tures dependencies across modalities, enabling joint reason-
+   The limitations of encoder-based designs have moti-        ing over textual and 3D geometric inputs.
+vated recent exploration of encoder-free architectures in
+2D vision-language domains. Fuyu-8B [3] and Otter-HD             Each token ti is embedded into Rdllm and the LLM
+[35] pioneered decoder-only models that project raw image     autoregressively produces hidden states h^i = fllm(T<i),
+patches directly into language models, demonstrating ar-      where T<i = (t1, . . . , ti1). Each h^i is projected to vocab-
+chitectural simplicity but achieving moderate performance     ulary logits via fvocab : Rdllm  R|V|, and the next token is
+due to insufficient geometric structure preservation. The     predicted as t~i = arg maxwV fvocab(h^i)[w]. Training min-
+EVE series [18, 19] advanced this direction by unifying vi-   imizes negative log-likelihood over response tokens only,
+sion and language representations within a single decoder     masking out instruction tokens. As mentioned earlier, such
+through auxiliary supervision and scaled training data. Sim-  an encoder-based approach has several drawbacks, includ-
+ilarly, SHOW-O [66] proposed unified understanding and        ing semantic misalignment, resolution mismatch, and com-
+generation without dedicated encoders. Alternative ap-        putational overhead. To this end, we explore an end-to-end
+proaches employ VQ tokenizers [57] or lightweight pro-        3D MLLM approach that is pre-trained-encoder free.
+jection layers [9, 18] to convert images into discrete token
+sequences, treating visual data as an extension of the lan-
+
+                                                              16678
+3.2. End-to-end 3D MLLM                                                                        !                                  !             !# !!            !"
+
+                                                               Stage 1: 3D tokenizer warm-up      Stage 2: Instruction tuning        Stage 3: GRPO-based tuning
+
+   The core idea of our proposed approach (Figure 2) is to                   LLM                                 LLM                            LLM
+treat a point cloud as a foreign language without using a
+pre-trained 3D encoder. To extend the vocabulary of pre-                  3D        Text              3D            Text                 3D             Text
+trained LLM tokenizer to understand point clouds, we in-              tokenizer  tokenizer        tokenizer      tokenizer           tokenizer       tokenizer
+troduce a lightweight, trainable tokenizer that projects the
+point cloud into the LLM's input space. Given an input         Figure 3. The proposed training pipeline of our model. The model
+point cloud P  RND, where N denotes the number of              is trained in three stages -- each stage focusing on a specific train-
+points and D the dimensionality of each point feature (e.g.,   ing objective.
+D = 6 for (x, y, z, r, g, b) when including RGB color infor-
+mation), the proposed tokenizer outputs a sequence of quan-       Since the quantization operation is inherently non-
+tized tokens Y = (y1, y2, . . . , yM ), each selected from a   differentiable, we employ the vector quantization loss [61]
+discrete learned codebook, with M denoting the number of       to enable gradient-based training:
+point tokens. Below, we discuss the main components of
+the proposed tokenizer.                                               LVQ = sg[H]  Hq22 + H  sg[Hq]22, (3)
+
+   Geometric Sampling and Grouping. Given the dense                                               codebook loss             commitment loss
+point cloud P, we first sample a representative set of points
+Ns using Farthest Point Sampling (FPS). These points rep-      where sg[·] denotes the stop-gradient operator. The first
+resent cluster centres for each of which Kg-nearest neigh-     term updates the codebook vectors to better represent the
+bours are identified using the KNN algorithm to form local     projected features, while the second term constrains the pro-
+sub-clouds that preserve neighbourhood geometry. Next,         jection to produce features close to existing codebook en-
+a local geometry aggregation module constructs spatially       tries, preventing drift from the quantized space.
+contextualized representations that capture both geometric
+and semantic cues by projecting the point feature into geo-       Mixed-Modality Sequence Formation. After vector
+metric feature space, adding relative positional embedding,    quantization, the discretized tokens from the codebook are
+and applying global max-pooling to each sub-cloud. Specif-     directly concatenated with text tokens to form a mixed-
+ically, aggregated features are pooled to obtain the compact   modality input sequence for the LLM:
+latent representation Z  RMdg , where dg denotes the ge-
+ometric feature dimension and M is the number of spatial       [<p start>, eq(h1), . . . , eq(hM ), <p end>, w1, . . . , wL],
+tokens retained after pooling.                                                                                                     (4)
+
+   Projection to LLM Space. These features are first pro-      where {wj}jL=1 are text token embeddings and {eq(hi)}M i=1
+jected into the language model embedding space using a         are the quantized 3D token embeddings retrieved from the
+learnable projection matrix W  Rdgdllm :                       codebook, all in Rdllm . <p start> and <p end> are spe-
+                                                               cial tokens indicating the start and end of point cloud to-
+
+                                                               kens. The entire framework is optimized end-to-end using
+
+                                                               a combined objective:
+
+                                                                                                  Ltotal = LNTP + LVQ,                                           (5)
+
+               H = ZW  RMdllm .    (1)                         where LNTP is the next-token prediction loss, and  balances
+                                                               the two terms.
+   Vector Quantization. To bridge the gap between con-
+tinuous geometric features and discrete language tokens, we    3.3. Proposed Training Pipeline
+employ vector quantization with a learnable codebook that
+maps continuous embeddings into a finite vocabulary of 3D         While our end-to-end 3D MLLM can be seamlessly in-
+tokens. This process effectively extends the LLM tokenizer     tegrated into existing multimodal training frameworks [48,
+to the 3D domain, treating geometric representations as a      68], and our empirical results in the section 4 show im-
+new language. To discretize the projected features H, we       proved performance over existing methods, we introduce a
+define a learnable codebook C = {ek}kC=1, where C de-          preference optimization strategy to further improve the rea-
+notes the codebook size and each ek  Rdllm represents a        soning capability of 3D MLLM for more complex tasks.
+code vector. Each latent feature hi (the i-th row of H) is     This stage is employed on top of the existing two-stage
+quantized by selecting its nearest codebook entry:             training protocol adopted by the existing literature. Follow-
+                                                               ing, we describe the whole pipeline in detail:
+q(hi)  =  arg  min  hi    ek 22 ,  Hq = {eq(hi)}M i=1, (2)
+                                                                  Stage 1: 3D Tokenizer Warm-up. In the first stage, the
+                 k                                             newly initialized 3D tokenizer is jointly trained with a small
+                                                               subset of the LLM layers using a next-token prediction ob-
+where Hq  RMdllm denotes the quantized representation.         jective on 3D captioning datasets. Specialized structural to-
+The codebook C is trained jointly with the rest of the model,  kens, <p start> and <p end>, are introduced to delin-
+                                                               eate 3D token sequences within the language stream. This
+allowing the discovery of discrete 3D primitives that align
+
+with both geometric and linguistic semantics.
+
+                                                               16679
+stage focuses on aligning geometric token embeddings with         The final outcome score for each response is a weighted
+the linguistic representation space while stabilizing early-   combination of both terms:
+stage multimodal interactions.
+                                                                         si =  s(isem) + (1  ) si(len),            (8)
+   Stage 2: Instruction Tuning. The second stage per-
+forms end-to-end instruction tuning using multimodal in-       where   [0, 1] balances semantic accuracy and length
+struction­response pairs. Here, the entire model (tokenizer    regularization. This composite reward enables stable GRPO
+and LLM) is optimized to comprehend and generate con-          optimization in descriptive 3D­language tasks, ensuring the
+textually accurate outputs conditioned jointly on textual      model learns to produce semantically relevant and appropri-
+and 3D point cloud inputs. This step substantially en-         ately concise responses.
+hances the model's cross-modal reasoning and alignment
+with instruction-following behaviours.                            Given the outcome scores {si}m i=1 computed from our
+                                                               composite reward, we compute a normalized group-wise
+   Stage 3: Preference Optimization. Finally, we in-           advantage for each sampled response:
+troduce a new preference optimization stage that utilizes
+a novel reward function with Group Relative Policy Op-         Ai =      si  s¯            ,  where        1m
+timization (GRPO) [51] to fine-tune the model toward                                                 s¯ = m sj.
+preference-aligned responses. Unlike most common rein-                1  jm=1(sj  s¯)2 + 
+forcement learning approaches, such as PPO [50], GRPO                 m                                           j=1
+eliminates the need for an explicit reward model by utiliz-
+ing the model's own likelihoods to derive relative quality                                                                         (9)
+preferences across a set of generated responses, leading to    Here,  is a small constant (1  109) added for numeri-
+more stable and efficient optimization.
+                                                               cal stability to prevent division by zero. This normalization
+   While GRPO has been primarily adopted for verifiable
+domains such as mathematical reasoning--where correct-         ensures that the relative quality of responses, rather than
+ness can be explicitly determined by comparing the fi-
+nal answer to a ground truth--3D understanding tasks are       their absolute magnitude, drives learning within each sam-
+inherently descriptive and often admit multiple valid re-
+sponses expressed in different wordings. To adapt GRPO         pled group. The GRPO objective is then defined as:
+to this open-ended setting, we design a reward function
+that combines semantic similarity with length regulariza-                                1m
+tion to evaluate generated responses in a continuous and in-          LGRPO() =  m Ai log (yi | q, P), (10)
+terpretable manner. For each instruction­point cloud pair
+(q, P), the model generates a group of m candidate re-                                               i=1
+sponses {y1, y2, . . . , ym}, each compared against a refer-
+ence response yref. We employ a pre-trained sentence en-       where (yi | q, P) denotes the model's probability of gen-
+coder (Sentence-BERT) E(·) to encode both the generated        erating response yi given the instruction­point cloud pair
+and reference sentences, and compute their cosine similar-     (q, P). This objective encourages the model to increase
+ity:                                                           the likelihood of responses with higher relative rewards
+                                                               within each group, promoting self-improvement through
+                                                               outcome-based preference optimization. During this stage,
+                                                               we reuse the instruction­response pairs from Stage 2, but
+                                                               sample multiple candidate responses per instruction and ap-
+                                                               ply GRPO updates iteratively.
+
+s(isem)  =     E(yi) · E(yref) ,  i = 1, 2, . . . , m.  (6)    4. Experiments
+            E(yi)2 E(yref)2
+                                                               4.1. Implementations Details
+This term provides a continuous measure of semantic align-
+ment, rewarding responses that are meaningfully close to          Training Details. Following the experimental setup of
+the reference description, even if phrased differently.        existing 3D­language alignment methods and to ensure fair
+                                                               comparison with prior work, we adopt LLaMA [59] as the
+   To further discourage excessively short or overly long      backbone language model and initialize from the Vicuna-
+outputs, we introduce a length-based reward defined as:        7B v1.1 [13] checkpoint. All implementation details for
+                                                               the first two stages follow those of PointLLM [68], un-
+            s(ilen) = exp   (Li    Lref)2  ,            (7)    less otherwise specified. All experiments are conducted
+                                  22                           on 4 NVIDIA H100 80GB GPUs in BF16 precision. We
+                                                               employ the AdamW optimizer with a cosine learning rate
+where Li and Lref denote the token lengths of the generated    schedule, a warmup ratio of 0.03, and weight decay of 0.05.
+and reference responses, respectively, and  controls the tol-  FlashAttention is used to improve memory efficiency
+erance around the reference length. This reward reaches        during training.
+its maximum when Li = Lref and decays smoothly as the
+length deviation increases.                                       During stage 1 (3D tokenizer warm-up), the model is
+                                                               trained for 3 epochs with a batch size of 128 and an ini-
+                                                               tial learning rate of 4  104. During this stage, the
+
+                                                               16680
+3D tokenizer module and the first four transformer layers     4.2. Multimodal Understanding
+of the LLM are jointly trained, while the remaining lay-
+ers are frozen. Specialized point tokens <p start> and           In this section, we discuss the main results of our pro-
+<p end> are randomly initialized and trained along with       posed method and its comparison to existing methods.
+the model to denote point cloud boundaries. For the 3D to-
+kenizer, we set the number of sampled points to Ns = 512         3D Object Captioning. Table 1 summarizes the quan-
+and the number of neighbours to Kg = 81. For vector           titative results on the Objaverse 3D captioning benchmark
+quantization, we use a learnable codebook of size 8192.       following the evaluation protocol of PointLLM [68]. Each
+The weighting coefficient of vector quantization loss is      model is prompted with "Caption this 3D model in de-
+ = 0.25 and the regularization coefficient in the total loss  tail." Our proposed model, SAGE, substantially outper-
+is  = 0.50.                                                   forms all baselines across both GPT-4­based and text-
+                                                              similarity metrics. Specifically, our 7B and 13B vari-
+   In stage 2 (instruction tuning), the model is fine-tuned   ants achieve GPT-4 scores of 50.98 and 52.87, surpassing
+end-to-end for 3 epochs with a batch size of 32 and a learn-  ShapeLLM-13B by +3.93 and PointLLM-13B by +4.72, re-
+ing rate of 2  105. Instruction­response pairs contain-       spectively. Our model also achieves a large gain in tradi-
+ing complex multi-modal queries are used to enhance the       tional lexical metrics--BLEU-1, ROUGE-L, and METEOR
+model's reasoning and alignment between text and 3D con-      over PointLLM and SpaheLLM on both model sizes, sug-
+tent.                                                         gesting that the learned 3D token representations contribute
+                                                              to richer and more precise linguistic grounding. Consistent
+   Finally, in stage 3 (preference optimization), the model   improvements are observed in more advanced similarity-
+is fully fine-tuned using the GRPO objective with a learn-    based measures such as Sentence-BERT and SimCSE, with
+ing rate of 1  106, and number of generated responses,        +1.91 and +0.47 improvement for 7B and +3.93 and +1.05
+m = 8, trained for 1 epoch on the instruction tuning data.    for 13B.
+The weighting coefficient for group normalization is set to
+ = 0.95. The model-specific hyperparameters are listed           3D Object Classification. For the open-vocabulary
+in Appendix A1 for reproducibility. Furthermore, an in-       3D classification task, models are prompted using two
+depth sensitivity analysis of these hyperparameters is also   query formats: (1) an instruction-style prompt--"What is
+presented in Appendix A4.2.                                   this?"--and (2) a completion-style prompt--"This is an
+                                                              object of ...". Our 7B and 13B models achieve evalua-
+   We follow the evaluation protocol of prior works and re-   tion scores of 57.11 and 58.48, respectively, outperform-
+port multiple metrics for 3D captioning, including BLEU-      ing the best existing 3D MLLM (ShapeLLM) by +2.61 and
+1, ROUGE-L, METEOR, and embedding-based scores us-            +4.48. These results indicate that the proposed model facil-
+ing SimCSE and Sentence-BERT. For instruction-following       itates stronger 3D­language alignment and generalization
+and classification tasks, we additionally employ GPT-4 as     across prompts, enabling consistent recognition and reason-
+an external evaluator following [48, 68], using Prompt 1      ing about object semantics without the need for dedicated
+(Appendix A1).                                                3D encoders.
+
+   Dataset Details. We train our model using the large-          3D Visual Question Answering. We further evaluate
+scale point­text instruction-following dataset introduced in  our model on the MM-Vet benchmark [48] for 3D visual
+PointLLM [68], which provides comprehensive coverage          question answering (VQA). Our 7B model achieves a GPT-
+for 3D-language alignment. The dataset contains over 730K     4 evaluation score of 49.53, outperforming existing meth-
+point­text pairs across approximately 660K unique 3D ob-      ods by 2.13. Scaling to 13B further boosts performance to
+jects sourced from Objaverse [16]. It consists of 660K brief  54.89, marking a +1.79 improvement over ShapeLLM-13B.
+caption-style instructions generated via Cap3D [41] and an    This consistent trend across all three tasks demonstrates
+additional 70K complex instruction samples synthesized us-    that our encoder-free architecture effectively captures fine-
+ing GPT-4. The latter include 40K single-turn conversations   grained geometric and semantic relationships, leading to
+and 15K multi-turn dialogues, designed to capture diverse     more coherent and human-aligned multimodal reasoning.
+object properties such as category, appearance, affordance,
+and function. For evaluation, we adopt the benchmark pro-     4.3. Analysis and Discussion
+tocols established in PointLLM [68]. Specifically, we eval-
+uate on the same evaluation set as existing work (Obja-       4.3.1 SAGE Outperforms Existing 3D MLLM
+verse [16]), each paired with high-quality Cap3D [41] cap-
+tions. For 3D visual question answering (VQA) evaluation,     The primary goal of this work is to explore the feasibil-
+we use the MM-Vet dataset [48].                               ity of an end-to-end architecture for 3D MLLMs, aiming
+                                                              to alleviate the limitations inherent in pre-trained encoder-
+                                                              based designs. As shown in Table 1, our encoder-free
+                                                              model (SAGE)--trained under the same setup as prior
+                                                              works--surpasses or performs on par with existing meth-
+
+                                                              16681
+Table 1. Performance comparison on various 3D downstream tasks. Here, the Objaverse dataset is used for 3D object captioning and
+
+recognition tasks, and the MM-Vet dataset is used for 3D VQA. In addition to our full model (SAGE), we provide the results without the
+preference optimization (SAGE). Additional comparisons with existing methods on different datasets are provided in the Appendix A3.
+
+Model                                          Captioning                                                        Cls.  VQA
+                                                                                                                GPT-4  GPT-4
+InstructBLIP-7B [15]   GPT-4    Sentence-BERT  SimCSE BLEU-1                                ROUGE-L   METEOR    43.50
+InstructBLIP-13B [15]  43.54          47.41                                                     8.28     12.99  44.25     ­
+LLaVA-7B [39]          44.97          45.90    48.48                  4.27                      8.85     13.23  50.00     ­
+LLaVA-13B [39]         46.71          45.61                                                     7.70     12.14  51.75     ­
+PointLLM-7B [68]       38.28          46.37    48.86                  4.65                      8.15     12.58  53.00  47.90
+PointLLM-13B [68]      44.85          47.47                                                     7.30     11.92  54.00  41.20
+ShapeLLM-7B [48]       48.15          47.91    47.10                  3.64                      7.23     12.26  54.50  46.60
+ShapeLLM-13B [48]      46.92          48.20                                                       ­        ­    54.00  47.40
+SAGE-7B                48.94          48.52    45.90                  4.02                        ­        ­    55.71  53.10
+SAGE-7B                49.05          49.23                                                    10.25     14.35  57.11  46.38
+SAGE-13B               50.98          50.11    48.55                  3.87                     12.66     16.95  56.39  49.53
+SAGE-13B               48.54          48.99                                                    12.48     14.27  58.48  53.21
+                       52.87          51.91    49.12                  3.83                     13.25     16.99         54.89
+
+                                               49.23                  ­
+
+                                               49.98                  ­
+
+                                               48.56                  7.41
+
+                                               49.70                  9.50
+
+                                               50.18                  7.98
+
+                                               51.03                  9.72
+
+Table 2. Runtime Complexity Comparison. Inference latency                   Score (S-BERT)
+(ms) and memory (GB) on H100 GPU, 8K points, and Objaverse
+dataset.
+
+Model                  Latency  Throughput                                  Resolution      2K        4K        8K
+                        (ms)    (Sample/s) 
+PointLLM-7B                                                                 Tokens          128       256       512
+SAGE-7B                   239         4.2
+                          100        10.0                                   Throughput      11.0      10.5      10.0
+
+ods that rely on pre-trained encoders. This demonstrates       Figure 4. Performance of SAGE on diverse ranges of point cloud
+that the feature misalignment between pre-trained 3D en-       resolution on 3D captioning task on Objaverse dataset.
+coders and the LLM input space is too large to be effec-
+tively bridged by a simple projection layer, as adopted in     speedup over PointLLM (239 ms), while simultaneously
+previous approaches. In contrast, our lightweight yet well-    improving throughput from 4.2 to 10.0 samples per sec-
+structured tokenizer learns a more coherent representation     ond. This efficiency gain stems from eliminating the heavy
+space, enabling the LLM to interpret 3D data analogously       geometric encoder and replacing it with a lightweight geo-
+to a foreign language.                                         metric tokenizer that directly projects spatial features into
+                                                               the LLM's embedding space.
+
+4.3.2 SAGE Is Computationally Efficient Than                   4.3.3 Robustness to Varying Input Resolutions
+         Encoder-based 3D MLLMs
+                                                               Another limitation of encoder-based models, such as
+A key motivation behind the proposed encoder-free design       PointLLM, lies in their fixed input resolution. When en-
+of SAGE is to address the excessive latency and compu-         countering high-resolution point clouds, these models must
+tational overhead introduced by traditional encoder-based      subsample the input, inevitably discarding fine-grained ge-
+3D MLLMs. In existing methods such as PointLLM, the            ometric details. Conversely, when presented with low-
+3D encoder must first process dense point clouds into latent   resolution inputs, they must upsample points to match
+features before the language model can begin text genera-      the expected resolution--introducing redundant informa-
+tion. This additional preprocessing stage significantly slows  tion that provides no additional semantic value while in-
+inference, making real-time or large-scale deployment im-      creasing inference overhead. In contrast, SAGE naturally
+practical.                                                     supports variable-resolution inputs, efficiently adapting to
+                                                               the density of the point cloud. It achieves higher efficiency
+   To quantify these differences, we compare inference la-     with smaller inputs while maintaining strong performance
+tency and throughput between SAGE and PointLLM on              on high-resolution data--offering the best of both worlds.
+an H100 GPU using 8K-point inputs from the Objaverse
+dataset (Table 2). Our results show that SAGE achieves an         As shown in Figure 4, we evaluate performance across
+inference latency of 100 ms, representing more than a 2.3      different input resolutions (2K, 4K, and 8K points) on the
+                                                               Objaverse dataset. Since PointLLM requires a fixed input
+
+                                                               16682
+Table 3. Qualitative results on Objaverse. We adopt this table from [68], and compare our proposed model's generated description for
+the specific 3D object samples.
+
+Samples 1, 2
+
+Uid                0ea33b6617174530b97d6b7a92c275fb                      de8ec2a724f14fc4b54624512f80f13e
+Prompt
+Human              What is this?                                         This is an object of
+InstructBLIP [15]  A cartoon green and red like a fruit                  A black insect
+LLaVA [39]         an appleavatar 3d model                               26
+                   This is a computer-generated image (CGI) or a         This is an image of a large, close-up, and dark-
+3D-LLM [25]        3D model of an apple with a leaf on it.               colored insect, possibly a big cockroach, with
+PointLLM [68]                                                            long antennae.
+                   A 3D model of a red apple.                            A small, black spider with a long tail.
+SAGE               This is a 3D model of a unique apple, distinc-        This 3D model depicts a realistic, jet-black in-
+                   tively adorned with a single, vibrant green leaf      sect with a pair of striking, golden brown eyes.
+                   at the top.
+                   This is a 3D model of an apple, which is              This is a 3D model of a type of insect, charac-
+                   vividly colored with a shiny red exterior and         terized by its six legs and two antennae, de-
+                   a contrasting green leaf at the top.                  picted in a distinctive black color.
+
+resolution, its inputs are upsampled to the predefined res-       of the sample. This highlights SAGE's stronger alignment
+olution before processing. The results clearly show that          between 3D geometry and linguistic representation, leading
+PointLLM's performance drops sharply on low-resolution            to more natural and detailed 3D object understanding.
+data due to its inability to handle sparse inputs, whereas
+SAGE exhibits only a minor degradation, demonstrating             5. Conclusion
+its robustness to resolution variability. Additionally, the
+throughput of SAGE improves with lower resolution, as                In this work, we presented SAGE, the first encoder-
+the number of input tokens drops. In contrast, PointLLM's         free 3D Multimodal Large Language Model that directly
+throughput remains constant regardless of the original input      processes raw point clouds without relying on pre-trained
+resolution due to its fixed preprocessing requirement.            3D encoders. By introducing a lightweight 3D tokenizer
+                                                                  that transforms geometric structures into discrete tokens
+4.4. Additional Analysis                                          through sampling and vector quantization, our approach
+                                                                  effectively treats 3D data as a foreign language, enabling
+   In the appendix, we present additional experiments,            seamless integration within large language models. Further-
+including comparisons to existing methods on different            more, our multi-stage training pipeline, culminating in a re-
+datasets (Appendix A3.1), performance comparison across           inforcement learning stage with semantic alignment­based
+multiple runs (Appendix A3.4) and a detailed ablation and         rewards, enhances open-ended 3D reasoning capabilities
+sensitivity studies (Appendix A4) on all the main compo-          where answers are descriptive rather than verifiable. Exten-
+nents and hyperparameters.                                        sive experiments demonstrate that our encoder-free frame-
+                                                                  work not only matches or surpasses the performance of
+4.5. Qualitative Analysis                                         encoder-based methods but also offers superior computa-
+                                                                  tional efficiency, backbone generalization, and robust res-
+   Table A9 presents qualitative results on the Objaverse         olution handling. We believe this work lays the founda-
+dataset, comparing the descriptive outputs of our proposed        tion for future exploration of unified multimodal reasoning
+model, SAGE, against existing baselines. Each column              frameworks that treat diverse sensory modalities--such as
+shows examples of 3D object prompts alongside generated           2D, 3D, and language--as components of a shared linguis-
+descriptions. As seen, SAGE produces more precise, con-           tic space.
+textually rich, and visually grounded descriptions, accu-
+rately capturing fine-grained geometric and appearance de-
+tails (e.g., color, texture, and structure) that baseline models
+either overlook or describe vaguely. For example, for sam-
+ple 2, SAGE can describe the number of different body parts
+
+                                                                  16683
+References                                                         [14] Jasmine Collins, Shubham Goel, Kenan Deng, Achlesh-
+                                                                         war Luthra, Leon Xu, Erhan Gundogdu, Xi Zhang, Tomas
+ [1] Daichi Azuma, Taiki Miyanishi, Shuhei Kurita, and Motoaki           F Yago Vicente, Thomas Dideriksen, Himanshu Arora, et al.
+      Kawanabe. Scanqa: 3d question answering for spatial scene          Abo: Dataset and benchmarks for real-world 3d object un-
+      understanding. In proceedings of the IEEE/CVF conference           derstanding. In Proceedings of the IEEE/CVF conference
+      on computer vision and pattern recognition, pages 19129­           on computer vision and pattern recognition, pages 21126­
+      19139, 2022. 2, 3                                                  21136, 2022. 2, 3
+
+ [2] Jian Bai et al. Qwen: A family of large language models.      [15] Wenliang Dai, Junnan Li, Dongxu Li, Anthony Tiong, Junqi
+      arXiv preprint arXiv:2309.16609, 2023. 1                           Zhao, Weisheng Wang, Boyang Li, Pascale N Fung, and
+                                                                         Steven Hoi. Instructblip: Towards general-purpose vision-
+ [3] Rohan Bavishi, Erich Elsen, Curtis Hawthorne, Maxwell               language models with instruction tuning. Advances in neural
+      Nye, Augustus Odena, Arushi Somani, and Sagnak Tasirlar.           information processing systems, 36:49250­49267, 2023. 7,
+      Introducing our multimodal models, 2023. URL https://www.          8, 5
+      adept. ai/blog/fuyu-8b, 2, 2023. 3
+                                                                   [16] Matt Deitke, Dustin Schwenk, Jordi Salvador, Luca Weihs,
+ [4] Daigang Cai, Lichen Zhao, Jing Zhang, Lu Sheng, and Dong            Oscar Michel, Eli VanderBilt, Ludwig Schmidt, Kiana
+      Xu. 3djcg: A unified framework for joint dense captioning          Ehsani, Aniruddha Kembhavi, and Ali Farhadi. Objaverse:
+      and visual grounding on 3d point clouds. In Proceedings of         A universe of annotated 3d objects. In Proceedings of
+      the IEEE/CVF conference on computer vision and pattern             the IEEE/CVF conference on computer vision and pattern
+      recognition, pages 16464­16473, 2022. 2                            recognition, pages 13142­13153, 2023. 6, 2
+
+ [5] Tianyu Cai et al. Phi-3: Democratizing language model         [17] Jiajun Deng, Tianyu He, Li Jiang, Tianyu Wang, Feras Day-
+      alignment. arXiv preprint arXiv:2404.12345, 2024. 1                oub, and Ian Reid. 3d-llava: Towards generalist 3d lmms
+                                                                         with omni superpoint transformer. In Proceedings of the
+ [6] Angel X Chang, Thomas Funkhouser, Leonidas Guibas,                  Computer Vision and Pattern Recognition Conference, pages
+      Pat Hanrahan, Qixing Huang, Zimo Li, Silvio Savarese,              3772­3782, 2025. 3, 2
+      Manolis Savva, Shuran Song, Hao Su, et al. Shapenet:
+      An information-rich 3d model repository. arXiv preprint      [18] Haiwen Diao, Yufeng Cui, Xiaotong Li, Yueze Wang,
+      arXiv:1512.03012, 2015. 2, 3                                       Huchuan Lu, and Xinlong Wang. Unveiling encoder-free
+                                                                         vision-language models. Advances in Neural Information
+ [7] Dave Zhenyu Chen, Qirui Wu, Matthias Nießner, and An-               Processing Systems, 37:52545­52567, 2024. 3
+      gel X Chang. D3net: A speaker-listener architecture for
+      semi-supervised dense captioning and visual grounding in     [19] Haiwen Diao, Xiaotong Li, Yufeng Cui, Yueze Wang, Haoge
+      rgb-d scans. 2021. 2                                               Deng, Ting Pan, Wenxuan Wang, Huchuan Lu, and Xinlong
+                                                                         Wang. Evev2: Improved baselines for encoder-free vision-
+ [8] Sijin Chen, Hongyuan Zhu, Xin Chen, Yinjie Lei, Gang                language models. arXiv preprint arXiv:2502.06788, 2025.
+      Yu, and Tao Chen. End-to-end 3d dense captioning with              3
+      vote2cap-detr. In Proceedings of the IEEE/CVF conference
+      on computer vision and pattern recognition, pages 11124­     [20] Huan Fu, Rongfei Jia, Lin Gao, Mingming Gong, Binqiang
+      11133, 2023. 2                                                     Zhao, Steve Maybank, and Dacheng Tao. 3d-future: 3d fur-
+                                                                         niture shape with texture. International Journal of Computer
+ [9] Yangyi Chen, Xingyao Wang, Hao Peng, and Heng Ji. Solo:             Vision, 129(12):3313­3337, 2021. 2, 3
+      A single transformer for scalable vision-language modeling.
+      Transactions on Machine Learning Research, 2024. 3           [21] Rao Fu, Jingyu Liu, Xilun Chen, Yixin Nie, and Wen-
+                                                                         han Xiong. Scene-llm: Extending language model for
+[10] Yilun Chen, Shuai Yang, Haifeng Huang, Tai Wang, Run-               3d visual understanding and reasoning. arXiv preprint
+      sen Xu, Ruiyuan Lyu, Dahua Lin, and Jiangmiao Pang.                arXiv:2403.11401, 2024. 2
+      Grounded 3d-llm with referent tokens. arXiv preprint
+      arXiv:2405.10370, 2024. 2                                    [22] Yipeng Gao, Zeyu Wang, Wei-Shi Zheng, Cihang Xie, and
+                                                                         Yuyin Zhou. Sculpting holistic 3d representation in con-
+[11] Zhenyu Chen, Ali Gholami, Matthias Nießner, and Angel X             trastive language-image-3d pre-training. In Proceedings of
+      Chang. Scan2cap: Context-aware dense captioning in rgb-            the IEEE/CVF Conference on Computer Vision and Pattern
+      d scans. In Proceedings of the IEEE/CVF conference on              Recognition, pages 22998­23008, 2024. 2, 3
+      computer vision and pattern recognition, pages 3193­3203,
+      2021. 2, 3                                                   [23] Yijie Guo et al. Ll3d: Large language models meet 3d. arXiv
+                                                                         preprint arXiv:2312.04837, 2023. 2
+[12] Zhenyu Chen, Ronghang Hu, Xinlei Chen, Matthias
+      Nießner, and Angel X Chang. Unit3d: A unified transformer    [24] Ziyu Guo, Renrui Zhang, Xiangyang Zhu, Yiwen Tang, Xi-
+      for 3d dense captioning and visual grounding. In Proceed-          anzheng Ma, Jiaming Han, Kexin Chen, Peng Gao, Xi-
+      ings of the IEEE/CVF international conference on computer          anzhi Li, Hongsheng Li, et al. Point-bind & point-llm:
+      vision, pages 18109­18119, 2023. 2                                 Aligning point cloud with multi-modality for 3d understand-
+                                                                         ing, generation, and instruction following. arXiv preprint
+[13] Wei-Lin Chiang, Zhuohan Li, Ziqing Lin, Ying Sheng,                 arXiv:2309.00615, 2023. 2, 3
+      Zhanghao Wu, Hao Zhang, Lianmin Zheng, Siyuan Zhuang,
+      Yonghao Zhuang, Joseph E Gonzalez, et al. Vicuna: An         [25] Yining Hong, Haoyu Zhen, Peihao Chen, Shuhong Zheng,
+      open-source chatbot impressing gpt-4 with 90%* chatgpt             Yilun Du, Zhenfang Chen, and Chuang Gan. 3d-llm: In-
+      quality. See https://vicuna. lmsys. org (accessed 14 April         jecting the 3d world into large language models. Advances
+      2023), 2(3):6, 2023. 5
+
+                                                                   16684
+      in Neural Information Processing Systems, 36:20482­20494,    [39] Haotian Liu, Chunyuan Li, Qingyang Wu, and Yong Jae Lee.
+      2023. 8, 2, 5                                                      Visual instruction tuning. Advances in neural information
+                                                                         processing systems, 36:34892­34916, 2023. 7, 8, 5
+[26] Wenbo Hu, Yining Hong, Yanjun Wang, Leison Gao, Zibu
+      Wei, Xingcheng Yao, Nanyun Peng, Yonatan Bitton, Idan        [40] Minghua Liu, Ruoxi Shi, Kaiming Kuang, Yinhao Zhu, Xu-
+      Szpektor, and Kai-Wei Chang. 3dllm-mem: Long-term                  anlin Li, Shizhong Han, Hong Cai, Fatih Porikli, and Hao
+      spatial-temporal memory for embodied 3d large language             Su. Openshape: Scaling up 3d shape representation towards
+      model. arXiv preprint arXiv:2505.22657, 2025. 3                    open-world understanding. Advances in neural information
+                                                                         processing systems, 36:44860­44879, 2023. 2, 3
+[27] Haifeng Huang, Yilun Chen, Zehan Wang, Rongjie Huang,
+      Runsen Xu, Tai Wang, Luping Liu, Xize Cheng, Yang Zhao,      [41] Tiange Luo, Chris Rockwell, Honglak Lee, and Justin
+      Jiangmiao Pang, et al. Chat-scene: Bridging 3d scene and           Johnson. Scalable 3d captioning with pretrained mod-
+      large language models with object identifiers. Advances            els. Advances in Neural Information Processing Systems,
+      in Neural Information Processing Systems, 37:113991­               36:75307­75337, 2023. 6
+      114017, 2024. 2
+                                                                   [42] Chenyang Ma, Kai Lu, Ta-Ying Cheng, Niki Trigoni, and
+[28] Jiangyong Huang, Silong Yong, Xiaojian Ma, Xiongkun                 Andrew Markham. Spatialpin: Enhancing spatial reason-
+      Linghu, Puhao Li, Yan Wang, Qing Li, Song-Chun Zhu,                ing capabilities of vision-language models through prompt-
+      Baoxiong Jia, and Siyuan Huang. An embodied generalist             ing and interacting 3d priors. Advances in neural information
+      agent in 3d world. arXiv preprint arXiv:2311.12871, 2023.          processing systems, 37:68803­68832, 2024. 3
+      2
+                                                                   [43] Yunze Man, Liang-Yan Gui, and Yu-Xiong Wang. Situa-
+[29] Tianyu Huang, Bowen Dong, Yunhan Yang, Xiaoshui                     tional awareness matters in 3d vision language reasoning. In
+      Huang, Rynson WH Lau, Wanli Ouyang, and Wangmeng                   Proceedings of the IEEE/CVF Conference on Computer Vi-
+      Zuo. Clip2point: Transfer clip to point cloud classifi-            sion and Pattern Recognition, pages 13678­13688, 2024. 3
+      cation with image-depth pre-training. In Proceedings of
+      the IEEE/CVF international conference on computer vision,    [44] Youquan Pang et al. Masked autoencoders for point cloud
+      pages 22157­22167, 2023. 3                                         self-supervised learning. ECCV, 2022. 1
+
+[30] Gabriel Ilharco, Mitchell Wortsman, Ross Wightman, Cade       [45] Yatian Pang, Eng Hock Francis Tay, Li Yuan, and Zhenghua
+      Gordon, Nicholas Carlini, Rohan Taori, Achal Dave,                 Chen. Masked autoencoders for 3d point cloud self-
+      Vaishaal Shankar, Hongseok Namkoong, John Miller, et al.           supervised learning. World Scientific Annual Review of Arti-
+      Openclip, july 2021. URL https://doi. org/10.5281/zenodo,          ficial Intelligence, 1:2440001, 2023. 3
+      5143773(2):29, 2021. 2, 3
+                                                                   [46] Hengshuang Qi et al. Contrastive 3d learning with multi-
+[31] Albert Q. Jiang et al. Mistral 7b. arXiv preprint                   level alignment. NeurIPS, 2023. 1
+      arXiv:2310.06825, 2023. 1
+                                                                   [47] Zekun Qi, Runpei Dong, Guofan Fan, Zheng Ge, Xiangyu
+[32] Yang Jiao, Shaoxiang Chen, Zequn Jie, Jingjing Chen, Lin            Zhang, Kaisheng Ma, and Li Yi. Contrast with reconstruct:
+      Ma, and Yu-Gang Jiang. More: Multi-order relation mining           Contrastive 3d representation learning guided by generative
+      for dense captioning in 3d scenes. In European Conference          pretraining. In International Conference on Machine Learn-
+      on Computer Vision, pages 528­545. Springer, 2022. 2               ing, pages 28223­28243. PMLR, 2023. 2, 3
+
+[33] Zhao Jin, Munawar Hayat, Yuwei Yang, Yulan Guo, and Yin-      [48] Zekun Qi, Runpei Dong, Shaochen Zhang, Haoran Geng,
+      jie Lei. Context-aware alignment and mutual masking for 3d-        Chunrui Han, Zheng Ge, Li Yi, and Kaisheng Ma. Shapellm:
+      language pre-training. In Proceedings of the IEEE/CVF Con-         Universal 3d object understanding for embodied interaction.
+      ference on Computer Vision and Pattern Recognition, pages          In European Conference on Computer Vision, pages 214­
+      10984­10994, 2023. 2                                               238. Springer, 2024. 2, 4, 6, 7, 3
+
+[34] Weitai Kang, Haifeng Huang, Yuzhang Shang, Mubarak            [49] Zhangyang Qi, Zhixiong Zhang, Ye Fang, Jiaqi Wang,
+      Shah, and Yan Yan. Robin3d: Improving 3d large language            and Hengshuang Zhao. Gpt4scene: Understand 3d scenes
+      model via robust instruction tuning. pages 3905­3915, 2025.        from videos with vision-language models. arXiv preprint
+      3, 2                                                               arXiv:2501.01428, 2025. 3
+
+[35] Bo Li, Peiyuan Zhang, Jingkang Yang, Yuanhan Zhang,           [50] John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Rad-
+      Fanyi Pu, and Ziwei Liu. Otterhd: A high-resolution multi-         ford, and Oleg Klimov. Proximal policy optimization algo-
+      modality model. arXiv preprint arXiv:2311.04219, 2023. 3           rithms. arXiv preprint arXiv:1707.06347, 2017. 5
+
+[36] Rong Li, Shijie Li, Lingdong Kong, Xulei Yang, and Jun-       [51] Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao
+      wei Liang. Seeground: See and ground for zero-shot open-           Song, Xiao Bi, Haowei Zhang, Mingchuan Zhang, YK Li,
+      vocabulary 3d visual grounding. In Proceedings of the              Yang Wu, et al. Deepseekmath: Pushing the limits of math-
+      Computer Vision and Pattern Recognition Conference, pages          ematical reasoning in open language models. arXiv preprint
+      3707­3717, 2025. 3                                                 arXiv:2402.03300, 2024. 5
+
+[37] Xiang Li et al. Gpt-4v(ision): Multimodal reasoning across    [52] Quan Sun, Yuxin Fang, Ledell Wu, Xinlong Wang, and Yue
+      text and images. arXiv preprint arXiv:2402.00123, 2024. 1          Cao. Eva-clip: Improved training techniques for clip at scale.
+                                                                         arXiv preprint arXiv:2303.15389, 2023. 2, 3
+[38] Haotian Liu et al. Llava-next: Stronger vision-language un-
+      derstanding with large multimodal models. arXiv preprint     [53] Yiwen Tang, Zoey Guo, Zhuhao Wang, Ray Zhang, Qizhi
+      arXiv:2401.03124, 2024. 1                                          Chen, Junli Liu, Delin Qu, Zhigang Wang, Dong Wang, Xue-
+                                                                         long Li, et al. Exploring the potential of encoder-free archi-
+
+                                                                   16685
+      tectures in 3d lmms. arXiv preprint arXiv:2502.09620, 2025.   [68] Tianyu Xu et al. Pointllm: Empowering large language mod-
+      3                                                                   els to understand point clouds. CVPR, 2025. 1, 3, 4, 5, 6, 7,
+[54] Yuan Tang, Xu Han, Xianzhi Li, Qiao Yu, Yixue Hao, Long              8, 2
+      Hu, and Min Chen. Minigpt-3d: Efficiently aligning 3d point
+      clouds with large language models using 2d priors. In Pro-    [69] Le Xue, Mingfei Gao, Chen Xing, Roberto Mart´in-Mart´in,
+      ceedings of the 32nd ACM International Conference on Mul-           Jiajun Wu, Caiming Xiong, Ran Xu, Juan Carlos Niebles,
+      timedia, pages 6617­6626, 2024. 3                                   and Silvio Savarese. Ulip: Learning a unified representation
+[55] Yuan Tang, Xu Han, Xianzhi Li, Qiao Yu, Jinfeng Xu, Yixue            of language, images, and point clouds for 3d understanding.
+      Hao, Long Hu, and Min Chen. More text, less point: To-              In Proceedings of the IEEE/CVF conference on computer vi-
+      wards 3d data-efficient point-language understanding. In            sion and pattern recognition, pages 1179­1189, 2023. 2, 3
+      Proceedings of the AAAI Conference on Artificial Intelli-
+      gence, volume 39, pages 7284­7292, 2025. 3                    [70] Le Xue, Ning Yu, Shu Zhang, Artemis Panagopoulou, Jun-
+[56] Zhiqi Tang et al. Geometryclip: Bridging 3d geometry and             nan Li, Roberto Mart´in-Mart´in, Jiajun Wu, Caiming Xiong,
+      language through multimodal pretraining. arXiv preprint             Ran Xu, Juan Carlos Niebles, et al. Ulip-2: Towards scalable
+      arXiv:2402.06712, 2024. 1                                           multimodal pre-training for 3d understanding. In Proceed-
+[57] Chameleon Team. Chameleon: Mixed-modal early-fusion                  ings of the IEEE/CVF Conference on Computer Vision and
+      foundation models. arXiv preprint arXiv:2405.09818, 2024.           Pattern Recognition, pages 27091­27101, 2024. 2, 3
+      3
+[58] Anh Thai, Songyou Peng, Kyle Genova, Leonidas Guibas,          [71] Hanxun Yu, Wentong Li, Song Wang, Junbo Chen, and
+      and Thomas Funkhouser. Splattalk: 3d vqa with gaussian              Jianke Zhu. Inst3d-lmm: Instance-aware 3d scene under-
+      splatting. arXiv preprint arXiv:2503.06271, 2025. 3                 standing with multi-modal instruction tuning. In Proceed-
+[59] Hugo Touvron et al. Llama: Open and efficient foundation             ings of the Computer Vision and Pattern Recognition Con-
+      language models. arXiv preprint arXiv:2302.13971, 2023.             ference, pages 14147­14157, 2025. 3
+      1, 5
+[60] Mikaela Angelina Uy, Quang-Hieu Pham, Binh-Son Hua,            [72] Xumin Yu et al. Point-bert: Pre-training 3d point cloud trans-
+      Thanh Nguyen, and Sai-Kit Yeung. Revisiting point cloud             formers with masked point modeling. CVPR, 2022. 1, 3
+      classification: A new benchmark dataset and classification
+      model on real-world data. In Proceedings of the IEEE/CVF      [73] Renrui Zhang, Ziyu Guo, Wei Zhang, Kunchang Li, Xu-
+      international conference on computer vision, pages 1588­            peng Miao, Bin Cui, Yu Qiao, Peng Gao, and Hongsheng Li.
+      1597, 2019. 2, 3                                                    Pointclip: Point cloud understanding by clip. In Proceedings
+[61] Aaron van den Oord, Oriol Vinyals, and Koray                         of the IEEE/CVF conference on computer vision and pattern
+      Kavukcuoglu. Neural discrete representation learning.               recognition, pages 8552­8562, 2022. 2, 3
+      Advances in neural information processing systems, 30,
+      2017. 4                                                       [74] Yichi Zhang et al. I2p-mae: Image-to-point masked autoen-
+[62] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszko-              coders for self-supervised learning on 3d data. ICCV, 2023.
+      reit, Llion Jones, Aidan N Gomez, !ukasz Kaiser, and Illia          1
+      Polosukhin. Attention is all you need. Advances in neural
+      information processing systems, 30, 2017. 3                   [75] Zhihao Zhang, Shengcao Cao, and Yu-Xiong Wang. Tamm:
+[63] Heng Wang, Chaoyi Zhang, Jianhui Yu, and Weidong Cai.                Triadapter multi-modal learning for 3d shape understanding.
+      Spatiality-guided transformer for 3d dense captioning on            In Proceedings of the IEEE/CVF Conference on Computer
+      point clouds. arXiv preprint arXiv:2204.10688, 2022. 2              Vision and Pattern Recognition, pages 21413­21423, 2024.
+[64] Haochen Wang, Yucheng Zhao, Tiancai Wang, Haoqiang                   2, 3
+      Fan, Xiangyu Zhang, and Zhaoxiang Zhang. Ross3d: Recon-
+      structive visual instruction tuning with 3d-awareness. arXiv  [76] Duo Zheng, Shijia Huang, and Liwei Wang. Video-3d llm:
+      preprint arXiv:2504.01901, 2025. 3                                  Learning position-aware video representation for 3d scene
+[65] Zhirong Wu, Shuran Song, Aditya Khosla, Fisher Yu, Lin-              understanding. In Proceedings of the Computer Vision and
+      guang Zhang, Xiaoou Tang, and Jianxiong Xiao. 3d                    Pattern Recognition Conference, pages 8995­9006, 2025. 3
+      shapenets: A deep representation for volumetric shapes. In
+      Proceedings of the IEEE conference on computer vision and     [77] Junsheng Zhou, Jinsheng Wang, Baorui Ma, Yu-Shen Liu,
+      pattern recognition, pages 1912­1920, 2015. 2, 3                    Tiejun Huang, and Xinlong Wang. Uni3d: Exploring unified
+[66] Jinheng Xie, Weijia Mao, Zechen Bai, David Junhao Zhang,             3d representation at scale. arXiv preprint arXiv:2310.06773,
+      Weihao Wang, Kevin Qinghong Lin, Yuchao Gu, Zhijie                  2023. 2, 3
+      Chen, Zhenheng Yang, and Mike Zheng Shou. Show-o:
+      One single transformer to unify multimodal understanding      [78] Chenming Zhu, Tai Wang, Wenwei Zhang, Jiangmiao Pang,
+      and generation. The Thirteenth International Conference on          and Xihui Liu. Llava-3d: A simple yet effective pathway
+      Learning Representations, 2025. 3                                   to empowering lmms with 3d-awareness. arXiv preprint
+[67] Saining Xie et al. Pointcontrast: Unsupervised pre-training          arXiv:2409.18125, 2024. 3, 2
+      for 3d point cloud understanding. ECCV, 2020. 1, 3
+                                                                    [79] Jian Zhu, Hanli Wang, and Miaojing Shi. Multi-modal large
+                                                                          language model enhanced pseudo 3d perception framework
+                                                                          for visual commonsense reasoning. IEEE Transactions on
+                                                                          Circuits and Systems for Video Technology, 2024. 3
+
+                                                                    [80] Xiangyang Zhu, Renrui Zhang, Bowei He, Ziyu Guo, Ziyao
+                                                                          Zeng, Zipeng Qin, Shanghang Zhang, and Peng Gao. Point-
+                                                                          clip v2: Prompting clip and gpt for powerful 3d open-world
+                                                                          learning. In Proceedings of the IEEE/CVF international con-
+                                                                          ference on computer vision, pages 2639­2650, 2023. 2, 3
+
+                                                                    [81] Ziyu Zhu, Xiaojian Ma, Yixin Chen, Zhidong Deng, Siyuan
+                                                                          Huang, and Qing Li. 3d-vista: Pre-trained transformer for 3d
+
+                                                                    16686
+vision and text alignment. In Proceedings of the IEEE/CVF
+International Conference on Computer Vision, pages 2911­
+2921, 2023. 2
+
+                                                                           16687
+

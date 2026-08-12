@@ -1,0 +1,3113 @@
+{
+  "status": "ok",
+  "script": "plan_figures.py",
+  "paper_id": "arxiv:2412.09511",
+  "figure_plan": {
+    "paper_id": "arxiv:2412.09511",
+    "figures": [
+      {
+        "id": "Figure 2",
+        "caption": "(Left): Framework Overview. The proposed GEAL consists of two branches: 3D and 2D. The 2D branch is established through",
+        "kind": "method_overview",
+        "section": "机制流程",
+        "reason": "这张图概括了整体方法或系统流程；如果匹配置信度足够高，最适合放在 `### 机制流程` 帮助快速建立执行链理解。",
+        "priority": 1,
+        "anchor_text": "机制流程",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_004_fig_figure_2.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_004_fig_figure_2.png",
+          "width": 670,
+          "height": 231,
+          "size_bytes": 56616,
+          "label": "Figure 2",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.180185,
+            "visual_rect_count": 144,
+            "visual_body_ratio": 1.0,
+            "paragraph_text_chars": 0,
+            "table_body_rows": 0,
+            "caption_text_chars": 769,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 4,
+            "score": 8,
+            "matched_terms": [
+              "figure 2",
+              "left",
+              "framework",
+              "proposed",
+              "geal",
+              "consists"
+            ],
+            "snippet": "stency Alignment 𝐟enh 3D Downsampler Upsampler 𝐟enh 2D 𝐟cam 2D 𝐟cam 3D 𝐟cam 3D−2D ℒconsis Figure 2. (Left): Framework Overview. The proposed GEAL consists of two branches: 3D and 2D. The 2",
+            "images": [
+              {
+                "filename": "page_004_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_004_img_01.png",
+                "width": 32,
+                "height": 25,
+                "size_bytes": 117
+              },
+              {
+                "filename": "page_004_img_02.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_004_img_02.png",
+                "width": 20,
+                "height": 32,
+                "size_bytes": 479
+              },
+              {
+                "filename": "page_004_img_03.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_004_img_03.png",
+                "width": 22,
+                "height": 35,
+                "size_bytes": 506
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_004_fig_figure_2.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_004_fig_figure_2.png",
+                "width": 670,
+                "height": 231,
+                "size_bytes": 56616,
+                "label": "Figure 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.180185,
+                  "visual_rect_count": 144,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 769,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 5,
+            "score": 6,
+            "matched_terms": [
+              "fig. 2",
+              "consists"
+            ],
+            "snippet": "nt and knowledge trans- fer from 2D to 3D spaces. Specifically, as shown in right part of Fig. 2, we map f 3D enh and f 2D enh into a shared embedding space. Given the 2D-3D corresponden",
+            "images": [
+              {
+                "filename": "page_005_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_005_img_01.png",
+                "width": 128,
+                "height": 128,
+                "size_bytes": 908
+              },
+              {
+                "filename": "page_005_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_005_img_02.jpeg",
+                "width": 128,
+                "height": 128,
+                "size_bytes": 4850
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_005_fig_figure_3.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_005_fig_figure_3.png",
+                "width": 670,
+                "height": 285,
+                "size_bytes": 64041,
+                "label": "Figure 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.222566,
+                  "visual_rect_count": 49,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 766,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 233,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "left",
+              "framework",
+              "proposed",
+              "geal"
+            ],
+            "snippet": "ced robustness across different corruption types. In contrast, our proposed method, GEAL (left side of each example), maintains high accuracy and generaliza- tion across these challeng",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_01.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 85115
+              },
+              {
+                "filename": "page_001_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 86354
+              },
+              {
+                "filename": "page_001_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 80790
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_fig_figure_1.png",
+                "width": 686,
+                "height": 333,
+                "size_bytes": 158263,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.265861,
+                  "visual_rect_count": 52,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 1435,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 509,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Figure 4",
+        "caption": "Qualitative comparisons between GEAL and LASO [32]",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_008_fig_figure_4.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_fig_figure_4.png",
+          "width": 667,
+          "height": 463,
+          "size_bytes": 148657,
+          "label": "Figure 4",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "reject",
+            "quality_reason_codes": [
+              "multiple_caption_regions_suspected"
+            ],
+            "page_coverage_ratio": 0.358847,
+            "visual_rect_count": 25,
+            "visual_body_ratio": 1.0,
+            "paragraph_text_chars": 858,
+            "table_body_rows": 0,
+            "caption_text_chars": 318,
+            "other_caption_count": 1,
+            "other_caption_labels": [
+              "Table 6"
+            ]
+          },
+          "candidate_status": "reject_visual_quality"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 8,
+            "score": 8,
+            "matched_terms": [
+              "fig. 4",
+              "qualitative",
+              "comparisons",
+              "between",
+              "geal",
+              "laso"
+            ],
+            "snippet": "nt between the 2D and 3D branches. Qualitative comparisons with LASO on PIAD are shown in Fig. 4. Robustness on Corrupt Data: To assess robustness under real-world conditions, we compare",
+            "images": [
+              {
+                "filename": "page_008_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_img_01.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 27621
+              },
+              {
+                "filename": "page_008_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 27651
+              },
+              {
+                "filename": "page_008_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 51842
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_008_fig_table_6.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_fig_table_6.png",
+                "width": 315,
+                "height": 164,
+                "size_bytes": 15255,
+                "label": "Table 6",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.060291,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 301,
+                  "table_body_rows": 11,
+                  "caption_text_chars": 418,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_008_fig_figure_4.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_fig_figure_4.png",
+                "width": 667,
+                "height": 463,
+                "size_bytes": 148657,
+                "label": "Figure 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "reject",
+                  "quality_reason_codes": [
+                    "multiple_caption_regions_suspected"
+                  ],
+                  "page_coverage_ratio": 0.358847,
+                  "visual_rect_count": 25,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 858,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 318,
+                  "other_caption_count": 1,
+                  "other_caption_labels": [
+                    "Table 6"
+                  ]
+                },
+                "candidate_status": "reject_visual_quality"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "between",
+              "geal",
+              "laso"
+            ],
+            "snippet": "ploy a dual- branch architecture with Gaussian splatting to establish consistent mappings between 3D point clouds and 2D rep- resentations, enabling realistic 2D renderings from sparse po",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_01.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 85115
+              },
+              {
+                "filename": "page_001_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 86354
+              },
+              {
+                "filename": "page_001_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 80790
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_fig_figure_1.png",
+                "width": 686,
+                "height": 333,
+                "size_bytes": 158263,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.265861,
+                  "visual_rect_count": 52,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 1435,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 509,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 6,
+            "score": 3,
+            "matched_terms": [
+              "between",
+              "geal",
+              "laso"
+            ],
+            "snippet": "he loss function is: L2D = L2D BCE + L2D Dice, (10) where L2D BCE minimizes discrepancies between predicted and true affordance scores, and L2D Dice improves the overlap between predicted",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_table_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_1.png",
+                "width": 318,
+                "height": 268,
+                "size_bytes": 28443,
+                "label": "Table 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.099389,
+                  "visual_rect_count": 10,
+                  "visual_body_ratio": 0.060218,
+                  "paragraph_text_chars": 570,
+                  "table_body_rows": 18,
+                  "caption_text_chars": 258,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_006_fig_table_2.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_2.png",
+                "width": 314,
+                "height": 227,
+                "size_bytes": 25895,
+                "label": "Table 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.083016,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 471,
+                  "table_body_rows": 15,
+                  "caption_text_chars": 375,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Figure 7",
+        "caption": "Qualitative comparisons between GEAL and LASO [32] on the PIAD-C dataset, highlighting the superior robustness of our",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_017_fig_figure_7.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_017_fig_figure_7.png",
+          "width": 712,
+          "height": 776,
+          "size_bytes": 376503,
+          "label": "Figure 7",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.641986,
+            "visual_rect_count": 83,
+            "visual_body_ratio": 1.0,
+            "paragraph_text_chars": 0,
+            "table_body_rows": 0,
+            "caption_text_chars": 153,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 17,
+            "score": 8,
+            "matched_terms": [
+              "figure 7",
+              "qualitative",
+              "comparisons",
+              "between",
+              "geal",
+              "laso"
+            ],
+            "snippet": "LASO GT Ours LASO Clean Rotation Jitter Scale Drop Local Drop Global Add Local Add Global Figure 7. Qualitative comparisons between GEAL and LASO [32] on the PIAD-C dataset, highlighting t",
+            "images": [
+              {
+                "filename": "page_017_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_017_img_01.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 37926
+              },
+              {
+                "filename": "page_017_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_017_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 40670
+              },
+              {
+                "filename": "page_017_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_017_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 40592
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_017_fig_figure_7.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_017_fig_figure_7.png",
+                "width": 712,
+                "height": 776,
+                "size_bytes": 376503,
+                "label": "Figure 7",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.641986,
+                  "visual_rect_count": 83,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 153,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "between",
+              "geal",
+              "laso"
+            ],
+            "snippet": "ploy a dual- branch architecture with Gaussian splatting to establish consistent mappings between 3D point clouds and 2D rep- resentations, enabling realistic 2D renderings from sparse po",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_01.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 85115
+              },
+              {
+                "filename": "page_001_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 86354
+              },
+              {
+                "filename": "page_001_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 80790
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_fig_figure_1.png",
+                "width": 686,
+                "height": 333,
+                "size_bytes": 158263,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.265861,
+                  "visual_rect_count": 52,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 1435,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 509,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 6,
+            "score": 3,
+            "matched_terms": [
+              "between",
+              "geal",
+              "laso"
+            ],
+            "snippet": "he loss function is: L2D = L2D BCE + L2D Dice, (10) where L2D BCE minimizes discrepancies between predicted and true affordance scores, and L2D Dice improves the overlap between predicted",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_table_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_1.png",
+                "width": 318,
+                "height": 268,
+                "size_bytes": 28443,
+                "label": "Table 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.099389,
+                  "visual_rect_count": 10,
+                  "visual_body_ratio": 0.060218,
+                  "paragraph_text_chars": 570,
+                  "table_body_rows": 18,
+                  "caption_text_chars": 258,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_006_fig_table_2.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_2.png",
+                "width": 314,
+                "height": 227,
+                "size_bytes": 25895,
+                "label": "Table 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.083016,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 471,
+                  "table_body_rows": 15,
+                  "caption_text_chars": 375,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Figure 8",
+        "caption": "Qualitative comparisons between GEAL and LASO [32] on the PIAD dataset.",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_018_fig_figure_8.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_018_fig_figure_8.png",
+          "width": 670,
+          "height": 662,
+          "size_bytes": 182912,
+          "label": "Figure 8",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.515832,
+            "visual_rect_count": 48,
+            "visual_body_ratio": 1.0,
+            "paragraph_text_chars": 164,
+            "table_body_rows": 0,
+            "caption_text_chars": 81,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 18,
+            "score": 8,
+            "matched_terms": [
+              "figure 8",
+              "qualitative",
+              "comparisons",
+              "between",
+              "geal",
+              "laso"
+            ],
+            "snippet": "ug efficiently? Your preferred open point on dishwasher? 1 0 GT Ours LASO 1 0 1 0 1 0 1 0 Figure 8. Qualitative comparisons between GEAL and LASO [32] on the PIAD dataset. 18",
+            "images": [
+              {
+                "filename": "page_018_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_018_img_01.png",
+                "width": 190,
+                "height": 190,
+                "size_bytes": 4494
+              },
+              {
+                "filename": "page_018_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_018_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 14280
+              },
+              {
+                "filename": "page_018_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_018_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 36318
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_018_fig_figure_8.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_018_fig_figure_8.png",
+                "width": 670,
+                "height": 662,
+                "size_bytes": 182912,
+                "label": "Figure 8",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.515832,
+                  "visual_rect_count": 48,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 164,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 81,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "between",
+              "geal",
+              "laso"
+            ],
+            "snippet": "ploy a dual- branch architecture with Gaussian splatting to establish consistent mappings between 3D point clouds and 2D rep- resentations, enabling realistic 2D renderings from sparse po",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_01.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 85115
+              },
+              {
+                "filename": "page_001_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 86354
+              },
+              {
+                "filename": "page_001_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 80790
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_fig_figure_1.png",
+                "width": 686,
+                "height": 333,
+                "size_bytes": 158263,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.265861,
+                  "visual_rect_count": 52,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 1435,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 509,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 6,
+            "score": 3,
+            "matched_terms": [
+              "between",
+              "geal",
+              "laso"
+            ],
+            "snippet": "he loss function is: L2D = L2D BCE + L2D Dice, (10) where L2D BCE minimizes discrepancies between predicted and true affordance scores, and L2D Dice improves the overlap between predicted",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_table_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_1.png",
+                "width": 318,
+                "height": 268,
+                "size_bytes": 28443,
+                "label": "Table 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.099389,
+                  "visual_rect_count": 10,
+                  "visual_body_ratio": 0.060218,
+                  "paragraph_text_chars": 570,
+                  "table_body_rows": 18,
+                  "caption_text_chars": 258,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_006_fig_table_2.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_2.png",
+                "width": 314,
+                "height": 227,
+                "size_bytes": 25895,
+                "label": "Table 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.083016,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 471,
+                  "table_body_rows": 15,
+                  "caption_text_chars": 375,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Table 1",
+        "caption": "The overall results of all comparative methods on PIAD",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_006_fig_table_1.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_1.png",
+          "width": 318,
+          "height": 268,
+          "size_bytes": 28443,
+          "label": "Table 1",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.099389,
+            "visual_rect_count": 10,
+            "visual_body_ratio": 0.060218,
+            "paragraph_text_chars": 570,
+            "table_body_rows": 18,
+            "caption_text_chars": 258,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 6,
+            "score": 8,
+            "matched_terms": [
+              "table 1",
+              "overall",
+              "comparative",
+              "methods",
+              "piad"
+            ],
+            "snippet": "seven types of corruptions – 1Add Global, 2Add Local, 3Drop Global, 4Drop Local, 5Rotate, Table 1. The overall results of all comparative methods on PIAD [70]. Seen and Unseen are two par",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_table_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_1.png",
+                "width": 318,
+                "height": 268,
+                "size_bytes": 28443,
+                "label": "Table 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.099389,
+                  "visual_rect_count": 10,
+                  "visual_body_ratio": 0.060218,
+                  "paragraph_text_chars": 570,
+                  "table_body_rows": 18,
+                  "caption_text_chars": 258,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_006_fig_table_2.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_2.png",
+                "width": 314,
+                "height": 227,
+                "size_bytes": 25895,
+                "label": "Table 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.083016,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 471,
+                  "table_body_rows": 15,
+                  "caption_text_chars": 375,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 15,
+            "score": 6,
+            "matched_terms": [
+              "table 1",
+              "piad"
+            ],
+            "snippet": "0.608 0.120 12.5 72.4 0.612 0.116 23 Bottle • 23.5 77.3 0.552 0.110 27.8 79.8 0.536 0.107 Table 10. The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_015_fig_table_9.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_015_fig_table_9.png",
+                "width": 538,
+                "height": 370,
+                "size_bytes": 69209,
+                "label": "Table 9",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.231254,
+                  "visual_rect_count": 110,
+                  "visual_body_ratio": 0.400016,
+                  "paragraph_text_chars": 1363,
+                  "table_body_rows": 25,
+                  "caption_text_chars": 165,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_015_fig_table_10.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_015_fig_table_10.png",
+                "width": 538,
+                "height": 370,
+                "size_bytes": 69209,
+                "label": "Table 10",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.231254,
+                  "visual_rect_count": 110,
+                  "visual_body_ratio": 0.400016,
+                  "paragraph_text_chars": 1363,
+                  "table_body_rows": 25,
+                  "caption_text_chars": 168,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 16,
+            "score": 5,
+            "matched_terms": [
+              "table 1"
+            ],
+            "snippet": "Table 11. The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the LA",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_016_fig_table_11.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_016_fig_table_11.png",
+                "width": 538,
+                "height": 370,
+                "size_bytes": 69973,
+                "label": "Table 11",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.231254,
+                  "visual_rect_count": 110,
+                  "visual_body_ratio": 0.400016,
+                  "paragraph_text_chars": 1362,
+                  "table_body_rows": 25,
+                  "caption_text_chars": 166,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_016_fig_table_12.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_016_fig_table_12.png",
+                "width": 538,
+                "height": 372,
+                "size_bytes": 71522,
+                "label": "Table 12",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.232468,
+                  "visual_rect_count": 110,
+                  "visual_body_ratio": 0.400106,
+                  "paragraph_text_chars": 1347,
+                  "table_body_rows": 25,
+                  "caption_text_chars": 168,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Table 10",
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the PIAD dataset [70]. AUC and aIOU",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_015_fig_table_10.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_015_fig_table_10.png",
+          "width": 538,
+          "height": 370,
+          "size_bytes": 69209,
+          "label": "Table 10",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.231254,
+            "visual_rect_count": 110,
+            "visual_body_ratio": 0.400016,
+            "paragraph_text_chars": 1363,
+            "table_body_rows": 25,
+            "caption_text_chars": 168,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 15,
+            "score": 8,
+            "matched_terms": [
+              "table 10",
+              "category-wise",
+              "laso",
+              "geal",
+              "ours",
+              "unseen"
+            ],
+            "snippet": "0.608 0.120 12.5 72.4 0.612 0.116 23 Bottle • 23.5 77.3 0.552 0.110 27.8 79.8 0.536 0.107 Table 10. The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the P",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_015_fig_table_9.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_015_fig_table_9.png",
+                "width": 538,
+                "height": 370,
+                "size_bytes": 69209,
+                "label": "Table 9",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.231254,
+                  "visual_rect_count": 110,
+                  "visual_body_ratio": 0.400016,
+                  "paragraph_text_chars": 1363,
+                  "table_body_rows": 25,
+                  "caption_text_chars": 165,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_015_fig_table_10.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_015_fig_table_10.png",
+                "width": 538,
+                "height": 370,
+                "size_bytes": 69209,
+                "label": "Table 10",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.231254,
+                  "visual_rect_count": 110,
+                  "visual_body_ratio": 0.400016,
+                  "paragraph_text_chars": 1363,
+                  "table_body_rows": 25,
+                  "caption_text_chars": 168,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "laso",
+              "geal",
+              "ours"
+            ],
+            "snippet": "cally assess the robustness, we introduce two new corruption-based benchmarks: PIAD-C and LASO-C. Extensive experiments on public datasets and our benchmarks show that GEAL consistentl",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_01.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 85115
+              },
+              {
+                "filename": "page_001_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 86354
+              },
+              {
+                "filename": "page_001_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 80790
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_fig_figure_1.png",
+                "width": 686,
+                "height": 333,
+                "size_bytes": 158263,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.265861,
+                  "visual_rect_count": 52,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 1435,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 509,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 6,
+            "score": 3,
+            "matched_terms": [
+              "laso",
+              "geal",
+              "ours",
+              "unseen"
+            ],
+            "snippet": "real-world scenarios, we establish two 3D affordance ro- bustness benchmarks: PIAD-C and LASO-C based on the test sets of the commonly used datasets PIAD and LASO following [56]. We a",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_table_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_1.png",
+                "width": 318,
+                "height": 268,
+                "size_bytes": 28443,
+                "label": "Table 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.099389,
+                  "visual_rect_count": 10,
+                  "visual_body_ratio": 0.060218,
+                  "paragraph_text_chars": 570,
+                  "table_body_rows": 18,
+                  "caption_text_chars": 258,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_006_fig_table_2.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_2.png",
+                "width": 314,
+                "height": 227,
+                "size_bytes": 25895,
+                "label": "Table 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.083016,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 471,
+                  "table_body_rows": 15,
+                  "caption_text_chars": 375,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Table 11",
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the LASO dataset [32]. AUC and aIOU",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_016_fig_table_11.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_016_fig_table_11.png",
+          "width": 538,
+          "height": 370,
+          "size_bytes": 69973,
+          "label": "Table 11",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.231254,
+            "visual_rect_count": 110,
+            "visual_body_ratio": 0.400016,
+            "paragraph_text_chars": 1362,
+            "table_body_rows": 25,
+            "caption_text_chars": 166,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 16,
+            "score": 8,
+            "matched_terms": [
+              "table 11",
+              "category-wise",
+              "laso",
+              "geal",
+              "ours",
+              "seen"
+            ],
+            "snippet": "Table 11. The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the LAS",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_016_fig_table_11.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_016_fig_table_11.png",
+                "width": 538,
+                "height": 370,
+                "size_bytes": 69973,
+                "label": "Table 11",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.231254,
+                  "visual_rect_count": 110,
+                  "visual_body_ratio": 0.400016,
+                  "paragraph_text_chars": 1362,
+                  "table_body_rows": 25,
+                  "caption_text_chars": 166,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_016_fig_table_12.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_016_fig_table_12.png",
+                "width": 538,
+                "height": 372,
+                "size_bytes": 71522,
+                "label": "Table 12",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.232468,
+                  "visual_rect_count": 110,
+                  "visual_body_ratio": 0.400106,
+                  "paragraph_text_chars": 1347,
+                  "table_body_rows": 25,
+                  "caption_text_chars": 168,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "laso",
+              "geal",
+              "ours",
+              "seen"
+            ],
+            "snippet": "cally assess the robustness, we introduce two new corruption-based benchmarks: PIAD-C and LASO-C. Extensive experiments on public datasets and our benchmarks show that GEAL consistentl",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_01.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 85115
+              },
+              {
+                "filename": "page_001_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 86354
+              },
+              {
+                "filename": "page_001_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 80790
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_fig_figure_1.png",
+                "width": 686,
+                "height": 333,
+                "size_bytes": 158263,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.265861,
+                  "visual_rect_count": 52,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 1435,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 509,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 6,
+            "score": 3,
+            "matched_terms": [
+              "laso",
+              "geal",
+              "ours",
+              "seen"
+            ],
+            "snippet": "real-world scenarios, we establish two 3D affordance ro- bustness benchmarks: PIAD-C and LASO-C based on the test sets of the commonly used datasets PIAD and LASO following [56]. We a",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_table_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_1.png",
+                "width": 318,
+                "height": 268,
+                "size_bytes": 28443,
+                "label": "Table 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.099389,
+                  "visual_rect_count": 10,
+                  "visual_body_ratio": 0.060218,
+                  "paragraph_text_chars": 570,
+                  "table_body_rows": 18,
+                  "caption_text_chars": 258,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_006_fig_table_2.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_2.png",
+                "width": 314,
+                "height": 227,
+                "size_bytes": 25895,
+                "label": "Table 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.083016,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 471,
+                  "table_body_rows": 15,
+                  "caption_text_chars": 375,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Table 12",
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the LASO dataset [32]. AUC and aIOU",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_016_fig_table_12.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_016_fig_table_12.png",
+          "width": 538,
+          "height": 372,
+          "size_bytes": 71522,
+          "label": "Table 12",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.232468,
+            "visual_rect_count": 110,
+            "visual_body_ratio": 0.400106,
+            "paragraph_text_chars": 1347,
+            "table_body_rows": 25,
+            "caption_text_chars": 168,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 16,
+            "score": 8,
+            "matched_terms": [
+              "table 12",
+              "category-wise",
+              "laso",
+              "geal",
+              "ours",
+              "unseen"
+            ],
+            "snippet": "0.630 0.125 13.5 79.5 0.650 0.116 23 Bottle • 20.4 81.2 0.553 0.114 28.7 81.9 0.570 0.116 Table 12. The category-wise results for LASO [32] and GEAL (Ours) on the Unseen partition of the L",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_016_fig_table_11.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_016_fig_table_11.png",
+                "width": 538,
+                "height": 370,
+                "size_bytes": 69973,
+                "label": "Table 11",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.231254,
+                  "visual_rect_count": 110,
+                  "visual_body_ratio": 0.400016,
+                  "paragraph_text_chars": 1362,
+                  "table_body_rows": 25,
+                  "caption_text_chars": 166,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_016_fig_table_12.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_016_fig_table_12.png",
+                "width": 538,
+                "height": 372,
+                "size_bytes": 71522,
+                "label": "Table 12",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.232468,
+                  "visual_rect_count": 110,
+                  "visual_body_ratio": 0.400106,
+                  "paragraph_text_chars": 1347,
+                  "table_body_rows": 25,
+                  "caption_text_chars": 168,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "laso",
+              "geal",
+              "ours"
+            ],
+            "snippet": "cally assess the robustness, we introduce two new corruption-based benchmarks: PIAD-C and LASO-C. Extensive experiments on public datasets and our benchmarks show that GEAL consistentl",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_01.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 85115
+              },
+              {
+                "filename": "page_001_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 86354
+              },
+              {
+                "filename": "page_001_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 80790
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_fig_figure_1.png",
+                "width": 686,
+                "height": 333,
+                "size_bytes": 158263,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.265861,
+                  "visual_rect_count": 52,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 1435,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 509,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 6,
+            "score": 3,
+            "matched_terms": [
+              "laso",
+              "geal",
+              "ours",
+              "unseen"
+            ],
+            "snippet": "real-world scenarios, we establish two 3D affordance ro- bustness benchmarks: PIAD-C and LASO-C based on the test sets of the commonly used datasets PIAD and LASO following [56]. We a",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_table_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_1.png",
+                "width": 318,
+                "height": 268,
+                "size_bytes": 28443,
+                "label": "Table 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.099389,
+                  "visual_rect_count": 10,
+                  "visual_body_ratio": 0.060218,
+                  "paragraph_text_chars": 570,
+                  "table_body_rows": 18,
+                  "caption_text_chars": 258,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_006_fig_table_2.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_2.png",
+                "width": 314,
+                "height": 227,
+                "size_bytes": 25895,
+                "label": "Table 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.083016,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 471,
+                  "table_body_rows": 15,
+                  "caption_text_chars": 375,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Table 2",
+        "caption": "The overall results of all comparative methods on the",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_006_fig_table_2.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_2.png",
+          "width": 314,
+          "height": 227,
+          "size_bytes": 25895,
+          "label": "Table 2",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.083016,
+            "visual_rect_count": 0,
+            "visual_body_ratio": 0.0,
+            "paragraph_text_chars": 471,
+            "table_body_rows": 15,
+            "caption_text_chars": 375,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 6,
+            "score": 8,
+            "matched_terms": [
+              "table 2",
+              "overall",
+              "comparative",
+              "methods"
+            ],
+            "snippet": "[70] 8.0 71.8 0.352 0.127 LASO [32] 8.0 69.2 0.386 0.118 GEAL (Ours) 8.7 72.5 0.390 0.102 Table 2. The overall results of all comparative methods on the LASO dataset [32]. Seen and Unseen",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_table_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_1.png",
+                "width": 318,
+                "height": 268,
+                "size_bytes": 28443,
+                "label": "Table 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.099389,
+                  "visual_rect_count": 10,
+                  "visual_body_ratio": 0.060218,
+                  "paragraph_text_chars": 570,
+                  "table_body_rows": 18,
+                  "caption_text_chars": 258,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_006_fig_table_2.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_2.png",
+                "width": 314,
+                "height": 227,
+                "size_bytes": 25895,
+                "label": "Table 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.083016,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 471,
+                  "table_body_rows": 15,
+                  "caption_text_chars": 375,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 1,
+            "matched_terms": [
+              "methods"
+            ],
+            "snippet": "al for robotics and human-machine inter- action. However, existing 3D affordance learning methods struggle with generalization and robustness due to limited annotated data and a reliance",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_01.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 85115
+              },
+              {
+                "filename": "page_001_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 86354
+              },
+              {
+                "filename": "page_001_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 80790
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_fig_figure_1.png",
+                "width": 686,
+                "height": 333,
+                "size_bytes": 158263,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.265861,
+                  "visual_rect_count": 52,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 1435,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 509,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 7,
+            "score": 1,
+            "matched_terms": [
+              "methods"
+            ],
+            "snippet": "training LASO for comparison. On LASO, we compare with the original LASO method and other methods utilizing vision-language models for cross- modal alignment. To adapt IAGNet to LASO, its",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_007_fig_table_3.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_3.png",
+                "width": 316,
+                "height": 114,
+                "size_bytes": 11560,
+                "label": "Table 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.041872,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 353,
+                  "table_body_rows": 9,
+                  "caption_text_chars": 383,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_007_fig_table_4.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_4.png",
+                "width": 316,
+                "height": 114,
+                "size_bytes": 11918,
+                "label": "Table 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.041872,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 353,
+                  "table_body_rows": 9,
+                  "caption_text_chars": 383,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_007_fig_table_5.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_5.png",
+                "width": 331,
+                "height": 176,
+                "size_bytes": 15577,
+                "label": "Table 5",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.067636,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 568,
+                  "table_body_rows": 11,
+                  "caption_text_chars": 485,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Table 3",
+        "caption": "Comparison of different methods under various corrup-",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_007_fig_table_3.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_3.png",
+          "width": 316,
+          "height": 114,
+          "size_bytes": 11560,
+          "label": "Table 3",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.041872,
+            "visual_rect_count": 0,
+            "visual_body_ratio": 0.0,
+            "paragraph_text_chars": 353,
+            "table_body_rows": 9,
+            "caption_text_chars": 383,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 7,
+            "score": 8,
+            "matched_terms": [
+              "table 3",
+              "comparison",
+              "different",
+              "methods",
+              "under",
+              "various"
+            ],
+            "snippet": "ts highlight the effectiveness of GEAL in leveraging the rich semantic understanding from Table 3. Comparison of different methods under various corrup- tion settings on the proposed PIAD",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_007_fig_table_3.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_3.png",
+                "width": 316,
+                "height": 114,
+                "size_bytes": 11560,
+                "label": "Table 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.041872,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 353,
+                  "table_body_rows": 9,
+                  "caption_text_chars": 383,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_007_fig_table_4.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_4.png",
+                "width": 316,
+                "height": 114,
+                "size_bytes": 11918,
+                "label": "Table 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.041872,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 353,
+                  "table_body_rows": 9,
+                  "caption_text_chars": 383,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_007_fig_table_5.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_5.png",
+                "width": 331,
+                "height": 176,
+                "size_bytes": 15577,
+                "label": "Table 5",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.067636,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 568,
+                  "table_body_rows": 11,
+                  "caption_text_chars": 485,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "different",
+              "methods",
+              "under"
+            ],
+            "snippet": "ous methods like LASO [32] (right side of each example) exhibit reduced robustness across different corruption types. In contrast, our proposed method, GEAL (left side of each example), mai",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_01.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 85115
+              },
+              {
+                "filename": "page_001_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 86354
+              },
+              {
+                "filename": "page_001_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 80790
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_fig_figure_1.png",
+                "width": 686,
+                "height": 333,
+                "size_bytes": 158263,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.265861,
+                  "visual_rect_count": 52,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 1435,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 509,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 4,
+            "score": 3,
+            "matched_terms": [
+              "different",
+              "under",
+              "various"
+            ],
+            "snippet": "ty-Adaptive Visual-Textual Fusion and 2D-3D Consistency Alignment, to unify features from different modalities into a shared embedding space (cf. 3.2). Finally, we decode generalizable affo",
+            "images": [
+              {
+                "filename": "page_004_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_004_img_01.png",
+                "width": 32,
+                "height": 25,
+                "size_bytes": 117
+              },
+              {
+                "filename": "page_004_img_02.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_004_img_02.png",
+                "width": 20,
+                "height": 32,
+                "size_bytes": 479
+              },
+              {
+                "filename": "page_004_img_03.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_004_img_03.png",
+                "width": 22,
+                "height": 35,
+                "size_bytes": 506
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_004_fig_figure_2.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_004_fig_figure_2.png",
+                "width": 670,
+                "height": 231,
+                "size_bytes": 56616,
+                "label": "Figure 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.180185,
+                  "visual_rect_count": 144,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 769,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Table 4",
+        "caption": "Comparison of different methods under various corrup-",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_007_fig_table_4.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_4.png",
+          "width": 316,
+          "height": 114,
+          "size_bytes": 11918,
+          "label": "Table 4",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.041872,
+            "visual_rect_count": 0,
+            "visual_body_ratio": 0.0,
+            "paragraph_text_chars": 353,
+            "table_body_rows": 9,
+            "caption_text_chars": 383,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 7,
+            "score": 8,
+            "matched_terms": [
+              "table 4",
+              "comparison",
+              "different",
+              "methods",
+              "under",
+              "various"
+            ],
+            "snippet": "18.5 81.0 81.1 0.525 0.536 0.100 0.095 Add-G 13.4 16.1 76.9 77.4 0.506 0.513 0.101 0.098 Table 4. Comparison of different methods under various corrup- tion settings on the proposed LASO",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_007_fig_table_3.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_3.png",
+                "width": 316,
+                "height": 114,
+                "size_bytes": 11560,
+                "label": "Table 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.041872,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 353,
+                  "table_body_rows": 9,
+                  "caption_text_chars": 383,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_007_fig_table_4.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_4.png",
+                "width": 316,
+                "height": 114,
+                "size_bytes": 11918,
+                "label": "Table 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.041872,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 353,
+                  "table_body_rows": 9,
+                  "caption_text_chars": 383,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_007_fig_table_5.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_5.png",
+                "width": 331,
+                "height": 176,
+                "size_bytes": 15577,
+                "label": "Table 5",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.067636,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 568,
+                  "table_body_rows": 11,
+                  "caption_text_chars": 485,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "different",
+              "methods",
+              "under"
+            ],
+            "snippet": "ous methods like LASO [32] (right side of each example) exhibit reduced robustness across different corruption types. In contrast, our proposed method, GEAL (left side of each example), mai",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_01.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 85115
+              },
+              {
+                "filename": "page_001_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 86354
+              },
+              {
+                "filename": "page_001_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 80790
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_fig_figure_1.png",
+                "width": 686,
+                "height": 333,
+                "size_bytes": 158263,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.265861,
+                  "visual_rect_count": 52,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 1435,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 509,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 4,
+            "score": 3,
+            "matched_terms": [
+              "different",
+              "under",
+              "various"
+            ],
+            "snippet": "ty-Adaptive Visual-Textual Fusion and 2D-3D Consistency Alignment, to unify features from different modalities into a shared embedding space (cf. 3.2). Finally, we decode generalizable affo",
+            "images": [
+              {
+                "filename": "page_004_img_01.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_004_img_01.png",
+                "width": 32,
+                "height": 25,
+                "size_bytes": 117
+              },
+              {
+                "filename": "page_004_img_02.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_004_img_02.png",
+                "width": 20,
+                "height": 32,
+                "size_bytes": 479
+              },
+              {
+                "filename": "page_004_img_03.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_004_img_03.png",
+                "width": 22,
+                "height": 35,
+                "size_bytes": 506
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_004_fig_figure_2.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_004_fig_figure_2.png",
+                "width": 670,
+                "height": 231,
+                "size_bytes": 56616,
+                "label": "Figure 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.180185,
+                  "visual_rect_count": 144,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 0,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 769,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Table 5",
+        "caption": "Ablation study on the impact of different components",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_007_fig_table_5.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_5.png",
+          "width": 331,
+          "height": 176,
+          "size_bytes": 15577,
+          "label": "Table 5",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.067636,
+            "visual_rect_count": 0,
+            "visual_body_ratio": 0.0,
+            "paragraph_text_chars": 568,
+            "table_body_rows": 11,
+            "caption_text_chars": 485,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 7,
+            "score": 8,
+            "matched_terms": [
+              "table 5",
+              "ablation",
+              "impact",
+              "different",
+              "components"
+            ],
+            "snippet": "20.2 82.7 84.4 0.566 0.572 0.103 0.100 Add-G 16.7 19.0 81.1 83.4 0.549 0.575 0.108 0.097 Table 5. Ablation study on the impact of different components in GEAL on the PIAD dataset [70]. S",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_007_fig_table_3.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_3.png",
+                "width": 316,
+                "height": 114,
+                "size_bytes": 11560,
+                "label": "Table 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.041872,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 353,
+                  "table_body_rows": 9,
+                  "caption_text_chars": 383,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_007_fig_table_4.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_4.png",
+                "width": 316,
+                "height": 114,
+                "size_bytes": 11918,
+                "label": "Table 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.041872,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 353,
+                  "table_body_rows": 9,
+                  "caption_text_chars": 383,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_007_fig_table_5.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_5.png",
+                "width": 331,
+                "height": 176,
+                "size_bytes": 15577,
+                "label": "Table 5",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.067636,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 568,
+                  "table_body_rows": 11,
+                  "caption_text_chars": 485,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 8,
+            "score": 8,
+            "matched_terms": [
+              "table 5",
+              "ablation",
+              "impact",
+              "components"
+            ],
+            "snippet": "ed with cor- rupted or noisy 3D data. 4.3. Ablation Study Component Analysis. As shown in Table 5, we conduct an ablation study on the PIAD dataset [70] to evaluate the effectiveness of e",
+            "images": [
+              {
+                "filename": "page_008_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_img_01.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 27621
+              },
+              {
+                "filename": "page_008_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 27651
+              },
+              {
+                "filename": "page_008_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 51842
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_008_fig_table_6.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_fig_table_6.png",
+                "width": 315,
+                "height": 164,
+                "size_bytes": 15255,
+                "label": "Table 6",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.060291,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 301,
+                  "table_body_rows": 11,
+                  "caption_text_chars": 418,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_008_fig_figure_4.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_fig_figure_4.png",
+                "width": 667,
+                "height": 463,
+                "size_bytes": 148657,
+                "label": "Figure 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "reject",
+                  "quality_reason_codes": [
+                    "multiple_caption_regions_suspected"
+                  ],
+                  "page_coverage_ratio": 0.358847,
+                  "visual_rect_count": 25,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 858,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 318,
+                  "other_caption_count": 1,
+                  "other_caption_labels": [
+                    "Table 6"
+                  ]
+                },
+                "candidate_status": "reject_visual_quality"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 1,
+            "matched_terms": [
+              "different"
+            ],
+            "snippet": "ous methods like LASO [32] (right side of each example) exhibit reduced robustness across different corruption types. In contrast, our proposed method, GEAL (left side of each example), mai",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_01.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 85115
+              },
+              {
+                "filename": "page_001_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 86354
+              },
+              {
+                "filename": "page_001_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 80790
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_fig_figure_1.png",
+                "width": 686,
+                "height": 333,
+                "size_bytes": 158263,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.265861,
+                  "visual_rect_count": 52,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 1435,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 509,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Table 6",
+        "caption": "Ablation study on the configuration of Gaussian Splatting",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_008_fig_table_6.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_fig_table_6.png",
+          "width": 315,
+          "height": 164,
+          "size_bytes": 15255,
+          "label": "Table 6",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.060291,
+            "visual_rect_count": 0,
+            "visual_body_ratio": 0.0,
+            "paragraph_text_chars": 301,
+            "table_body_rows": 11,
+            "caption_text_chars": 418,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 8,
+            "score": 8,
+            "matched_terms": [
+              "table 6",
+              "ablation",
+              "configuration",
+              "gaussian",
+              "splatting"
+            ],
+            "snippet": "Table 6. Ablation study on the configuration of Gaussian Splatting parameters in GEAL on the PIAD",
+            "images": [
+              {
+                "filename": "page_008_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_img_01.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 27621
+              },
+              {
+                "filename": "page_008_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 27651
+              },
+              {
+                "filename": "page_008_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 51842
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_008_fig_table_6.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_fig_table_6.png",
+                "width": 315,
+                "height": 164,
+                "size_bytes": 15255,
+                "label": "Table 6",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.060291,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 301,
+                  "table_body_rows": 11,
+                  "caption_text_chars": 418,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_008_fig_figure_4.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_008_fig_figure_4.png",
+                "width": 667,
+                "height": 463,
+                "size_bytes": 148657,
+                "label": "Figure 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "reject",
+                  "quality_reason_codes": [
+                    "multiple_caption_regions_suspected"
+                  ],
+                  "page_coverage_ratio": 0.358847,
+                  "visual_rect_count": 25,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 858,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 318,
+                  "other_caption_count": 1,
+                  "other_caption_labels": [
+                    "Table 6"
+                  ]
+                },
+                "candidate_status": "reject_visual_quality"
+              }
+            ]
+          },
+          {
+            "page_number": 7,
+            "score": 3,
+            "matched_terms": [
+              "ablation",
+              "gaussian",
+              "splatting"
+            ],
+            "snippet": "7 84.4 0.566 0.572 0.103 0.100 Add-G 16.7 19.0 81.1 83.4 0.549 0.575 0.108 0.097 Table 5. Ablation study on the impact of different components in GEAL on the PIAD dataset [70]. Seen and Un",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_007_fig_table_3.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_3.png",
+                "width": 316,
+                "height": 114,
+                "size_bytes": 11560,
+                "label": "Table 3",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.041872,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 353,
+                  "table_body_rows": 9,
+                  "caption_text_chars": 383,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_007_fig_table_4.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_4.png",
+                "width": 316,
+                "height": 114,
+                "size_bytes": 11918,
+                "label": "Table 4",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.041872,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 353,
+                  "table_body_rows": 9,
+                  "caption_text_chars": 383,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_007_fig_table_5.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_007_fig_table_5.png",
+                "width": 331,
+                "height": 176,
+                "size_bytes": 15577,
+                "label": "Table 5",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.067636,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 568,
+                  "table_body_rows": 11,
+                  "caption_text_chars": 485,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 2,
+            "matched_terms": [
+              "gaussian",
+              "splatting"
+            ],
+            "snippet": "leveraging large-scale pre-trained 2D models. We employ a dual- branch architecture with Gaussian splatting to establish consistent mappings between 3D point clouds and 2D rep- resentatio",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_01.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 85115
+              },
+              {
+                "filename": "page_001_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 86354
+              },
+              {
+                "filename": "page_001_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 80790
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_fig_figure_1.png",
+                "width": 686,
+                "height": 333,
+                "size_bytes": 158263,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.265861,
+                  "visual_rect_count": 52,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 1435,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 509,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      },
+      {
+        "id": "Table 9",
+        "caption": "The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the PIAD dataset [70]. AUC and aIOU scores",
+        "kind": "main_result",
+        "section": "关键结果",
+        "reason": "这张图或表直接承载主结果，适合放在关键结果部分。",
+        "priority": 2,
+        "anchor_text": "关键结果",
+        "insert_mode": "placeholder",
+        "figure_asset_candidate": {
+          "filename": "page_015_fig_table_9.png",
+          "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_015_fig_table_9.png",
+          "width": 538,
+          "height": 370,
+          "size_bytes": 69209,
+          "label": "Table 9",
+          "extraction_level": "figure",
+          "quality_signals": {
+            "visual_quality_status": "usable",
+            "quality_reason_codes": [],
+            "page_coverage_ratio": 0.231254,
+            "visual_rect_count": 110,
+            "visual_body_ratio": 0.400016,
+            "paragraph_text_chars": 1363,
+            "table_body_rows": 25,
+            "caption_text_chars": 165,
+            "other_caption_count": 0,
+            "other_caption_labels": []
+          },
+          "candidate_status": "usable_candidate"
+        },
+        "candidate_pages": [
+          {
+            "page_number": 15,
+            "score": 8,
+            "matched_terms": [
+              "table 9",
+              "category-wise",
+              "laso",
+              "geal",
+              "ours",
+              "seen"
+            ],
+            "snippet": "Table 9. The category-wise results for LASO [32] and GEAL (Ours) on the Seen partition of the PIA",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_015_fig_table_9.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_015_fig_table_9.png",
+                "width": 538,
+                "height": 370,
+                "size_bytes": 69209,
+                "label": "Table 9",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.231254,
+                  "visual_rect_count": 110,
+                  "visual_body_ratio": 0.400016,
+                  "paragraph_text_chars": 1363,
+                  "table_body_rows": 25,
+                  "caption_text_chars": 165,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_015_fig_table_10.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_015_fig_table_10.png",
+                "width": 538,
+                "height": 370,
+                "size_bytes": 69209,
+                "label": "Table 10",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.231254,
+                  "visual_rect_count": 110,
+                  "visual_body_ratio": 0.400016,
+                  "paragraph_text_chars": 1363,
+                  "table_body_rows": 25,
+                  "caption_text_chars": 168,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 1,
+            "score": 3,
+            "matched_terms": [
+              "laso",
+              "geal",
+              "ours",
+              "seen"
+            ],
+            "snippet": "cally assess the robustness, we introduce two new corruption-based benchmarks: PIAD-C and LASO-C. Extensive experiments on public datasets and our benchmarks show that GEAL consistentl",
+            "images": [
+              {
+                "filename": "page_001_img_01.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_01.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 85115
+              },
+              {
+                "filename": "page_001_img_02.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_02.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 86354
+              },
+              {
+                "filename": "page_001_img_03.jpeg",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_img_03.jpeg",
+                "width": 800,
+                "height": 800,
+                "size_bytes": 80790
+              }
+            ],
+            "figure_assets": [
+              {
+                "filename": "page_001_fig_figure_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_001_fig_figure_1.png",
+                "width": 686,
+                "height": 333,
+                "size_bytes": 158263,
+                "label": "Figure 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.265861,
+                  "visual_rect_count": 52,
+                  "visual_body_ratio": 1.0,
+                  "paragraph_text_chars": 1435,
+                  "table_body_rows": 0,
+                  "caption_text_chars": 509,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          },
+          {
+            "page_number": 6,
+            "score": 3,
+            "matched_terms": [
+              "laso",
+              "geal",
+              "ours",
+              "seen"
+            ],
+            "snippet": "real-world scenarios, we establish two 3D affordance ro- bustness benchmarks: PIAD-C and LASO-C based on the test sets of the commonly used datasets PIAD and LASO following [56]. We a",
+            "images": [],
+            "figure_assets": [
+              {
+                "filename": "page_006_fig_table_1.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_1.png",
+                "width": 318,
+                "height": 268,
+                "size_bytes": 28443,
+                "label": "Table 1",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.099389,
+                  "visual_rect_count": 10,
+                  "visual_body_ratio": 0.060218,
+                  "paragraph_text_chars": 570,
+                  "table_body_rows": 18,
+                  "caption_text_chars": 258,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              },
+              {
+                "filename": "page_006_fig_table_2.png",
+                "path": "D:\\study\\deep-learning\\paper\\tmp\\DeepPaperNote\\assets\\GEAL_Generalizable_3D_Affordance_Learning_with_Cross_Modal_Consistency\\images\\page_006_fig_table_2.png",
+                "width": 314,
+                "height": 227,
+                "size_bytes": 25895,
+                "label": "Table 2",
+                "extraction_level": "figure",
+                "quality_signals": {
+                  "visual_quality_status": "usable",
+                  "quality_reason_codes": [],
+                  "page_coverage_ratio": 0.083016,
+                  "visual_rect_count": 0,
+                  "visual_body_ratio": 0.0,
+                  "paragraph_text_chars": 471,
+                  "table_body_rows": 15,
+                  "caption_text_chars": 375,
+                  "other_caption_count": 0,
+                  "other_caption_labels": []
+                },
+                "candidate_status": "usable_candidate"
+              }
+            ]
+          }
+        ],
+        "matching_strategy": "figure-asset-candidate"
+      }
+    ]
+  }
+}
