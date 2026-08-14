@@ -950,11 +950,44 @@ V2 是**把渲染得到的 2D 概率作为特征先验注入 3D 主干**，二�
 
 ## 16. 第一轮实现清单（V2 增量）
 
-- [ ] `Branch2D.forward` stage2 增加 `return_affordance_map` 输出 `attn_map`
-- [ ] `Branch2D._render_views` 透传 `render_idx` / `rendered_contrib`
-- [ ] `model/soft_prior_backprojector.py`：`SoftPriorBackprojector`（gather 实现）
-- [ ] `Branch3D`：`soft_prior` 注入点 + 近零门控
-- [ ] `train_stage2.py`：主循环接入 backprojector（冻结 2D 教师）
-- [ ] `config/train_stage2_v2_softprior.yaml` + P0–P3 消融开关
-- [ ] 评测脚本增加“遮挡/背面点子集”召回维度
-- [ ] 与 §9 轻量损失分开报告，避免重复计功
+> 已实现于 `geal_test/`（2026-08-12）。所有改动基于 §15 的代码级设计，未改动训练/推理
+> 的数值契约：推理期 `soft_prior=None` 时 `Branch3D` 行为与基线完全一致。
+
+- [x] `model/soft_prior_backprojector.py`：新增 `SoftPriorBackprojector`。用 `scatter_add_` 把
+      `[B, V, H, W]` 像素值聚到 `[B, N]` 点序（**不** densify 成 `[B,N,H,W]`），支持
+      `mean` / `vis` / `vis_unc` 三种消融模式，输出 `q [B,N]`、`u [B,N]`。
+- [x] `model/branch_2d.py`：
+      - `_render_views` 现在额外返回 `render_idx [B,V,H,W]` 与 `rendered_contrib [B,V,H,W]`。
+      - stage2 路径新增 `return_affordance_map` 入参，开启时复用 stage1 的 decoder +
+        `learnable_upsample` 产出 `attn_map [B*V,1,H,W]`，连同 idx/contrib 一并返回
+        （5 元组）；不开启时仍返回原 `(fused_features, render_feats)` 2 元组，向后兼容。
+- [x] `model/branch_3d.py`：`__init__` 读取 `soft_prior.enabled/mode`，创建 `soft_prior_mlp`
+      （`Conv1d(emb_dim+2→emb_dim)` + BN + GELU + `Conv1d`）与近零初始化 `soft_prior_gate`
+      Parameter(0.0)；`forward(text, xyz, soft_prior=None)` 在 tokenizer 融合**之前**注入
+      残差 `fused_feat + gate * mlp([fused_feat, q, u])`。推理 `soft_prior=None` 时跳过。
+- [x] `scripts/train_stage2.py`：导入并实例化 `SoftPriorBackprojector`（按 `soft_prior.enabled`
+      与 `mode`）；baseline 路径在 `enabled` 时：① 先纯 3D 前向拿 `feat_3d` → ② 冻结 2D 教师
+      渲染 + 解码得 `attn_map` 及对应 idx/contrib → ③ 反投影得 `soft_prior [B,2,N]` →
+      ④ 再跑一次 3D 分支注入先验得到最终 `pred_3d / feat_3d`。`enabled=False` 时保持原路径。
+- [x] `config/train_stage2_v2_softprior.yaml`：基于 `train_stage2_v1_tokenizer.yaml`，保留
+      tokenizer，新增 `soft_prior.enabled/mode`，并在文件头注释说明 P0–P3 消融开关。
+- [ ] 评测脚本增加“遮挡/背面点子集”召回维度（风险 2 验收，待补）。
+- [x] 与 §9 轻量损失分开报告：V2 走 baseline 路径（`use_new_losses: false`），与
+      `loss_3d2img/loss_contrastive` 不叠加，论文中分开计功。
+
+### 16.1 验证状态
+- 全部改动文件已通过 `python -m py_compile`。
+- `SoftPriorBackprojector` 在 CPU 上与逐像素手算参考实现（visibility-weighted 均值）
+  逐点误差 < 1e-5，确认 scatter 聚合正确；`mean` 模式 `u≡0`、`vis_unc` 模式 `u≥0` 已断言。
+- 未做：端到端 GPU 训练 / 遮挡子集评测（需真实数据集与显卡，留待用户在训练环境运行；
+  建议先跑 P0 与 P3 对比 aIoU small bin，并观察 `soft_prior_gate` 是否显著偏离 0 以判断
+  训练/推理偏移风险）。
+
+### 16.2 已知代价 / 注意点
+- 训练期 3D 分支前向跑了**两次**（一次拿 `feat_3d` 供 2D 渲染，一次带先验出最终预测），
+  2D 分支（含 3DGS 渲染 + DINO）只跑一次。这是 §15.5 设计内的取舍；后续可缓存 3D 分支的
+  point-encoder / text-encode 子结果以省算力。
+- `render_idx` 为 winner-take-all 单点索引；被遮挡点在其所有视角 `a_jv≈0`，`q_j` 自然趋 0
+  （风险 2），评测需显式看遮挡/背面点子集是否塌缩。
+- `soft_prior` 仅训练期有，推理回退纯 3D（风险 1）；若 `gate` 训练后显著非零，需警惕
+  训练/推理分布偏移，必要时改为推理期也跑一次轻量 2D 渲染（牺牲纯 3D 部署优势）。
