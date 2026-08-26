@@ -1,0 +1,138 @@
+{
+  "paper_type": "AI_method",
+  "paper_type_rationale": "VAGNet proposes a new task (video-guided 3D affordance grounding), a new architecture (MCAM + STFM), a new dataset (PVAD), and a new state-of-the-art on it. The dominant contribution is a method/dataset paper with AI-method character.",
+  "dominant_domain": "3D affordance grounding / video-conditioned 3D scene understanding",
+  "must_cover": [
+    "New task definition: video-guided 3D affordance grounding",
+    "MCAM: 2D contextual attention + 2D-to-3D cross-attention injection",
+    "STFM: spatial-temporal cross-attention fusion in 3D",
+    "PVAD dataset construction and Seen/Unseen protocols",
+    "Main quantitative results vs. XMF/IAGNet/GREAT/PointTalk-Baseline on PVAD",
+    "Ablation isolating MCAM, STFM, and the full 2D branch",
+    "Qualitative analysis (single-instruction multi-affordance / multi-object)"
+  ],
+  "key_numbers": [
+    "PVAD: 3,763 videos; 36,765 point clouds; 38 categories; 22 affordance types; max 10s per clip",
+    "Seen aIoU: VAGNet 42.96 vs GREAT 40.23 (+2.73); VAGNet-img 41.58",
+    "Seen SIM: VAGNet 0.723 vs GREAT 0.703 (+0.02)",
+    "Unseen AUC: VAGNet 61.31 vs GREAT 59.83 (+1.48)",
+    "Unseen aIoU: VAGNet 12.09 vs GREAT 10.42 (+1.67)",
+    "Unseen MAE: VAGNet 0.201 vs GREAT 0.265",
+    "Ablation w/o 2D branch & MCAM: Unseen aIoU 11.64; w/o STFM: 10.25; w/o MCAM: 11.98; Full: 12.09",
+    "Training: 60 epochs, batch 12, 1x RTX 4090, AdamW, lr 1e-4, wd 1e-6, cosine schedule",
+    "Video: 8 uniformly-sampled frames; TimeSformer frozen, Kinetics-600 pretrained"
+  ],
+  "real_comparisons": [
+    "VAGNet vs. GREAT (static SOTA): consistent gains on Seen and Unseen; largest on Unseen aIoU/MAE",
+    "VAGNet vs. VAGNet-img: video input adds further gains on top of architectural contribution",
+    "VAGNet vs. Baseline (PointTalk-adapted video-3D): VAGNet wins by a large margin, showing affordance-specific fusion matters",
+    "VAGNet vs. XMF (completion repurposed): VAGNet wins; repurposed completion is insufficient for affordance"
+  ],
+  "central_claims": [
+    {
+      "claim": "Using HOI videos as the primary functional supervision yields more accurate 3D affordance grounding than static (image/text) cues.",
+      "supporting_evidence": [
+        "Sec.4.2 Table 1: VAGNet > all static baselines on Seen/Unseen aIoU/AUC/SIM/MAE",
+        "Sec.4.3 Table 2: removing video-conditioned modules degrades all metrics",
+        "Sec.4.4 Fig.4 qualitative: VAGNet covers full functional regions where single-image methods miss parts"
+      ],
+      "what_it_actually_proves": "Within the PVAD protocol and the compared baselines, video-guided grounding outperforms static-cue grounding.",
+      "what_it_does_not_prove": "It does not prove this gap generalizes to all open-vocabulary settings, partial observations, or robots in the wild; PVAD assumes aligned video-point-cloud pairs and 38/22 category coverage."
+    },
+    {
+      "claim": "The MCAM + STFM two-stage design is necessary; neither module alone reproduces the full performance.",
+      "supporting_evidence": [
+        "Sec.4.3 Table 2: w/o MCAM loses Unseen generalization (aIoU 11.98 vs 12.09); w/o STFM loses Unseen more (aIoU 10.25); w/o both loses the most",
+        "Sec.4.3 Fig.5: contextual attention maps progressively highlight affordance regions as MCAM integrates video frames"
+      ],
+      "what_it_actually_proves": "Within the four-variant ablation, the two modules contribute complementary evidence for Seen vs Unseen.",
+      "what_it_does_not_prove": "It does not prove this exact split is optimal; alternative fusions or joint training strategies are not exhaustively compared."
+    },
+    {
+      "claim": "An affordance-aware 2D projection + cross-attention is an effective interface for injecting 2D context into 3D features.",
+      "supporting_evidence": [
+        "Sec.3.3 Eq.(1)-(4) and the architecture's cross-attention injection",
+        "VAGNet-img (no video) still beats GREAT, showing the 2D-projection-based injection has standalone value"
+      ],
+      "what_it_actually_proves": "It proves the injection design works on PVAD; it does not prove the specific view-planning or 3x3 patch size is optimal.",
+      "what_it_does_not_prove": "Robustness to bad view planning, extreme occlusion, or sparse-view inputs is not evaluated."
+    },
+    {
+      "claim": "PVAD is a useful benchmark for video-grounded affordance.",
+      "supporting_evidence": [
+        "Sec.3.2: 3,763 videos, 36,765 point clouds, 38 categories, 22 affordance types with Seen/Unseen splits",
+        "All baselines perform worse than VAGNet, showing the benchmark is non-trivial"
+      ],
+      "what_it_actually_proves": "PVAD is large enough to separate methods; it does not prove the categories/exemplars are representative of all real HOIs.",
+      "what_it_does_not_prove": "Whether PVAD covers long-tail affordances or noisy in-the-wild videos; whether the 10s clip cap limits temporal modeling."
+    }
+  ],
+  "claim_boundaries": [
+    "VAGNet is not zero-video at inference: the claim is 'zero heavy model' (no LLM teacher), not 'zero video input'.",
+    "PVAD assumes point clouds are complete; partial-observation robustness is not studied.",
+    "Unseen split aIoU is still around 12 across all methods, leaving a large generalization gap.",
+    "The ablation uses 4 variants; finer-grained ablations (e.g., patch size, frame count, view-planning strategy) are not reported."
+  ],
+  "negative_or_limiting_results": [
+    "Baseline (PointTalk video-3D) underperforms even XMF, indicating naive video-3D fusion is not enough.",
+    "Unseen aIoU for all methods is around 12 (vs ~40 on Seen), showing large generalization gap.",
+    "No frame-count sensitivity: only 8 frames reported.",
+    "VAGNet-img (image only) is still close to GREAT but loses to full VAGNet, isolating the video contribution."
+  ],
+  "mechanism_result_map": [
+    "2D contextual attention (Eq.1-2) -> MCAM aligns projection with video frames -> enables cross-attention injection to anchor evidence on the 3D surface (Table 2 w/o MCAM drops Unseen aIoU).",
+    "Spatial-temporal cross-attention in STFM (Eq.5-6) -> fuses time-evolving contact cues with 3D geometry -> drives the Unseen generalization (Table 2 w/o STFM drops Unseen aIoU to 10.25).",
+    "Focal+Dice loss on per-point heatmap -> handles class imbalance and region overlap -> stable optimization under sparse affordance labels.",
+    "Affordance-aware view planning -> ensures the projection contains interaction-rich viewpoints -> supplies MCAM with meaningful foreground/background pairs."
+  ],
+  "comparative_positioning": [
+    "Vs. IAGNet/GREAT (image-3D): VAGNet adds video, giving dynamic functional supervision that static images cannot.",
+    "Vs. PointTalk/Ego-SAG (video-point cloud): VAGNet focuses on object-level affordance rather than scene-level, and is lighter than Ego-SAG's learnable bilateral queries.",
+    "Vs. Affostruction (completion-based): orthogonal; Affostruction assumes complete shape while VAGNet uses video as functional prior (not completion).",
+    "Vs. HAMMER (MLLM intent, single-image): VAGNet does not use MLLM; it uses frozen TimeSformer. The two are complementary in spirit (dynamic vs language intent)."
+  ],
+  "reuse_takeaways": [
+    "Affordance-aware 2D projection + MCAM-style 2D-to-3D cross-attention is a reusable template for grounding 2D evidence on 3D surfaces.",
+    "STFM's time-axis cross-attention is a clean way to inject temporal context into 3D features without a heavy temporal backbone.",
+    "Building a video-grounded affordance benchmark requires careful video-clip trimming and a Seen/Unseen protocol to expose generalization gaps."
+  ],
+  "followup_questions": [
+    "Can the MCAM injection be distilled into a video-free 3D branch (true zero-video grounding)?",
+    "What is the minimum video length / frame count needed to retain VAGNet's gain?",
+    "Does VAGNet still work when the point cloud is partial / incomplete (closer to real robot input)?",
+    "Can the dynamic supervision be replaced by an MLLM-derived intent signal, and how do the two compare?",
+    "How sensitive is the model to view-planning errors and to extreme occlusions?"
+  ],
+  "section_plan": [
+    {
+      "focus": "Restate the static-cue failure modes and motivate video-guided grounding.",
+      "reading_goal": "Make the reader feel that affordance is action-defined, not geometry-defined.",
+      "purpose": "research_question"
+    },
+    {
+      "focus": "Define the task, the PVAD splits, and the four evaluation metrics.",
+      "reading_goal": "Let the reader judge what VAGNet is and is not being evaluated on.",
+      "purpose": "data_and_task"
+    },
+    {
+      "focus": "Walk through MCAM, STFM, the loss, and the projection choices with key equations.",
+      "reading_goal": "Make the architecture and training objective reproducible at the level of a senior graduate student.",
+      "purpose": "method"
+    },
+    {
+      "focus": "Present the main table, the ablation, and the qualitative analysis side by side.",
+      "reading_goal": "Let the reader see which numbers come from which design choice.",
+      "purpose": "results"
+    },
+    {
+      "focus": "Explain why MCAM+STFM works, discuss cost and extensibility, and flag reproduction gotchas.",
+      "reading_goal": "Turn the paper into actionable guidance for the reader's own project.",
+      "purpose": "deep_analysis"
+    },
+    {
+      "focus": "Catalog honest limitations: video dependence, Unseen gap, frame-count fixity, no failure-case analysis.",
+      "reading_goal": "Prevent the reader from over-claiming what the paper proves.",
+      "purpose": "limitations"
+    }
+  ]
+}
