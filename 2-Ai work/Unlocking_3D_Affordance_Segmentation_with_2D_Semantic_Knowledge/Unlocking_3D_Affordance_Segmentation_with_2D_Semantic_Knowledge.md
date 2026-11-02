@@ -265,14 +265,42 @@ $$T^{img} = \text{Proj}_{img}(F_{img}) + E_{img}$$
 ![Table 4](images/page_008_fig_table_4_review.png)
 *论文原图编号: Table 4。在 `PIADv2` Seen 划分上的消融实验, 分析 Stage 1 损失组件与 Stage 2 骨干选择。*
 
-| 配置 | PIADv2 Seen aIoU (%) ↑ |
-|------|--------------------------|
-| $L_{rec}$ only | 39.27 |
-| $L_{rec} + L_{aff}$ | 44.13 |
-| $L_{rec} + L_{aff} + L_{div}$ | 44.88 |
-| 将 `DINOv3` 替换为 `DINOv2` | 43.26 |
-| Stage 2 使用 `PointNet++` 骨干 | 37.91 |
-| Stage 2 使用 `PointMAE` 骨干 | 38.16 |
+| 配置                            | PIADv2 Seen aIoU (%) ↑ |
+| ----------------------------- | ---------------------- |
+| $L_{rec}$ only                | 39.27                  |
+| $L_{rec} + L_{aff}$           | 44.13                  |
+| $L_{rec} + L_{aff} + L_{div}$ | 44.88                  |
+| 将 `DINOv3` 替换为 `DINOv2`       | 43.26                  |
+| Stage 2 使用 `PointNet++` 骨干    | 37.91                  |
+| Stage 2 使用 `PointMAE` 骨干      | 38.16                  |
+
+#### Stage 2 骨干消融的实验协议 (Table 4 下半部分)
+
+原文 `4.4` 节原文措辞: *"For the segmentation backbone, we compare PointNet++ and PointMAE trained from scratch. Although PointMAE performs slightly better, both lag far behind our CMAT-pretrained model, which reaches 44.88%."*
+
+**实验设计:** 这是一个"替换编码器 + 去掉 CMAT"的对照, 用于控制变量地回答: `44.88` 的收益到底来自 `CMAT` 预训练, 还是来自 `PointMAE` 这个 Transformer 架构本身的容量。
+
+- **变量:** 只替换 Stage 2 (`LAS`) 里的三维编码器 $Φ^{3D}$。
+- **不变项:** `LAS` 头部 (6 层 co-attention, `unified_dim=256`, 3 层 MLP 分割头)、提示编码器 (冻结的 `RoBERTa-base` / `DINOv3` ViT-B)、点云采样 2048 点、数据集与 `Seen` 划分、训练超参 (差异学习率 骨干 `1e-5` / 新增模块 `1e-4`, 100 epochs, batch 16, `focal+dice`, $λ=1.0$)、评测指标 `aIoU`。
+- **对照组:** `PointNet++` 与 `PointMAE` 均**不使用** `CMAT` 预训练, 直接在 `PIADv2` 下游标注上端到端训练。
+- **结果:** `PointNet++` `37.91` < `PointMAE` `38.16` << `CMAT-PointMAE` `44.88`。
+- **结论:** 两个从零训练的骨干彼此只差 `0.25` 个 aIoU, 而 `CMAT` 带来 `+6.72` 的跃升。因此架构差异是次要因素, `CMAT` 的关系结构迁移才是主因。
+
+#### 这处消融的三个坑 (读论文时务必注意)
+
+1. **"trained from scratch" 与表 1 说明互相矛盾。** 表 1 脚注写 `Ours(w/o CMAT)` 是 *"our LAS segmentor paired with the standard PointMAE backbone, **using its original pretrained weights**"*, 而 `4.4` 节正文写 `PointNet++` 和 `PointMAE` 是 *"**trained from scratch**"*。两处 aIoU 都是 `38.16`, 说明这大概率是同一个数字被两种描述复用。
+   该区别很关键: 若基线用的是 `PointMAE` 官方预训练权重, 则结论是"`CMAT` 优于纯几何 MAE 预训练", 更强; 若真是从零训练, 则 `+6.72` 中有一部分是"任何预训练都有用"的通用效应。需要向作者确认。
+2. **没有 `PointNet++ + CMAT` 这一行。** 因此这不是 `2×2` 的析因实验, 无法判断 `CMAT` 的收益是否架构无关 (即能否同样提升 `PointNet++`)。
+3. **`PointNet++` 如何接入 `LAS` 未说明。** `LAS` 的输入是 64 个 patch 词元再经特征传播上采样, 而 `PointNet++` 不是 patch 词元模型。论文未交代如何把 SA 层输出转成词元序列, 也未报告该变体的参数量与显存。
+
+#### 代码层面的可复现性
+
+官方仓库 `github.com/yellowfish0331/CMAT` **只包含 PointMAE 版本的 Stage 2**: `models/las_model.py` 里 `self.point_encoder = PointMAEEncoder(...)` 是硬编码, `configs/las_*.yaml` 也没有暴露骨干切换开关。
+`models/pointnet2_utils.py` 与 `models/pointnet_util.py` 虽存在, 但只被 `utils/misc.py` 用于最远点采样, 并未被 `LAS` 调用。
+因此 **`PointNet++` 消融无法从公开代码复现**, 属未发布的实验分支。
+
+复现 `PointMAE` 从零训练的对照 (Table 4 第 6 行 / 表 1 的 `Ours(w/o CMAT)`) 只需把配置里的
+`model.point_encoder.pretrain` 设为 `false` —— 代码在 `PointMAEEncoder.__init__` 中通过 `if config.get('pretrain', False): load_model_from_ckpt(...)` 控制, 设为 `false` 即跳过权重加载, 等价于随机初始化。
 
 消融结果有三点启示:
 
@@ -309,6 +337,52 @@ $$T^{img} = \text{Proj}_{img}(F_{img}) + E_{img}$$
 消融实验定量支持这一点: 仅重建几何 ($L_{rec}$) 只能达到 `39.27` aIoU, 加入 affinity 对齐后跃升至 `44.13`。
 这说明几何连续性不足以支持功能推理, 而跨模态关系对齐才是关键。
 
+### patch 粒度的三重信息损失 (经开源代码核实)
+
+`CMAT` 的 affinity 对齐在 **patch 级**进行, 这带来三个会互相放大的瓶颈。以下均取自官方仓库 `github.com/yellowfish0331/CMAT` 的实际实现。
+
+#### 1. 3D patch 与 2D 监督的成员集合根本不是同一批点
+
+- **3D 侧** (`models/pointmae_official.py` 的 `Group`): `FPS` 选中心 → `KNN(k=32)` 取邻域 → 减中心坐标 (**无半径归一化**)。KNN 对每个中心独立取近邻, 因此**邻域互相重叠**: 一个点可同时属于多个 patch, 也可能不属于任何 patch。
+- **2D 侧** (`Point-MAE/models/Point_MAE.py` 的 `_aggregate_group_features`): `assign = argmin(cdist(pts, centers))`, 即**最近中心硬分配 (Voronoi 划分)**, 每个点恰好属于 1 个 group, 再 `scatter_add` 后除以 `counts` 做**均值池化**。
+
+也就是说, 对同一个下标 $j$, 3D patch 看的是 "KNN-32 邻域", 2D 目标算的是 "Voronoi 单元", **两批点不是同一批**。
+
+**池化算子也不对称:** 3D 侧 mini-PointNet 用的是 **max 池化** (两级 `torch.max`), 2D 目标用的是**均值池化**。max 保留最显著局部响应, mean 做区域平滑, 两者诱导出的 affinity 矩阵统计特性系统不同。
+
+#### 2. affinity 只在随机可见子集上计算
+
+`Point_MAE.py` 的 `forward` 里 `feats_b = group_feats[b][vis_mask[b]]`、`gram_pred = self._compute_gram(x_vis)`, 即 affinity 只在**未被 mask 的 patch** 上算。
+`mask_ratio=0.6` 下, 每次迭代实际对齐的只是一个**随机采样的约 26 节点子图** (若 $G=64$)。
+后果: 小部件对应的 patch 每次有 60% 概率完全不参与监督; 两个小部件 patch **同时可见**的概率仅约 16%。细粒度关系被系统性欠采样。
+
+#### 3. 下游分辨率瓶颈在 64 个 token, 不在 co-attention
+
+`las_model.py` 的前向顺序是: encoder 出 64 个 patch token → 投影 → **单层 `PointNetFeaturePropagation` 上采样 64 → 2048** → 加模态嵌入 → **6 层 co-attention 在 2048 个点级 token 上跑** → 分割头。
+
+co-attention 确实在点级, 有长程建模能力; 但输入的 2048 个点特征只有 **64 个自由度** (3-NN 距离加权插值自 64 个中心)。预测掩码因此在 patch 尺度上近似分段平滑, **边界被 patch 量化**。小部件若不足一个 patch (2048 点中 32 点 ≈ 物体表面 1.6%), 其边界无法被精确表达。
+
+#### 结论: 小部件细粒度对齐必然受损, 但论文数据无法定论
+
+- **理论上必然有损失**: 跨部件 patch 污染 + 均值池化稀释 + 随机 mask 欠采样, 三者叠加。
+- **现有实验无法判定**: `PIAD`/`PIADv2`/`LASO` 均**不提供按部件尺度的分层指标**。旁证是矛盾的 —— `PIAD` Seen 上 aIoU 相对涨 7.5% 而 SIM 涨 16.7% (粗结构对上了、精确边界没对上);`PIADv2` Seen 上反而 aIoU 涨 17.6% 而 SIM 只涨 4.1%。两个数据集模式相反, 不能当作结论。较硬的旁证是 `PIAD` Unseen 上 aIoU 仅从 7.8 涨到 8.4 (+0.6), 远小于 Seen 的 +1.5。
+- **可做的诊断实验**: (a) 按 GT mask 面积分桶 (<1% / 1–5% / 5–20% / >20%) 分别报 aIoU, 对比 w/ 与 w/o `CMAT`; (b) 用 GT part label 统计 patch 语义纯度与跨部件 patch 占比; (c) 扫描 `num_group` = 64/128/256/512 看 aIoU 曲线, 若单调上升则瓶颈确在 patch 粒度; (d) 把 affinity 从可见子集改为全量 patch 做对照。
+
+#### PointMAE 作为骨干的固有缺点
+
+1. **分组纯几何、与功能边界无关**: `FPS` 按欧氏距离最大化覆盖选中心, 不看语义。`Fig. 1` 批评 `PointNet++` 边界模糊, 但 `PointMAE` 的 patch 划分同样无视功能边界。
+2. **固定点数与固定 group 数**: $64 \times 32 = 2048$, 对物体尺度与点云密度变化不鲁棒 (`PIAD` 中 mug 与 bicycle 尺度差异极大)。
+3. **局部坐标无半径归一化**: `neighborhood - center` 直接使用, 大平面 patch 与小部件 patch 的坐标量级差异大。
+4. **预训练与微调的掩码不一致**: 预训练 `mask_ratio=0.6`, 下游 `mask_ratio=0.0`。
+5. **重建目标本质是局部几何补全**: `CD-L2` on masked patch 内坐标, 学到的主要是形状插值能力而非语义 —— 这正是 `CMAT` 要补的, 也是 `Point-PQAE` 所批评的"自重建退化为局部几何插值"。
+6. **非层次化**: 只有一层 64 token, 没有 `PointNet++` 式的多尺度, dense prediction 只能靠单步 FP。
+
+#### 顺带发现的两处论文—代码不一致
+
+- **`L_div` (KoLeo) 未实现**: `Point_MAE.py` 里只有 `total_loss = loss1 + lambda_struct * loss_struct`, 即重建 + gram 两项。`Table 4` 第 3 行声称的多样性损失在开源代码中不存在, 44.13 → 44.88 的增益无法复现。
+- **预训练 group 数与论文不符**: `Point-MAE/cfgs/pretrain.yaml` 是 `num_group: 256`、dataset `npoints: 1024`、顶层 `npoints: 4096` (同一文件内自相矛盾), `lambda_struct: 0.1`; 而下游 `configs/las_*.yaml` 是 `num_group: 64`、`num_points: 2048`。论文 §4.2 写的是 64 patches。
+  权重之所以能跨 group 数加载, 是因为 `pos_embed` 是坐标 MLP (`Linear(3,128)→GELU→Linear(128,384)`) 而非可学习位置嵌入; 但 attention 的序列长度从 256 (可见约 102) 变为 64, 存在分布偏移。
+
 ### 与相关工作的定位差异
 
 - **传统三维可供性方法** (如 `IAGNet`, `PartAfford`) 依赖完全标注的三维数据集学习几何-功能映射, 在类别外泛化受限。本文不依赖更多三维标注, 而是借助二维视觉基础模型提供语义监督。
@@ -329,13 +403,25 @@ $$T^{img} = \text{Proj}_{img}(F_{img}) + E_{img}$$
 2. **缺乏真实机器人交互验证。** 所有实验均在静态三维对象 benchmark 上进行, 未在真实抓取、操作或动态交互场景中验证预测区域的物理可用性。
 3. **CMAT 与数据量的贡献未完全解耦。** 从零训练的 `PointMAE` (`38.16`) 与 `CMAT` 版本 (`44.88`) 的差距可能同时来自预训练数据 (`Objaverse`+`Behavior-1K`) 和 affinity 目标, 消融未单独控制数据量变量。
 4. **单模态 benchmark 限制了 LAS 的多模态能力展示。** 文本与视觉提示同时输入时是否产生互补增益, 现有实验无法回答。
-5. **未提供公开代码与预训练权重。** 论文未附代码仓库链接, 复现者需要独立实现 `CMAT` 三阶段流程, 增加了验证门槛。
+5. **代码仅覆盖 PointMAE 路线, 骨干消融不可复现。** 官方仓库 `github.com/yellowfish0331/CMAT` 已开放 (含 Stage 1 CMAT 预训练与 Stage 2 LAS 微调)。但 `LAS` 的三维编码器硬编码为 `PointMAEEncoder`, `PointNet++` 与 `PointMAE-from-scratch` 消融变体均未发布, 无法直接复跑 Table 4 的骨干对照。
+6. **开源配置与论文正文超参不一致。** 仓库 `configs/las_piad_config.yaml` 写的是 `epochs: 150`、`batch_size: 8`、`warmup_epochs: 10`, 而论文 `4.2` 节写的是 100 epochs、batch 16、warmup 15。复现时需明确以哪一套为准, 二者可能导致可观的精度差异。
+7. **patch 级对齐存在粒度上限, 小部件细粒度对齐必然受损。** 分组纯几何导致跨部件 patch, 均值池化稀释小部件, 随机 mask 又让小部件关系被欠采样。但论文未提供按部件尺度的分层评测, 因此该损失在论文数据里**无法定量判定** (详见 <<patch 粒度的三重信息损失>> 一节)。
+8. **评测指标无法区分"粗结构对齐"与"精确边界对齐"。** `SIM` 对整体轮廓敏感、`aIoU` 对小目标与边界敏感, 但两个数据集上二者涨幅方向相反, 无法据此判断细粒度是否改善。缺少按 GT 掩码面积分桶的分层 aIoU。
 
 ## 我的笔记
 
 - **可迁移的方法论:** `CMAT` 的跨模态 affinity 对齐思路不仅适用于可供性分割, 也可推广到任何需要从二维图像先验学习三维结构关系的任务, 例如三维部件分割、机器人抓取位姿估计、动态场景的功能区域跟踪。
 - **复现关键点:** 需要特别注意 `DINOv3` ViT-L 的最终层特征提取、12 视角渲染、反投影时的多视角一致性、64 个 patch 的划分、以及损失权重 $λ_{rec}=1.0$, $λ_{aff}=0.1$, $λ_{div}=0.2$。任意一项设置偏离都可能导致性能不复现。
-- **后续可探索方向:**
+- **后续可探索方向 (针对 patch 粒度瓶颈, 按性价比排序):**
+  - **语义感知分组**: 用提升后的 `DINOv3` 特征做超分割 / `NCut` / `KMeans` 定义 group, 替代 `FPS+KNN`, 使 patch 与功能区域对齐。这是最契合本文叙事的改法 —— 把 patch-affinity 升级为 part-affinity。
+  - **统一两侧的聚合口径**: 要么都按 KNN 邻域取成员, 要么都用 Voronoi; 并让池化算子一致 (都 mean, 或都用 attention pooling), 消除 max/mean 不对称带来的系统偏置。
+  - **patch 内加权聚合**: 用 patch 内 2D 特征的一致性给点加权, 抑制跨部件污染, 让混合 patch 的目标特征偏向主导部件。
+  - **affinity 去 mask**: 在全量 patch 上算 affinity (mask 只作用于重建分支), 或降低 `mask_ratio`, 让小部件关系不再被 60% 概率丢弃。
+  - **多尺度 affinity**: 在 $G = 32 / 64 / 128$ 多层同时对齐, 粗层抓部件间关系, 细层抓部件内边界。
+  - **点级辅助蒸馏**: 在 patch affinity 之外加点级 2D→3D 特征对齐损失, 补回被池化抹掉的细节。
+  - **下游多级上采样**: 把单层 FP 换成 64→256→1024→2048 的多级 FP, 或在更大的 group 数下做 co-attention。
+  - **换骨干**: `Point Transformer V3` / `Sonata` / `OctFormer` / `Point-M2AE`, 原生点级、可变点数、层次化, 一并绕开固定 $64\times32$ 与单步 FP; 其中 `Sonata` 还能顺带堵住几何捷径。
+- **原有其他方向:**
   - 将 `CMAT` 与 `SAM` 或 `CLIP` 等具有不同语义粒度的二维教师结合, 观察 affinity 结构变化。
   - 在真实机器人抓取数据上验证 `CMAT` 预训练对抓取成功率的提升。
   - 构建同时支持文本+视觉提示的 affordance benchmark, 真正释放 `LAS` 的多模态设计。

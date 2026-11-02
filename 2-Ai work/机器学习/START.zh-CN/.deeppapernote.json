@@ -1,0 +1,14 @@
+{
+  "artifact_type": "deeppapernote_paper_directory",
+  "schema_version": 1,
+  "paper_id": "doi:10.1016/j.eswa.2026.133773",
+  "title": "START: Structural-semantic collaborative perception transfer for incremental 3D affordance grounding",
+  "source_sha256": "1be61d59187720fec9d5a19f8a9ce5f0abee3aef576fe21dfe98cd80ecd430df",
+  "note_stem": "START",
+  "notes": {
+    "zh-CN": {
+      "filename": "START.zh-CN.md",
+      "note_sha256": "e4fc77032ee1fdc6fd91fc97ad2743b5becc52a5f232fc9dfaa9e404f86afa86"
+    }
+  }
+}

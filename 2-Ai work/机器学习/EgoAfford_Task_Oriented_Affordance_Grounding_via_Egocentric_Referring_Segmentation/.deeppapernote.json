@@ -1,0 +1,14 @@
+{
+  "artifact_type": "deeppapernote_paper_directory",
+  "schema_version": 1,
+  "paper_id": "arxiv:2608.04533",
+  "title": "EgoAfford: Task-Oriented Affordance Grounding via Egocentric Referring Segmentation",
+  "source_sha256": "0a0dc287e9491e136685ca3af4ab93496c25bb6aaa854707c8ccce8e514f4aca",
+  "note_stem": "EgoAfford_Task_Oriented_Affordance_Grounding_via_Egocentric_Referring_Segmentation",
+  "notes": {
+    "zh-CN": {
+      "filename": "EgoAfford_Task_Oriented_Affordance_Grounding_via_Egocentric_Referring_Segmentation.md",
+      "note_sha256": "da1fbfa614783e912bcdf34e8771ce99e4045691a8fab775e17173dee650dbfd"
+    }
+  }
+}
