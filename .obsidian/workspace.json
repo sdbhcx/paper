@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "fa55f7551c217590",
+        "id": "ae7caeb80e0582c1",
         "type": "tabs",
         "children": [
           {
-            "id": "2a5b32fa5a40f2ab",
+            "id": "107a480905b934fa",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "2-Ai work/AffGrasp - Learning Precise Affordances from Egocentric Videos for Robotic Manipulation/AffGrasp.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "AffGrasp"
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           }
         ]
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#887：A",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 330.16668701171875
+    "width": 420.70001220703125
   },
   "right": {
     "id": "fb6181ff0778e535",
@@ -182,7 +182,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 412.5
+    "width": 515.0999755859375
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,54 +196,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2a5b32fa5a40f2ab",
+  "active": "107a480905b934fa",
   "lastOpenFiles": [
-    "2-Ai work/AffGrasp - Learning Precise Affordances from Egocentric Videos for Robotic Manipulation/images/fig1_overview.png",
-    "3-实验/GREAT_CER_SGv2_联合训练_实验总结_20261030.md",
-    "3-实验/GREAT_CER_角色路由_实验总结_20261028_assets/GREAT_CER_角色路由_实验方案与结果分析_20261028.md",
-    "3-实验/下一步实验.md",
-    "3-实验/GREAT_SG_v2_新旧知识实验.md",
-    "2-Ai work/QueryMe_Query_Driven_Open_Vocabulary_3D_Object_Affordances_Grounding_from_Multimodal_Evidence/QueryMe_Query_Driven_Open_Vocabulary_3D_Object_Affordances_Grounding_from_Multimodal_Evidence.md",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101.md",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/training_aiou_curves.png",
-    "1-inbox/HAMMER.pdf",
-    "3-实验/GREAT_视觉token联合融合_实验结果与总结_20261024.md",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/evidence/旧FiLM逐层诊断报告.md",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/2464_interactive.html",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/2441_Laptop_press_median.png",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/2441_interactive.html",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/2436_Laptop_press_more_confusion.png",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/2436_interactive.html",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/2425_Laptop_press_less_confusion.png",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/2425_interactive.html",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/1373_Hammer_beat_localization_worse.png",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/1354_Hammer_wrapgrasp_localization_better.png",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/1352_Hammer_wrapgrasp_localization_median.png",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/1303_Knife_cut_localization_worse.png",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/1250_Knife_grasp_localization_median.png",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/1248_Knife_grasp_localization_better.png",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/1244_interactive.html",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/1243_interactive.html",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/1236_interactive.html",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/1227_interactive.html",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/figures/1221_interactive.html",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/evidence/接触与功能混淆分析.md",
-    "3-实验/GREAT_局部CER专家_实验方案与结果分析_20261101_assets/evidence/定位质量路由实施方案_20261031.md",
-    "3-实验/analysis.md",
+    "2-Ai work/SAGE - Point Cloud as a Foreign Language for Multi-modal Large Language Model.md",
+    "2-Ai work/T-FunS3D/T-FunS3D.md",
+    "2-Ai work/Aff3DFunc - Open-Vocabulary 3D Affordance Understanding.md",
+    "tmp/dpn_tfuns3d/lint_final.json",
+    "2-Ai work/Methodology_Affordance_Semantic_Space_Construction.md",
+    "tmp/dpn_tfuns3d/lint_result6.json",
+    "tmp/dpn_tfuns3d/lint_result5.json",
+    "tmp/dpn_tfuns3d/lint_result4.json",
+    "tmp/dpn_tfuns3d/lint_result3.json",
+    "tmp/dpn_tfuns3d/lint_result2.json",
+    "tmp/dpn_tfuns3d/lint_result.json",
     "2-Ai work/PointGS - Semantic-Consistent Unsupervised 3D Point Cloud Segmentation with 3D Gaussian.md",
-    "3-实验/GREAT_CMAT_失败案例/failure_analysis.md",
-    "3-实验/GREAT_CMAT_失败案例/meeting_review/meeting_brief.md",
-    "3-实验/GREAT_CMAT_失败案例/meeting_review/case_cards.md",
-    "3-实验/HK首句替换与SGv2实验总结_20261025.md",
-    "2-Ai work/AffGrasp - Learning Precise Affordances from Egocentric Videos for Robotic Manipulation/AffGrasp.md",
-    "2-Ai work/机器学习/UniAfford_Token_Routed_Multitask_Learning_for_Generalizable_2D_3D_Affordance_Perception/UniAfford_Token_Routed_Multitask_Learning_for_Generalizable_2D_3D_Affordance_Perception.zh-CN.md",
-    "2-Ai work/HAMMER/HAMMER.md",
-    "2-Ai work/AAH/AAH.md",
-    "2-Ai work/机器学习/EgoAfford_Task_Oriented_Affordance_Grounding_via_Egocentric_Referring_Segmentation/EgoAfford_Task_Oriented_Affordance_Grounding_via_Egocentric_Referring_Segmentation.md",
-    "2-Ai work/VAGNet - Grounding 3D Affordance from Human-Object Interactions in Videos/VAGNet - Grounding 3D Affordance from Human-Object Interactions in Videos.md",
-    "2-Ai work/大模型/InteractVLM_3D_Interaction_Reasoning_from_2D_Foundational_Models/InteractVLM_3D_Interaction_Reasoning_from_2D_Foundational_Models.md",
-    "2-Ai work/VideoAfford - Grounding 3D Affordance from Human-Object-Interaction Videos via Multimodal Large Language Model/VideoAfford.md",
-    "2-Ai work/O3Afford - One-Shot 3D Object-to-Object Affordance Grounding/O3Afford - One-Shot 3D Object-to-Object Affordance Grounding.md",
+    "2-Ai work/T-FunS3D/images/page_007_fig_fig_4.png",
+    "2-Ai work/T-FunS3D/images/page_003_fig_fig_2.png",
+    "2-Ai work/T-FunS3D/images",
+    "2-Ai work/T-FunS3D",
+    "tmp/dpn_tfuns3d/mat_fig4.json",
+    "Research/Papers/2-Ai work/T-FunS3D/images/page_007_fig_fig_4.png",
+    "Research/Papers/2-Ai work/T-FunS3D/images/page_003_fig_fig_2.png",
+    "tmp/dpn_tfuns3d/T-FunS3D_full_text.md",
+    "2-Ai work/LISA-3D - Lifting Language-Image Segmentation to 3D via Multi-View Consistency.md",
+    "2-Ai work/Fun3DU - Functionality Understanding and Segmentation in 3D Scenes.md",
+    "2-Ai work/3DAffordSplat - Efficient Affordance Reasoning with 3D Gaussians.md",
+    "2-Ai work/Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge/Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge.md",
+    "2-Ai work/Feasibility_稀疏PC-3DGS-CAM-SAGE架构.md",
+    "2-Ai work/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency.md",
+    "2-Ai work/Comparison_2D-to-3D_Semantic_Transfer_Unlocking_GEAL_PointGS.md",
+    "outputs/GEAL-TASA改造计划.md",
+    "2-Ai work/Research/Papers/affordance-grounding/IAAO_Interactive_Affordance_Learning_for_Articulated_Objects_in_3D_Environments/IAAO_Interactive_Affordance_Learning_for_Articulated_Objects_in_3D_Environments.md",
+    "2-Ai work/Research/Papers/affordance-grounding/IAAO_Interactive_Affordance_Learning_for_Articulated_Objects_in_3D_Environments/images/page_007_fig_table_2_review.png",
+    "2-Ai work/Research/Papers/affordance-grounding/IAAO_Interactive_Affordance_Learning_for_Articulated_Objects_in_3D_Environments/images/page_007_fig_table_1_review.png",
+    "2-Ai work/Research/Papers/affordance-grounding/IAAO_Interactive_Affordance_Learning_for_Articulated_Objects_in_3D_Environments/images/page_008_fig_figure_3_review.png",
+    "2-Ai work/Research/Papers/affordance-grounding/IAAO_Interactive_Affordance_Learning_for_Articulated_Objects_in_3D_Environments/images/page_004_fig_figure_2_review.png",
+    "tmp/DPN_iaao/iaao_note_draft.md",
+    "tmp/DPN_iaao/iaao_full_text.md",
+    "Research/Papers/机器学习/Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge/Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge.md",
+    "Research/Papers/机器学习/Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge/images/page_008_fig_table_4_review.png",
+    "Research/Papers/机器学习/Unlocking_3D_Affordance_Segmentation_with_2D_Semantic_Knowledge/images/page_008_fig_table_3_review.png",
+    "tmp/DeepPaperNote_runs/aff3d_note_draft.md",
+    "tmp/DeepPaperNote_runs/aff3d_full_text.md",
+    "2-Ai work/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/GEAL 改进方案.md",
+    "tmp/2412.09511/2412.09511_full_text.md",
+    "2-Ai work/Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement/Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement.md",
+    "2-Ai work/GEAL - Generalizable 3D Affordance Learning with Cross-Modal Consistency/基于SAGE的改进.md",
+    "tmp/2412.09511/GEAL_draft.md",
     "未命名.canvas"
   ]
 }
